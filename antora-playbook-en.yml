@@ -1,0 +1,13 @@
+site:
+  title: Plentymarkets Developers site 2.0
+  start_page: component-b::index.adoc
+content:
+  sources:
+  - url: https://gitlab.com/antora/demo/demo-component-b.git
+    branches: [v2.0, v1.0]
+    start_path: docs/en-gb
+ui:
+  bundle:
+    url: https://github.com/plentymarkets/plenty-docs-ui/raw/main/ui-bundle.zip
+    snapshot: true
+  output_dir: _/en-gb
