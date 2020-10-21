@@ -8,6 +8,6 @@ content:
     start_path: docs/en-gb
 ui:
   bundle:
-    url: https://github.com/plentymarkets/plenty-docs-ui/raw/main/ui-bundle.zip
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
   output_dir: _/en-gb
