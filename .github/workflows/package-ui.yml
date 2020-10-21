@@ -26,8 +26,9 @@ jobs:
       - name: Package UI
         run: gulp bundle
       
-      - name: Upload bundle
-        uses: actions/upload-artifact@v2
-        with:
-          name: ui-bundle
-          path: ./build/ui-bundle.zip
+      - name: Push bundle
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git commit -am "Automated bundle"
+          git push
