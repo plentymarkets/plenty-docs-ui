@@ -30,6 +30,5 @@ jobs:
         run: |
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
-          git add ./build/ui-bundle.zip
           git commit -am "Automated bundle"
           git push
