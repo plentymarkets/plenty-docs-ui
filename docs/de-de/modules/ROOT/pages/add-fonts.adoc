@@ -1,6 +1,6 @@
-= Add Fonts
+= Add Fonts Modified
 
-This page explains how to add new fonts to your UI.
+This is a test page. It explains how to add new fonts to your UI.
 These instructions assume you've forked the default UI and are able to customize it.
 
 There are three steps involved:
