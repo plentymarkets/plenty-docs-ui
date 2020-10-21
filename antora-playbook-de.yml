@@ -1,10 +1,10 @@
 site:
   title: Plentymarkets Developers site 2.0
-  start_page: component-b::index.adoc
+  start_page: antora-ui-default::add-fonts.adoc
 content:
   sources:
-  - url: https://gitlab.com/antora/demo/demo-component-a.git
-    branches: master
+  - url: https://github.com/plentymarkets/plenty-developers-site.git
+    branches: main
     start_path: docs/de-de
 ui:
   bundle:

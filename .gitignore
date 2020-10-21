@@ -3,3 +3,4 @@ yarn.lock
 /node_modules/
 /public/
 .idea/
+.DS_Store
