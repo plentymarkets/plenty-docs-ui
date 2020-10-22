@@ -32,3 +32,11 @@ jobs:
           git config --global user.email 'action@github.com'
           git commit -am "Automated bundle"
           git push
+      
+      # This step dispatches an event to run the CI workflow of plenty-developers-docs
+      - name: Rebuild site
+        run: |
+          curl -X POST https://api.github.com/repos/plentymarkets/plenty-developers-docs/dispatches \
+          -H 'Accept: application/vnd.github.v3+json' \
+          -u ${{ secrets.ACCESS_TOKEN }} \
+          --data '{"event_type": "UIBundleUpdate", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'" }}'
