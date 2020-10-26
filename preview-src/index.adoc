@@ -1,4 +1,6 @@
 = Hardware and Software Requirements
+:page-layout: homepage
+
 Author Name
 :idprefix:
 :idseparator: -

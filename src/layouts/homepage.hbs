@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{> head defaultPageTitle='Untitled'}}
+</head>
+<body class="homepage{{#with (or page.attributes.role page.role)}} {{{this}}}{{/with}}">
+{{> header}}
+<div class="outer-container">
+  <div class="container">
+    {{> article}}
+  </div>
+</div>
+{{> footer}}
+</body>
+</html>
