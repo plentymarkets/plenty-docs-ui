@@ -1,10 +1,17 @@
 <header class="header">
   <nav class="navbar">
     <div class="container-lg">
-      <a class="navbar-item" href="{{{or site.url (or siteRootUrl siteRootPath)}}}">
-        <img src="https://cdn02.plentymarkets.com/pmsbpnokwu6a/plugin/2/plentymanual/images/_layout/plentyknowledge-logo.svg"
-             alt="plentyKnowledge Logo" width="136" height="27">
+      <a class="logo" href="{{{or site.url (or siteRootUrl siteRootPath)}}}">
+        {{#if page.home}}
+          <img src="_/img/plenty-logo.png" alt="home-logo">plentymarkets
+        {{/if}}
       </a>
+      <div class="right">
+        <div class="search">
+          <input type="text" placeholder="What are you looking for...">
+          <img src="_/img/search.png" alt="search">
+        </div>
+      </div>
     </div>
   </nav>
 </header>

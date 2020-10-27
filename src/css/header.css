@@ -19,8 +19,44 @@ body {
   padding: 0;
 }
 
+.navbar .logo img {
+  height: 100%;
+  width: 30px;
+  margin-right: 10px;
+}
+
 .navbar a {
   text-decoration: none;
+  font-family: 'Sen', sans-serif;
+  color: white;
+}
+
+.search {
+  position: relative;
+}
+
+.search input {
+  background: none;
+  border: 0;
+  border-bottom: 2px solid white;
+  width: 250px;
+  padding: 3px 0;
+  color: white;
+  outline: none;
+  font-family: 'Sen', sans-serif;
+}
+
+.search input::placeholder {
+  color: lightgray;
+}
+
+.search img {
+  width: 17px;
+  height: auto;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translateY(-50%);
 }
 
 @media screen and (min-width: 1024px) {

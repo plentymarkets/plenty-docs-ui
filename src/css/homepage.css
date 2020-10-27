@@ -1,3 +1,77 @@
-.homepage .doc {
+body.homepage .navbar {
+  background-color: var(--primary-color);
+}
+body.homepage .hero-wrapper {
+  background-color: var(--primary-color);
+}
+body.homepage .hero-wrapper .title {
+  color: white;
+  font-family: "Sen", sans-serif;
+}
+body.homepage .hero-wrapper .title.second {
+  color: #C9C9C9;
+}
+body.homepage .hero-wrapper .img-wrapper {
+  padding: 35px;
+  margin-top: 20px;
+}
+body.homepage .hero-wrapper .img-wrapper .big-logo {
+  width: 100%;
+}
+body.homepage .tiles-outer-wrapper {
+  background: linear-gradient(to top, white 70%, var(--primary-color) 30%);
+}
+body.homepage .tiles-outer-wrapper .tile-wrapper {
+  padding: 5px;
+  position: relative;
+}
+body.homepage .tiles-outer-wrapper .tile-wrapper .tile {
+  background: url("../img/placeholder.jpg") 100% 100% no-repeat;
+  background-size: cover;
+  filter: brightness(0.2);
+  height: 170px;
+  padding: 10px;
+  margin: 5px;
+}
+body.homepage .tiles-outer-wrapper .tile-wrapper .tile:hover {
+  animation: brightness 0.5s;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+}
+body.homepage .tiles-outer-wrapper .tile-wrapper .tile-title {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  color: white;
+  font-size: 25px;
+  font-family: "Sen", sans-serif;
+  pointer-events: none;
+  text-align: center;
+  width: 100%;
+}
+body.homepage .stack-wrapper {
+  text-align: center;
+}
+body.homepage .stack-wrapper .title {
+  font-family: "Sen", sans-serif;
+}
+body.homepage .stack-wrapper img {
+  width: auto;
+  height: 50px;
+  margin: 0 30px;
+}
+body.homepage .doc {
   margin: 0;
 }
+
+@-webkit-keyframes brightness {
+  0% {
+    filter: brightness(0.2);
+  }
+  100% {
+    filter: brightness(0.4);
+  }
+}
+
+/*# sourceMappingURL=homepage.css.map */

@@ -3,6 +3,11 @@ body {
   height: 100%;
 }
 
+.main {
+  flex: 1 0 auto;
+  font-family: 'Sen', sans-serif;
+}
+
 *,
 *::before,
 *::after {
@@ -27,6 +32,9 @@ body {
   font-family: var(--body-font-family);
   line-height: var(--body-line-height);
   margin: 0;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
@@ -73,4 +81,8 @@ button {
 button::-moz-focus-inner {
   border: none;
   padding: 0;
+}
+
+.title {
+  font-family: 'Sen', sans-serif;
 }

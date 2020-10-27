@@ -4,12 +4,88 @@
   {{> head defaultPageTitle='Untitled'}}
 </head>
 <body class="homepage{{#with (or page.attributes.role page.role)}} {{{this}}}{{/with}}">
+
 {{> header}}
-<div class="outer-container">
-  <div class="container">
-    {{> article}}
+
+<div class="main">
+  <div class="hero-wrapper pb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9">
+          <h1 class="title pb-3 pt-3 pb-lg-5 pt-lg-5">plentymarkets developers</h1>
+          <h6 class="title second">Welcome to our Developer's website.</h6>
+          <h6 class="title second">You'll find all the documentation needed to get started</h6>
+        </div>
+        <div class="col-md-3">
+          <div class="img-wrapper">
+            <img class="big-logo d-none d-md-block" src="_/img/plenty-logo.png" alt="logo">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tiles-outer-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 offset-sm-1">
+          <div class="row">
+            <div class="col-md-4 tile-wrapper">
+              <a href="#">
+                <div class="tile"></div>
+                <span class="tile-title">Getting started</span>
+              </a>
+            </div>
+
+            <div class="col-md-4 tile-wrapper">
+              <a href="#">
+                <div class="tile"></div>
+                <span class="tile-title">Plugin basics</span>
+              </a>
+            </div>
+
+            <div class="col-md-4 tile-wrapper">
+              <a href="#">
+                <div class="tile"></div>
+                <span class="tile-title">plentyshop</span>
+              </a>
+            </div>
+
+            <div class="col-md-4 tile-wrapper">
+              <a href="#">
+                <div class="tile"></div>
+                <span class="tile-title">REST API</span>
+              </a>
+            </div>
+
+            <div class="col-md-4 tile-wrapper">
+              <a href="#">
+                <div class="tile"></div>
+                <span class="tile-title">Interface Docs</span>
+              </a>
+            </div>
+
+            <div class="col-md-4 tile-wrapper">
+              <a href="#">
+                <div class="tile"></div>
+                <span class="tile-title">plenty Base</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="stack-wrapper pb-3 pt-lg-5">
+    <h5 class="title pb-3">What keeps the fire burning:</h5>
+    <img src="_/img/stack-1.png" alt="home-logo">
+    <img src="_/img/stack-2.png" alt="home-logo">
+    <img src="_/img/stack-3.png" alt="home-logo">
+    <img src="_/img/stack-4.png" alt="home-logo">
+    <img src="_/img/stack-5.png" alt="home-logo">
   </div>
 </div>
+
 {{> footer}}
+
 </body>
 </html>

@@ -1,0 +1,93 @@
+body.homepage {
+  .navbar {
+    background-color: var(--primary-color);
+  }
+
+  .hero-wrapper {
+    background-color: var(--primary-color);
+
+    .title {
+      color: white;
+      font-family: "Sen", sans-serif;
+
+      &.second {
+        color: #C9C9C9;
+      }
+    }
+
+    .img-wrapper {
+      padding: 35px;
+      margin-top: 20px;
+
+      .big-logo {
+        width: 100%;
+      }
+    }
+
+  }
+
+  .tiles-outer-wrapper {
+    background: linear-gradient(to top, white 70%, var(--primary-color) 30%);
+
+    .tile-wrapper {
+      padding: 5px;
+      position: relative;
+
+      .tile {
+        background: url('../img/placeholder.jpg') 100% 100% no-repeat;
+        background-size: cover;
+        filter: brightness(0.2);
+        height: 170px;
+        padding: 10px;
+        margin: 5px;
+
+        &:hover {
+          animation: brightness .5s;
+          animation-fill-mode: forwards;
+          cursor: pointer;
+        }
+      }
+
+      .tile-title {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        color: white;
+        font-size: 25px;
+        font-family: 'Sen', sans-serif;
+        pointer-events: none;
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+
+  .stack-wrapper {
+    text-align: center;
+
+    .title {
+      font-family: 'Sen', sans-serif;
+    }
+
+    img {
+      width: auto;
+      height: 50px;
+      margin: 0 30px;
+    }
+  }
+
+  .doc {
+    margin: 0;
+  }
+}
+
+@-webkit-keyframes brightness {
+  0% {
+    filter: brightness(0.2);
+  }
+
+  100% {
+    filter: brightness(0.4);
+  }
+}
