@@ -11,12 +11,14 @@
 }
 
 @media screen and (min-width: 769px) {
+
   .nav-container {
     width: var(--nav-width);
   }
 }
 
 @media screen and (min-width: 1024px) {
+
   .nav-container {
     font-size: calc(15.5 / var(--rem-base) * 1rem);
     flex: none;
@@ -38,12 +40,14 @@
 }
 
 @media screen and (min-width: 769px) {
+
   .nav {
     box-shadow: 0.5px 0 3px var(--nav-border-color);
   }
 }
 
 @media screen and (min-width: 1024px) {
+
   .nav {
     top: var(--navbar-height);
     box-shadow: none;
@@ -71,6 +75,7 @@ html.is-clipped--nav {
 }
 
 @media screen and (min-width: 1024px) {
+
   .nav-panel-menu {
     height: var(--nav-panel-height--desktop);
   }
@@ -143,11 +148,13 @@ html.is-clipped--nav {
 }
 
 /* adds some breathing room below a nested list */
+
 .nav-item-toggle ~ .nav-list {
   padding-bottom: 0.125rem;
 }
 
 /* matches list without a title */
+
 .nav-item[data-depth="0"] > .nav-list:first-child {
   display: block;
   margin: 0;

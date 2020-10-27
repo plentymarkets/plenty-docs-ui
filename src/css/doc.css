@@ -9,6 +9,7 @@
 }
 
 @media screen and (min-width: 1024px) {
+
   .doc {
     flex: auto;
     font-size: var(--doc-font-size--desktop);
@@ -37,6 +38,7 @@
 }
 
 @media screen and (min-width: 769px) {
+
   .doc > h1.page:first-child {
     margin-top: 2.5rem;
   }
@@ -508,6 +510,7 @@
 }
 
 /* NEEDS REVIEW prevent pre in table from causing article to exceed bounds */
+
 .doc .tableblock pre,
 .doc .listingblock.wrap pre {
   white-space: pre-wrap;
@@ -524,6 +527,7 @@
 }
 
 /* NOTE assume pre.highlight contains code[data-lang] */
+
 .doc pre.highlight {
   position: relative;
 }
