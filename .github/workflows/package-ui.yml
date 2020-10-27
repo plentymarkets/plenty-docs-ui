@@ -30,6 +30,7 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3.4.1
         with:
+          author: GitHub Action <action@github.com>
           branch: github-action/update-bundle
           delete-branch: true
           
@@ -38,9 +39,10 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Merge me!
+      - name: Merge bundle PR
         uses: ridedott/merge-me-action@master
         with:
+          GITHUB_LOGIN: GitHub Action
           # Depending on branch protection rules, a  manually populated
           # `GITHUB_TOKEN_WORKAROUND` environment variable with permissions to
           # push to a protected branch must be used. This variable can have an
