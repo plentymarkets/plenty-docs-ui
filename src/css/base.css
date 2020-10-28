@@ -87,3 +87,41 @@ button::-moz-focus-inner {
 .title {
   font-family: 'Sen', sans-serif;
 }
+
+h1 {
+  font-size: 42px;
+  line-height: calc(58 / 42);
+  color: black;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 576px) {
+
+  h1 {
+    font-size: 30px;
+    line-height: calc(36 / 30);
+  }
+}
+
+h2 {
+  font-size: 32px;
+  line-height: calc(43 / 32);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 20px;
+  line-height: calc(30 / 20);
+  margin-bottom: 10px;
+}
+
+@media (min-width: 576px) {
+
+  h3 {
+    font-size: 30px;
+    line-height: calc(44 / 30);
+    margin-bottom: 20px;
+  }
+}
