@@ -1,5 +1,5 @@
 = Hardware and Software Requirements
-:page-layout: homepage
+:page-layout: default
 
 Author Name
 :idprefix:
