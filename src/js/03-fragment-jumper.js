@@ -24,7 +24,7 @@
     var diff = 108
     var navs = document.getElementsByTagName('nav')
     if (navs !== null && navs.length !== 0 && navs[0] != null) {
-      diff = navs[0].clientHeight;
+      diff = navs[0].clientHeight
     }
     window.scrollTo(0, computePosition(this, 0) - diff)
   }
