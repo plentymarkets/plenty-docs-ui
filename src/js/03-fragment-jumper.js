@@ -2,7 +2,6 @@
   'use strict'
 
   var article = document.querySelector('article.doc')
-  var toolbar = document.querySelector('.toolbar')
 
   function decodeFragment (hash) {
     return hash && (~hash.indexOf('%') ? decodeURIComponent(hash) : hash).slice(1)
