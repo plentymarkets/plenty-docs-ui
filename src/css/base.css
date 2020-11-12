@@ -90,6 +90,16 @@ button::-moz-focus-inner {
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Sen', sans-serif;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  color: black!important;
 }

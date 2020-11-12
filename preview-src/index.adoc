@@ -1,5 +1,5 @@
 = Hardware and Software Requirements
-:page-layout: homepage
+:page-layout: default
 
 Author Name
 :idprefix:
@@ -19,7 +19,14 @@ Vestibulum consectetur nec urna a luctus.
 Quisque pharetra tristique arcu fringilla dapibus.
 Curabitur ut massa aliquam, cursus enim et, accumsan lectus.
 
-== Cu solet
+dadasdd
+
+= heading here
+== heading here
+=== heading here
+==== heading here
+===== heading here
+====== heading here
 
 Nominavi luptatum eos, an vim hinc philosophia intellegebat.
 Lorem pertinacia `expetenda` et nec, [.underline]#wisi# illud [.line-through]#sonet# qui ea.
