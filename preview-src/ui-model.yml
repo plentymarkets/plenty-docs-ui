@@ -9,10 +9,10 @@ site:
     url: '#'
     versions:
     - &latest_version_abc
-      url: '#' 
+      url: '#'
       version: '1.1'
       displayVersion: '1.1'
-    - url: '#' 
+    - url: '#'
       version: '1.0'
       displayVersion: '1.0'
     latestVersion: *latest_version_abc
@@ -26,13 +26,13 @@ site:
       version: '6.0'
       displayVersion: '6.0'
     - &component_version
-      url: '#' 
+      url: '#'
       version: '5.2'
       displayVersion: '5.2'
-    - url: '#' 
+    - url: '#'
       version: '5.1'
       displayVersion: '5.1'
-    - url: '#' 
+    - url: '#'
       version: '5.0'
       displayVersion: '5.0'
     latestVersion: *latest_version_xyz
@@ -41,13 +41,13 @@ site:
     url: '#'
     versions:
     - &latest_version_123
-      url: '#' 
+      url: '#'
       version: '2.2'
       displayVersion: '2.2'
-    - url: '#' 
+    - url: '#'
       version: '2.1'
       displayVersion: '2.1'
-    - url: '#' 
+    - url: '#'
       version: '2.0'
       displayVersion: '2.0'
     latestVersion: *latest_version_123
@@ -65,10 +65,6 @@ page:
     private: false
   previous:
     content: Quickstart
-    url: '#'
-    urlType: 'internal'
-  next:
-    content: Liber Recusabo
     url: '#'
     urlType: 'internal'
   breadcrumbs:
@@ -94,7 +90,7 @@ page:
     url: '#'
   navigation:
   - root: true
-    content: Project XYZ
+    content: Plentymarkets docs
     url: '#'
     urlType: fragment
     items:
@@ -105,23 +101,12 @@ page:
       - content: Brand&#8217;s Hardware &amp; Software Requirements
         url: /xyz/5.2/index.html
         urlType: internal
-      - content: Cu Solet
-        url: '/xyz/5.2/index.html#cu-solet'
-        urlType: internal
       - content: English + 中文
         url: '/xyz/5.2/index.html#english+中文'
         urlType: internal
-    - content: Liber Recusabo
-      url: '#liber-recusabo'
-      urlType: fragment
-    - content: Reference
-      items:
-      - content: Keyboard Shortcuts
-        url: '#'
-        urlType: fragment
-      - content: Importing and Exporting
-        url: '#'
-        urlType: fragment
-      - content: Some Code
-        url: '/xyz/5.2/index.html#some-code'
+      - content: Hello World
+        url: '/xyz/5.2/index.html#helloworld'
         urlType: internal
+
+
+
