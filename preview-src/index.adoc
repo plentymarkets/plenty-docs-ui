@@ -289,11 +289,11 @@ ____
 In a few simple steps, we will walk you through creating your first plugin that displays Hello World! in your browser when adding `/hello` to your domain.
 
 .What an incredible technology!
-image::helloworld.png[Hello World example,500]
+image::img/helloworld.png[Hello World example,500]
 
 
 There are often people who like to rush things, and if you are one of them. We totally understand. You can just download
-the link:https://github.com/plentymarkets/plugin-hello-world[github repository] and try to figure yourself out what the code means. Otherwise, stay tuned and keep following the next 3 steps!
+the link:https://github.com/plentymarkets/plugin-hello-world2[github repository] and try to figure yourself out what the code means. Otherwise, stay tuned and keep following the next 3 steps!
 
 
 === First File
@@ -453,39 +453,46 @@ class HelloWorldServiceProvider extends ServiceProvider
 <1> This line registers the `HelloWorldRouteServiceProvider` with our application. This means the RouteServiceProvider will map our route to your plentyshop. Therefore the circle is complete. Coding is done 😎. Commit your repository to your github repo.
 
 
-=== Importing the Plugin into your Shop
+=== Integrate your Plugin into your Shop
 
 After pushing the code to your github repository, you need the full Github URL and your login Credentials.
 
-. Open the plentymarkets back end.
-. Go to Plugins » Git.
-.. Click on Add plugin.
-.. The Settings window will open.
-.. Enter the remote URL.
-.. You can copy the URL by clicking on Clone or download in the repository on GitHub.
-.. Enter your user name and password.
-.. Click on Test connection.
-. Connectivity to the Git repository is checked and established and the drop-down menu Branch can be selected.
-. Select the branch of the repository that you want to clone and edit.
-.. In our case, Master is set by default.
-. Save the settings.
-.. The plugin repository is cloned to the plentymarkets inbox and the plugin is added to the plugin list.
+. Open the plentymarkets back end. Click on Plugins->Plugin set overview and on your shop name.
 
++
+image::img/pluginsteps1.png[Plugin Tutorial 1,500]
 
-=== Deploy The Plugin
+. Now click on `+ Add plugin`
 
-Deploy the plugin to integrate it with plentymarkets.
++
+image::img/pluginsteps2.png[Plugin Tutorial 2,500]
 
-. Go to Plugins » Plugin overview.
-.. Select your plugin set.
-.. Activate the plugin in the Active column.
-. In the toolbar, click on Save & publish plugins.
-.. Once a success message is displayed, we are ready to check the output.
+. Now click on `Add Git repository`
 
-=== Say Hello
++
+image::img/pluginsteps3.png[Plugin Tutorial 3,500]
 
-Open your Browser, type your domain, add the `/hello` and your Shop says 'Hello World'.
+. Click on the `+` Button.
 
++
+image::img/pluginsteps4.png[Plugin Tutorial 5,500]
 
+. In this following field you can enter your Repository URL, your Username and your link:https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token[Github Token]. When you are done, press the save icon.
+
++
+image::img/pluginsteps5.png[Plugin Tutorial 5,500]
+
+. You are almost done. In the Pluginset overview activate the toggle next to the HelloWorld Plugin (if it does not appear reload the current browser window). Click on the save icon, to deploy the current pluginset. When this is done click on the eye-icon to preview your current pluginset in the shop.
+
++
+image::img/pluginsteps6.png[Plugin Tutorial 6,500]
+
+. In the opened Shop, add the `/hello` route to the URL and...
+
++
 .What a result
 image::helloworld.png[Hello World example,500]
+
+
+Congratulations. Your first plugin has been deployed. If you ahve any questions, don't hesitate to contact us through our
+link: [forum]
