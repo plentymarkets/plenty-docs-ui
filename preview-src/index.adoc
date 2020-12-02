@@ -494,5 +494,5 @@ image::img/pluginsteps6.png[Plugin Tutorial 6,500]
 image::helloworld.png[Hello World example,500]
 
 
-Congratulations. Your first plugin has been deployed. If you ahve any questions, don't hesitate to contact us through our
-link: [forum]
+Congratulations. Your first plugin has been deployed. If you have any questions, don't hesitate to contact us through our
+link:https://forum.plentymarkets.com/[forum]
