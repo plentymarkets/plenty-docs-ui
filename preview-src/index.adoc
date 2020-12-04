@@ -298,7 +298,7 @@ the link:https://github.com/plentymarkets/plugin-hello-world2[github repository]
 
 === First File
 
-The first thing that we are going to do is create a json, which contains all information about our plugin, that we need.
+The first thing that we are going to do is create a plugin.json, which contains all information about our plugin, that we need.
 [source,json]
 ----
 {
@@ -452,7 +452,7 @@ class HelloWorldServiceProvider extends ServiceProvider
 
 <1> This line registers the `HelloWorldRouteServiceProvider` with our application. This means the RouteServiceProvider will map our route to your plentyshop. Therefore the circle is complete. Coding is done 😎. Commit your repository to your github repo.
 
-
+[#integrateplugin]
 === Integrate your Plugin into your Shop
 
 After pushing the code to your github repository, you need the full Github URL and your login Credentials.
@@ -496,3 +496,132 @@ image::helloworld.png[Hello World example,500]
 
 Congratulations. Your first plugin has been deployed. If you have any questions, don't hesitate to contact us through our
 link:https://forum.plentymarkets.com/[forum]
+
+
+[#helloworldbackend]
+== Hello World Backend Tutorial
+
+
+In this tutorial, we will develop a basic plugin to display a view in our plentymarkets backend. Only basic knowledge of creating and editing files in your IDE as well as using plentymarkets is necessary to develop this plugin.
+
+Follow the steps and learn how to create your first view that displays Hello World! in the plentymarkets back end.
+
+
+Click the link for the link:https://github.com/plentymarkets/plugin-hello-world2[github repository].
+
+=== First File: plugin.json
+
+The first thing that we are going to do is create a plugin.json, which contains all information about our plugin, that we need.
+
+.plugin.json
+[source,json]
+----
+
+{
+    "name": "MyFirstView", <1>
+    "description": "My first back end view", <2>
+    "namespace": "MyFirstView", <3>
+    "author": "Your name", <4>
+    "type": "backend", <5>
+    "serviceProvider": "MyFirstView\\Providers\\MyFirstViewServiceProvider" <6>
+}
+----
+<1> This is the name of our plugin. This is also how it will be displayed in the repository.
+<2> A description for our plugin
+<3> We recommend that you use the name of the plugin folder as the namespace root. This service provider is the central location to register services in the plugin.
+<4> The Author of the plugin, your company name or your personal name.
+<5> The type of the plugin, for now accept, that this is a template, there are also other type, which we will explain later.
+<6> The namespace of our ServiceProvider (We haven't created it yet)
+
+
+=== Second File: ui.json
+
+Now we need a ui.json. This file defines the entries of our backend menu.
+
+.ui.json
+[source,json]
+----
+{
+    "defaultEntryPoint": "index.html", <1>
+    "namespace": "MyFirstView", <2>
+    "menuEntries": [
+        {
+        "label": "Hello World", <3>
+        "menu": "start", <4>
+        "urlKey": "hello-world", <5>
+        "entryPoint": "index.html" <6>
+        }
+    ]
+}
+----
+<1> This is the name of our plugin. This is also how it will be displayed in the repository.
+<2> The namespace of our ServiceProvider (We haven't created it yet)
+<3> The label defines how it will be displayed in the menu.
+<4> The menu, in which the menu entry is added.
+<5> The url key, under which we open the menu point. (in our case this will be /start/hello-world
+<6> The entryPoint basically tells us which file to open.
+
+
+=== Folder Structure
+
+Furthermore we will now present you the structure including all the files, that we will need for our Hello World Plugin.
+So we only have to create the index.html, which will be a simple file and our ServiceProvider.
+
+....
+MyFirstView/ <1>
+  src/
+    Providers/
+      MyFirstViewServiceProvider.php
+  ui/
+    index.html <2>
+  ui.json
+  plugin.json
+....
+<1> We recommend calling your Folder the same way that you called your Plugin in the plugin.json
+<2> We use a simple html file, called index.html to display our Hello World!
+
+
+=== The Output
+
+Let's define what we want to present the user, that comes to our specified route: In out case it's a simple Hello World.
+
+.index.html
+[source,html]
+----
+<h1>Hello World!</h1>
+----
+
+
+=== Our ServiceProvider
+
+This is a very basic Service Provider.
+
+
+.MyFirstViewServiceProvider.php
+[source%linenums,php,linenums]
+----
+<?php
+
+namespace MyFirstView\Providers;
+
+use Plenty\Plugin\ServiceProvider;
+
+class MyFirstViewServiceProvider extends ServiceProvider
+{
+    public function register()
+    {
+
+    }
+}
+----
+
+
+=== Integrate the plugin and see the result
+
+To integrate the plugin into the system you can folllow this link:#integrateplugin[guide].
+
+Now you just need to go to this route in your backend
+/start/hello-world
+
+and you have the result.
+
