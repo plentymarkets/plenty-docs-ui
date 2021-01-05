@@ -664,3 +664,7 @@
 .doc td.tableblock {
   word-break: break-word; /* overflow-wrap for table cells; gives space higher precedence than hyphen opportunity */
 }
+
+.doc .tableblock caption {
+  caption-side: top;
+}
