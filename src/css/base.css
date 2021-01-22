@@ -51,6 +51,10 @@ a:active {
   background-color: none;
 }
 
+a.nav-link {
+  padding: 0;
+}
+
 code,
 kbd,
 pre {
