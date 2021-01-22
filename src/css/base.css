@@ -21,7 +21,6 @@ html {
 }
 
 @media screen and (min-width: 1024px) {
-
   html {
     font-size: var(--body-font-size--desktop);
   }
@@ -51,10 +50,19 @@ a:active {
   background-color: none;
 }
 
+a.nav-link {
+  padding: 0;
+}
+
 code,
 kbd,
 pre {
   font-family: var(--monospace-font-family);
+  color: var(--color-white);
+}
+
+pre code {
+  color: var(--color-white);
 }
 
 b,
@@ -64,11 +72,13 @@ th {
   font-weight: var(--body-font-weight-bold);
 }
 
-em em { /* stylelint-disable-line */
+em em {
+  /* stylelint-disable-line */
   font-style: normal;
 }
 
-strong strong { /* stylelint-disable-line */
+strong strong {
+  /* stylelint-disable-line */
   font-weight: normal;
 }
 
