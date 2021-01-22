@@ -263,22 +263,22 @@ html.is-clipped--nav {
 .nav-panel-explore .component .version {
   display: block;
   margin: 0.375rem 0.375rem 0 0;
+  font-weight: var(--version-font-weight);
 }
 
 .nav-panel-explore .component .version a {
-  border: 1px solid var(--nav-border-color);
-  border-radius: 0.25rem;
+  border: 2px solid var(--nav-border-color);
+  border-radius: 1.5rem;
   color: inherit;
   opacity: 0.75;
   white-space: nowrap;
-  padding: 0.125em 0.25em;
+  padding: 0 7px;
   display: inherit;
 }
 
 .nav-panel-explore .component .is-current a {
-  border-color: currentColor;
-  opacity: 0.9;
-  font-weight: var(--body-font-weight-bold);
+  border-color: #fff;
+  color: #fff;
 }
 
 /*
