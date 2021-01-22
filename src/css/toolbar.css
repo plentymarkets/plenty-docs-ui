@@ -15,7 +15,7 @@
   content: "";
   position: absolute;
   bottom: 0;
-  width: 100vh;
+  width: 100vw;
   border-bottom: 1px solid var(--plenty-secondaries-white);
   margin: var(--doc-margin--desktop);
 }
