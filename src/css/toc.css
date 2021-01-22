@@ -1,5 +1,11 @@
 .toc-menu {
   color: var(--toc-font-color);
+  background: var(--plentyBluesTealBlue);
+  padding-left: 0.5rem;
+  padding-right: 0.75rem;
+  padding-bottom: 1rem;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .toc.sidebar .toc-menu {
@@ -54,7 +60,7 @@
 }
 
 .toc .toc-menu li {
-  margin: 0;
+  margin-bottom: .5rem;
 }
 
 .toc .toc-menu li[data-level="2"] a {
@@ -67,7 +73,6 @@
 
 .toc .toc-menu a {
   color: inherit;
-  border-left: 2px solid var(--toc-border-color);
   display: inline-block;
   padding: 0.25rem 0 0.25rem 0.5rem;
   text-decoration: none;
@@ -83,8 +88,8 @@
 }
 
 .toc .toc-menu a.is-active {
-  border-left-color: var(--link-font-color);
-  color: var(--doc-font-color);
+  border-left: 3px solid var(--color-white);
+  color: var(--link-font-color);
 }
 
 .sidebar.toc .toc-menu a:focus {
