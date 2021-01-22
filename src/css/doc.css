@@ -89,7 +89,8 @@
 .doc h4 .anchor::before,
 .doc h5 .anchor::before,
 .doc h6 .anchor::before {
-  content: "\00a7";
+  content: "\e928";
+  font-family: 'plenty-icons';
 }
 
 .doc h1:hover .anchor,

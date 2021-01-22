@@ -58,6 +58,7 @@
 
 .nav .panels {
   display: flex;
+  padding-left: 20px;
   flex-direction: column-reverse;
   height: inherit;
   width: 100%;
@@ -173,7 +174,8 @@ html.is-clipped--nav {
   position: absolute;
   height: calc(var(--nav-line-height) * 1em);
   width: calc(var(--nav-line-height) * 1em);
-  margin-top: -0.05em;
+  font-size: 12px;
+  margin-top: 0.2em;
   margin-left: calc(var(--nav-line-height) * -1em);
 }
 
@@ -195,6 +197,8 @@ html.is-clipped--nav {
   top: 0;
   left: 0;
   max-height: calc(50% + var(--drawer-height));
+  padding-left: 25px;
+  padding-top: 10px;
 }
 
 .nav-panel-explore .context {
@@ -209,6 +213,11 @@ html.is-clipped--nav {
   cursor: pointer;
   line-height: 1;
   height: var(--drawer-height);
+}
+
+.nav-panel-explore .context .title {
+  font-size: calc(20 / var(--rem-base) * 1rem);
+  font-weight: bold;
 }
 
 .nav-panel-explore .context .version {
