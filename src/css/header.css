@@ -22,7 +22,6 @@ body {
 .navbar .logo img {
   height: 100%;
   width: 30px;
-  margin-right: 10px;
 }
 
 .navbar a {
@@ -32,6 +31,9 @@ body {
 
 .search {
   position: relative;
+  padding-left: 25px;
+  border-left: 1px solid white;
+  margin-left: 25px;
 }
 
 .search input {
@@ -49,12 +51,8 @@ body {
 }
 
 .search img {
-  width: 17px;
-  height: auto;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  transform: translateY(-50%);
+  width: 18px;
+  height: 30px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -231,4 +229,36 @@ body {
   color: var(--navbar-button-font-color);
   padding: 0 0.75em;
   white-space: nowrap;
+}
+
+.navbar .left {
+  margin-left: 20px;
+}
+
+.navbar .left .logo img {
+  width: auto;
+  height: 35px;
+}
+
+.navbar .left .logo:last-child img {
+  margin-left: 15px;
+  padding-left: 15px;
+  border-left: 1px solid white;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.navbar .right {
+  display: flex;
+  margin-right: 30px;
+}
+
+.navbar .right .menu-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.navbar .right .menu-wrapper a {
+  margin-left: 20px;
 }
