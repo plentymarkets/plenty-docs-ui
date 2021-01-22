@@ -44,7 +44,7 @@ a {
 
 a:hover {
   text-decoration: none;
-  opacity: .8;
+  opacity: 0.8;
 }
 
 a:active {
