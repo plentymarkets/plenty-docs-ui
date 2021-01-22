@@ -8,7 +8,6 @@ body.homepage .hero-wrapper {
 
 body.homepage .hero-wrapper .title {
   color: white;
-  font-family: "Sen", sans-serif;
 }
 
 body.homepage .hero-wrapper .title.second {
@@ -55,7 +54,6 @@ body.homepage .tiles-outer-wrapper .tile-wrapper .tile-title {
   transform: translate(50%, -50%);
   color: white;
   font-size: 25px;
-  font-family: "Sen", sans-serif;
   pointer-events: none;
   text-align: center;
   width: 100%;
@@ -66,7 +64,6 @@ body.homepage .stack-wrapper {
 }
 
 body.homepage .stack-wrapper .title {
-  font-family: "Sen", sans-serif;
 }
 
 body.homepage .stack-wrapper img {

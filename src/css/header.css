@@ -27,7 +27,6 @@ body {
 
 .navbar a {
   text-decoration: none;
-  font-family: 'Sen', sans-serif;
   color: white;
 }
 
@@ -43,7 +42,6 @@ body {
   padding: 3px 0;
   color: white;
   outline: none;
-  font-family: 'Sen', sans-serif;
 }
 
 .search input::placeholder {
