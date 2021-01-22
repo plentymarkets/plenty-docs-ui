@@ -5,7 +5,7 @@ body {
 
 .main {
   flex: 1 0 auto;
-  font-family: 'Sen', sans-serif;
+  font-family: var(--source-sans-pro);
 }
 
 *,
@@ -43,7 +43,8 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  opacity: .8;
 }
 
 a:active {
@@ -84,17 +85,13 @@ button::-moz-focus-inner {
   padding: 0;
 }
 
-.title {
-  font-family: 'Sen', sans-serif;
-}
-
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: 'Sen', sans-serif;
+  font-family: var(--grau-blau-sans);
 }
 
 h1 {
