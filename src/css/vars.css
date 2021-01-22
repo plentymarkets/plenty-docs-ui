@@ -101,6 +101,7 @@
   --caption-font-weight: var(--body-font-weight-bold);
   --code-background: var(--plentyGreysNevada);
   --code-font-color: var(--body-font-color);
+  --code-block-border-radius: 5px;
   --example-background: var(--plentyGreysNevada);
   --example-border-color: var(--color-gray-70);
   --kbd-background: var(--panel-background);
