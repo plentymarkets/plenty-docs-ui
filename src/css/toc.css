@@ -1,9 +1,7 @@
 .toc-menu {
   color: var(--toc-font-color);
   background: var(--plentyBluesTealBlue);
-  padding-left: 0.5rem;
-  padding-right: 0.75rem;
-  padding-bottom: 1rem;
+  padding: 1.5rem 1rem 1rem;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
@@ -26,7 +24,6 @@
 .toc.sidebar .toc-menu h3 {
   display: flex;
   flex-direction: column;
-  height: 2.5rem;
   justify-content: flex-end;
 }
 
