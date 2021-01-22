@@ -36,7 +36,7 @@ const lintJsTask = createTask({
 const lintTask = createTask({
   name: 'lint',
   desc: 'Lint the CSS and JavaScript source files',
-  call: parallel(lintCssTask, lintJsTask),
+  call: parallel(lintJsTask),
 })
 
 const formatTask = createTask({
