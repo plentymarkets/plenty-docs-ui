@@ -315,7 +315,8 @@
 
 /*TODO place icon code into ::after */
 .doc .admonitionblock.warning .icon i::after {
-  content: 'warning';
+  content: "\e90f";
+  transform: rotate(180deg);
 }
 
 .doc .admonitionblock .icon i {
