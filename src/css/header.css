@@ -259,6 +259,51 @@ body {
   align-content: center;
 }
 
-.navbar .right .menu-wrapper a {
+.navbar .right .menu-wrapper .menu-item {
   margin-left: 20px;
+  padding: 5px;
+}
+
+.navbar .right .menu-wrapper .submenu-wrapper {
+  display: none;
+  position: absolute;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background: var(--body-background);
+  padding: 10px;
+  transform: translateX(-10px);
+}
+
+.navbar .right .menu-wrapper .submenu-wrapper .submenu-item:not(:first-of-type) {
+  margin-top: 15px;
+}
+
+.navbar .right .menu-wrapper .parent:after {
+  display: block;
+  content: "";
+  background: transparent url(../img/caret.svg) no-repeat center / 50%;
+  border: none;
+  outline: none;
+  line-height: inherit;
+  position: absolute;
+  height: 1.35em;
+  width: 1.35em;
+  font-size: 12px;
+  right: -15px;
+  transform: rotate(90deg);
+  top: 7px;
+}
+
+.navbar .right .menu-item.parent {
+  position: relative;
+  margin-right: 15px;
+}
+
+.navbar .right .menu-item.parent:hover {
+  cursor: pointer;
+}
+
+.navbar .right .menu-item.parent:hover .submenu-wrapper {
+  display: flex;
+  width: max-content;
 }
