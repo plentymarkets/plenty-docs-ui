@@ -127,6 +127,13 @@
   color: var(--link_unresolved-font-color);
 }
 
+.doc a[href^="http://"]:not([href*="#"]):before,
+.doc a[href^="https://"]:not([href*="#"]):before {
+    content: "\e926";
+    font-family: plenty-icons;
+    padding: .1rem .25rem;
+}
+
 .doc i.fa {
   font-style: normal;
 }

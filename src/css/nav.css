@@ -226,6 +226,7 @@ html.is-clipped--nav {
   background-position: right 0.5rem top 50%;
   background-size: auto 0.75em;
   padding: 0 1.5rem 0 0;
+  filter: brightness(3);
 }
 
 .nav-panel-explore .components {

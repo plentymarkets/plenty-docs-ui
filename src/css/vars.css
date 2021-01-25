@@ -60,7 +60,7 @@
   --toolbar-border-color: var(--panel-border-color);
   --toolbar-font-color: var(--color-white);
   --toolbar-muted-color: var(--color-gray-30);
-  --page-version-menu-background: var(--color-smoke-70);
+  --page-version-menu-background: var(--plentyGreysLimedSpruce);
   --page-version-missing-font-color: var(--color-gray-30);
   /* toc */
   --toc-font-color: var(--nav-muted-color);
