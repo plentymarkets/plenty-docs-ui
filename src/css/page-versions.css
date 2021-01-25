@@ -23,6 +23,7 @@
   padding: 0.5rem 1.5rem 0.5rem 0.5rem;
   position: relative;
   z-index: var(--z-index-page-version-menu);
+  filter: brightness(3);
 }
 
 .page-versions .version-menu {
