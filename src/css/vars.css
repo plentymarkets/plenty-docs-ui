@@ -90,7 +90,7 @@
   --alt-heading-font-weight: var(--body-font-weight-bold);
   --section-divider-color: var(--panel-border-color);
   --link-font-color: var(--plentyBluesPictonBlue);
-  --link_hover-font-color: #104d92d3;
+  --link_hover-font-color: var(--plentyBluesSail);
   --link_unresolved-font-color: var(--important-color);
   --abstract-background: var(--color-smoke-70);
   --abstract-font-color: var(--color-jet-20);
