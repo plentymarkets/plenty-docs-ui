@@ -1,6 +1,11 @@
-<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.3/dist/cdn/docsearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@alpha"></script>
 <script>
     (function(){
+        window.process = {
+            env: {
+                NODE_ENV: 'production'
+            }
+        };        
         var version = "{{page.componentVersion.displayVersion}}"
 
         var interface_versions = [
@@ -17,10 +22,9 @@
         docsearch({
             apiKey: '3c1a0708184b01efeebc6ab288f94dc2',
             indexName: 'plenty_developers_en',
-            inputSelector: '#search-input',
+            container: '#docsearch',
             appId: 'HET8OH1LPP',
-            debug: true,
-            algoliaOptions: {
+            searchParameters: {
                 hitsPerPage: 10,
                 'facetFilters': [
                     ["tags:developers", "version:"+version]
