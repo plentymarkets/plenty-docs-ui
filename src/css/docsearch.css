@@ -1,0 +1,7 @@
+.DocSearch-Hits mark {
+    padding: 0;
+}
+
+:root {
+    --docsearch-primary-color: var(--plentyGreysLimedSpruce)
+}
