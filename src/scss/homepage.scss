@@ -1,4 +1,5 @@
 body.homepage {
+
   .navbar {
     background-color: var(--primary-color);
   }
@@ -6,45 +7,49 @@ body.homepage {
   .hero-wrapper {
     background-color: var(--primary-color);
 
-    .title {
-      color: white;
-      font-family: "Sen", sans-serif;
+    .title-wrapper {
+      .title {
+        color: white;
+        text-align: center;
 
-      &.second {
-        color: #c9c9c9;
+        &.first {
+          font-size: 35px;
+          line-height: (38/35);
+          padding: 40px 20px 25px;
+
+          @media (min-width: 992px) {
+            font-size: 64px;
+            line-height: (68/66);
+            padding: 80px 30px 50px;
+          }
+        }
+
+        &.second {
+          color: #c9c9c9;
+          font-family: var(--source-sans-pro);
+        }
       }
     }
-
-    .img-wrapper {
-      padding: 35px;
-      margin-top: 20px;
-
-      .big-logo {
-        width: 100%;
-      }
-    }
-
   }
 
   .tiles-outer-wrapper {
-    background: linear-gradient(to top, white 70%, var(--primary-color) 30%);
-
     .tile-wrapper {
       padding: 5px;
       position: relative;
 
       .tile {
-        background: url('../img/placeholder.jpg') 100% 100% no-repeat;
-        background-size: cover;
-        filter: brightness(0.2);
+        background: var(--plentyGreysLimedSpruce);
         height: 170px;
-        padding: 10px;
+        padding: 25px;
         margin: 5px;
+        border-radius: 15px;
 
-        &:hover {
-          animation: brightness .5s;
-          animation-fill-mode: forwards;
-          cursor: pointer;
+        img {
+          margin: 0 auto;
+          display: block;
+          width: 100%;
+          height: 100%;
+          opacity: 0.05;
         }
       }
 
@@ -55,7 +60,6 @@ body.homepage {
         transform: translate(50%, -50%);
         color: white;
         font-size: 25px;
-        font-family: 'Sen', sans-serif;
         pointer-events: none;
         text-align: center;
         width: 100%;
@@ -65,15 +69,40 @@ body.homepage {
 
   .stack-wrapper {
     text-align: center;
+    background: var(--plentyBluesTealBlue);
+    padding-top: 80px;
 
-    .title {
-      font-family: 'Sen', sans-serif;
+    .logo-wrapper {
+      background: var(--plentyBluesFadedJade);
+      padding: 10px;
+      border-radius: 15px;
+      margin: 0 15px;
+
+      img {
+        width: auto;
+        height: 110px;
+        padding: 10px;
+      }
     }
 
-    img {
-      width: auto;
-      height: 50px;
-      margin: 0 30px;
+    h6.title {
+      font-family: var(--source-sans-pro);
+    }
+
+    h2.title {
+      font-size: 48px;
+      line-height: (56/48);
+      padding: 0 30px;
+      display: flex;
+      width: 400px;
+      margin: 0 auto;
+    }
+
+    .stack-inner-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 60px;
+      margin-bottom: 135px;
     }
   }
 
