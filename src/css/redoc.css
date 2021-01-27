@@ -61,3 +61,8 @@
 #redoc-container input.search-input::placeholder {
   color: white;
 }
+
+#redoc-container div[role=button] div,
+#redoc-container div[role=button] span {
+  color: black;
+}

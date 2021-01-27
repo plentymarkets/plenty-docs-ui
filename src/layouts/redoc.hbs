@@ -32,10 +32,17 @@ Redoc.init('{{ page.attributes.specurl }}', {
       },
       text: {
         primary: '#fbfbfb',
-      }
+      },
+      success: {
+        main: '#12c924'
+      },
+      error: {
+        main: '#ff0400'
+      },
     }
   }
 }, document.getElementById('redoc-container'))
 </script>
+{{> body-scripts}}
 </body>
 </html>
