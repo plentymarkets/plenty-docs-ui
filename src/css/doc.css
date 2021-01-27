@@ -80,7 +80,7 @@
   visibility: hidden;
   font-size: 0.8em;
   font-weight: normal;
-  padding-top: 0.05em;
+  padding-top: 0.15em;
 }
 
 .doc h1 .anchor::before,
@@ -89,7 +89,7 @@
 .doc h4 .anchor::before,
 .doc h5 .anchor::before,
 .doc h6 .anchor::before {
-  content: "\e928";
+  content: "\e942";
   font-family: 'plenty-icons';
 }
 
