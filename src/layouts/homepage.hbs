@@ -1,91 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  {{> head defaultPageTitle='Untitled'}}
+    {{> head defaultPageTitle='Untitled'}}
 </head>
 <body class="homepage{{#with (or page.attributes.role page.role)}} {{{this}}}{{/with}}">
 
 {{> header}}
 
 <div class="main">
-  <div class="hero-wrapper pb-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-9">
-          <h1 class="title pb-3 pt-3 pb-lg-5 pt-lg-5">plentymarkets developers</h1>
-          <h6 class="title second">Welcome to our Developer's website.</h6>
-          <h6 class="title second">You'll find all the documentation needed to get started</h6>
+    <div class="hero-wrapper pb-5">
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-md-6 title-wrapper">
+                    <h1 class="title first">plentymarkets developers</h1>
+                    <h4 class="title second">Welcome to our Developer's website.</h4>
+                    <h4 class="title second">You'll find all the documentation needed to get started</h4>
+                </div>
+            </div>
         </div>
-        <div class="col-md-3">
-          <div class="img-wrapper">
-            <img class="big-logo d-none d-md-block" src="/en-gb/_/img/plenty-logo.png" alt="logo">
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
-  <div class="tiles-outer-wrapper">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-10 offset-sm-1">
-          <div class="row">
-            <div class="col-md-4 tile-wrapper">
-              <a href="/en-gb/developers/main/plugin-architecture.html">
-                <div class="tile"></div>
-                <span class="tile-title">Getting started</span>
-              </a>
-            </div>
+    <div class="tiles-outer-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-10 offset-sm-1">
+                    <div class="row">
+                        <div class="col-md-4 tile-wrapper">
+                            <a href="/en-gb/developers/main/plugin-architecture.html">
+                                <div class="tile">
+                                    <img src="_/img/tile-1.svg" alt="home-logo">
+                                </div>
+                                <span class="tile-title">Getting started</span>
+                            </a>
+                        </div>
 
-            <div class="col-md-4 tile-wrapper">
-              <a href="#">
-                <div class="tile"></div>
-                <span class="tile-title">Plugin basics</span>
-              </a>
-            </div>
+                        <div class="col-md-4 tile-wrapper">
+                            <a href="#">
+                                <div class="tile">
+                                    <img src="_/img/tile-2.svg" alt="home-logo">
+                                </div>
+                                <span class="tile-title">Plugin basics</span>
+                            </a>
+                        </div>
 
-            <div class="col-md-4 tile-wrapper">
-              <a href="#">
-                <div class="tile"></div>
-                <span class="tile-title">plentyshop</span>
-              </a>
-            </div>
+                        <div class="col-md-4 tile-wrapper">
+                            <a href="#">
+                                <div class="tile">
+                                    <img src="_/img/tile-3.svg" alt="home-logo">
+                                </div>
+                                <span class="tile-title">plentyshop</span>
+                            </a>
+                        </div>
 
-            <div class="col-md-4 tile-wrapper">
-              <a href="/en-gb/plentymarkets-rest-api/index.html">
-                <div class="tile"></div>
-                <span class="tile-title">REST API</span>
-              </a>
-            </div>
+                        <div class="col-md-4 tile-wrapper">
+                            <a href="/en-gb/plentymarkets-rest-api/index.html">
+                                <div class="tile">
+                                    <img src="_/img/tile-4.svg" alt="home-logo">
+                                </div>
+                                <span class="tile-title">REST API</span>
+                            </a>
+                        </div>
 
-            <div class="col-md-4 tile-wrapper">
-              <a href="#">
-                <div class="tile"></div>
-                <span class="tile-title">Interface Docs</span>
-              </a>
-            </div>
+                        <div class="col-md-4 tile-wrapper">
+                            <a href="#">
+                                <div class="tile">
+                                    <img src="_/img/tile-5.svg" alt="home-logo">
+                                </div>
+                                <span class="tile-title">Interface Docs</span>
+                            </a>
+                        </div>
 
-            <div class="col-md-4 tile-wrapper">
-              <a href="#">
-                <div class="tile"></div>
-                <span class="tile-title">plenty Base</span>
-              </a>
+                        <div class="col-md-4 tile-wrapper">
+                            <a href="#">
+                                <div class="tile">
+                                    <img src="_/img/tile-6.svg" alt="home-logo">
+                                </div>
+                                <span class="tile-title">plenty Base</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
-  <div class="stack-wrapper pb-3 pt-lg-5">
-    <h5 class="title pb-3">What keeps the fire burning:</h5>
-    <img src="/en-gb/_/img/stack-1.png" alt="home-logo">
-    <img src="/en-gb/_/img/stack-2.png" alt="home-logo">
-    <img src="/en-gb/_/img/stack-3.png" alt="home-logo">
-    <img src="/en-gb/_/img/stack-4.png" alt="home-logo">
-    <img src="/en-gb/_/img/stack-5.png" alt="home-logo">
-  </div>
+    <div class="stack-wrapper pb-3 mt-md-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h6 class="title pb-1">TECHNOLOGY STACK</h6>
+                    <h2 class="title pb-3">What keeps the fire burning</h2>
+                    <div class="stack-inner-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="_/img/stack-1.png" alt="home-logo">
+                        </div>
+
+                        <div class="logo-wrapper">
+                            <img src="_/img/stack-2.png" alt="home-logo">
+                        </div>
+
+                        <div class="logo-wrapper">
+                            <img src="_/img/stack-3.png" alt="home-logo">
+                        </div>
+
+                        <div class="logo-wrapper">
+                            <img src="_/img/stack-4.png" alt="home-logo">
+                        </div>
+
+                        <div class="logo-wrapper">
+                            <img src="_/img/stack-5.png" alt="home-logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 {{> footer}}
-
+{{> body-scripts}}
 </body>
 </html>
