@@ -204,6 +204,7 @@
 .doc table.tableblock thead th {
   border-bottom: 2.5px solid var(--table-border-color);
   padding: 0.5rem;
+  font-weight: 700;
 }
 
 .doc table.tableblock td,
@@ -211,6 +212,11 @@
   border-top: 1px solid var(--table-border-color);
   border-bottom: 1px solid var(--table-border-color);
   padding: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.doc table.tableblock tr:nth-child(even) {
+  background-color: var(--plentyGreysLimedSpruce);
 }
 
 .doc .halign-left {
@@ -703,4 +709,36 @@
 
 .doc .tableblock caption {
   caption-side: top;
+}
+
+
+.doc .collapsebox {
+  position: relative;
+	display: flex;
+	flex-direction: column;
+  padding: 15px 20px;
+  background: #04485b;
+  color: #fbfbfb;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.doc .collapsebox .title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.doc .collapsebox .title::after {
+  /* TODO implement arrow from fonts */
+  content: '>';
+  transform: rotate(90deg);
+  font-family: plenty-icons;
+  float: right;
+  margin-left: 5px;
+}
+
+
+.doc .collapsebox .content {
+  font-weight: 400;
+  font-size: calc(16/var(--rem-base)*1rem);
 }
