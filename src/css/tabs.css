@@ -1,0 +1,65 @@
+.doc .tabs ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0 -0.25rem 0 0;
+  padding: 0;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.doc .tabs ul li p {
+  width: 100%;
+  text-align: center;
+}
+
+.doc .tabs li {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  font-weight: bold;
+  height: 3.5rem;
+  line-height: 1;
+  margin-bottom: 0;
+  padding: 0 1.5rem;
+  position: relative;
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+  background-color: var(--plentyBluesTealBlue);
+}
+
+.doc .tabs li:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.doc .tabs li:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.doc .tabs li:not(:last-child) {
+  margin-right: 2px;
+}
+
+.doc .tabs li + li {
+  margin-top: 0;
+}
+
+.doc .tabset.is-loading .tabs li:not(:first-child),
+.doc .tabset:not(.is-loading) .tabs li:not(.is-active) {
+  background-color: var(--plentyGreysLimedSpruce);
+}
+
+.doc .tabset > .content {
+  padding: 1.25rem;
+}
+
+.doc .tabset.is-loading .tab-pane:not(:first-child),
+.doc .tabset:not(.is-loading) .tab-pane:not(.is-active) {
+  display: none;
+}
+
+.doc .tab-pane > :first-child {
+  margin-top: 0;
+}
