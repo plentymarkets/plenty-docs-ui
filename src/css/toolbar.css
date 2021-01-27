@@ -60,7 +60,7 @@
 }
 
 .home-link::before {
-  content: "\e917";
+  content: "\e90b";
   font-family: plenty-icons;
   font-size: 2em;
 }

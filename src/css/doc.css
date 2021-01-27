@@ -290,45 +290,40 @@
 .doc .admonitionblock.caution .icon {
   color: var(--caution-on-color);
 }
-/*TODO place icon code into ::after */
 .doc .admonitionblock.caution .icon i::after {
-  content: 'caution';
+  content: '\e95a';
 }
 
 .doc .admonitionblock.important .icon {
   color: var(--important-on-color);
 }
 
-/*TODO place icon code into ::after */
 .doc .admonitionblock.important .icon i::after {
-  content: 'important';
+  content: '\e929';
 }
 
 .doc .admonitionblock.note .icon {
   color: var(--note-on-color);
 }
 
-/*TODO place icon code into ::after */
 .doc .admonitionblock.note .icon i::after {
-  content: "\e90f";
+  content: '\e929';
 }
 
 .doc .admonitionblock.tip .icon {
   color: var(--tip-on-color);
 }
 
-/*TODO place icon code into ::after */
 .doc .admonitionblock.tip .icon i::after {
-  content: "\e910";
+  content: '\e92a';
 }
 
 .doc .admonitionblock.warning .icon {
   color: var(--warning-on-color);
 }
 
-/*TODO place icon code into ::after */
 .doc .admonitionblock.warning .icon i::after {
-  content: "\e90f";
+  content: '\e929';
   transform: rotate(180deg);
 }
 
@@ -735,14 +730,15 @@
 }
 
 .doc .collapsebox .title::after {
-  /* TODO implement arrow from fonts */
-  content: '>';
-  transform: rotate(90deg);
+  content: '\e920';
   font-family: plenty-icons;
   float: right;
   margin-left: 5px;
 }
 
+.doc .collapsebox.active .title::after {
+  content: '\e914';
+}
 
 .doc .collapsebox .content {
   display: none;
