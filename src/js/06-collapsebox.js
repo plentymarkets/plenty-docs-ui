@@ -1,9 +1,9 @@
 ; (function () {
-  var colbox = document.getElementsByClassName('collapsebox')
+  var colboxes = document.getElementsByClassName('collapsebox')
 
-  colbox.forEach((collapsible) => {
-    collapsible.onclick = function () {
+  for (var i = 0; i < colboxes.length; i++) {
+    colboxes[i].onclick = function () {
       this.classList.toggle('active')
     }
-  })
+  }
 })()

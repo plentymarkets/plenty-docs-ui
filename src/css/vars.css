@@ -10,6 +10,7 @@
     --plentyRedCrimson: #D4021D;
     --plentyRedSeaPink: #F0A3AB;
     --plentyMalachite: #42952D;
+    --plentyAdocYellow: #e18114;
     /* colors */
     --primary-color: var(--plentyBluesFadedJade);
     --secondary-color: var(--plentyBluesTealBlue);
@@ -74,13 +75,13 @@
     --caution-color: var(--color-white);
     --caution-on-color: var(--plentyRedCrimson);
     --important-color: var(--color-white);
-    --important-on-color: var(--plentyRedCrimson);
+    --important-on-color: var(--plentyAdocYellow);
     --note-color: var(--color-white);
     --note-on-color: var(--plentyBluesPacificBlue);
     --tip-color: var(--color-white);
     --tip-on-color: var(--plentyMalachite);
     --warning-color: var(--color-white);
-    --warning-on-color: #e18114;
+    --warning-on-color: var(--plentyAdocYellow);
     /* doc */
     --doc-font-color: var(--color-white);
     --doc-font-size: inherit;
