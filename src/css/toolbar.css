@@ -2,7 +2,7 @@
   color: var(--toolbar-font-color);
   align-items: center;
   display: flex;
-  font-size: calc(13 / var(--rem-base) * 1rem);
+  font-size: var(--toolbar-font-size);
   height: var(--toolbar-height);
   justify-content: flex-start;
   z-index: var(--z-index-toolbar);
@@ -54,28 +54,52 @@
   display: block;
   height: 2rem;
   width: 2rem;
-  padding: .25rem;
+  padding: 0.25rem;
   line-height: 1;
   margin-left: 40px;
 }
 
 .home-link::before {
   content: "\e90b";
-  font-family: plenty-icons;
+  font-family: var(--plenty-icon-font-family);
   font-size: 2em;
 }
 
-.edit-this-page {
-  display: none;
-  padding-right: 0.5rem;
+.toolbar-actions {
+  display: flex;
+  margin-right: 0.75rem;
+}
+
+.toolbar-action:last-child {
+  margin: 0;
 }
 
 @media screen and (min-width: 1024px) {
-  .edit-this-page {
+  .toolbar-action {
     display: block;
   }
 }
 
-.toolbar .edit-this-page a {
-  color: var(--toolbar-muted-color);
+.toolbar .toolbar-action {
+  background: var(--color-white);
+  border-radius: 50%;
+  padding: 0.25rem;
+  margin-right: 0.5rem;
+  font-size: var(--toolbar-font-size);
+  color: var(--plentyBluesFadedJade);
+  display: grid;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.is-disabled {
+  color: currentColor;
+  cursor: not-allowed;
+  text-decoration: none;
+}
+
+.is-disabled:hover {
+  opacity: 1;
 }
