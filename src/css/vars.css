@@ -20,6 +20,7 @@
     --grau-blau-sans: "Graublau Sans";
     --source-sans-pro: "Source Sans Pro";
     --source-code-pro: "Source Code Pro";
+    --plenty-icon-font-family: "plentymarkets-icon-font" !important;
     --rem-base: 16;
     /* used to compute rem value from desired pixel value (e.g., calc(18 / var(--rem-base) * 1rem) = 18px) */
     --body-font-size: 1em;
@@ -64,6 +65,8 @@
     --toolbar-border-color: var(--panel-border-color);
     --toolbar-font-color: var(--color-white);
     --toolbar-muted-color: var(--color-gray-30);
+    --toolbar-font-size: calc(13 / var(--rem-base) * 1rem);
+    --toolbar-actions-font-size: 1rem;
     --page-version-menu-background: var(--plentyGreysLimedSpruce);
     --page-version-missing-font-color: var(--color-gray-30);
     /* toc */

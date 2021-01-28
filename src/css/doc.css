@@ -90,7 +90,7 @@
 .doc h5 .anchor::before,
 .doc h6 .anchor::before {
   content: "\e942";
-  font-family: 'plenty-icons';
+  font-family: var(--plenty-icon-font-family);
 }
 
 .doc h1:hover .anchor,
@@ -130,7 +130,7 @@
 .doc a[href^="http://"]:not([href*="#"]):before,
 .doc a[href^="https://"]:not([href*="#"]):before {
     content: "\e940";
-    font-family: plenty-icons;
+    font-family: var(--plenty-icon-font-family);
     padding: .25rem;
     vertical-align: top;
 }
@@ -338,7 +338,7 @@
 
 .doc .admonitionblock .icon i::after {
   content: attr(title);
-  font-family: "plenty-icons";
+  font-family: var(--plenty-icon-font-family);
 }
 
 .doc .imageblock {
@@ -732,7 +732,7 @@
 
 .doc .collapsebox .title::after {
   content: '\e920';
-  font-family: plenty-icons;
+  font-family: var(--plenty-icon-font-family);
   float: right;
   margin-left: 5px;
 }
@@ -748,4 +748,28 @@
 }
 .doc .collapsebox.active .content {
   display: block;
+}
+
+.doc .videoblock {
+  flex-direction: column-reverse;
+  margin: 1rem;
+  display: flex;
+}
+
+.doc .videoblock .content {
+  text-align: center;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+}
+
+.doc .videoblock .content iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

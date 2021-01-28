@@ -1,13 +1,16 @@
 <div class="toolbar" role="navigation">
-{{> nav-toggle}}
+  {{> nav-toggle}}
   {{#with site.homeUrl}}
   <a href="{{{relativize this}}}" class="home-link{{#if @root.page.home}} is-current{{/if}}"></a>
   {{/with}}
-{{> breadcrumbs}}
-{{> page-versions}}
-  {{#if (and page.fileUri (not env.CI))}}
-  <div class="edit-this-page"><a href="{{page.fileUri}}">Edit this Page</a></div>
-  {{else if (and page.editUrl (or env.FORCE_SHOW_EDIT_PAGE_LINK (not page.origin.private)))}}
-  <div class="edit-this-page"><a href="{{page.editUrl}}">Edit this Page</a></div>
-  {{/if}}
+  {{> breadcrumbs}}
+  {{> page-versions}}
+  <div class="toolbar-actions">
+    <a class="is-disabled toolbar-action"><i class="pif-intercom"></i></a>
+    {{#if (and page.fileUri (not env.CI))}}
+    <a class="toolbar-action" href="{{page.fileUri}}"><i class="pif-pen"></i></a>
+    {{else if (and page.editUrl (or env.FORCE_SHOW_EDIT_PAGE_LINK (not page.origin.private)))}}
+    <a class="toolbar-action" href="{{page.editUrl}}"><i class="pif-pen"></i></a>
+    {{/if}}
+  </div>
 </div>
