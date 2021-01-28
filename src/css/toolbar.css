@@ -62,7 +62,7 @@
 .home-link::before {
   content: "\e90b";
   font-family: var(--plenty-icon-font-family);
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .toolbar-actions {
