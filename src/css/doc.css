@@ -749,3 +749,27 @@
 .doc .collapsebox.active .content {
   display: block;
 }
+
+.doc .videoblock {
+  flex-direction: column-reverse;
+  margin: 1rem;
+  display: flex;
+}
+
+.doc .videoblock .content {
+  text-align: center;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+}
+
+.doc .videoblock .content iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
