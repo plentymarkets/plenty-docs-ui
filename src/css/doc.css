@@ -90,7 +90,7 @@
 .doc h5 .anchor::before,
 .doc h6 .anchor::before {
   content: "\e942";
-  font-family: 'plenty-icons';
+  font-family: var(--plenty-icon-font-family);
 }
 
 .doc h1:hover .anchor,
@@ -130,7 +130,7 @@
 .doc a[href^="http://"]:not([href*="#"]):before,
 .doc a[href^="https://"]:not([href*="#"]):before {
     content: "\e940";
-    font-family: plenty-icons;
+    font-family: var(--plenty-icon-font-family);
     padding: .25rem;
     vertical-align: top;
 }
@@ -338,7 +338,7 @@
 
 .doc .admonitionblock .icon i::after {
   content: attr(title);
-  font-family: "plenty-icons";
+  font-family: var(--plenty-icon-font-family);
 }
 
 .doc .imageblock {
@@ -732,7 +732,7 @@
 
 .doc .collapsebox .title::after {
   content: '\e920';
-  font-family: plenty-icons;
+  font-family: var(--plenty-icon-font-family);
   float: right;
   margin-left: 5px;
 }
