@@ -66,6 +66,7 @@
     --toolbar-font-color: var(--color-white);
     --toolbar-muted-color: var(--color-gray-30);
     --toolbar-font-size: calc(13 / var(--rem-base) * 1rem);
+    --toolbar-actions-font-size: 1rem;
     --page-version-menu-background: var(--plentyGreysLimedSpruce);
     --page-version-missing-font-color: var(--color-gray-30);
     /* toc */

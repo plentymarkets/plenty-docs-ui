@@ -2,7 +2,7 @@
   color: var(--toolbar-font-color);
   align-items: center;
   display: flex;
-  font-size: var(--toolbar-font-size);
+  font-size: var(--toolbar-actions-font-size);
   height: var(--toolbar-height);
   justify-content: flex-start;
   z-index: var(--z-index-toolbar);
@@ -85,7 +85,7 @@
   border-radius: 50%;
   padding: 0.25rem;
   margin-right: 0.5rem;
-  font-size: var(--toolbar-font-size);
+  font-size: var(--toolbar-actions-font-size);
   color: var(--plentyBluesFadedJade);
   display: grid;
   align-items: center;
