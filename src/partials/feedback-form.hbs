@@ -1,0 +1,38 @@
+<div class="feedback-form-{{location}}-wrapper">
+    <div class="feedback-form-wrapper">
+        <form class="feedback-form" data-location="{{location}}">
+            <div class="top">
+                <h6 class="title">FEEDBACK</h6>
+            </div>
+
+            <textarea placeholder="Enter your feedback here..." name="feedback" id="feedback"
+                      rows="10"></textarea>
+            <input type="hidden" name="location" value="{{location}}">
+
+            <div class="opinion-wrapper">
+                <button type="submit" class="opinion like" data-location="{{location}}" data-opinion="like">
+                    <i class="pif-thumbs-up"></i>
+                    This documentation was useful
+                </button>
+
+                <button type="submit" class="opinion dislike" data-location="{{location}}" data-opinion="dislike">
+                    <i class="pif-thumbs-down"></i>
+                    This documentation wasn't useful
+                </button>
+            </div>
+        </form>
+        <div class="feedback-submitted d-none">
+            Thank you for your feedback.
+        </div>
+        <i class="pif-add close"></i>
+    </div>
+</div>
+
+<script>
+    var Feedback = {
+        page: '{{ page.title }}',
+        space: 'AAAAFHhmz80',
+        key: 'AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI',
+        token: 'H7zyIArazaYYgfAIsLkPigpFTJUv4IhgPCrosCyPbjY'
+    }
+</script>

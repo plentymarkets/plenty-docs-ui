@@ -17,6 +17,7 @@ const postcssImport = require('postcss-import')
 const postcssUrl = require('postcss-url')
 const postcssVar = require('postcss-custom-properties')
 const uglify = require('gulp-uglify')
+const babel = require('gulp-babel')
 const vfs = require('vinyl-fs')
 
 module.exports = (src, dest, preview) => () => {
@@ -57,6 +58,9 @@ module.exports = (src, dest, preview) => () => {
   return merge(
     vfs
       .src('js/+([0-9])-*.js', { ...opts, sourcemaps })
+      .pipe(babel({
+        presets: ['@babel/env'],
+      }))
       .pipe(uglify())
       // NOTE concat already uses stat from newest combined file
       .pipe(concat('js/site.js')),

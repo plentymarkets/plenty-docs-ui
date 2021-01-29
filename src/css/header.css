@@ -31,9 +31,14 @@ body {
 
 .search {
   position: relative;
-  padding-left: 25px;
-  border-left: 1px solid white;
-  margin-left: 25px;
+}
+
+@media screen and (min-width: 769px) {
+  .search {
+    padding-left: 25px;
+    border-left: 1px solid white;
+    margin-left: 25px;
+  }
 }
 
 .search input {
@@ -235,6 +240,12 @@ body {
   margin-left: 20px;
 }
 
+@media screen and (max-width: 769px) {
+  .navbar .left {
+    margin: 0 auto;
+  }
+}
+
 .navbar .left .logo img {
   width: auto;
   height: 35px;
@@ -251,6 +262,13 @@ body {
 .navbar .right {
   display: flex;
   margin-right: 30px;
+}
+
+@media screen and (max-width: 769px) {
+  .navbar .right {
+    margin: 0 auto;
+    margin-top: 10px;
+  }
 }
 
 .navbar .right .menu-wrapper {
@@ -313,6 +331,15 @@ body {
   top: 100px;
   left: 0;
   width: 100vw;
+}
+
+@media screen and (max-width: 769px) {
+  .navbar .search {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 15px;
+  }
 }
 
 .navbar .search-wrapper .algolia-autocomplete {
