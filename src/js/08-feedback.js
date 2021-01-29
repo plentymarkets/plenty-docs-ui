@@ -1,22 +1,23 @@
 ;class FeedbackHandler {
   constructor ({ space, key, token, selector }) {
+    this.selector = selector
     this.endpoint = `https://chat.googleapis.com/v1/spaces/${space}/messages?key=${key}&token=${token}`
-    this.registerListener(selector)
+    this.registerListener()
   }
 
-  registerListener (formSelector) {
-    $(formSelector).submit(this.submitHandler)
+  registerListener () {
+    $(this.selector + ' input[type=submit]').on('click', (event) => this.submitHandler(event))
   }
 
   submitHandler (event) {
     event.preventDefault()
 
-    var feedback = $('.feedback-form textarea[name=feedback]').val()
-    var opinion = $('input[name=opinion]').val()
+    const feedback = $(this.selector + ' textarea[name=feedback]').val()
+    const opinion = $(this.selector + ' input[name=opinion]').val()
 
-    var requestData = {
-      text: 'New ' + opinion + ' feedback on page: <' + window.location.href + '|' + window.Feedback.page + '>' +
-        '\n\nMessage below\n ' + feedback,
+    const requestData = {
+      text: `New ${opinion} feedback on page: <${window.location.href}|${window.Feedback.page}\n\n` +
+        `Message below\n${feedback}`,
     }
 
     this.sendFeedback(requestData, this.onSuccess)
@@ -42,5 +43,11 @@
 
 (function () {
   $(document).ready(function () {
+    new FeedbackHandler({
+      space: window.Feedback.space,
+      key: window.Feedback.key,
+      token: window.Feedback.token,
+      selector: 'form.feedback-form',
+    })
   })
 })()
