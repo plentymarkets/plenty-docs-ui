@@ -5,6 +5,7 @@ class FeedbackHandler {
     this.page = page
     this.selector = selector
     this.endpoint = `https://chat.googleapis.com/v1/spaces/${space}/messages?key=${key}&token=${token}`
+    this.isSubmitting = false
     this.initializeForm()
     this.registerListener()
   }
@@ -55,6 +56,13 @@ class FeedbackHandler {
   }
 
   sendFeedback (data) {
+    if (this.isSubmitting) {
+      return
+    }
+
+    $(this.selector).addClass('disabled')
+    this.isSubmitting = true
+
     $.ajax(
       {
         type: 'POST',
@@ -62,7 +70,13 @@ class FeedbackHandler {
         dataType: 'json',
         contentType: 'application/json',
         data: JSON.stringify(data),
-        success: () => { this.onSuccess() },
+        success: () => {
+          this.onSuccess()
+        },
+        complete: () => {
+          $(this.selector).removeClass('disabled')
+          this.isSubmitting = false
+        },
       }
     )
   }
