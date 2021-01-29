@@ -28,7 +28,9 @@ class FeedbackHandler {
   submitHandler (event) {
     event.preventDefault()
 
-    const message = $(this.selector + ' textarea[name=feedback]').val() || 'No message was specified'
+    const location = event.target.getAttribute('data-location')
+    const textareaSelector = this.selector + '[data-location=' + location + '] textarea[name=feedback]'
+    const message = $(textareaSelector).val() || 'No message was specified'
     const opinion = event.target.getAttribute('data-opinion')
 
     const requestData = {

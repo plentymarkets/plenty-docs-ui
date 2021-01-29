@@ -1,6 +1,6 @@
 <div class="feedback-form-{{location}}-wrapper">
     <div class="feedback-form-wrapper">
-        <form class="feedback-form" action="" method="post" data-type="{{location}}">
+        <form class="feedback-form" data-location="{{location}}">
             <div class="top">
                 <h6 class="title">FEEDBACK</h6>
             </div>
@@ -10,12 +10,12 @@
             <input type="hidden" name="location" value="{{location}}">
 
             <div class="opinion-wrapper">
-                <button type="submit" class="opinion like" data-opinion="like">
+                <button type="submit" class="opinion like" data-location="{{location}}" data-opinion="like">
                     <i class="pif-thumbs-up"></i>
                     This documentation was useful
                 </button>
 
-                <button type="submit" class="opinion dislike" data-opinion="dislike">
+                <button type="submit" class="opinion dislike" data-location="{{location}}" data-opinion="dislike">
                     <i class="pif-thumbs-down"></i>
                     This documentation wasn't useful
                 </button>
