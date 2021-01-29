@@ -83,5 +83,9 @@ class FeedbackHandler {
       page: window.Feedback.page,
       selector: 'form.feedback-form',
     })
+
+    $('.feedback-popup, .close').on('click touch', function () {
+      $('.feedback-form-popup-wrapper').toggleClass('d-flex')
+    })
   })
 })()

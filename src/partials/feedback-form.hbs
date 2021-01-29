@@ -1,9 +1,8 @@
 <div class="feedback-form-{{location}}-wrapper">
     <div class="feedback-form-wrapper">
-        <form class="feedback-form" action="" method="post">
+        <form class="feedback-form" action="" method="post" data-type="{{location}}">
             <div class="top">
                 <h6 class="title">FEEDBACK</h6>
-                <i class="pif-add close"></i>
             </div>
 
             <textarea placeholder="Enter your feedback here..." name="feedback" id="feedback"
@@ -25,6 +24,7 @@
         <div class="feedback-submitted d-none">
             Thank you for your feedback.
         </div>
+        <i class="pif-add close"></i>
     </div>
 </div>
 
