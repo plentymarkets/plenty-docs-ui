@@ -92,6 +92,7 @@ class FeedbackHandler {
 
 (function () {
   $(document).ready(function () {
+    // eslint-disable-next-line
     new FeedbackHandler({
       space: window.Feedback.space,
       key: window.Feedback.key,
