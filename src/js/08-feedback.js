@@ -15,9 +15,13 @@ class FeedbackHandler {
 
   initializeForm () {
     if (this.feedbackWasGivenBefore()) {
-      $(this.selector).hide()
-      $(this.selector + ' .feedback-submitted').show()
+      this.hideForm()
     }
+  }
+
+  hideForm () {
+    $(this.selector).hide()
+    $(this.selector + ' .feedback-submitted').show()
   }
 
   submitHandler (event) {
@@ -66,6 +70,7 @@ class FeedbackHandler {
   onSuccess () {
     const now = new Date()
     window.localStorage.setItem('feedback_' + this.page, JSON.stringify(now.getTime() + FEEDBACK_TTL))
+    this.hideForm()
   }
 }
 
