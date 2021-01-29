@@ -6,7 +6,7 @@
   {{> breadcrumbs}}
   {{> page-versions}}
   <div class="toolbar-actions">
-    <a class="toolbar-action feedback-popup" href="javascript:void(0)"><i class="pif-intercom"></i></a>
+    <a class="toolbar-action feedback-popup" href="javascript:void(0)"><i class="fa-pif-intercom"></i></a>
     {{#if (and page.fileUri (not env.CI))}}
     <a class="toolbar-action" href="{{page.fileUri}}"><i class="fa-pif-pen"></i></a>
     {{else if (and page.editUrl (or env.FORCE_SHOW_EDIT_PAGE_LINK (not page.origin.private)))}}
