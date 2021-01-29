@@ -11,14 +11,16 @@
   margin: 0rem 0 2rem;
 }
 
-.toolbar::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 100vw;
-  border-bottom: 1px solid var(--plenty-secondaries-white);
-  margin: var(--doc-margin--desktop);
-  z-index: -1;
+@media screen and (min-width: 1024px) {
+  .toolbar::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    border-bottom: 1px solid var(--plenty-secondaries-white);
+    margin: var(--doc-margin--desktop);
+    z-index: -1;
+  }
 }
 
 .toolbar a {
@@ -35,6 +37,7 @@
   padding: 0;
   width: 2.5rem;
   margin-right: -0.25rem;
+  filter: brightness(100);
 }
 
 @media screen and (min-width: 1024px) {
@@ -46,6 +49,7 @@
 .nav-toggle.is-active {
   background-image: url(../img/back.svg);
   background-size: 41.5%;
+  filter: invert(1);
 }
 
 .home-link {
@@ -78,4 +82,14 @@
 
 .toolbar .edit-this-page a {
   color: var(--toolbar-muted-color);
+}
+
+@media screen and (max-width: 769px) {
+  .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    margin: 10px;
+  }
 }
