@@ -5,11 +5,23 @@ class FeedbackHandler {
     this.page = page
     this.selector = selector
     this.endpoint = `https://chat.googleapis.com/v1/spaces/${space}/messages?key=${key}&token=${token}`
+    this.initializeForm()
     this.registerListener()
   }
 
   registerListener () {
     $(this.selector + ' button[type=submit]').on('click', (event) => this.submitHandler(event))
+  }
+
+  initializeForm () {
+    if (this.feedbackWasGivenBefore()) {
+      this.hideForm()
+    }
+  }
+
+  hideForm () {
+    $(this.selector).hide()
+    $(this.selector + ' .feedback-submitted').show()
   }
 
   submitHandler (event) {
@@ -58,6 +70,7 @@ class FeedbackHandler {
   onSuccess () {
     const now = new Date()
     window.localStorage.setItem('feedback_' + this.page, JSON.stringify(now.getTime() + FEEDBACK_TTL))
+    this.hideForm()
   }
 }
 
