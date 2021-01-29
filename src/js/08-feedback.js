@@ -5,18 +5,14 @@ class FeedbackHandler {
     this.page = page
     this.selector = selector
     this.endpoint = `https://chat.googleapis.com/v1/spaces/${space}/messages?key=${key}&token=${token}`
-    this.initializeForm()
+    if (this.feedbackWasGivenBefore()) {
+      this.hideForm()
+    }
     this.registerListener()
   }
 
   registerListener () {
     $(this.selector + ' button[type=submit]').on('click', (event) => this.submitHandler(event))
-  }
-
-  initializeForm () {
-    if (this.feedbackWasGivenBefore()) {
-      this.hideForm()
-    }
   }
 
   hideForm () {
