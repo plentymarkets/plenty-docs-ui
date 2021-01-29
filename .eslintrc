@@ -10,5 +10,8 @@
     }],
     "max-len": [1, 120, 2],
     "spaced-comment": "off"
+  },
+  "env": {
+    "jquery": true
   }
 }
