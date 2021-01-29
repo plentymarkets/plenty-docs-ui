@@ -1,11 +1,21 @@
-<div class="feedback-form-wrapper feedback-{{location}}">
-    <form class="feedback-form">
-        <label for="feedback">Feedback</label><textarea name="feedback" id="feedback" cols="30" rows="10"></textarea>
-        <input type="hidden" name="location" value="{{location}}">
-        <input type="radio" name="opinion" value="good" checked>Like
-        <input type="radio" name="opinion" value="bad">Dislike
-        <input type="submit" value="Send feedback">
-    </form>
+<div class="feedback-form-{{location}}-wrapper">
+    <div class="feedback-form-wrapper">
+        <form class="feedback-form" action="" method="post">
+            <div class="top">
+                <h6 class="title">FEEDBACK</h6>
+                <i class="pif-add close"></i>
+            </div>
+
+            <textarea placeholder="Enter your feedback here..." name="feedback" id="feedback"
+                      rows="10"></textarea>
+            <input type="hidden" name="location" value="{{location}}">
+
+            <div class="opinion-wrapper">
+                <button type="submit" class="opinion like">This documentation was useful</button>
+                <button type="submit" class="opinion dislike">This documentation was not useful</button>
+            </div>
+        </form>
+    </div>
 </div>
 
 <script>
