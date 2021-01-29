@@ -1,22 +1,128 @@
+/****************** GENERAL STYLE ******************/
+
 .feedback-form-wrapper textarea {
     width: 100%;
+    background: var(--body-background);
+    padding: 10px;
+    color: white;
+    border: none;
+}
+
+.feedback-form-wrapper textarea:focus {
+    outline: none;
+}
+
+.feedback-form-wrapper textarea::placeholder {
+    color: #fbfbfb;
 }
 
 .feedback-form-wrapper {
     padding: 20px;
     background: var(--nav-background);
-    border-radius: 5px;
+    border-radius: 15px;
 }
 
 .feedback-form-wrapper .feedback-content {
     margin-top: 30px;
 }
 
-.feedback-form-wrapper.feedback-popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 999;
+.feedback-form-wrapper button.opinion {
+    padding: 15px;
+    font-weight: bold;
+    background: none;
+}
+
+.feedback-form-wrapper button.opinion.like {
+    border: 1px solid #008EBD;
+    color: #008EBD;
+}
+
+.feedback-form-wrapper button.opinion.dislike {
+    border: 1px solid #D4021D;
+    color: #D4021D;
+}
+
+.feedback-form-wrapper button.opinion.submit {
+    background: var(--primary-color);
+    color: white;
+    width: 100%;
+    border: none;
+}
+
+
+/****************** POPUP STYLE ******************/
+
+.feedback-form-popup-wrapper .top {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.feedback-form-content-wrapper .close {
     display: none;
+}
+
+.feedback-form-popup-wrapper .top .title {
+    width: 100%
+}
+
+.feedback-form-popup-wrapper .top .close {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    color: white;
+    transform: rotate(45deg);
+}
+
+.feedback-form-popup-wrapper .top .close:hover {
+    cursor: pointer;
+}
+
+.feedback-form-popup-wrapper {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.feedback-form-popup-wrapper .feedback-form-wrapper {
+    width: 350px;
+    margin: 0 auto;
+}
+
+.feedback-form-popup-wrapper button.opinion {
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+/******************* CONTENT STYLE *****************/
+.feedback-form-content-wrapper {
+    margin-top: 30px;
+}
+
+.feedback-form-content-wrapper h6 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: calc(24/16);
+}
+
+.feedback-form-content-wrapper .opinion-wrapper {
+    display: flex;
+}
+
+.feedback-form-content-wrapper .opinion-wrapper .opinion {
+    margin-top: 10px;
+    width: 50%;
+}
+
+.feedback-form-content-wrapper .opinion-wrapper .opinion:first-child {
+    margin-right: 15px;
 }
