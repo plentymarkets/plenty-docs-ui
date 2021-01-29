@@ -30,23 +30,22 @@
     padding: 15px;
     font-weight: bold;
     background: none;
+    color: white;
+    border: none;
 }
 
 .feedback-form-wrapper button.opinion.like {
-    border: 1px solid #008EBD;
-    color: #008EBD;
+    background: #008EBD;
 }
 
 .feedback-form-wrapper button.opinion.dislike {
-    border: 1px solid #D4021D;
-    color: #D4021D;
+    background: #D4021D;
 }
 
-.feedback-form-wrapper button.opinion.submit {
-    background: var(--primary-color);
-    color: white;
-    width: 100%;
-    border: none;
+.feedback-form-wrapper i {
+    font-size: 25px;
+    padding: 5px;
+    vertical-align: middle;
 }
 
 
