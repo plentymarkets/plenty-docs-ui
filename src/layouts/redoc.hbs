@@ -5,9 +5,44 @@
 </head>
 <body class="redoc">
 {{> header}}
-<redoc spec-url={{ page.attributes.specurl }} nativeScrollbars noAutoAuth></redoc>
+<div id="redoc-container"></div>
+<!--
+<redoc
+  spec-url={{ page.attributes.specurl }}
+  scroll-y-offset="header > .navbar > .container-fluid"
+  nativeScrollbars
+  noAutoAuth>
+</redoc>
+-->
 <script src="https://cdn.jsdelivr.net/npm/redoc@next/bundles/redoc.standalone.js"></script>
-{{> footer}}
+<script>
+Redoc.init('{{ page.attributes.specurl }}', {
+  scrollYOffset: "header > .navbar > .container-fluid",
+  nativeScrollbars: true,
+  noAutoAuth: true,
+  theme: {
+    menu: {
+      backgroundColor: '#04485b',
+      textColor: 'white',
+      width: '23.75rem',
+    },
+    colors: {
+      primary: {
+        main: '#fbfbfb'
+      },
+      text: {
+        primary: '#fbfbfb',
+      },
+      success: {
+        main: '#12c924'
+      },
+      error: {
+        main: '#ff0400'
+      },
+    }
+  }
+}, document.getElementById('redoc-container'))
+</script>
 {{> body-scripts}}
 </body>
 </html>

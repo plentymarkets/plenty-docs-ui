@@ -1,0 +1,68 @@
+#redoc-container .menu-content {
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.2);
+}
+
+#redoc-container .logiML {
+  display: none;
+}
+
+#redoc-container h1,
+#redoc-container h2,
+#redoc-container h3,
+#redoc-container h4,
+#redoc-container h5 {
+  color: #fbfbfb;
+}
+
+#redoc-container table {
+  border-collapse: collapse;
+  font-size: calc(15 / var(--rem-base) * 1rem);
+  margin: 2rem 0;
+  width: 100%;
+}
+
+#redoc-container table tr {
+  border-top: none;
+  background-color: transparent;
+  border-bottom: 1px solid #fbfbfb;
+}
+
+#redoc-container table tr:last-child {
+  border-bottom: none;
+}
+
+#redoc-container table thead th {
+  border-bottom: 2.5px solid var(--table-border-color);
+  padding: 0.5rem;
+}
+
+#redoc-container table td,
+#redoc-container table th,
+#redoc-container table > :not(thead) th {
+  padding: 0.5rem;
+  border: none;
+  background-image: none;
+  border-left: 1px solid #fbfbfb;
+}
+
+#redoc-container table td:first-child,
+#redoc-container table th:first-child {
+  border-left: none;
+}
+
+#redoc-container .dropdown-selector-value {
+  color: #7395a5;
+}
+
+#redoc-container ul > li.react-tabs__tab--selected {
+  color: black;
+}
+
+#redoc-container input.search-input::placeholder {
+  color: white;
+}
+
+#redoc-container div[role=button] div,
+#redoc-container div[role=button] span {
+  color: black;
+}

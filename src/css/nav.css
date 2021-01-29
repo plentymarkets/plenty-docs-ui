@@ -276,19 +276,28 @@ html.is-clipped--nav {
   font-weight: var(--version-font-weight);
 }
 
+.nav-panel-explore .component .version a:hover {
+  color: var(--plentyBluesPictonBlue);
+  border-color: var(--plentyBluesPictonBlue);
+}
 .nav-panel-explore .component .version a {
   border: 2px solid var(--nav-border-color);
   border-radius: 1.5rem;
   color: inherit;
   opacity: 0.75;
   white-space: nowrap;
-  padding: 0 7px;
+  padding: 4px 7px;
   display: inherit;
 }
 
 .nav-panel-explore .component .is-current a {
-  border-color: #fff;
-  color: #fff;
+  border-color: var(--plentyBluesPacificBlue);
+  color: var(--plentyBluesPacificBlue);
+}
+
+.nav-panel-explore .component .is-current a:hover {
+  border-color: var(--plentyBluesPacificBlue);
+  color: var(--plentyBluesPacificBlue);
 }
 
 /*

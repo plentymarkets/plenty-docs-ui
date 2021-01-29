@@ -80,7 +80,7 @@
   visibility: hidden;
   font-size: 0.8em;
   font-weight: normal;
-  padding-top: 0.05em;
+  padding-top: 0.15em;
 }
 
 .doc h1 .anchor::before,
@@ -89,8 +89,8 @@
 .doc h4 .anchor::before,
 .doc h5 .anchor::before,
 .doc h6 .anchor::before {
-  content: "\e928";
-  font-family: 'plenty-icons';
+  content: "\e942";
+  font-family: var(--plenty-icon-font-family);
 }
 
 .doc h1:hover .anchor,
@@ -129,9 +129,10 @@
 
 .doc a[href^="http://"]:not([href*="#"]):before,
 .doc a[href^="https://"]:not([href*="#"]):before {
-    content: "\e926";
-    font-family: plenty-icons;
-    padding: .1rem .25rem;
+    content: "\e940";
+    font-family: var(--plenty-icon-font-family);
+    padding: .25rem;
+    vertical-align: top;
 }
 
 .doc i.fa {
@@ -290,45 +291,40 @@
 .doc .admonitionblock.caution .icon {
   color: var(--caution-on-color);
 }
-/*TODO place icon code into ::after */
 .doc .admonitionblock.caution .icon i::after {
-  content: 'caution';
+  content: '\e95a';
 }
 
 .doc .admonitionblock.important .icon {
   color: var(--important-on-color);
 }
 
-/*TODO place icon code into ::after */
 .doc .admonitionblock.important .icon i::after {
-  content: 'important';
+  content: '\e929';
 }
 
 .doc .admonitionblock.note .icon {
   color: var(--note-on-color);
 }
 
-/*TODO place icon code into ::after */
 .doc .admonitionblock.note .icon i::after {
-  content: "\e90f";
+  content: '\e929';
 }
 
 .doc .admonitionblock.tip .icon {
   color: var(--tip-on-color);
 }
 
-/*TODO place icon code into ::after */
 .doc .admonitionblock.tip .icon i::after {
-  content: "\e910";
+  content: '\e92a';
 }
 
 .doc .admonitionblock.warning .icon {
   color: var(--warning-on-color);
 }
 
-/*TODO place icon code into ::after */
 .doc .admonitionblock.warning .icon i::after {
-  content: "\e90f";
+  content: '\e929';
   transform: rotate(180deg);
 }
 
@@ -342,7 +338,7 @@
 
 .doc .admonitionblock .icon i::after {
   content: attr(title);
-  font-family: "plenty-icons";
+  font-family: var(--plenty-icon-font-family);
 }
 
 .doc .imageblock {
@@ -713,13 +709,19 @@
 
 
 .doc .collapsebox {
+  cursor: pointer;
   position: relative;
 	display: flex;
 	flex-direction: column;
   padding: 15px 20px;
-  background: #04485b;
+  background: var(--plentyBluesTealBlue);
   color: #fbfbfb;
-  border-radius: 5px 5px 0px 0px;
+  border-radius: 5px;
+  filter: drop-shadow(0px 5px 15px rgba(0, 0, 0, 0.15));
+}
+
+.doc .collapsebox:hover {
+  filter: brightness(85%);
 }
 
 .doc .collapsebox .title {
@@ -729,16 +731,45 @@
 }
 
 .doc .collapsebox .title::after {
-  /* TODO implement arrow from fonts */
-  content: '>';
-  transform: rotate(90deg);
-  font-family: plenty-icons;
+  content: '\e920';
+  font-family: var(--plenty-icon-font-family);
   float: right;
   margin-left: 5px;
 }
 
+.doc .collapsebox.active .title::after {
+  content: '\e914';
+}
 
 .doc .collapsebox .content {
+  display: none;
   font-weight: 400;
   font-size: calc(16/var(--rem-base)*1rem);
+}
+.doc .collapsebox.active .content {
+  display: block;
+}
+
+.doc .videoblock {
+  flex-direction: column-reverse;
+  margin: 1rem;
+  display: flex;
+}
+
+.doc .videoblock .content {
+  text-align: center;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+}
+
+.doc .videoblock .content iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
