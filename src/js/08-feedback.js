@@ -21,7 +21,7 @@ class FeedbackHandler {
 
   hideForm () {
     $(this.selector).hide()
-    $(this.selector + ' .feedback-submitted').show()
+    $(this.selector + '+ .feedback-submitted').removeClass('d-none')
   }
 
   submitHandler (event) {
