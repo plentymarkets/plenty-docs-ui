@@ -9,7 +9,7 @@
   if (navToggle) navToggle.addEventListener('click', showNav)
   if (navContainer) navContainer.addEventListener('click', concealEvent)
 
-  var menuPanel = navContainer.querySelector('[data-panel=menu]')
+  var menuPanel = navContainer.querySelector('[data-panel=menu]') || null
   if (!menuPanel) return
   var nav = navContainer.querySelector('.nav')
 
