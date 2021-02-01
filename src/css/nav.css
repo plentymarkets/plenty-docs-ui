@@ -6,7 +6,7 @@
   font-size: calc(17 / var(--rem-base) * 1rem);
   z-index: var(--z-index-nav);
   visibility: hidden;
-  background: #fefefe;
+  background: var(--body-background);
   box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.2);
 }
 
