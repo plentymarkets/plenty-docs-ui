@@ -6,6 +6,7 @@
     padding: 10px;
     color: white;
     border: none;
+    resize: none;
 }
 
 .feedback-form-wrapper textarea:focus {
@@ -19,7 +20,8 @@
 .feedback-form-wrapper {
     padding: 20px;
     background: var(--nav-background);
-    border-radius: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
 }
 
 .feedback-form-wrapper .feedback-content {
@@ -62,7 +64,7 @@
 }
 
 .feedback-form-popup-wrapper .top .title {
-    width: 100%
+    width: 100%;
 }
 
 .feedback-form-wrapper {
@@ -95,7 +97,7 @@
 }
 
 .feedback-form-popup-wrapper .feedback-form-wrapper {
-    width: 350px;
+    max-width: 90vw;
     margin: 0 auto;
 }
 
