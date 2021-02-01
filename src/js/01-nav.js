@@ -1,6 +1,9 @@
 ;(function () {
   'use strict'
 
+  // not needed on the homepage
+  if (document.querySelector('body.homepage')) return
+
   var SECT_CLASS_RX = /^sect(\d)$/
 
   var navContainer = document.querySelector('.nav-container')
