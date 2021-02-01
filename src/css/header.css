@@ -287,9 +287,11 @@ body {
   position: absolute;
   flex-wrap: wrap;
   flex-direction: column;
-  background: var(--body-background);
+  background: var(--secondary-background);
   padding: 10px;
+  border-radius: 5px;
   transform: translateX(-10px);
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
 }
 
 .navbar .right .menu-wrapper .submenu-wrapper .submenu-item:not(:first-of-type) {

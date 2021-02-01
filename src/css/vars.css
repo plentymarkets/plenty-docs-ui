@@ -39,6 +39,7 @@
     /* base */
     --body-background: var(--plentyBluesFadedJade);
     --panel-background: var(--plentyGreysLimedSpruce);
+    --secondary-background: var(--plentyBluesTealBlue);
     --panel-border-color: var(--color-white);
     --scrollbar-thumb-color: var(--plentyGreysNevada);
     /* navbar */
