@@ -1,16 +1,17 @@
 <div class="toolbar" role="navigation">
-  {{> nav-toggle}}
-  {{#with site.homeUrl}}
-  <a href="{{{relativize this}}}" class="home-link{{#if @root.page.home}} is-current{{/if}}"></a>
-  {{/with}}
-  {{> breadcrumbs}}
-  {{> page-versions}}
-  <div class="toolbar-actions">
-    <a class="toolbar-action feedback-popup" href="javascript:void(0)"><i class="fa-pif-intercom"></i></a>
-    {{#if (and page.fileUri (not env.CI))}}
-    <a class="toolbar-action" href="{{page.fileUri}}"><i class="fa-pif-pen"></i></a>
-    {{else if (and page.editUrl (or env.FORCE_SHOW_EDIT_PAGE_LINK (not page.origin.private)))}}
-    <a class="toolbar-action" href="{{page.editUrl}}"><i class="fa-pif-pen"></i></a>
-    {{/if}}
-  </div>
+    {{#with site.homeUrl}}
+        <a href="{{{relativize this}}}" class="home-link{{#if @root.page.home}} is-current{{/if}}"></a>
+    {{/with}}
+    {{> breadcrumbs}}
+    {{> page-versions}}
+    <div class="toolbar-actions">
+        {{#unless (eq page.layout '404')}}
+            <a class="toolbar-action feedback-popup" href="javascript:void(0)"><i class="fa-pif-intercom"></i></a>
+        {{/unless}}
+        {{#if (and page.fileUri (not env.CI))}}
+            <a class="toolbar-action" href="{{page.fileUri}}"><i class="fa-pif-pen"></i></a>
+        {{else if (and page.editUrl (or env.FORCE_SHOW_EDIT_PAGE_LINK (not page.origin.private)))}}
+            <a class="toolbar-action" href="{{page.editUrl}}"><i class="fa-pif-pen"></i></a>
+        {{/if}}
+    </div>
 </div>

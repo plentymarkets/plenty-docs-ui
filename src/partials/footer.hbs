@@ -1,3 +1,5 @@
 {{> footer-content}}
 {{> footer-scripts}}
-{{> feedback-form location='popup' }}
+{{#unless (eq page.layout '404')}}
+  {{> feedback-form location='popup' }}
+{{/unless}}
