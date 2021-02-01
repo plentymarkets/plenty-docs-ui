@@ -17,5 +17,7 @@
         {{{page.contents}}}
     {{/if}}
     {{> pagination}}
-    {{> feedback-form location='content' }}
+    {{#unless (eq page.layout '404')}}
+        {{> feedback-form location='content' }}
+    {{/unless}}
 </article>
