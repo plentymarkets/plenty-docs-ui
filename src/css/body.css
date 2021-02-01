@@ -1,18 +1,7 @@
 .body {
   word-wrap: break-word; /* aka overflow-wrap; used when hyphens are disabled or don't do the trick */
   flex: 1 0 auto;
-  transition: 1s all;
-  transform: rotateY(0deg);
-  opacity: 1;
-  filter: saturate(1);
 }
-
-body.backend {
-  transform: rotateY(180deg);
-  opacity: 0.5;
-  filter: saturate(0.5);
-}
-
 
 @media screen and (min-width: 1024px) {
   .body {
