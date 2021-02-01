@@ -4,11 +4,8 @@ footer {
   font-size: 16px;
 }
 
-.footer-menu {
-  text-align: right;
-}
-
-.footer-menu a {
+.footer-menu * {
   color: var(--footer-link-font-color);
-  margin-left: 20px;
+  margin: 1rem 0;
+  text-align: center;
 }
