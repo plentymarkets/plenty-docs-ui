@@ -1,35 +1,41 @@
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@alpha"></script>
 <script>
-    (function(){
-        window.process = {
-            env: {
-                NODE_ENV: 'production'
-            }
-        };        
-        var version = "{{page.componentVersion.displayVersion}}"
+  (function () {
+    window.process = {
+      env: {
+        NODE_ENV: 'production'
+      }
+    }
+    var interface_version = "{{page.componentVersion.displayVersion}}"
+    var interface_version_list = [
+      'stable7',
+      'early',
+      'beta7'
+    ]
+    if (!interface_version_list.includes(interface_version)) {
+      interface_version = interface_version_list[0]
+    }
 
-        var interface_versions = [
-            'stable7',
-            'early',
-            'beta7'
+    var plugin_version = "{{page.componentVersion.displayVersion}}"
+    var plugin_version_list = [
+      '5.0.0',
+      '4.6.0'
+    ]
+    if (!plugin_version_list.includes(plugin_version)) {
+      plugin_version = plugin_version_list[0]
+    }
+
+    docsearch({
+      apiKey: '3c1a0708184b01efeebc6ab288f94dc2',
+      indexName: 'plenty_developers_en',
+      container: '#docsearch',
+      appId: 'HET8OH1LPP',
+      searchParameters: {
+        hitsPerPage: 10,
+        'facetFilters': [
+          ['tags:developers', 'version:' + interface_version, 'version:' + plugin_version]
         ]
-
-        if(!interface_versions.includes(version))
-        {
-            version = interface_versions[0];
-        }
-
-        docsearch({
-            apiKey: '3c1a0708184b01efeebc6ab288f94dc2',
-            indexName: 'plenty_developers_en',
-            container: '#docsearch',
-            appId: 'HET8OH1LPP',
-            searchParameters: {
-                hitsPerPage: 10,
-                'facetFilters': [
-                    ["tags:developers", "version:"+version]
-                ]             
-            },
-        });
-    })()
+      },
+    })
+  })()
 </script>
