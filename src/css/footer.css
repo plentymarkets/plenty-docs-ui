@@ -4,11 +4,12 @@ footer {
   font-size: 16px;
 }
 
-.footer-menu {
-  text-align: right;
+.footer-menu * {
+  color: var(--footer-link-font-color);
+  margin: 1rem 0;
+  text-align: center;
 }
 
-.footer-menu a {
+.footer-menu a:hover {
   color: var(--footer-link-font-color);
-  margin-left: 20px;
 }
