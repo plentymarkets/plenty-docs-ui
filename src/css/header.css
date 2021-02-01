@@ -33,7 +33,7 @@ body {
   position: relative;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1024px) {
   .search {
     padding-left: 25px;
     border-left: 1px solid white;
@@ -240,7 +240,7 @@ body {
   margin-left: 20px;
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 778px) {
   .navbar .left {
     margin: 0 auto;
   }
@@ -333,7 +333,7 @@ body {
   width: 100vw;
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 500px) {
   .navbar .search {
     position: absolute;
     right: 0;
