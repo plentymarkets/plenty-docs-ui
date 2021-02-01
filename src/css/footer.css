@@ -9,3 +9,7 @@ footer {
   margin: 1rem 0;
   text-align: center;
 }
+
+.footer-menu a:hover {
+  color: var(--footer-link-font-color);
+}
