@@ -66,3 +66,8 @@
 #redoc-container div[role=button] span {
   color: black;
 }
+
+#redoc-container mark {
+  background: var(--marking-background-color);
+  color: var(--marking-color);
+}
