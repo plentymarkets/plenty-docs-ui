@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  {{> head defaultPageTitle='Untitled'}}
+  {{> head defaultPageTitle='Plentymarkets REST-API'}}
 </head>
 <body class="redoc">
 {{> header}}
 <div id="redoc-container"></div>
-<script src="https://cdn.jsdelivr.net/npm/redoc@next/bundles/redoc.standalone.js"></script>
 <script>
 Redoc.init('{{ page.attributes.specurl }}', {
   scrollYOffset: "header > .navbar > .container-fluid",
   nativeScrollbars: true,
   noAutoAuth: true,
   theme: {
-    menu: {
+    sidebar: {
       backgroundColor: '#04485b',
       textColor: 'white',
       width: '23.75rem',
@@ -31,7 +30,27 @@ Redoc.init('{{ page.attributes.specurl }}', {
       error: {
         main: '#ff0400'
       },
-    }
+    },
+    typography: {
+      fontSize: '18px',
+      lineHeight: '1.5em',
+      fontWeightRegular: '300',
+      fontWeightBold: '400',
+      fontWeightLight: '300',
+      fontFamily: 'Source Sans Pro, sans-serif',
+      smoothing: 'antialiased',
+      optimizeSpeed: true,
+      headings: {
+        fontFamily: 'Graublau Sans, sans-serif',
+        fontWeight: '700',
+        lineHeight: '1.6em',
+      },
+      code: {
+        fontFamily: 'Source Code Pro',
+        fontWeight: '500',
+        fontSize: '16px',
+      }
+    },
   }
 }, document.getElementById('redoc-container'))
 </script>
