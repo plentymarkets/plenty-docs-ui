@@ -1,0 +1,235 @@
+/* base
+ --body-background: var(--plentyBluesFadedJade);
+ --panel-background: var(--plentyGreysLimedSpruce);
+ --secondary-background: var(--plentyBluesTealBlue);
+ --panel-border-color: var(--color-white);
+ --scrollbar-thumb-color: var(--plentyGreysNevada);
+ --link-font-color: var(--plentyBluesPictonBlue);
+ --link_hover-font-color: var(--plentyBluesSail);
+ --link_unresolved-font-color: var(--important-color);
+*/
+$white: var(--color-white);
+$body-background: var(--body-background);
+$malachite: var(--plentyMalachite);
+$picton-blue: var(--plentyBluesPictonBlue);
+$bluesail: var(--plentBuesSail);
+$red: var(--plentyRedCrimson);
+$source-sans: var(--source-sans-pro);
+
+.swagger-ui {
+  font-family: $source-sans;
+  color: $white;
+
+  p {
+    color: $white;
+  }
+
+  .table-container table thead tr th {
+    color: $white;
+  }
+  .parameter__name,
+  .parameter__type,
+  .parameter__deprecated,
+  .parameter__in,
+  .model-title,
+  .model,
+  .markdown p,
+  .response-col_status,
+  .response-col_description,
+  .opblock-summary,
+  .opblock-description-wrapper p {
+    color: $white;
+  }
+
+  .info {
+    .title,
+    .base-url,
+    p {
+      color: $white;
+    }
+    a {
+      color: var(--link-font-color);
+    }
+    a:hover {
+      color: var(--link_hover-font-color);
+    }
+  }
+
+  .opblock-tag-section {
+    background: var(--secondary-background);
+
+    a.nostyle {
+      color: $white;
+    }
+  }
+
+  .opblock {
+    background: $body-background;
+    border: 0;
+    .opblock-body {
+      background: var(--body-background);
+
+      .opblock-section {
+        .try-out {
+          display: none;
+        }
+      }
+      table tbody tr td:first-of-type {
+        padding: 10px 10px 0 0;
+      }
+    }
+
+    .opblock-summary-path {
+      color: $white;
+      flex: 3 1 auto !important;
+    }
+
+    .opblock-summary-description {
+      min-width: 20%;
+      color: $white;
+    }
+
+    //sass-lint:disable-all
+    .authorization__btn {
+      svg {
+        fill: $white;
+      }
+    }
+
+    .opblock-summary {
+      border: 0;
+      color: $body-background;
+    }
+
+    &.opblock-post {
+      background: $body-background;
+      border: 0;
+
+      .opblock-summary-method {
+        background: $malachite;
+      }
+    }
+
+    &.opblock-get {
+      background: $body-background;
+      border: 0;
+
+      .opblock-summary-method {
+        background: $picton-blue;
+      }
+    }
+
+    &.opblock-delete {
+      background: $body-background;
+      border: 0;
+
+      .opblock-summary-method {
+        background: $red;
+      }
+    }
+
+    &.opblock-put {
+      background: $body-background;
+      border: 0;
+    }
+
+    &.opblock-patch {
+      background: $body-background;
+      border: 0;
+    }
+
+    &.opblock-options {
+      background: $body-background;
+      border: 0;
+    }
+  }
+
+  .opblock-summary-path,
+  .opblock-summary-description {
+    overflow: hidden;
+    a {
+      &:hover,
+      &:active,
+      &:focus {
+        color: $white;
+      }
+    }
+  }
+
+  .swagger-container {
+    .wrapper {
+      display: none;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .opblock-tag {
+      font-size: 1.4rem;
+
+      small {
+        font-size: inherit;
+      }
+    }
+  }
+
+  .opblock-tag {
+    align-items: baseline;
+    justify-content: space-between;
+
+    > small {
+      @media (max-width: 540px) {
+        display: none;
+      }
+    }
+
+    > div {
+      display: none;
+    }
+  }
+
+  .models {
+    .model-container {
+      margin: 0 20px 15px;
+    }
+  }
+
+  .scheme-container {
+    background: var(--secondary-background);
+    .schemes {
+      > label {
+        margin: -20px 15px 0;
+      }
+    }
+
+    button {
+      margin-right: 15px;
+    }
+  }
+
+  table.parameters {
+    tbody {
+      tr {
+        border-bottom: 0.1rem dotted rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+  .auth-container:last-of-type,
+  .auth-container {
+    padding: 0;
+  }
+  input[type="text"] {
+    padding: 4px 5px;
+  }
+
+  .swagger-container {
+    margin-bottom: 3rem;
+
+    section {
+      > span {
+        display: block;
+        margin-bottom: 3rem;
+      }
+    }
+  }
+}
