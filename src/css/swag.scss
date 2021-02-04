@@ -19,8 +19,9 @@ $opblock-section-header-background: rgba(255, 255, 255, 0.1);
 $scheme-container-background: $secondary-background;
 $prop-format: var(--plentyRedSeaPink);
 
-.information-container.wrapper {
-  display: none;
+.information-container.wrapper,
+.float-right {
+  display: none!important;
 }
 
 .swagger-ui {

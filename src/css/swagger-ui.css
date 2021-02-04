@@ -1,5 +1,6 @@
-.information-container.wrapper {
-  display: none;
+.information-container.wrapper,
+.float-right {
+  display: none !important;
 }
 
 .swagger-ui {
