@@ -10,23 +10,45 @@
 */
 $white: var(--color-white);
 $body-background: var(--body-background);
+$secondary-background: var(--secondary-background);
+$panel-background: var(--panel-background);
 $malachite: var(--plentyMalachite);
 $picton-blue: var(--plentyBluesPictonBlue);
 $bluesail: var(--plentBuesSail);
+$faded-jade: var(--plentyBluesFadedJade);
 $red: var(--plentyRedCrimson);
+$graublau: var(--grau-blau-sans);
 $source-sans: var(--source-sans-pro);
+
+$link-color: var(--link-font-color);
+$link-hover-color: var(--link_hover-font-color);
+$tag-section-background: $secondary-background;
+$opblock-request-background: $faded-jade;
+$opblock-body-background: rgba(255, 255, 255, 0.1);
+$opblock-section-header-background: rgba(255, 255, 255, 0.1);
+$scheme-container-background: $secondary-background;
+$prop-format: var(--plentyRedSeaPink);
+
+.information-container.wrapper {
+  display: none;
+}
 
 .swagger-ui {
   font-family: $source-sans;
   color: $white;
 
-  p {
-    color: $white;
+  a {
+    color: $link-color;
+    &:hover {
+      color: $link-hover-color;
+    }
   }
 
-  .table-container table thead tr th {
-    color: $white;
+  & input[disabled] {
+    display: none;
   }
+
+  .table-container table thead tr th,
   .parameter__name,
   .parameter__type,
   .parameter__deprecated,
@@ -37,8 +59,14 @@ $source-sans: var(--source-sans-pro);
   .response-col_status,
   .response-col_description,
   .opblock-summary,
-  .opblock-description-wrapper p {
+  .opblock-description-wrapper p,
+  label,
+  p {
     color: $white;
+  }
+
+  .prop-format {
+    color: $prop-format;
   }
 
   .info {
@@ -48,37 +76,52 @@ $source-sans: var(--source-sans-pro);
       color: $white;
     }
     a {
-      color: var(--link-font-color);
+      color: $link-color;
     }
     a:hover {
-      color: var(--link_hover-font-color);
+      color: $link-hover-color;
     }
   }
 
   .opblock-tag-section {
-    background: var(--secondary-background);
+    background: $tag-section-background;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
 
     a.nostyle {
       color: $white;
     }
+
+    & .is-open {
+      margin-bottom: 1rem;
+    }
   }
 
+  .opblock-tag {
+    font-family: $graublau;
+    margin: 0;
+    align-items: baseline;
+    justify-content: space-between;
+  }
   .opblock {
-    background: $body-background;
     border: 0;
-    .opblock-body {
-      background: var(--body-background);
+    margin: 0 0.5rem 1rem 0.5rem;
 
-      .opblock-section {
-        .try-out {
-          display: none;
-        }
-      }
-      table tbody tr td:first-of-type {
-        padding: 10px 10px 0 0;
-      }
+    &.opblock-get,
+    &.opblock-put,
+    &.opblock-post,
+    &.opblock-delete,
+    &.opblock-opt {
+      background: $opblock-request-background;
     }
-
+    .opblock-section-header {
+      background: $opblock-section-header-background;
+    }
+    .opblock-section-header span,
+    .opblock-section-header h4 {
+      color: $white;
+    }
     .opblock-summary-path {
       color: $white;
       flex: 3 1 auto !important;
@@ -86,6 +129,7 @@ $source-sans: var(--source-sans-pro);
 
     .opblock-summary-description {
       min-width: 20%;
+      flex: 1;
       color: $white;
     }
 
@@ -95,52 +139,17 @@ $source-sans: var(--source-sans-pro);
         fill: $white;
       }
     }
+  }
 
-    .opblock-summary {
-      border: 0;
-      color: $body-background;
-    }
-
-    &.opblock-post {
-      background: $body-background;
-      border: 0;
-
-      .opblock-summary-method {
-        background: $malachite;
+  .opblock-body {
+    background: $opblock-body-background;
+    .opblock-section {
+      .try-out {
+        display: none;
       }
     }
-
-    &.opblock-get {
-      background: $body-background;
-      border: 0;
-
-      .opblock-summary-method {
-        background: $picton-blue;
-      }
-    }
-
-    &.opblock-delete {
-      background: $body-background;
-      border: 0;
-
-      .opblock-summary-method {
-        background: $red;
-      }
-    }
-
-    &.opblock-put {
-      background: $body-background;
-      border: 0;
-    }
-
-    &.opblock-patch {
-      background: $body-background;
-      border: 0;
-    }
-
-    &.opblock-options {
-      background: $body-background;
-      border: 0;
+    table tbody tr td:first-of-type {
+      padding: 10px 10px 0 0;
     }
   }
 
@@ -173,8 +182,6 @@ $source-sans: var(--source-sans-pro);
   }
 
   .opblock-tag {
-    align-items: baseline;
-    justify-content: space-between;
 
     > small {
       @media (max-width: 540px) {
@@ -194,7 +201,7 @@ $source-sans: var(--source-sans-pro);
   }
 
   .scheme-container {
-    background: var(--secondary-background);
+    background: $scheme-container-background;
     .schemes {
       > label {
         margin: -20px 15px 0;
@@ -209,7 +216,7 @@ $source-sans: var(--source-sans-pro);
   table.parameters {
     tbody {
       tr {
-        border-bottom: 0.1rem dotted rgba(0, 0, 0, 0.1);
+        border-bottom: 0.1rem dotted rgba(0, 0, 0, 0.6);
       }
     }
   }
