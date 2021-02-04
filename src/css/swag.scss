@@ -1,0 +1,232 @@
+$white: var(--color-white);
+$body-background: var(--body-background);
+$secondary-background: var(--secondary-background);
+$panel-background: var(--panel-background);
+$malachite: var(--plentyMalachite);
+$picton-blue: var(--plentyBluesPictonBlue);
+$bluesail: var(--plentBuesSail);
+$faded-jade: var(--plentyBluesFadedJade);
+$red: var(--plentyRedCrimson);
+$graublau: var(--grau-blau-sans);
+$source-sans: var(--source-sans-pro);
+
+$link-color: var(--link-font-color);
+$link-hover-color: var(--link_hover-font-color);
+$tag-section-background: $secondary-background;
+$opblock-request-background: $faded-jade;
+$opblock-body-background: rgba(255, 255, 255, 0.1);
+$opblock-section-header-background: rgba(255, 255, 255, 0.1);
+$scheme-container-background: $secondary-background;
+$prop-format: var(--plentyRedSeaPink);
+
+.information-container.wrapper {
+  display: none;
+}
+
+.swagger-ui {
+  font-family: $source-sans;
+  color: $white;
+
+  a {
+    color: $link-color;
+    &:hover {
+      color: $link-hover-color;
+    }
+  }
+
+  & input[disabled] {
+    display: none;
+  }
+
+  .table-container table thead tr th,
+  .parameter__name,
+  .parameter__type,
+  .parameter__deprecated,
+  .parameter__in,
+  .model-title,
+  .model,
+  .markdown p,
+  .response-col_status,
+  .response-col_description,
+  .opblock-summary,
+  .opblock-description-wrapper p,
+  label,
+  p {
+    color: $white;
+  }
+
+  .prop-format {
+    color: $prop-format;
+  }
+
+  .info {
+    .title,
+    .base-url,
+    p {
+      color: $white;
+    }
+    a {
+      color: $link-color;
+    }
+    a:hover {
+      color: $link-hover-color;
+    }
+  }
+
+  .opblock-tag-section {
+    background: $tag-section-background;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
+
+    a.nostyle {
+      color: $white;
+    }
+
+    & .is-open {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .opblock-tag {
+    font-family: $graublau;
+    margin: 0;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  .opblock {
+    border: 0;
+    margin: 0 0.5rem 1rem 0.5rem;
+
+    &.opblock-get,
+    &.opblock-put,
+    &.opblock-post,
+    &.opblock-delete,
+    &.opblock-opt {
+      background: $opblock-request-background;
+    }
+    .opblock-section-header {
+      background: $opblock-section-header-background;
+    }
+    .opblock-section-header span,
+    .opblock-section-header h4 {
+      color: $white;
+    }
+    .opblock-summary-path {
+      color: $white;
+      flex: 3 1 auto !important;
+    }
+
+    .opblock-summary-description {
+      min-width: 20%;
+      flex: 1;
+      color: $white;
+    }
+
+    //sass-lint:disable-all
+    .authorization__btn {
+      svg {
+        fill: $white;
+      }
+    }
+  }
+
+  .opblock-body {
+    background: $opblock-body-background;
+    .opblock-section {
+      .try-out {
+        display: none;
+      }
+    }
+    table tbody tr td:first-of-type {
+      padding: 10px 10px 0 0;
+    }
+  }
+
+  .opblock-summary-path,
+  .opblock-summary-description {
+    overflow: hidden;
+    a {
+      &:hover,
+      &:active,
+      &:focus {
+        color: $white;
+      }
+    }
+  }
+
+  .swagger-container {
+    .wrapper {
+      display: none;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .opblock-tag {
+      font-size: 1.4rem;
+
+      small {
+        font-size: inherit;
+      }
+    }
+  }
+
+  .opblock-tag {
+
+    > small {
+      @media (max-width: 540px) {
+        display: none;
+      }
+    }
+
+    > div {
+      display: none;
+    }
+  }
+
+  .models {
+    .model-container {
+      margin: 0 20px 15px;
+    }
+  }
+
+  .scheme-container {
+    background: $scheme-container-background;
+    .schemes {
+      > label {
+        margin: -20px 15px 0;
+      }
+    }
+
+    button {
+      margin-right: 15px;
+    }
+  }
+
+  table.parameters {
+    tbody {
+      tr {
+        border-bottom: 0.1rem dotted rgba(0, 0, 0, 0.6);
+      }
+    }
+  }
+
+  .auth-container:last-of-type,
+  .auth-container {
+    padding: 0;
+  }
+  input[type="text"] {
+    padding: 4px 5px;
+  }
+
+  .swagger-container {
+    margin-bottom: 3rem;
+
+    section {
+      > span {
+        display: block;
+        margin-bottom: 3rem;
+      }
+    }
+  }
+}

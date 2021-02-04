@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script rel="preload" as="script" src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.41.1/swagger-ui.js"></script>
+  <script rel="preload" as="script" src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.41.1/swagger-ui-bundle.js"></script>
+  <script rel="preload" as="script" src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.41.1/swagger-ui-standalone-preset.js"></script>
+  {{> head defaultPageTitle='Untitled'}}
+</head>
+
+<body class="article">
+  {{> header}}
+  <div class="body">
+    {{> nav-swagger}}
+    <main class="article">
+      {{> toolbar}}
+      <div class="content">
+        <div id="swagger-ui" style="width: 100%"></div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    window.onload = function ()
+    {
+      // Build a system
+      window.ui = SwaggerUIBundle({
+        url: "https://raw.githubusercontent.com/plentymarkets/api-doc/master/plentymarkets/openApiV2/openApiV2WithExamples.json",
+        dom_id: '#swagger-ui',
+        docExpansion: 'none',
+        deepLinking: true,
+        presets: [
+          SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset.slice(1)
+        ],
+        plugins: [SwaggerUIBundle.plugins.DownloadUrl],
+        layout: "StandaloneLayout",
+        onComplete: createSwaggerNav
+      })
+    }
+  </script>
+  {{> body-scripts}}
+  {{> footer}}
+</body>
+
+</html>
