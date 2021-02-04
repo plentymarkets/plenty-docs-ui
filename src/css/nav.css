@@ -142,6 +142,7 @@ html.is-clipped--nav {
 
 .nav-menu > .nav-list {
   margin-bottom: 0.5rem;
+  padding-bottom: 1rem;
 }
 
 .nav-item {
