@@ -3,3 +3,4 @@ yarn.lock
 /public/
 .idea/
 .DS_Store
+.vscode
