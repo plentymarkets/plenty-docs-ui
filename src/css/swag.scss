@@ -145,6 +145,7 @@ section.models {
     .opblock-summary-path {
       color: $white;
       flex: 3 1 auto !important;
+      max-width: 100%;
     }
 
     .opblock-summary-description {
@@ -187,8 +188,8 @@ section.models {
 
   .opblock .opblock-summary-method {
     font-size: 1rem;
-    min-width: 2em;
-    padding: 0.5em 1em;
+    min-width: 6em;
+    padding: 0.25em .25em;
   }
 
   @media (max-width: 767px) {

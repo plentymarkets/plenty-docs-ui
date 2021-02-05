@@ -108,6 +108,7 @@ section.models {
 .swagger-ui .opblock .opblock-summary-path {
   color: var(--color-white);
   flex: 3 1 auto !important;
+  max-width: 100%;
 }
 .swagger-ui .opblock .opblock-summary-description {
   min-width: 20%;
@@ -140,8 +141,8 @@ section.models {
 }
 .swagger-ui .opblock .opblock-summary-method {
   font-size: 1rem;
-  min-width: 2em;
-  padding: 0.5em 1em;
+  min-width: 6em;
+  padding: 0.25em 0.25em;
 }
 @media (max-width: 767px) {
   .swagger-ui .opblock-tag {
