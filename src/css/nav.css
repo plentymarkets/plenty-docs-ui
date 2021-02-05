@@ -185,7 +185,10 @@ html.is-clipped--nav {
 
 .is-current-page > .nav-link,
 .is-current-page > .nav-text {
-  font-weight: var(--body-font-weight-bold);
+  font-weight: 700;
+  border-left: 3px solid var(--color-white);
+  padding-left: 0.5em;
+  color: var(--link-font-color);
 }
 
 .nav-panel-explore {
