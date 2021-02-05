@@ -1,5 +1,5 @@
 = Hardware and Software Requirements
-:page-layout: default
+:page-layout: swagger
 
 Author Name
 :idprefix:

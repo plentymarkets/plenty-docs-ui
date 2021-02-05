@@ -203,6 +203,10 @@ section.models {
   }
 
   @media (max-width: 425px) {
+    .col-12 {
+      padding: 0;
+    }
+
     & code {
       font-size: 0.75em;
     }
