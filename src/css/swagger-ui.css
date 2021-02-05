@@ -153,6 +153,9 @@ section.models {
   }
 }
 @media (max-width: 425px) {
+  .swagger-ui .col-12 {
+    padding: 0;
+  }
   .swagger-ui code {
     font-size: 0.75em;
   }
