@@ -25,7 +25,7 @@
     {
       // Build a system
       window.ui = SwaggerUIBundle({
-        url: "https://raw.githubusercontent.com/plentymarkets/api-doc/master/plentymarkets/openApiV2/openApiV2WithExamples.json",
+        url: "{{ page.attributes.specurl }}",
         dom_id: '#swagger-ui',
         docExpansion: 'none',
         deepLinking: true,
