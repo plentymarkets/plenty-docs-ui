@@ -1,7 +1,7 @@
 footer {
   background: var(--plentyGreysLimedSpruce);
-  padding: 30px 0;
-  font-size: 16px;
+  padding-top: 0.5rem;
+  font-size: 1rem;
 }
 
 .footer-menu * {
