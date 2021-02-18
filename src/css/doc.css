@@ -45,8 +45,26 @@
 }
 
 #preamble + .sect1,
-.doc .sect1 + .sect1 {
+.doc .sect1 + .sect1,
+.doc .sect2 + .sect2 {
   margin-top: 4em;
+}
+
+.doc .sect3 + .sect3 {
+  margin-top: 3em;
+}
+
+.sect2 {
+  position: relative;
+}
+
+.sect2:after {
+  content: "";
+  position: absolute;
+  bottom: -1.5em;
+  left: 0;
+  right: 0;
+  border-bottom: .1rem solid #04485b;
 }
 
 .doc h1.sect0 {
