@@ -29,10 +29,12 @@ class FeedbackHandler {
   submitHandler (event) {
     event.preventDefault()
 
-    const location = event.target.getAttribute('data-location')
+    const target = event.currentTarget
+
+    const opinion = target.getAttribute('data-opinion')
+    const location = target.getAttribute('data-location')
     const textareaSelector = this.selector + '[data-location=' + location + '] textarea[name=feedback]'
     const message = $(textareaSelector).val() || 'No message was specified'
-    const opinion = event.target.getAttribute('data-opinion')
 
     const requestData = {
       text: `New ${opinion} feedback on page: <${window.location.href}|${this.page}>\n\n` +
