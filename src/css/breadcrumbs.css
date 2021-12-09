@@ -5,6 +5,10 @@
   line-height: var(--nav-line-height);
 }
 
+.breadcrumbs a {
+  font-weight: 400;
+}
+
 @media screen and (min-width: 1024px) {
 
   .breadcrumbs {

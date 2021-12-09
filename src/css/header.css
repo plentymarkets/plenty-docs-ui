@@ -26,7 +26,8 @@ body {
 
 .navbar a {
   text-decoration: none;
-  color: white;
+  color: var(--plentyGreysLimedSpruce);
+  font-weight: var(--version-font-weight);
 }
 
 .search {
@@ -287,7 +288,7 @@ body {
   position: absolute;
   flex-wrap: wrap;
   flex-direction: column;
-  background: var(--secondary-background);
+  background: var(--plentyRedCrimson);
   padding: 10px;
   border-radius: 5px;
   transform: translateX(-10px);
@@ -317,6 +318,8 @@ body {
 .navbar .right .menu-item.parent {
   position: relative;
   margin-right: 15px;
+  color: var(--plentyGreysLimedSpruce);
+  font-weight: var(--version-font-weight);
 }
 
 .navbar .right .menu-item.parent:hover {

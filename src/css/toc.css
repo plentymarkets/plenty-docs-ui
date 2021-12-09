@@ -1,6 +1,6 @@
 .toc-menu {
   color: var(--toc-font-color);
-  background: var(--plentyBluesTealBlue);
+  background: var(--plenty-secondaries-white);
   padding: 1.5rem 1rem 1rem;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -10,15 +10,17 @@
   margin-right: 0.75rem;
   position: sticky;
   top: var(--toc-top);
+  box-shadow: var(--box-shadow);
 }
 
 .toc .toc-menu h3 {
-  color: var(--toc-heading-font-color);
+  color: var(--plentyGreysLimedSpruce);
   font-size: calc(16 / var(--rem-base) * 1rem);
-  font-weight: var(--body-font-weight-bold);
   line-height: 1.3;
   margin: 0 -0.5px;
   padding-bottom: 0.25rem;
+  margin-bottom: 0.25rem;
+  border-bottom: 1px solid var(--plentyLightGrey);
 }
 
 .toc.sidebar .toc-menu h3 {
@@ -80,17 +82,9 @@
   outline: none;
 }
 
-.toc .toc-menu a:hover {
-  color: var(--link-font-color);
-}
-
 .toc .toc-menu a.is-active {
-  border-left: 3px solid var(--color-white);
-  color: var(--link-font-color);
-}
-
-.sidebar.toc .toc-menu a:focus {
-  background: var(--panel-background);
+  border-left: 3px solid var(--plentyRedCrimson);
+  color: var(--doc-font-color);
 }
 
 .toc .toc-menu .is-hidden-toc {

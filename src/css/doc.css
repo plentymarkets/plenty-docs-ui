@@ -1,5 +1,5 @@
 .doc {
-  color: var(--doc-font-color);
+  color: var(--doc-paragraph-color);
   font-size: var(--doc-font-size);
   hyphens: auto;
   line-height: var(--doc-line-height);
@@ -761,7 +761,7 @@
 
 .doc .collapsebox .content {
   display: none;
-  font-weight: 400;
+  font-weight: 300;
   font-size: calc(16/var(--rem-base)*1rem);
 }
 .doc .collapsebox.active .content {
