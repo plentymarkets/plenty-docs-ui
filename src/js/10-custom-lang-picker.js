@@ -11,7 +11,6 @@
   const thePath = window.location.pathname.replace('.html', '');
   let theUrl = '/' + nextLangTxt;
 
-  console.log(thePath);
   $('#langToggle').html(currentLangLabel);
   $('#langSelect').html(nextLangLabel);
 
