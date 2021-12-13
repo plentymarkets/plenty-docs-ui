@@ -1,5 +1,6 @@
 {{#if navigation.length}}
 <ul class="nav-list">
+<i class="fas fa-search"></i>
   {{#each navigation}}
   <li class="nav-item{{#if (eq ./url @root.page.url)}} is-current-page{{/if}}" data-depth="{{or ../level 0}}">
     {{#if ./content}}
