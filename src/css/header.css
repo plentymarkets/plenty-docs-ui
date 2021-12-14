@@ -295,6 +295,10 @@ body {
   box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
 }
 
+.navbar .right .menu-wrapper .submenu-wrapper .submenu-item{
+  color: var(--plenty-secondaries-white);
+}
+
 .navbar .right .menu-wrapper .submenu-wrapper .submenu-item:not(:first-of-type) {
   margin-top: 15px;
 }

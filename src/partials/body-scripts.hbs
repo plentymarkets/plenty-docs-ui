@@ -26,14 +26,13 @@
     }
 
     docsearch({
-      apiKey: '45aeef71ca14d766195975ac179f14d0',
-      indexName: 'plentymarkets',
+      appId: '6PTARL4KJP',
+      apiKey: 'e7e08c62fb27474b5104e29e3e673645',
+      indexName: 'plentymarkets_beta_doc',
       container: '#docsearch',
+
       searchParameters: {
         hitsPerPage: 10,
-        'facetFilters': [
-          ['tags:developers', 'version:' + interface_version, 'version:' + plugin_version]
-        ]
       },
     })
   })()

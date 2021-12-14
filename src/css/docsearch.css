@@ -35,12 +35,12 @@
     --docsearch-footer-shadow: 0 -1px 0 0 #e0e3e8, 0 -3px 6px 0 rgba(69, 98, 155, 0.12);
     /** Style overwrites */
     --docsearch-primary-color: #032f35;
-    --docsearch-text-color: #f5f6f7;
+    --docsearch-text-color: #374D55;
     --docsearch-container-background: rgba(9, 10, 17, 0.8);
-    --docsearch-modal-background: #142637;
+    --docsearch-modal-background: #D4021D;
     --docsearch-modal-shadow: inset 1px 1px 0 0 #2c2e40, 0 3px 8px 0 #000309;
-    --docsearch-searchbox-background: #03495b;
-    --docsearch-searchbox-focus-background: #126277;
+    --docsearch-searchbox-background: #fbfbfb;
+    --docsearch-searchbox-focus-background: #D4021D;
     --docsearch-hit-color: #bec3c9;
     --docsearch-hit-shadow: none;
     --docsearch-hit-background: #0a1927;
@@ -73,11 +73,15 @@
 
 .DocSearch-Button:active,
 .DocSearch-Button:focus,
-.DocSearch-Button:hover {
+.DocSearch-Button:hover{
     background: var(--docsearch-searchbox-focus-background);
     box-shadow: var(--docsearch-searchbox-shadow);
-    color: var(--docsearch-text-color);
-    outline: none
+    color: #fff;
+    outline: none;
+}
+
+svg.DocSearch-Search-Icon path{
+  fill: #fff;
 }
 
 .DocSearch-Button-Container {
@@ -192,7 +196,7 @@
     appearance: none;
     background: transparent;
     border: 0;
-    color: var(--docsearch-text-color);
+    color: var(--plenty-secondaries-white);
     flex: 1;
     font: inherit;
     font-size: 1.2em;
@@ -414,7 +418,7 @@
 
 .DocSearch-Hit-source {
     background: var(--docsearch-modal-background);
-    color: var(--docsearch-highlight-color);
+    color: var(--plenty-secondaries-white);
     font-size: .85em;
     font-weight: 600;
     line-height: 32px;
@@ -608,7 +612,7 @@ svg.DocSearch-Hit-Select-Icon {
 
 .DocSearch-Footer {
     align-items: center;
-    background: var(--docsearch-footer-background);
+    background: var(--docsearch-modal-background);
     border-radius: 0 0 8px 8px;
     box-shadow: var(--docsearch-footer-shadow);
     display: flex;
