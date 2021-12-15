@@ -25,6 +25,12 @@ jobs:
       
       - name: Package UI
         run: gulp bundle
+        
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v2.3.0
+        with:
+          path: build/ui-bundle.zip
+          retention-days: 1
       
       - name: Push bundle
         run: |
