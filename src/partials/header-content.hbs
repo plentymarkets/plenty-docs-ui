@@ -21,10 +21,24 @@
                     </div>
                     <a class="menu-item" href="/en-gb/plentydevtool/main/plentydevtool-introduction.html">plentyDevTool</a>
                     <a class="menu-item" href="https://knowledge.plentymarkets.com/en" target="_blank">User manual</a>
-                </div>
-                <div class="search">
-                     <div id="docsearch"></div>
-                </div>
+                    {{#if (or (eq site.url 'https://knowledge.plentymarkets.com/de-de') (eq site.url 'https://knowledge.plentymarkets.com/en-gb')) }}
+                    <div class="dropdown menu-item">
+                      <i class="fa-pif-language"></i>
+                      <button class="dropdown-toggle"
+                              id="langToggle"
+                              data-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false">EN
+                      </button>
+                      <div class="dropdown-menu submenu-item"
+                           aria-labelledby="langToggle">
+                        <a id="languagePath"><span id="langSelect" class="submenu-item">DE</span></a>
+                      </div>
+                      {{/if}}
+                  </div>
+                  <div class="search">
+                       <div id="docsearch"></div>
+                  </div>
             </div>
         </div>
     </nav>
