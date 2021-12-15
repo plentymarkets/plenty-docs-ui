@@ -287,7 +287,9 @@
 .fa-pif-wifi:before {
   content: "\e959";
 }
-
+.fa-pif-language:before {
+  content: "\e894";
+}
 
 .material-icons {
   font-family: 'Material Icons';
