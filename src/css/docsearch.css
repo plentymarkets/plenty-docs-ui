@@ -41,6 +41,7 @@
     --docsearch-modal-shadow: inset 1px 1px 0 0 #2c2e40, 0 3px 8px 0 #000309;
     --docsearch-searchbox-background: #fbfbfb;
     --docsearch-searchbox-focus-background: #f1f1f1;
+    --docsearch-searchbox-header-focus-background: #D4021D;
     --docsearch-hit-color: #bec3c9;
     --docsearch-hit-shadow: none;
     --docsearch-hit-background: #0a1927;
@@ -74,7 +75,7 @@
 .DocSearch-Button:active,
 .DocSearch-Button:focus,
 .DocSearch-Button:hover{
-    background: var(--docsearch-searchbox-focus-background);
+    background: var(--docsearch-searchbox-header-focus-background);
     box-shadow: var(--docsearch-searchbox-shadow);
     color: #fff;
     outline: none;
