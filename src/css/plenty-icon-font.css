@@ -1,0 +1,1681 @@
+[class*="psicon-"] {
+  display: inline-block;
+  font-family: "plenty-system-icons" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.psicon-content_search:before {
+  content: ""; }
+
+.psicon-content_category:before {
+  content: ""; }
+
+.psicon-shaking_hands:before {
+  content: ""; }
+
+.psicon-content_check_out:before {
+  content: ""; }
+
+.psicon-content_my_account:before {
+  content: ""; }
+
+.psicon-new_order:before {
+  content: ""; }
+
+.psicon-reply_all:before {
+  content: ""; }
+
+.psicon-reply:before {
+  content: ""; }
+
+.psicon-table_sort_desc:before {
+  content: ""; }
+
+.psicon-table_sort_asc:before {
+  content: ""; }
+
+.psicon-table_sort:before {
+  content: ""; }
+
+.psicon-auslog:before {
+  content: ""; }
+
+.psicon-content:before {
+  content: ""; }
+
+.psicon-einlog:before {
+  content: ""; }
+
+.psicon-footer:before {
+  content: ""; }
+
+.psicon-header:before {
+  content: ""; }
+
+.psicon-unlink:before {
+  content: ""; }
+
+.psicon-anonymize:before {
+  content: ""; }
+
+.psicon-active_doc:before {
+  content: ""; }
+
+.psicon-active_fold_closed:before {
+  content: ""; }
+
+.psicon-active_fold_open:before {
+  content: ""; }
+
+.psicon-active_settings:before {
+  content: ""; }
+
+.psicon-equals:before {
+  content: ""; }
+
+.psicon-inactive_doc:before {
+  content: ""; }
+
+.psicon-inactive_fold_closed:before {
+  content: ""; }
+
+.psicon-inactive_fold_open:before {
+  content: ""; }
+
+.psicon-intermed_fold_closed:before {
+  content: ""; }
+
+.psicon-intermed_fold_open:before {
+  content: ""; }
+
+.psicon-link:before {
+  content: ""; }
+
+.psicon-real:before {
+  content: ""; }
+
+.psicon-reg_expr:before {
+  content: ""; }
+
+.psicon-plenty_base:before {
+  content: ""; }
+
+.psicon-colorpicker:before {
+  content: ""; }
+
+.psicon-servicecenter:before {
+  content: ""; }
+
+.psicon-open_external_link:before {
+  content: ""; }
+
+.psicon-unlock_contact:before {
+  content: ""; }
+
+.psicon-exch_adre_type:before {
+  content: ""; }
+
+.psicon-ship_amaz_1st:before {
+  content: ""; }
+
+.psicon-ship_amaz_2nd:before {
+  content: ""; }
+
+.psicon-ship_amaz_prime_1st:before {
+  content: ""; }
+
+.psicon-ship_amaz_prime_2nd:before {
+  content: ""; }
+
+.psicon-ship_amaz_prime:before {
+  content: ""; }
+
+.psicon-caret:before {
+  content: ""; }
+
+.psicon-item-artikel:before {
+  content: ""; }
+
+.psicon-align_center:before {
+  content: ""; }
+
+.psicon-align_justify:before {
+  content: ""; }
+
+.psicon-align_left:before {
+  content: ""; }
+
+.psicon-align_right:before {
+  content: ""; }
+
+.psicon-device_desktop:before {
+  content: ""; }
+
+.psicon-device_laptop:before {
+  content: ""; }
+
+.psicon-device_mobile:before {
+  content: ""; }
+
+.psicon-device_tablet:before {
+  content: ""; }
+
+.psicon-ebay:before {
+  content: ""; }
+
+.psicon-switch_editor:before {
+  content: ""; }
+
+.psicon-text_bold:before {
+  content: ""; }
+
+.psicon-text_italic:before {
+  content: ""; }
+
+.psicon-text_strikethrough:before {
+  content: ""; }
+
+.psicon-text_underline:before {
+  content: ""; }
+
+.psicon-click_and_collect:before {
+  content: ""; }
+
+.psicon-ebay_basket:before {
+  content: ""; }
+
+.psicon-ebay_plus:before {
+  content: ""; }
+
+.psicon-hood:before {
+  content: ""; }
+
+.psicon-reverse_fullscreen:before {
+  content: ""; }
+
+.psicon-ricardo:before {
+  content: ""; }
+
+.psicon-backend_ceres:before {
+  content: ""; }
+
+.psicon-backend_io:before {
+  content: ""; }
+
+.psicon-shipping_cbc_logistics:before {
+  content: ""; }
+
+.psicon-application_double:before {
+  content: ""; }
+
+.psicon-box_minus_disabled:before {
+  content: ""; }
+
+.psicon-box_minus:before {
+  content: ""; }
+
+.psicon-box_plus_disabled:before {
+  content: ""; }
+
+.psicon-box_plus:before {
+  content: ""; }
+
+.psicon-icon_questionmark_bck:before {
+  content: ""; }
+
+.psicon-manual_search:before {
+  content: ""; }
+
+.psicon-pay_5_paypal:before {
+  content: ""; }
+
+.psicon-pay_25_laredoute:before {
+  content: ""; }
+
+.psicon-pay_amazon_payment:before {
+  content: ""; }
+
+.psicon-pay_amazon:before {
+  content: ""; }
+
+.psicon-pay_bill:before {
+  content: ""; }
+
+.psicon-pay_billsafe:before {
+  content: ""; }
+
+.psicon-pay_cash_in_advance:before {
+  content: ""; }
+
+.psicon-pay_cash_on_delivery:before {
+  content: ""; }
+
+.psicon-pay_cash:before {
+  content: ""; }
+
+.psicon-pay_cheque:before {
+  content: ""; }
+
+.psicon-pay_clickandbuy:before {
+  content: ""; }
+
+.psicon-pay_concardis:before {
+  content: ""; }
+
+.psicon-pay_coupon:before {
+  content: ""; }
+
+.psicon-pay_credit_card:before {
+  content: ""; }
+
+.psicon-pay_crefopay:before {
+  content: ""; }
+
+.psicon-pay_debit:before {
+  content: ""; }
+
+.psicon-pay_ec:before {
+  content: ""; }
+
+.psicon-pay_eos:before {
+  content: ""; }
+
+.psicon-pay_expercash:before {
+  content: ""; }
+
+.psicon-pay_gartenxxl:before {
+  content: ""; }
+
+.psicon-pay_gimahhot:before {
+  content: ""; }
+
+.psicon-pay_heidelpay:before {
+  content: ""; }
+
+.psicon-pay_hitmeister:before {
+  content: ""; }
+
+.psicon-pay_iclear:before {
+  content: ""; }
+
+.psicon-pay_iloxx:before {
+  content: ""; }
+
+.psicon-pay_klarna:before {
+  content: ""; }
+
+.psicon-pay_masterpayment:before {
+  content: ""; }
+
+.psicon-pay_meinpaket:before {
+  content: ""; }
+
+.psicon-pay_neckermann:before {
+  content: ""; }
+
+.psicon-pay_other:before {
+  content: ""; }
+
+.psicon-pay_pay_card:before {
+  content: ""; }
+
+.psicon-pay_paymorrow_new:before {
+  content: ""; }
+
+.psicon-pay_paymorrow:before {
+  content: ""; }
+
+.psicon-pay_payolution:before {
+  content: ""; }
+
+.psicon-pay_payone:before {
+  content: ""; }
+
+.psicon-pay_paypal_express:before {
+  content: ""; }
+
+.psicon-pay_paypal_qr:before {
+  content: ""; }
+
+.psicon-pay_pixmania:before {
+  content: ""; }
+
+.psicon-pay_plus:before {
+  content: ""; }
+
+.psicon-pay_postpay:before {
+  content: ""; }
+
+.psicon-pay_rakuten:before {
+  content: ""; }
+
+.psicon-pay_ratepay:before {
+  content: ""; }
+
+.psicon-pay_saferpay:before {
+  content: ""; }
+
+.psicon-pay_sagepay:before {
+  content: ""; }
+
+.psicon-pay_santander:before {
+  content: ""; }
+
+.psicon-pay_shopgate:before {
+  content: ""; }
+
+.psicon-pay_skrill:before {
+  content: ""; }
+
+.psicon-pay_sofortueberweisung:before {
+  content: ""; }
+
+.psicon-pay_wirecard:before {
+  content: ""; }
+
+.psicon-pay_worldpay:before {
+  content: ""; }
+
+.psicon-pay_zalando:before {
+  content: ""; }
+
+.psicon-pay_zentralverkauf:before {
+  content: ""; }
+
+.psicon-shipping_bilog:before {
+  content: ""; }
+
+.psicon-shipping_bps:before {
+  content: ""; }
+
+.psicon-shipping_bvw:before {
+  content: ""; }
+
+.psicon-shipping_dachser:before {
+  content: ""; }
+
+.psicon-shipping_db_schenker:before {
+  content: ""; }
+
+.psicon-shipping_deutschepost:before {
+  content: ""; }
+
+.psicon-shipping_dhl_packstation:before {
+  content: ""; }
+
+.psicon-shipping_dhl:before {
+  content: ""; }
+
+.psicon-shipping_dpd:before {
+  content: ""; }
+
+.psicon-shipping_ems_garantpost:before {
+  content: ""; }
+
+.psicon-shipping_ereturn:before {
+  content: ""; }
+
+.psicon-shipping_esellersfriend:before {
+  content: ""; }
+
+.psicon-shipping_fedex:before {
+  content: ""; }
+
+.psicon-shipping_gel_express:before {
+  content: ""; }
+
+.psicon-shipping_gls:before {
+  content: ""; }
+
+.psicon-shipping_hbh:before {
+  content: ""; }
+
+.psicon-shipping_hermes:before {
+  content: ""; }
+
+.psicon-shipping_ids_logistik:before {
+  content: ""; }
+
+.psicon-shipping_ilopack:before {
+  content: ""; }
+
+.psicon-shipping_iloxx:before {
+  content: ""; }
+
+.psicon-shipping_lkv:before {
+  content: ""; }
+
+.psicon-shipping_other:before {
+  content: ""; }
+
+.psicon-shipping_post_at:before {
+  content: ""; }
+
+.psicon-shipping_pvs_logistik:before {
+  content: ""; }
+
+.psicon-shipping_rhenus:before {
+  content: ""; }
+
+.psicon-shipping_selbstabholer:before {
+  content: ""; }
+
+.psicon-shipping_shippingcenter:before {
+  content: ""; }
+
+.psicon-shipping_spedition:before {
+  content: ""; }
+
+.psicon-shipping_swiss_post:before {
+  content: ""; }
+
+.psicon-shipping_tnt:before {
+  content: ""; }
+
+.psicon-shipping_trans-o-flex:before {
+  content: ""; }
+
+.psicon-shipping_ups:before {
+  content: ""; }
+
+.psicon-shipping_yousellwesend:before {
+  content: ""; }
+
+.psicon-customer_link:before {
+  content: ""; }
+
+.psicon-design_inline_edit:before {
+  content: ""; }
+
+.psicon-document_show:before {
+  content: ""; }
+
+.psicon-dunning_level_1:before {
+  content: ""; }
+
+.psicon-dunning_level_2:before {
+  content: ""; }
+
+.psicon-dunning_level_3:before {
+  content: ""; }
+
+.psicon-dunning_level_4:before {
+  content: ""; }
+
+.psicon-dunning_level_5:before {
+  content: ""; }
+
+.psicon-email_sent:before {
+  content: ""; }
+
+.psicon-file_extension_odt:before {
+  content: ""; }
+
+.psicon-payment_sepa_pain:before {
+  content: ""; }
+
+.psicon-shipping_centre:before {
+  content: ""; }
+
+.psicon-order_new:before {
+  content: ""; }
+
+.psicon-refund_create:before {
+  content: ""; }
+
+.psicon-refund_reversal_create:before {
+  content: ""; }
+
+.psicon-icon-reversal_document-13:before {
+  content: ""; }
+
+.psicon-reorder_search:before {
+  content: ""; }
+
+.psicon-shipment_tracking:before {
+  content: ""; }
+
+.psicon-zoom_out:before {
+  content: ""; }
+
+.psicon-plugin_productive_deploy:before {
+  content: ""; }
+
+.psicon-plugin_to_productive:before {
+  content: ""; }
+
+.psicon-plugin_to_stage:before {
+  content: ""; }
+
+.psicon-image:before {
+  content: ""; }
+
+.psicon-plugin_stage_deploy:before {
+  content: ""; }
+
+.psicon-plugin_stage:before {
+  content: ""; }
+
+.psicon-trash:before {
+  content: ""; }
+
+.psicon-author:before {
+  content: ""; }
+
+.psicon-changelog:before {
+  content: ""; }
+
+.psicon-item_move:before {
+  content: ""; }
+
+.psicon-marketplace:before {
+  content: ""; }
+
+.psicon-plugin:before {
+  content: ""; }
+
+.psicon-burger:before {
+  content: ""; }
+
+.psicon-grid:before {
+  content: ""; }
+
+.psicon-plugin_inbox:before {
+  content: ""; }
+
+.psicon-dunning_level:before {
+  content: ""; }
+
+.psicon-folder_closeable:before {
+  content: ""; }
+
+.psicon-order_multi:before {
+  content: ""; }
+
+.psicon-support:before {
+  content: ""; }
+
+.psicon-diagramm:before {
+  content: ""; }
+
+.psicon-forum:before {
+  content: ""; }
+
+.psicon-handbuch:before {
+  content: ""; }
+
+.psicon-statistik:before {
+  content: ""; }
+
+.psicon-active:before {
+  content: ""; }
+
+.psicon-add:before {
+  content: ""; }
+
+.psicon-address_label:before {
+  content: ""; }
+
+.psicon-adjustment_form:before {
+  content: ""; }
+
+.psicon-apply_all:before {
+  content: ""; }
+
+.psicon-back:before {
+  content: ""; }
+
+.psicon-booking_carry_outpng:before {
+  content: ""; }
+
+.psicon-booking_reset:before {
+  content: ""; }
+
+.psicon-calculate_acquisition_pricepng:before {
+  content: ""; }
+
+.psicon-calendar_extend_appointment:before {
+  content: ""; }
+
+.psicon-cancel:before {
+  content: ""; }
+
+.psicon-category_edit:before {
+  content: ""; }
+
+.psicon-checkbox_checked:before {
+  content: ""; }
+
+.psicon-checkbox_indeterminate:before {
+  content: ""; }
+
+.psicon-checkbox_unchecked:before {
+  content: ""; }
+
+.psicon-close:before {
+  content: ""; }
+
+.psicon-collapse_down:before {
+  content: ""; }
+
+.psicon-collapse_left:before {
+  content: ""; }
+
+.psicon-collapse_rightpng:before {
+  content: ""; }
+
+.psicon-collapse_up:before {
+  content: ""; }
+
+.psicon-confirm:before {
+  content: ""; }
+
+.psicon-control_pause:before {
+  content: ""; }
+
+.psicon-control_play:before {
+  content: ""; }
+
+.psicon-control_skip:before {
+  content: ""; }
+
+.psicon-control_start:before {
+  content: ""; }
+
+.psicon-control_stop:before {
+  content: ""; }
+
+.psicon-copy_clipboard:before {
+  content: ""; }
+
+.psicon-copy:before {
+  content: ""; }
+
+.psicon-credit_note:before {
+  content: ""; }
+
+.psicon-customer_new_password:before {
+  content: ""; }
+
+.psicon-customer:before {
+  content: ""; }
+
+.psicon-data_export:before {
+  content: ""; }
+
+.psicon-date_pick:before {
+  content: ""; }
+
+.psicon-debug:before {
+  content: ""; }
+
+.psicon-delete:before {
+  content: ""; }
+
+.psicon-delivery_note_create:before {
+  content: ""; }
+
+.psicon-delivery_note:before {
+  content: ""; }
+
+.psicon-design_add:before {
+  content: ""; }
+
+.psicon-design_copy:before {
+  content: ""; }
+
+.psicon-design_export:before {
+  content: ""; }
+
+.psicon-design_import:before {
+  content: ""; }
+
+.psicon-design_inline_edit_toggle:before {
+  content: ""; }
+
+.psicon-design_publish:before {
+  content: ""; }
+
+.psicon-design_transfer:before {
+  content: ""; }
+
+.psicon-document:before {
+  content: ""; }
+
+.psicon-domain_new:before {
+  content: ""; }
+
+.psicon-domains:before {
+  content: ""; }
+
+.psicon-download:before {
+  content: ""; }
+
+.psicon-drag_sort_handle:before {
+  content: ""; }
+
+.psicon-dropbox:before {
+  content: ""; }
+
+.psicon-dunning_letter:before {
+  content: ""; }
+
+.psicon-edit_blog:before {
+  content: ""; }
+
+.psicon-edit_listing:before {
+  content: ""; }
+
+.psicon-edit:before {
+  content: ""; }
+
+.psicon-email_send:before {
+  content: ""; }
+
+.psicon-email_service:before {
+  content: ""; }
+
+.psicon-error:before {
+  content: ""; }
+
+.psicon-execute:before {
+  content: ""; }
+
+.psicon-export:before {
+  content: ""; }
+
+.psicon-favourite_active:before {
+  content: ""; }
+
+.psicon-favourite_inactive:before {
+  content: ""; }
+
+.psicon-favourites:before {
+  content: ""; }
+
+.psicon-file_attachment:before {
+  content: ""; }
+
+.psicon-file_extension_blank:before {
+  content: ""; }
+
+.psicon-file_extension_css:before {
+  content: ""; }
+
+.psicon-file_extension_csv:before {
+  content: ""; }
+
+.psicon-file_extension_doc:before {
+  content: ""; }
+
+.psicon-file_extension_docx:before {
+  content: ""; }
+
+.psicon-file_extension_gif:before {
+  content: ""; }
+
+.psicon-file_extension_gzip:before {
+  content: ""; }
+
+.psicon-file_extension_hh:before {
+  content: ""; }
+
+.psicon-file_extension_html:before {
+  content: ""; }
+
+.psicon-file_extension_ico:before {
+  content: ""; }
+
+.psicon-file_extension_jpeg:before {
+  content: ""; }
+
+.psicon-file_extension_jpg:before {
+  content: ""; }
+
+.psicon-file_extension_js:before {
+  content: ""; }
+
+.psicon-file_extension_json:before {
+  content: ""; }
+
+.psicon-file_extension_md:before {
+  content: ""; }
+
+.psicon-file_extension_openoffice:before {
+  content: ""; }
+
+.psicon-file_extension_pdf:before {
+  content: ""; }
+
+.psicon-file_extension_png:before {
+  content: ""; }
+
+.psicon-file_extension_rtf:before {
+  content: ""; }
+
+.psicon-file_extension_swf:before {
+  content: ""; }
+
+.psicon-file_extension_tar:before {
+  content: ""; }
+
+.psicon-file_extension_tiff:before {
+  content: ""; }
+
+.psicon-file_extension_twig:before {
+  content: ""; }
+
+.psicon-file_extension_txt:before {
+  content: ""; }
+
+.psicon-file_extension_xls:before {
+  content: ""; }
+
+.psicon-file_extension_xlsx:before {
+  content: ""; }
+
+.psicon-file_extension_xml:before {
+  content: ""; }
+
+.psicon-file_extension_zip:before {
+  content: ""; }
+
+.psicon-filter_add:before {
+  content: ""; }
+
+.psicon-filter_remove:before {
+  content: ""; }
+
+.psicon-filter:before {
+  content: ""; }
+
+.psicon-first:before {
+  content: ""; }
+
+.psicon-flag_alarm:before {
+  content: ""; }
+
+.psicon-flag_black:before {
+  content: ""; }
+
+.psicon-flag_blue:before {
+  content: ""; }
+
+.psicon-flag_bomb_black:before {
+  content: ""; }
+
+.psicon-flag_bomb_green:before {
+  content: ""; }
+
+.psicon-flag_bomb_red:before {
+  content: ""; }
+
+.psicon-flag_green:before {
+  content: ""; }
+
+.psicon-flag_help:before {
+  content: ""; }
+
+.psicon-flag_ledblack_16:before {
+  content: ""; }
+
+.psicon-flag_ledblue_16:before {
+  content: ""; }
+
+.psicon-flag_leddarkblue_16:before {
+  content: ""; }
+
+.psicon-flag_leddarkgreen_16:before {
+  content: ""; }
+
+.psicon-flag_leddarkred_16:before {
+  content: ""; }
+
+.psicon-flag_ledgreen_16:before {
+  content: ""; }
+
+.psicon-flag_ledgrey_16:before {
+  content: ""; }
+
+.psicon-flag_ledorange_16:before {
+  content: ""; }
+
+.psicon-flag_ledpink_16:before {
+  content: ""; }
+
+.psicon-flag_ledpurple_16:before {
+  content: ""; }
+
+.psicon-flag_ledred_16:before {
+  content: ""; }
+
+.psicon-flag_ledyellow_16:before {
+  content: ""; }
+
+.psicon-flag_none:before {
+  content: ""; }
+
+.psicon-flag_red:before {
+  content: ""; }
+
+.psicon-flag_star:before {
+  content: ""; }
+
+.psicon-flag_user_blue:before {
+  content: ""; }
+
+.psicon-flag_user_dark_blue:before {
+  content: ""; }
+
+.psicon-flag_user_female:before {
+  content: ""; }
+
+.psicon-flag_user_gray:before {
+  content: ""; }
+
+.psicon-flag_user_green:before {
+  content: ""; }
+
+.psicon-flag_user_light_gray:before {
+  content: ""; }
+
+.psicon-flag_user_orange:before {
+  content: ""; }
+
+.psicon-flag_user_purple:before {
+  content: ""; }
+
+.psicon-flag_user_red:before {
+  content: ""; }
+
+.psicon-flag_user_turquoise:before {
+  content: ""; }
+
+.psicon-flag_user_yellow:before {
+  content: ""; }
+
+.psicon-flag_weather_clouds:before {
+  content: ""; }
+
+.psicon-flag_weather_cloudy:before {
+  content: ""; }
+
+.psicon-flag_weather_lightning:before {
+  content: ""; }
+
+.psicon-flag_weather_rain:before {
+  content: ""; }
+
+.psicon-flag_weather_snow:before {
+  content: ""; }
+
+.psicon-flag_weather_sun:before {
+  content: ""; }
+
+.psicon-flag_yellow:before {
+  content: ""; }
+
+.psicon-folder_add:before {
+  content: ""; }
+
+.psicon-folder_closable:before {
+  content: ""; }
+
+.psicon-folder_openable:before {
+  content: ""; }
+
+.psicon-folder_opened:before {
+  content: ""; }
+
+.psicon-folder:before {
+  content: ""; }
+
+.psicon-frontend_open:before {
+  content: ""; }
+
+.psicon-fullscreen:before {
+  content: ""; }
+
+.psicon-help:before {
+  content: ""; }
+
+.psicon-inactive:before {
+  content: ""; }
+
+.psicon-infinite:before {
+  content: ""; }
+
+.psicon-info:before {
+  content: ""; }
+
+.psicon-insert_after:before {
+  content: ""; }
+
+.psicon-insert_before:before {
+  content: ""; }
+
+.psicon-invoice_create:before {
+  content: ""; }
+
+.psicon-item_barcode_show:before {
+  content: ""; }
+
+.psicon-item_bundle:before {
+  content: ""; }
+
+.psicon-item_image_gallery:before {
+  content: ""; }
+
+.psicon-item_image_selected_1:before {
+  content: ""; }
+
+.psicon-item_image_selected_2:before {
+  content: ""; }
+
+.psicon-item_label:before {
+  content: ""; }
+
+.psicon-item_plus:before {
+  content: ""; }
+
+.psicon-item_referrer_url:before {
+  content: ""; }
+
+.psicon-item_scan:before {
+  content: ""; }
+
+.psicon-item_search:before {
+  content: ""; }
+
+.psicon-item_serial_number_register:before {
+  content: ""; }
+
+.psicon-item_serial_number:before {
+  content: ""; }
+
+.psicon-item_variation_distribute_quantity:before {
+  content: ""; }
+
+.psicon-item_variation_inheritance:before {
+  content: ""; }
+
+.psicon-item_webshop_invisible:before {
+  content: ""; }
+
+.psicon-item:before {
+  content: ""; }
+
+.psicon-items_incoming_history:before {
+  content: ""; }
+
+.psicon-lang_de:before {
+  content: ""; }
+
+.psicon-lang_en:before {
+  content: ""; }
+
+.psicon-lang_multilingual:before {
+  content: ""; }
+
+.psicon-last:before {
+  content: ""; }
+
+.psicon-lionbridge_status_check:before {
+  content: ""; }
+
+.psicon-lionbridge_status_checked:before {
+  content: ""; }
+
+.psicon-listing_create:before {
+  content: ""; }
+
+.psicon-listing_direct_lister:before {
+  content: ""; }
+
+.psicon-listing_remove:before {
+  content: ""; }
+
+.psicon-listing_show_active:before {
+  content: ""; }
+
+.psicon-listing_template_transfer:before {
+  content: ""; }
+
+.psicon-listing_type_shop:before {
+  content: ""; }
+
+.psicon-listings_show_active:before {
+  content: ""; }
+
+.psicon-listings_show:before {
+  content: ""; }
+
+.psicon-more:before {
+  content: ""; }
+
+.psicon-move_down:before {
+  content: ""; }
+
+.psicon-move_up:before {
+  content: ""; }
+
+.psicon-navigate_back:before {
+  content: ""; }
+
+.psicon-new_todo:before {
+  content: ""; }
+
+.psicon-next:before {
+  content: ""; }
+
+.psicon-offer:before {
+  content: ""; }
+
+.psicon-order_confirmation_create:before {
+  content: ""; }
+
+.psicon-order_flag:before {
+  content: ""; }
+
+.psicon-order_mulit:before {
+  content: ""; }
+
+.psicon-order_not_possible:before {
+  content: ""; }
+
+.psicon-order_note_create:before {
+  content: ""; }
+
+.psicon-order_note_customer:before {
+  content: ""; }
+
+.psicon-order_note:before {
+  content: ""; }
+
+.psicon-order_open:before {
+  content: ""; }
+
+.psicon-order_parcel_service_change:before {
+  content: ""; }
+
+.psicon-order_parcel_service_preset_change:before {
+  content: ""; }
+
+.psicon-order_property:before {
+  content: ""; }
+
+.psicon-order_return_create_edit:before {
+  content: ""; }
+
+.psicon-order_return_slip:before {
+  content: ""; }
+
+.psicon-order_return:before {
+  content: ""; }
+
+.psicon-order_returns_label:before {
+  content: ""; }
+
+.psicon-order_scheduler_new:before {
+  content: ""; }
+
+.psicon-order_sent:before {
+  content: ""; }
+
+.psicon-order_show_existing_processes:before {
+  content: ""; }
+
+.psicon-order_split:before {
+  content: ""; }
+
+.psicon-order:before {
+  content: ""; }
+
+.psicon-outgoing_items:before {
+  content: ""; }
+
+.psicon-owner:before {
+  content: ""; }
+
+.psicon-payment_assign:before {
+  content: ""; }
+
+.psicon-payment_book_incoming_directly:before {
+  content: ""; }
+
+.psicon-payment_credit_note:before {
+  content: ""; }
+
+.psicon-payment_manual_booking:before {
+  content: ""; }
+
+.psicon-payment_register_incoming:before {
+  content: ""; }
+
+.psicon-picklist_close:before {
+  content: ""; }
+
+.psicon-picklist:before {
+  content: ""; }
+
+.psicon-placeholder_show_list:before {
+  content: ""; }
+
+.psicon-plenty_testsystem_new:before {
+  content: ""; }
+
+.psicon-plugin_copy_to_stage:before {
+  content: ""; }
+
+.psicon-plugin_linked_to_git:before {
+  content: ""; }
+
+.psicon-plugin_not_copied_to_stage:before {
+  content: ""; }
+
+.psicon-plugin_not_linked_to_git:before {
+  content: ""; }
+
+.psicon-plugin_not_productive:before {
+  content: ""; }
+
+.psicon-plugin_productive:before {
+  content: ""; }
+
+.psicon-plugin_pull_productive:before {
+  content: ""; }
+
+.psicon-plugin_pull_stage:before {
+  content: ""; }
+
+.psicon-plugin_pull:before {
+  content: ""; }
+
+.psicon-plugin_push:before {
+  content: ""; }
+
+.psicon-plugin_repo_fetch:before {
+  content: ""; }
+
+.psicon-preview_not_available:before {
+  content: ""; }
+
+.psicon-preview:before {
+  content: ""; }
+
+.psicon-print:before {
+  content: ""; }
+
+.psicon-printer_add:before {
+  content: ""; }
+
+.psicon-problem:before {
+  content: ""; }
+
+.psicon-process_add:before {
+  content: ""; }
+
+.psicon-process_caching:before {
+  content: ""; }
+
+.psicon-process_counter_1:before {
+  content: ""; }
+
+.psicon-process_counter_2:before {
+  content: ""; }
+
+.psicon-process_counter_3:before {
+  content: ""; }
+
+.psicon-process_counter_4:before {
+  content: ""; }
+
+.psicon-process_counter_5:before {
+  content: ""; }
+
+.psicon-process_counter_6:before {
+  content: ""; }
+
+.psicon-process_counter_7:before {
+  content: ""; }
+
+.psicon-process_counter_8:before {
+  content: ""; }
+
+.psicon-process_counter_9:before {
+  content: ""; }
+
+.psicon-process_counter_10:before {
+  content: ""; }
+
+.psicon-process_counter_11:before {
+  content: ""; }
+
+.psicon-process_counter_12:before {
+  content: ""; }
+
+.psicon-process_counter_13:before {
+  content: ""; }
+
+.psicon-process_counter_14:before {
+  content: ""; }
+
+.psicon-process_counter_15:before {
+  content: ""; }
+
+.psicon-process_counter_16:before {
+  content: ""; }
+
+.psicon-process_counter_17:before {
+  content: ""; }
+
+.psicon-process_counter_18:before {
+  content: ""; }
+
+.psicon-process_counter_19:before {
+  content: ""; }
+
+.psicon-process_counter_20:before {
+  content: ""; }
+
+.psicon-process_counter_21:before {
+  content: ""; }
+
+.psicon-process_counter_22:before {
+  content: ""; }
+
+.psicon-process_counter_23:before {
+  content: ""; }
+
+.psicon-process_counter_24:before {
+  content: ""; }
+
+.psicon-process_counter_25:before {
+  content: ""; }
+
+.psicon-process_dialog:before {
+  content: ""; }
+
+.psicon-process_end:before {
+  content: ""; }
+
+.psicon-process_error_grey:before {
+  content: ""; }
+
+.psicon-process_error_red:before {
+  content: ""; }
+
+.psicon-process_error:before {
+  content: ""; }
+
+.psicon-process_jump:before {
+  content: ""; }
+
+.psicon-process_loop:before {
+  content: ""; }
+
+.psicon-process_order_status:before {
+  content: ""; }
+
+.psicon-process_polling:before {
+  content: ""; }
+
+.psicon-process_scan:before {
+  content: ""; }
+
+.psicon-rating_small_-1:before {
+  content: ""; }
+
+.psicon-rating_small_-2:before {
+  content: ""; }
+
+.psicon-rating_small_-3:before {
+  content: ""; }
+
+.psicon-rating_small_-4:before {
+  content: ""; }
+
+.psicon-rating_small_-5:before {
+  content: ""; }
+
+.psicon-rating_small_0:before {
+  content: ""; }
+
+.psicon-rating_small_1:before {
+  content: ""; }
+
+.psicon-rating_small_02:before {
+  content: ""; }
+
+.psicon-rating_small_3:before {
+  content: ""; }
+
+.psicon-rating_small_4:before {
+  content: ""; }
+
+.psicon-rating_small_5:before {
+  content: ""; }
+
+.psicon-receipt_archive:before {
+  content: ""; }
+
+.psicon-referrer_backend:before {
+  content: ""; }
+
+.psicon-refresh:before {
+  content: ""; }
+
+.psicon-reload:before {
+  content: ""; }
+
+.psicon-reorder_create:before {
+  content: ""; }
+
+.psicon-reorder_not_possible:before {
+  content: ""; }
+
+.psicon-reorder_scan:before {
+  content: ""; }
+
+.psicon-reorder_show:before {
+  content: ""; }
+
+.psicon-reorder_type:before {
+  content: ""; }
+
+.psicon-reorder:before {
+  content: ""; }
+
+.psicon-repair_slip:before {
+  content: ""; }
+
+.psicon-reset_32:before {
+  content: ""; }
+
+.psicon-reset:before {
+  content: ""; }
+
+.psicon-save:before {
+  content: ""; }
+
+.psicon-search_apply:before {
+  content: ""; }
+
+.psicon-search:before {
+  content: ""; }
+
+.psicon-send_email:before {
+  content: ""; }
+
+.psicon-set_package_number:before {
+  content: ""; }
+
+.psicon-settings_transfer:before {
+  content: ""; }
+
+.psicon-settings:before {
+  content: ""; }
+
+.psicon-shipping_dhl_packstation_valid:before {
+  content: ""; }
+
+.psicon-shipping_express:before {
+  content: ""; }
+
+.psicon-skype:before {
+  content: ""; }
+
+.psicon-sort_asc:before {
+  content: ""; }
+
+.psicon-sort_desc:before {
+  content: ""; }
+
+.psicon-sort_down:before {
+  content: ""; }
+
+.psicon-sort_up:before {
+  content: ""; }
+
+.psicon-sound:before {
+  content: ""; }
+
+.psicon-stock_intake_without_reorder:before {
+  content: ""; }
+
+.psicon-stock_intake:before {
+  content: ""; }
+
+.psicon-stock_limited:before {
+  content: ""; }
+
+.psicon-stock:before {
+  content: ""; }
+
+.psicon-success:before {
+  content: ""; }
+
+.psicon-tag_disabled:before {
+  content: ""; }
+
+.psicon-tag:before {
+  content: ""; }
+
+.psicon-telephone_hangup:before {
+  content: ""; }
+
+.psicon-telephone:before {
+  content: ""; }
+
+.psicon-ticket_add_faq:before {
+  content: ""; }
+
+.psicon-ticket_all:before {
+  content: ""; }
+
+.psicon-ticket_attachment_private:before {
+  content: ""; }
+
+.psicon-ticket_create:before {
+  content: ""; }
+
+.psicon-ticket_deadline_exceeded:before {
+  content: ""; }
+
+.psicon-ticket_deadline_today:before {
+  content: ""; }
+
+.psicon-ticket_events:before {
+  content: ""; }
+
+.psicon-ticket_folder_move:before {
+  content: ""; }
+
+.psicon-ticket_link:before {
+  content: ""; }
+
+.psicon-ticket_message_new:before {
+  content: ""; }
+
+.psicon-ticket_message_private_new:before {
+  content: ""; }
+
+.psicon-ticket_message_private:before {
+  content: ""; }
+
+.psicon-ticket_message:before {
+  content: ""; }
+
+.psicon-ticket_mine_done:before {
+  content: ""; }
+
+.psicon-ticket_mine_todo:before {
+  content: ""; }
+
+.psicon-ticket_mine:before {
+  content: ""; }
+
+.psicon-ticket_new:before {
+  content: ""; }
+
+.psicon-ticket_prio1:before {
+  content: ""; }
+
+.psicon-ticket_prio2:before {
+  content: ""; }
+
+.psicon-ticket_prio3:before {
+  content: ""; }
+
+.psicon-ticket_prio4:before {
+  content: ""; }
+
+.psicon-ticket_prio5:before {
+  content: ""; }
+
+.psicon-ticket_prio6:before {
+  content: ""; }
+
+.psicon-ticket_prio7:before {
+  content: ""; }
+
+.psicon-ticket_prio8:before {
+  content: ""; }
+
+.psicon-ticket_show_parent:before {
+  content: ""; }
+
+.psicon-ticket_show:before {
+  content: ""; }
+
+.psicon-ticket_todo:before {
+  content: ""; }
+
+.psicon-timer:before {
+  content: ""; }
+
+.psicon-upload:before {
+  content: ""; }
+
+.psicon-user_my_account:before {
+  content: ""; }
+
+.psicon-vcard:before {
+  content: ""; }
+
+.psicon-visibility_private:before {
+  content: ""; }
+
+.psicon-warning:before {
+  content: ""; }
+
+.psicon-zoom:before {
+  content: ""; }
