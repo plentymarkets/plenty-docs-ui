@@ -1,6 +1,6 @@
 .toc-menu {
   color: var(--toc-font-color);
-  background: var(--plenty-secondaries-white);
+  background: var(--toc-background-color);
   padding: 1.5rem 1rem 1rem;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -14,7 +14,7 @@
 }
 
 .toc .toc-menu h3 {
-  color: var(--plentyGreysLimedSpruce);
+  color: var(--toc-heading-font-color);
   font-size: calc(16 / var(--rem-base) * 1rem);
   line-height: 1.3;
   margin: 0 -0.5px;
@@ -83,8 +83,8 @@
 }
 
 .toc .toc-menu a.is-active {
-  border-left: 3px solid var(--plentyRedCrimson);
-  color: var(--doc-font-color);
+  border-left: 3px solid var(--toc-left-border);
+  color: var(--toc-focused-color);
 }
 
 .toc .toc-menu .is-hidden-toc {

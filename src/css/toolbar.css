@@ -86,12 +86,12 @@
 }
 
 .toolbar .toolbar-action {
-  background: var(--plentyRedCrimson);
+  background: var(--toolbar-action-background);
   border-radius: 50%;
   padding: 0.25rem;
   margin-right: 0.5rem;
   font-size: var(--toolbar-actions-font-size);
-  color: var(--plenty-secondaries-white);
+  color: var(--toolbar-action-color);
   display: grid;
   align-items: center;
   text-align: center;

@@ -3,9 +3,9 @@
 .feedback-form-wrapper textarea {
     width: 100%;
     background: var(--primary-color);
-    border: 2px solid var(--plentyLightGrey);
+    border: 2px solid var(--feedback-form-textarea-border);
     padding: 10px;
-    color: var(--plentyGreysLimedSpruce);
+    color: var(--feedback-form-textarea-color);
     resize: none;
 }
 
@@ -14,12 +14,12 @@
 }
 
 .feedback-form-wrapper textarea::placeholder {
-    color: var(--plentyGreysLimedSpruce);
+    color: var(--feedback-form-textarea-color);
 }
 
 .feedback-form-wrapper {
     padding: 20px;
-    background: var(--plenty-secondaries-white);
+    background: var(--feedback-form-background);
     border-radius: 5px;
     box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
 }
@@ -37,15 +37,15 @@
 }
 
 .feedback-form-wrapper button.opinion.like {
-    color: var( --plentyBluesPacificBlue);
-    background: var(--primary-color);
-    border: 2px solid var( --plentyBluesPacificBlue);
+    color: var( --feedback-form-button-color-like);
+    background: var(--feedback-form-button-background-like);
+    border: 2px solid var( --feedback-form-button-border-like);
 }
 
 .feedback-form-wrapper button.opinion.dislike {
-  color: var( --plentyRedCrimson);
-  background: var(--primary-color);
-  border: 2px solid var( --plentyRedCrimson);
+    color: var( --feedback-form-button-color-dislike);
+    background: var(--feedback-form-button-background-dislike);
+    border: 2px solid var( --feedback-form-button-border-dislike);
 }
 
 .feedback-form-wrapper i {
