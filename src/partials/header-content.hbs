@@ -3,8 +3,14 @@
         <div class="container-fluid">
             {{> nav-toggle}}
             <div class="left">
-                <a class="logo" href="{{ site.url }}/index.html"><img src="{{ site.url }}/_/img/plenty-logo-rgb.png" alt="home-logo"></a>
-                <a class="logo d-none d-lg-inline" href="{{ site.url }}/index.html"><img src="{{ site.url }}/_/img/plenty-dev-text-rgb.png" alt="home-logo-text"></a>
+            {{#if (or (eq site.url 'http://localhost:5252') (eq site.url 'https://knowledge.plentymarkets.com/en-gb')) }}
+              <a class="logo" href="{{ site.url }}/index.html"><img src="{{ site.url }}/_/img/plenty-logo-rgb.png" alt="home-logo"></a>
+              <a class="logo d-none d-lg-inline" href="{{ site.url }}/index.html"><img src="{{ site.url }}/_/img/plenty-dev-text-rgb.png" alt="home-logo-text"></a>
+            {{else}}
+              <a class="logo" href="{{ site.url }}/index.html"><img src="{{ site.url }}/_/img/plenty-logo.svg" alt="home-logo"></a>
+              <a class="logo d-none d-lg-inline" href="{{ site.url }}/index.html"><img src="{{ site.url }}/_/img/plenty-dev-text.svg" alt="home-logo-text"></a>
+            {{/if}}
+
             </div>
             <div class="right">
                 <div class="menu-wrapper">

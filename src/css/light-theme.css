@@ -19,11 +19,11 @@
   --toc-background-color: var(--plenty-secondaries-white);
   --toc-heading-font-color: var(--doc-font-color);
   --toc-left-border: var(--plentyRedCrimson);
-  --toc-focused-color: var(--color-white);
+  --toc-focused-color: var(--doc-font-color);
   /* doc */
   --doc-font-color: var(--plentyBluesPacificBlue);
   --doc-paragraph-color: var(--plentyGreysLimedSpruce);
-  --heading-font-color: var(--plentyGreysLimedSpruce);
+  --heading-font-color: var(--doc-font-color);
   --link-font-color: var(--plenty-secondaries-white);
   /* footer */
   --footer-link-font-color: var(--plenty-secondaries-white);

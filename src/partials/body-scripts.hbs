@@ -37,6 +37,8 @@
     })
   })()
 </script>
+
+{{#if (or (eq site.url 'http://localhost:5252') (eq site.url 'https://knowledge.plentymarkets.com/en-gb')) }}
 <script>
   var Feedback = {
     page: '{{ page.title }}',
@@ -45,3 +47,14 @@
     token: 'H7zyIArazaYYgfAIsLkPigpFTJUv4IhgPCrosCyPbjY'
   }
 </script>
+{{else}}
+<script>
+  var Feedback = {
+    page: '{{ page.title }}',
+    space: 'AAAAFHhmz80',
+    key: 'AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI',
+    token: 'H7zyIArazaYYgfAIsLkPigpFTJUv4IhgPCrosCyPbjY'
+  }
+</script>
+{{/if}}
+
