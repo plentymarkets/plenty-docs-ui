@@ -22,6 +22,7 @@
   --toc-focused-color: var(--plentyBluesPictonBlue);
   /* doc */
   --doc-font-color: var(--color-white);
+  --link_unresolved-font-color: var(--important-color);
   /*--doc-paragraph-color: var(--plentyGreysLimedSpruce);*/
   --heading-font-color: var(--doc-font-color);
   --link-font-color: var(--plenty-secondaries-white);

@@ -25,6 +25,7 @@
   --doc-paragraph-color: var(--plentyGreysLimedSpruce);
   --heading-font-color: var(--doc-font-color);
   --link-font-color: var(--plenty-secondaries-white);
+  --link_unresolved-font-color: var(--plentyBluesPacificBlue);
   /* footer */
   --footer-link-font-color: var(--plenty-secondaries-white);
   /* docsearch */

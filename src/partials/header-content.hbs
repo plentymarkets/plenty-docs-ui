@@ -3,7 +3,7 @@
         <div class="container-fluid">
             {{> nav-toggle}}
             <div class="left">
-            {{#if (or (eq site.url 'https://knowledge.plentymarkets.com/de-de') (eq site.url 'https://knowledge.plentymarkets.com/en-gb')) }}
+            {{#if (or (eq site.url 'http://localhost:5252') (eq site.url 'httpsss://knowledge.plentymarkets.com/en-gb')) }}
               <a class="logo" href="{{ site.url }}/index.html"><img src="{{ site.url }}/_/img/plenty-logo-rgb.png" alt="home-logo"></a>
               <a class="logo d-none d-lg-inline" href="{{ site.url }}/index.html"><img src="{{ site.url }}/_/img/plenty-dev-text-rgb.png" alt="home-logo-text"></a>
             {{else}}
