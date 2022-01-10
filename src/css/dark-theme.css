@@ -33,6 +33,8 @@
   --docsearch-muted-color: var(--color-white);
   --docsearch-text-color: var(--color-white);
   --docsearch-searchbox-header-focus-background: #126277;
+  --docsearch-modal-background: var(--plentyVeryDarkBlue);
+  --docsearch-searchbox-focus-background: var(--plentyDarkCyan);
   /* feedback-form */
   --feedback-form-background: var(--plentyBluesTealBlue);
   --feedback-form-textarea-background: var(--plentyBluesFadedJade);
