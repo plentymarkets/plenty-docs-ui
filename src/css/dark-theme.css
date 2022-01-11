@@ -30,6 +30,8 @@
   --table-row-even: var(--plentyDarkShadeCyan);
   --table-heading-color: var(--color-white);
   --table-borders-color: var(--color-white);
+  --collapsebox-background-color: var(--plentyBluesTealBlue);
+  --collapsebox-text-color: var(--color-white);
   /*--doc-paragraph-color: var(--plentyGreysLimedSpruce);*/
   --heading-font-color: var(--doc-font-color);
   --link-font-color: var(--plenty-secondaries-white);

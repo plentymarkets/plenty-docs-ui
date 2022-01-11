@@ -33,6 +33,8 @@
   --table-row-even: var(--color-white);
   --table-heading-color: var(--plentyRedCrimson);
   --table-borders-color: var(--plentyBluesPacificBlue);
+  --collapsebox-background-color: var(--color-white);
+  --collapsebox-text-color: var(--plentyGreysLimedSpruce);
   /* footer */
   --footer-link-font-color: var(--plenty-secondaries-white);
   /* docsearch */
