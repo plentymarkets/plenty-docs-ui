@@ -221,21 +221,22 @@
 }
 
 .doc table.tableblock thead th {
-  border-bottom: 2.5px solid var(--table-border-color);
+  border-bottom: 2.5px solid var(--table-borders-color);
   padding: 0.5rem;
   font-weight: 700;
+  color: var(--table-heading-color);
 }
 
 .doc table.tableblock td,
 .doc table.tableblock > :not(thead) th {
-  border-top: 1px solid var(--table-border-color);
-  border-bottom: 1px solid var(--table-border-color);
+  border-top: 1px solid var(--table-borders-color);
+  border-bottom: 1px solid var(--table-borders-color);
   padding: 0.5rem;
   font-size: 0.75rem;
 }
 
 .doc table.tableblock tr:nth-child(even) {
-  background-color: var(--plentyGreysLimedSpruce);
+  background-color: var(--table-row-even);
 }
 
 .doc .halign-left {

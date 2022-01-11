@@ -30,6 +30,9 @@
   --tabs-background-color: var(--color-white);
   --tabs-text-color-is-active: var(--color-white);
   --tabs-text-color: var(--plentyRedCrimson);
+  --table-row-even: var(--color-white);
+  --table-heading-color: var(--plentyRedCrimson);
+  --table-borders-color: var(--plentyBluesPacificBlue);
   /* footer */
   --footer-link-font-color: var(--plenty-secondaries-white);
   /* docsearch */

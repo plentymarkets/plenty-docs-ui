@@ -27,6 +27,9 @@
   --tabs-background-color: var(--plentyDarkShadeCyan);
   --tabs-text-color-is-active: var(--color-white);
   --tabs-text-color: var(--color-white);
+  --table-row-even: var(--plentyDarkShadeCyan);
+  --table-heading-color: var(--color-white);
+  --table-borders-color: var(--color-white);
   /*--doc-paragraph-color: var(--plentyGreysLimedSpruce);*/
   --heading-font-color: var(--doc-font-color);
   --link-font-color: var(--plenty-secondaries-white);
