@@ -727,7 +727,7 @@
 }
 
 
-.doc .collapsebox {
+.doc .collapseBox {
   cursor: pointer;
   position: relative;
 	display: flex;
@@ -739,33 +739,33 @@
   filter: drop-shadow(0px 5px 15px rgba(0, 0, 0, 0.15));
 }
 
-.doc .collapsebox:hover {
+.doc .collapseBox:hover {
   filter: brightness(85%);
 }
 
-.doc .collapsebox .title {
+.doc .collapseBox .title {
   font-style: normal;
   font-weight: 700;
   font-size: 1.5rem;
 }
 
-.doc .collapsebox .title::after {
+.doc .collapseBox .title::after {
   content: '\e920';
   font-family: var(--plenty-icon-font-family);
   float: right;
   margin-left: 5px;
 }
 
-.doc .collapsebox.active .title::after {
+.doc .collapseBox.active .title::after {
   content: '\e914';
 }
 
-.doc .collapsebox .content {
+.doc .collapseBox .content {
   display: none;
   font-weight: 300;
   font-size: calc(16/var(--rem-base)*1rem);
 }
-.doc .collapsebox.active .content {
+.doc .collapseBox.active .content {
   display: block;
 }
 
