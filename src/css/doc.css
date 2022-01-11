@@ -124,8 +124,12 @@
   margin: 0;
 }
 
+.doc a.bare{
+  color: var(--color-white);
+}
+
 .doc mark {
-  background-color: var(--plentyGreysNevada);
+  background-color: var(--code-background);
   color: var(--color-white);
 }
 
@@ -670,7 +674,7 @@
 .doc kbd {
   display: inline-block;
   font-size: calc(12 / var(--rem-base) * 1rem);
-  background: var(--kbd-background);
+  background: var(--code-background);
   border: 1px solid var(--kbd-border-color);
   border-radius: 0.25em;
   box-shadow: 0 1px 0 var(--kbd-border-color), 0 0 0 0.1em var(--body-background) inset;
