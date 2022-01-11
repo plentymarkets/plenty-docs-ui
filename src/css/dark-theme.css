@@ -23,6 +23,10 @@
   /* doc */
   --doc-font-color: var(--color-white);
   --link_unresolved-font-color: var(--important-color);
+  --tabs-background-color-is-active: var(--plentyBluesTealBlue);
+  --tabs-background-color: var(--plentyDarkShadeCyan);
+  --tabs-text-color-is-active: var(--color-white);
+  --tabs-text-color: var(--color-white);
   /*--doc-paragraph-color: var(--plentyGreysLimedSpruce);*/
   --heading-font-color: var(--doc-font-color);
   --link-font-color: var(--plenty-secondaries-white);

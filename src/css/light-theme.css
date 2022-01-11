@@ -26,6 +26,10 @@
   --heading-font-color: var(--doc-font-color);
   --link-font-color: var(--plenty-secondaries-white);
   --link_unresolved-font-color: var(--plentyBluesPacificBlue);
+  --tabs-background-color-is-active: var(--plentyRedCrimson);
+  --tabs-background-color: var(--color-white);
+  --tabs-text-color-is-active: var(--color-white);
+  --tabs-text-color: var(--plentyRedCrimson);
   /* footer */
   --footer-link-font-color: var(--plenty-secondaries-white);
   /* docsearch */
