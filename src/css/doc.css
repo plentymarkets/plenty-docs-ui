@@ -337,9 +337,8 @@
   content: '\e92a';
 }
 
-.doc .admonitionblock.tip .icon i.fa-toggle-on::after,
-.doc .admonitionblock.tip .icon i.fa-chevron-right::after,
-.doc .admonitionblock.tip .icon i.fa-toggle-off::after
+.doc .admonitionblock.tip .icon i[class^="fa fa-"]::after,
+.doc .admonitionblock.important .icon i[class^="fa fa-"]::after
 {
   content: '';
 }
@@ -799,7 +798,9 @@
   height: 100%;
 }
 
-.doc .admonitionblock .ulist p span {
+.doc .admonitionblock.tip .ulist p span,
+.doc .admonitionblock.tip .content span,
+.doc .admonitionblock.important .content span {
   vertical-align: middle;
-  padding: 0 0.75rem 0 0;
+  padding: 0 0.35rem;
 }
