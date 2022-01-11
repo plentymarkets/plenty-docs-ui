@@ -337,6 +337,13 @@
   content: '\e92a';
 }
 
+.doc .admonitionblock.tip .icon i.fa-toggle-on::after,
+.doc .admonitionblock.tip .icon i.fa-chevron-right::after,
+.doc .admonitionblock.tip .icon i.fa-toggle-off::after
+{
+  content: '';
+}
+
 .doc .admonitionblock.warning .icon {
   color: var(--warning-on-color);
 }
@@ -790,4 +797,9 @@
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.doc .admonitionblock .ulist p span {
+  vertical-align: middle;
+  padding: 0 0.75rem 0 0;
 }
