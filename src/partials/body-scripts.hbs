@@ -15,7 +15,6 @@
     if (!interface_version_list.includes(interface_version)) {
       interface_version = interface_version_list[0]
     }
-
     var plugin_version = "{{page.componentVersion.displayVersion}}"
     var plugin_version_list = [
       '5.0.0',
@@ -24,20 +23,20 @@
     if (!plugin_version_list.includes(plugin_version)) {
       plugin_version = plugin_version_list[0]
     }
-
     docsearch({
-      appId: '6PTARL4KJP',
-      apiKey: 'e7e08c62fb27474b5104e29e3e673645',
-      indexName: 'plentymarkets_beta_doc',
+      apiKey: '45aeef71ca14d766195975ac179f14d0',
+      indexName: 'plentymarkets',
       container: '#docsearch',
-
       searchParameters: {
         hitsPerPage: 10,
+        'facetFilters': [
+          ['tags:developers', 'version:' + interface_version, 'version:' + plugin_version]
+        ]
       },
     })
   })()
 </script>
-
+<script>
 {{#if (or (eq site.url 'https://knowledge.plentymarkets.com/de-de') (eq site.url 'https://knowledge.plentymarkets.com/en-gb')) }}
   var Feedback = {
     page: '{{ page.title }}',
@@ -53,4 +52,4 @@
       token: 'H7zyIArazaYYgfAIsLkPigpFTJUv4IhgPCrosCyPbjY'
     }
 {{/if}}
-
+</script>
