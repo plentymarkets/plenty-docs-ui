@@ -337,6 +337,12 @@
   content: '\e92a';
 }
 
+.doc .admonitionblock.tip .icon i[class^="fa fa-"]::after,
+.doc .admonitionblock.important .icon i[class^="fa fa-"]::after
+{
+  content: '';
+}
+
 .doc .admonitionblock.warning .icon {
   color: var(--warning-on-color);
 }
@@ -790,4 +796,11 @@
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.doc .admonitionblock.tip .ulist p span,
+.doc .admonitionblock.tip .content span,
+.doc .admonitionblock.important .content span {
+  vertical-align: middle;
+  padding: 0 0.35rem;
 }
