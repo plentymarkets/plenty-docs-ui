@@ -1,5 +1,5 @@
 .doc {
-  color: var(--doc-font-color);
+  color: var(--doc-paragraph-color);
   font-size: var(--doc-font-size);
   hyphens: auto;
   line-height: var(--doc-line-height);
@@ -124,8 +124,12 @@
   margin: 0;
 }
 
+.doc a.bare{
+  color: var(--color-white);
+}
+
 .doc mark {
-  background-color: var(--plentyGreysNevada);
+  background-color: var(--code-background);
   color: var(--color-white);
 }
 
@@ -134,7 +138,7 @@
 }
 
 .doc a {
-  color: var(--link-font-color);
+  color: var(--doc-font-color);
 }
 
 .doc a:hover {
@@ -221,21 +225,22 @@
 }
 
 .doc table.tableblock thead th {
-  border-bottom: 2.5px solid var(--table-border-color);
+  border-bottom: 2.5px solid var(--table-borders-color);
   padding: 0.5rem;
   font-weight: 700;
+  color: var(--table-heading-color);
 }
 
 .doc table.tableblock td,
 .doc table.tableblock > :not(thead) th {
-  border-top: 1px solid var(--table-border-color);
-  border-bottom: 1px solid var(--table-border-color);
+  border-top: 1px solid var(--table-borders-color);
+  border-bottom: 1px solid var(--table-borders-color);
   padding: 0.5rem;
   font-size: 0.75rem;
 }
 
 .doc table.tableblock tr:nth-child(even) {
-  background-color: var(--plentyGreysLimedSpruce);
+  background-color: var(--table-row-even);
 }
 
 .doc .halign-left {
@@ -675,7 +680,7 @@
 .doc kbd {
   display: inline-block;
   font-size: calc(12 / var(--rem-base) * 1rem);
-  background: var(--kbd-background);
+  background: var(--code-background);
   border: 1px solid var(--kbd-border-color);
   border-radius: 0.25em;
   box-shadow: 0 1px 0 var(--kbd-border-color), 0 0 0 0.1em var(--body-background) inset;
@@ -732,45 +737,45 @@
 }
 
 
-.doc .collapsebox {
+.doc .collapseBox {
   cursor: pointer;
   position: relative;
 	display: flex;
 	flex-direction: column;
   padding: 15px 20px;
-  background: var(--plentyBluesTealBlue);
-  color: #fbfbfb;
+  background: var(--collapsebox-background-color);
+  color: var(--collapsebox-text-color);
   border-radius: 5px;
   filter: drop-shadow(0px 5px 15px rgba(0, 0, 0, 0.15));
 }
 
-.doc .collapsebox:hover {
+.doc .collapseBox:hover {
   filter: brightness(85%);
 }
 
-.doc .collapsebox .title {
+.doc .collapseBox .title {
   font-style: normal;
   font-weight: 700;
   font-size: 1.5rem;
 }
 
-.doc .collapsebox .title::after {
+.doc .collapseBox .title::after {
   content: '\e920';
   font-family: var(--plenty-icon-font-family);
   float: right;
   margin-left: 5px;
 }
 
-.doc .collapsebox.active .title::after {
+.doc .collapseBox.active .title::after {
   content: '\e914';
 }
 
-.doc .collapsebox .content {
+.doc .collapseBox .content {
   display: none;
-  font-weight: 400;
+  font-weight: 300;
   font-size: calc(16/var(--rem-base)*1rem);
 }
-.doc .collapsebox.active .content {
+.doc .collapseBox.active .content {
   display: block;
 }
 

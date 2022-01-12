@@ -1,5 +1,4 @@
 :root {
-    --plenty-secondaries-white: #fbfbfb;
     --plentyBluesFadedJade: #012e35;
     --plentyBluesTealBlue: #04485b;
     --plentyBluesPacificBlue: #068ec2;
@@ -28,9 +27,11 @@
     --teal: var(--plenty-color-lightblue);
     --brand-primary: var(--plenty-primary);
     --secondary: var(--plenty-secondary);
-
+    --plentyStrongCyan: #008ebd;
+    --plentyVeryDarkBlue: #142637;
+    --plentyDarkCyan: #126277;
+    --plentyDarkShadeCyan: #374d55;
     /* colors */
-    --primary-color: var(--plentyBluesFadedJade);
     --secondary-color: var(--plentyBluesTealBlue);
     --footer-bg-color: var(--plentyGreysLimedSpruce);
     --color-white: var(--plenty-secondaries-white);
@@ -56,14 +57,12 @@
     --monospace-font-family: "Source Code Pro", monospace;
     --monospace-font-weight-bold: 500;
     /* base */
-    --body-background: var(--plentyBluesFadedJade);
     --panel-background: var(--plentyGreysLimedSpruce);
     --secondary-background: var(--plentyBluesTealBlue);
     --panel-border-color: var(--color-white);
     --scrollbar-thumb-color: var(--plentyGreysNevada);
     /* navbar */
     --navbar-background: var(--secondary-color);
-    --navbar-font-color: var(--color-white);
     --navbar_hover-background: var(--color-black);
     --navbar-button-background: var(--color-white);
     --navbar-button-border-color: var(--panel-border-color);
@@ -73,7 +72,6 @@
     --navbar-menu-font-color: var(--body-font-color);
     --navbar-menu_hover-background: var(--color-smoke-50);
     /* nav */
-    --nav-background: var(--plentyBluesTealBlue);
     --nav-border-color: var(--color-white);
     --nav-line-height: 1.35;
     --nav-heading-font-color: var(--color-jet-30);
@@ -83,15 +81,12 @@
     /* toolbar */
     --toolbar-background: var(--plentyBluesTealBlue);
     --toolbar-border-color: var(--panel-border-color);
-    --toolbar-font-color: var(--color-white);
     --toolbar-muted-color: var(--color-gray-30);
     --toolbar-font-size: calc(13 / var(--rem-base) * 1rem);
     --toolbar-actions-font-size: 1rem;
     --page-version-menu-background: var(--plentyGreysLimedSpruce);
     --page-version-missing-font-color: var(--color-gray-30);
     /* toc */
-    --toc-font-color: var(--nav-muted-color);
-    --toc-heading-font-color: var(--doc-font-color);
     --toc-border-color: var(--panel-border-color);
     --toc-line-height: 1.2;
     /* admonitions */
@@ -106,19 +101,15 @@
     --warning-color: var(--color-white);
     --warning-on-color: var(--plentyAdocYellow);
     /* doc */
-    --doc-font-color: var(--color-white);
     --doc-font-size: inherit;
     --doc-font-size--desktop: calc(17 / var(--rem-base) * 1rem);
     --doc-line-height: 1.6;
     --doc-margin: 0 auto;
     --doc-margin--desktop: 0 2rem;
-    --heading-font-color: var(--doc-font-color);
     --heading-font-weight: 700;
     --alt-heading-font-weight: var(--body-font-weight-bold);
     --section-divider-color: var(--panel-border-color);
-    --link-font-color: var(--plentyBluesPictonBlue);
     --link_hover-font-color: var(--plentyBluesSail);
-    --link_unresolved-font-color: var(--important-color);
     --abstract-background: var(--color-smoke-70);
     --abstract-font-color: var(--color-jet-20);
     --abstract-border-color: var(--panel-border-color);
@@ -126,7 +117,6 @@
     --admonition-label-font-weight: var(--body-font-weight-bold);
     --caption-font-color: var(--color-gray-70);
     --caption-font-weight: var(--body-font-weight-bold);
-    --code-background: var(--plentyGreysNevada);
     --code-font-color: var(--body-font-color);
     --code-block-border-radius: 5px;
     --example-background: var(--plentyGreysNevada);
@@ -146,7 +136,6 @@
     --footer-line-height: var(--doc-line-height);
     --footer-background: var(--footer-bg-color);
     --footer-font-color: var(--doc-font-color);
-    --footer-link-font-color: var(--doc-font-color);
     /* dimensions and positioning */
     --navbar-height: calc(95 / var(--rem-base) * 1rem);
     --toolbar-height: calc(45 / var(--rem-base) * 1rem);

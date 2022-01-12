@@ -26,7 +26,8 @@ body {
 
 .navbar a {
   text-decoration: none;
-  color: white;
+  color: var(--navbar-font-color);
+  font-weight: var(--version-font-weight);
 }
 
 .search {
@@ -250,7 +251,7 @@ body {
   top: 60%;
   left: 20px;
   cursor: pointer;
-  background: #04485b;
+  background: var(--dropdown-background-color);
   color: white;
   padding: 10px;
   min-width: unset;
@@ -324,11 +325,15 @@ button:focus {
   position: absolute;
   flex-wrap: wrap;
   flex-direction: column;
-  background: var(--secondary-background);
+  background: var(--navbar-dropdown-background);
   padding: 10px;
   border-radius: 5px;
   transform: translateX(-10px);
   box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
+}
+
+.navbar .right .menu-wrapper .submenu-wrapper .submenu-item{
+  color: var(--plenty-secondaries-white);
 }
 
 .navbar .right .menu-wrapper .submenu-wrapper .submenu-item:not(:first-of-type) {
@@ -354,6 +359,8 @@ button:focus {
 .navbar .right .menu-item.parent {
   position: relative;
   margin-right: 15px;
+  color: var(--navbar-font-color);
+  font-weight: var(--version-font-weight);
 }
 
 .navbar .right .menu-item.parent:hover {

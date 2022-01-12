@@ -1,0 +1,61 @@
+:root {
+  --plenty-secondaries-white: #ffffff;
+  --plentyLightGrey: #F1F1F1;
+  /* colors */
+  --primary-color: var(--plenty-secondaries-white);
+  /* base */
+  --body-background: var(--plentyLightGrey);
+  /* header */
+  --dropdown-background-color: var(--plentyRedCrimson);
+  /* nav */
+  --nav-background: var(--plentyRedCrimson);
+  /* navbar */
+  --navbar-font-color: var(--plentyGreysLimedSpruce);
+  --navbar-dropdown-background: var(--plentyRedCrimson);
+  /* toolbar */
+  --toolbar-font-color: var(--plentyGreysLimedSpruce);
+  --toolbar-action-background: var(--plentyRedCrimson);
+  --toolbar-action-color: var(--color-white);
+  /* toc */
+  --toc-font-color: var(--plentyGreysLimedSpruce);
+  --toc-background-color: var(--plenty-secondaries-white);
+  --toc-heading-font-color: var(--doc-font-color);
+  --toc-left-border: var(--plentyRedCrimson);
+  --toc-focused-color: var(--doc-font-color);
+  /* doc */
+  --doc-font-color: var(--plentyBluesPacificBlue);
+  --doc-paragraph-color: var(--plentyGreysLimedSpruce);
+  --heading-font-color: var(--doc-font-color);
+  --link-font-color: var(--plenty-secondaries-white);
+  --link_unresolved-font-color: var(--plentyBluesPacificBlue);
+  --tabs-background-color-is-active: var(--plentyRedCrimson);
+  --tabs-background-color: var(--color-white);
+  --tabs-text-color-is-active: var(--color-white);
+  --tabs-text-color: var(--plentyRedCrimson);
+  --table-row-even: var(--color-white);
+  --table-heading-color: var(--plentyRedCrimson);
+  --table-borders-color: var(--plentyBluesPacificBlue);
+  --collapsebox-background-color: var(--color-white);
+  --collapsebox-text-color: var(--plentyGreysLimedSpruce);
+  --code-background: var(--plentyRedCrimson);
+  /* footer */
+  --footer-link-font-color: var(--plenty-secondaries-white);
+  /* docsearch */
+  --docsearch-searchbox-background: var(--plenty-secondaries-white);
+  --docsearch-muted-color: var(--plentyGreysLimedSpruce);
+  --docsearch-text-color: var(--plentyGreysLimedSpruce);
+  --docsearch-searchbox-header-focus-background: var(--plentyRedCrimson);
+  --docsearch-modal-background: var(--plentyLightGrey);
+  --docsearch-searchbox-focus-background: var(--plentyLightGrey);
+  /* feedback-form */
+  --feedback-form-background: var(--color-white);
+  --feedback-form-textarea-background: var(--color-white);
+  --feedback-form-textarea-border: var(--plentyLightGrey);
+  --feedback-form-textarea-color: var(--plentyGreysLimedSpruce);
+  --feedback-form-button-background-like: var(--color-white);
+  --feedback-form-button-color-like: var(--plentyStrongCyan);
+  --feedback-form-button-border-like: var(--plentyStrongCyan);
+  --feedback-form-button-background-dislike: var(--color-white);
+  --feedback-form-button-color-dislike: var(--plentyRedCrimson);
+  --feedback-form-button-border-dislike: var(--plentyRedCrimson);
+}

@@ -10,6 +10,13 @@
 .doc .tabs ul li p {
   width: 100%;
   text-align: center;
+  color: var(--tabs-text-color-is-active);
+}
+
+.doc .tabs ul li:not(.is-active) p {
+  width: 100%;
+  text-align: center;
+  color: var(--tabs-text-color);
 }
 
 .doc .tabs li {
@@ -25,7 +32,7 @@
   flex-basis: 0;
   flex-grow: 1;
   max-width: 100%;
-  background-color: var(--plentyBluesTealBlue);
+  background-color: var(--tabs-background-color-is-active);
 }
 
 .doc .tabs li:first-child {
@@ -48,7 +55,7 @@
 
 .doc .tabset.is-loading .tabs li:not(:first-child),
 .doc .tabset:not(.is-loading) .tabs li:not(.is-active) {
-  background-color: var(--plentyGreysLimedSpruce);
+  background-color: var(--tabs-background-color);
 }
 
 .doc .tabset > .content {

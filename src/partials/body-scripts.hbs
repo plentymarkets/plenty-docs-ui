@@ -15,7 +15,6 @@
     if (!interface_version_list.includes(interface_version)) {
       interface_version = interface_version_list[0]
     }
-
     var plugin_version = "{{page.componentVersion.displayVersion}}"
     var plugin_version_list = [
       '5.0.0',
@@ -24,7 +23,6 @@
     if (!plugin_version_list.includes(plugin_version)) {
       plugin_version = plugin_version_list[0]
     }
-
     docsearch({
       apiKey: '45aeef71ca14d766195975ac179f14d0',
       indexName: 'plentymarkets',
