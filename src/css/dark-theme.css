@@ -5,6 +5,8 @@
   --primary-color: var(--plentyBluesFadedJade);
   /* base */
   --body-background: var(--plentyBluesFadedJade);
+  /* header */
+  --dropdown-background-color: var(--plentyBluesTealBlue);
   /* nav */
   --nav-background: var(--plentyBluesTealBlue);
   /* navbar */

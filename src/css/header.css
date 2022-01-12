@@ -251,7 +251,7 @@ body {
   top: 60%;
   left: 20px;
   cursor: pointer;
-  background: #04485b;
+  background: var(--dropdown-background-color);
   color: white;
   padding: 10px;
   min-width: unset;

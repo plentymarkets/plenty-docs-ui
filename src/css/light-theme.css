@@ -5,6 +5,8 @@
   --primary-color: var(--plenty-secondaries-white);
   /* base */
   --body-background: var(--plentyLightGrey);
+  /* header */
+  --dropdown-background-color: var(--plentyRedCrimson);
   /* nav */
   --nav-background: var(--plentyRedCrimson);
   /* navbar */
