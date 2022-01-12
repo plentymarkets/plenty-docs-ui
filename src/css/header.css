@@ -241,6 +241,43 @@ body {
   margin-left: 20px;
 }
 
+.dropdown {
+  margin-left: 20px;
+  padding: 5px;
+}
+.dropdown:hover .dropdown-menu {display: block;}
+
+.dropdown-menu {
+  top: 60%;
+  left: 20px;
+  cursor: pointer;
+  background: #04485b;
+  color: white;
+  padding: 10px;
+  min-width: unset;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.dropdown-toggle {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+.dropdown-toggle:after {
+  display: none;
+}
+.fa-pif-language {
+  margin-right: 7px;
+}
+
 @media screen and (max-width: 778px) {
   .navbar .left {
     margin: 0 auto;
