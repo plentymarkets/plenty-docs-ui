@@ -69,7 +69,7 @@ b,
 dt,
 strong,
 th {
-  font-weight: var(--body-font-weight-bold);
+  font-weight: 700;
 }
 
 em em {
@@ -79,7 +79,7 @@ em em {
 
 strong strong {
   /* stylelint-disable-line */
-  font-weight: normal;
+  font-weight: bold;
 }
 
 button {
