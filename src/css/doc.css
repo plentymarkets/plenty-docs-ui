@@ -135,6 +135,7 @@
 
 .doc .tableblock p {
   font-size: inherit;
+  line-break: anywhere;
 }
 
 .doc a {
