@@ -135,6 +135,7 @@
 
 .doc .tableblock p {
   font-size: inherit;
+  hyphens: none;
 }
 
 .doc a {
