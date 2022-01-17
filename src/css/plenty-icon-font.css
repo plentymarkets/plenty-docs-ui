@@ -1,4 +1,4 @@
-[class*="psicon-"] {
+[class^="psicon-"] {
   display: inline-block;
   font-family: "plenty-system-icons" !important;
   speak: none;
