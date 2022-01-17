@@ -38,6 +38,7 @@
   --collapsebox-background-color: var(--color-white);
   --collapsebox-text-color: var(--plentyGreysLimedSpruce);
   --code-background: var(--plentyRedCrimson);
+  --example-background: var(--plentyLightGrey);
   /* footer */
   --footer-link-font-color: var(--plenty-secondaries-white);
   /* docsearch */
