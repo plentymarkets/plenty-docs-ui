@@ -19,10 +19,9 @@
 
 @font-face {
   font-family: "plenty-system-icons";
-  src: url("https://github.com/plentymarkets/plentymarkets-eu/blob/master/resources/documents/fonts/plenty-system-icons/plenty-system-icons.ttf?raw=true") format("truetype"),
-  url("https://github.com/plentymarkets/plentymarkets-eu/blob/master/resources/documents/fonts/plenty-system-icons/plenty-system-icons.eot?raw=true") format("eot"),
-  url("https://github.com/plentymarkets/plentymarkets-eu/blob/master/resources/documents/fonts/plenty-system-icons/plenty-system-icons.woff?raw=true") format("woff"),
-  url("https://raw.githubusercontent.com/plentymarkets/plentymarkets-eu/d15ff9878b5f87348451314752982ae7815c1cd6/resources/documents/fonts/plenty-system-icons/plenty-system-icons.svg?token=AQ3YYSVEJWVN76X2IWHH2YDBXHSXQ") format("svg");
+  src: url("../font/plenty-system-icons.eot");
+  src: url("../font/plenty-system-icons.ttf") format("truetype"),
+  url("../font/plenty-system-icons.woff") format("woff");
 }
 
 [class^="fa-pif-"], [class*=" fa-pif-"] {
