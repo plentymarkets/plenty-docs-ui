@@ -1,3 +1,8 @@
 {
-  "toctitle": "Inhalte"
+  "toctitle": "Inhalte",
+  "feedbackTitle": "Ist diese Seite hilfreich?",
+  "feedbackPlaceholder": "Geben Sie Ihr Feedback ein... (optional)",
+  "feedbackHelpful": "Diese Seite ist hilfreich",
+  "feedbackNotHelpful": "Diese Seite ist nicht hilfreich",
+  "feedbackThanks": "Danke für Ihre Rückmeldung."
 }
