@@ -1,0 +1,24 @@
+.cookie-bar{
+  background-color: var(--cookie-background);
+}
+.container-max{
+  z-index: auto;
+  max-width: 1200px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.container-max p {
+  color: var(--navbar-font-color);
+}
+.container-max a {
+  color: var(--doc-font-color);
+}
+.cookie-bar .btn-appearance {
+  color: var(--cookie-button-color);
+  background-color: var(--cookie-button-background);
+  border-color: var(--cookie-button-border);
+}
+

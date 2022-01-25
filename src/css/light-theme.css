@@ -41,6 +41,10 @@
   --example-background: var(--plentyLightGrey);
   /* footer */
   --footer-link-font-color: var(--plenty-secondaries-white);
+  --cookie-background: var(--plenty-secondaries-white);
+  --cookie-button-background: var(--plentyRedCrimson);
+  --cookie-button-color: var(--plenty-secondaries-white);
+  --cookie-button-border: var(--plentyRedCrimson);
   /* docsearch */
   --docsearch-searchbox-background: var(--plenty-secondaries-white);
   --docsearch-muted-color: var(--plentyGreysLimedSpruce);
