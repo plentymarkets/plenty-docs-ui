@@ -1,3 +1,52 @@
 {
-  "toctitle": "Inhalte"
+  "toctitle": "Inhalte",
+
+  "company_name": "plentysystems AG",
+  "company_homepage": "https://plentymarkets.com/de/",
+  "legal_disclosure_text": "Impressum",
+  "legal_disclosure_link": "https://www.plentymarkets.com/de/impressum/",
+  "privacy_policy_text": "Datenschutz",
+  "privacy_policy_link": "https://www.plentymarkets.com/de/datenschutz/",
+  "terms_and_conditions_text": "AGB",
+  "terms_and_conditions_link": "https://www.plentymarkets.com/de/agb/",
+
+  "footer_col_1": "plentymarkets",
+  "footer_text_1_1": "Systemvoraussetzungen",
+  "footer_link_1_1": "/de-de/manual/main/willkommen/systemvoraussetzungen.html",
+  "footer_text_1_2": "Admin-Aufgaben",
+  "footer_link_1_2": "/de-de/manual/main/business-entscheidungen/systemadministration.html",
+  "footer_text_1_3": "Assistenten",
+  "footer_link_1_3": "/de-de/manual/main/willkommen/assistenten.html",
+  "footer_text_1_4": "EOL",
+  "footer_link_1_4": "/de-de/manual/main/business-entscheidungen/eol.html",
+
+  "footer_col_2": "Systemerweiterung",
+  "footer_text_2_1": "plentyMarketplace",
+  "footer_link_2_1": "https://marketplace.plentymarkets.com/",
+  "footer_text_2_2": "Entwicklerdokumentation",
+  "footer_link_2_2": "https://developers.plentymarkets.com/",
+  "footer_text_2_3": "plentymarkets auf GitHub",
+  "footer_link_2_3": "https://github.com/plentymarkets",
+  "footer_text_2_4": "Kassensystem plentyPOS",
+  "footer_link_2_4": "https://www.plentymarkets.com/de/produkt/module/point-of-sale/",
+  
+  "footer_col_3": "Service",
+  "footer_text_3_1": "Systemeinrichtung",
+  "footer_link_3_1": "http://marketplace.plentymarkets.com/services/plentyservices/einrichtungspakete/",
+  "footer_text_3_2": "Consulting",
+  "footer_link_3_2": "https://marketplace.plentymarkets.com/services/plentyservices/consulting/",
+  "footer_text_3_3": "Workshops & Webinare",
+  "footer_link_3_3": "https://www.plentymarkets.com/de/wissen/workshops-webinare/",
+  "footer_text_3_4": "Partneragenturen",
+  "footer_link_3_4": "https://marketplace.plentymarkets.com/partners",
+  
+  "footer_col_4": "Produkt",
+  "footer_text_4_1": "Übersicht",
+  "footer_link_4_1": "https://www.plentymarkets.com/de/produkt/",
+  "footer_text_4_2": "Editionen",
+  "footer_link_4_2": "https://www.plentymarkets.com/de/produkt/editionen/",
+  "footer_text_4_3": "Kunden & Storys",
+  "footer_link_4_3": "https://www.plentymarkets.com/de/kunden/",
+  "footer_text_4_4": "Blog",
+  "footer_link_4_4": "https://www.plentymarkets.eu/blog/"
 }
