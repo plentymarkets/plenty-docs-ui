@@ -48,3 +48,17 @@ jobs:
           -H 'Accept: application/vnd.github.v3+json' \
           --user 'plentymonkey:${{ secrets.PLENTYMONKEY_TOKEN }}' \
           --data '{"event_type": "UIBundleUpdate", "client_payload": { "repository": "${{ github.repository }}" }}'
+
+  notification: 
+    name: Google chat notification
+    needs: build
+    runs-on: ubuntu-latest
+    if: ${{ always() }}
+    steps:
+      - name: Google Chat Notification Failure
+        if: ${{ needs.build.result == 'failure' }}
+        uses: Co-qn/google-chat-notification@releases/v1
+        with:
+          name: UI Build
+          url: ${{ secrets.GOOGLE_CHAT_WEBHOOK_FAILURE }}
+          status: ${{ needs.build.result }}
