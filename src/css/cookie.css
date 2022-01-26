@@ -1,5 +1,9 @@
 .cookie-bar{
   background-color: var(--cookie-background);
+  display: none;
+}
+.cookie-bar .privacy-settings {
+  max-height: 50vh;
 }
 .container-max{
   z-index: auto;
@@ -21,4 +25,9 @@
   background-color: var(--cookie-button-background);
   border-color: var(--cookie-button-border);
 }
-
+.custom-control-label {
+  color: var(--navbar-font-color);
+}
+#cookie-further-settings {
+  display: none;
+}
