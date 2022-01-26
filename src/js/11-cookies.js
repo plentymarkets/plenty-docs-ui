@@ -38,16 +38,6 @@ class Cookies {
     document.getElementsByClassName('cookie-bar')[0].style.display = display
   }
 
-  setCookie(consent, statistics, external, functional) {
-    this.consent = consent
-    this.statistics = statistics
-    this.external = external
-    this.functional = functional
-    document.cookie = name+"= "+this.createCookie()+"; Secure"
-    this.toggleCookies('hide')
-    this.setDefaultSettings()
-  }
-
   toggleExtraSettings(action) {
     let cookieSettingsDisplay = 'none';
     let cookieFurtherSettingsDisplay = 'block';
@@ -57,6 +47,16 @@ class Cookies {
     }
     document.getElementById('cookie-further-settings').style.display = cookieFurtherSettingsDisplay;
     document.getElementById('cookie-settings').style.display = cookieSettingsDisplay;
+  }
+
+  setCookie(consent, statistics, external, functional) {
+    this.consent = consent
+    this.statistics = statistics
+    this.external = external
+    this.functional = functional
+    document.cookie = name+"= "+this.createCookie()+"; Secure"
+    this.toggleCookies('hide')
+    this.setDefaultSettings()
   }
 
   createCookie() {
