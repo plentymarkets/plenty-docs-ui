@@ -1,0 +1,26 @@
+<div class="left">
+    <a class="logo" href="{{ site.url }}/index.html"><img src="{{ site.url }}/_/img/plenty-logo-rgb.png" alt="home-logo"></a>
+    <a class="logo d-none d-lg-inline" href="{{ site.url }}/index.html">plentyKnowledge</a>
+</div>
+
+<div class="right">
+    <div class="menu-wrapper">
+        <a class="menu-item" href="https://developers.plentymarkets.com/" target="_blank">{{ i18n page.attributes.lang 'developers-documentation' }}</a>
+        <div class="dropdown menu-item">
+            <i class="fa-pif-language"></i>
+            <button class="dropdown-toggle"
+                    id="langToggle"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false">EN
+            </button>
+            <div class="dropdown-menu submenu-item"
+                aria-labelledby="langToggle">
+            <a id="languagePath"><span id="langSelect" class="submenu-item">DE</span></a>
+            </div>
+        </div>
+        <div class="search">
+            <div id="docsearch"></div>
+        </div>
+    </div>
+</div>
