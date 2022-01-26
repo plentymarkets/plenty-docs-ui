@@ -48,5 +48,11 @@
   "footer_text_4_3": "Kunden & Storys",
   "footer_link_4_3": "https://www.plentymarkets.com/de/kunden/",
   "footer_text_4_4": "Blog",
-  "footer_link_4_4": "https://www.plentymarkets.eu/blog/"
+  "footer_link_4_4": "https://www.plentymarkets.eu/blog/",
+  
+  "feedbackTitle": "Ist diese Seite hilfreich?",
+  "feedbackPlaceholder": "Schreibe einen Kommentar... (optional)",
+  "feedbackHelpful": "Diese Seite ist hilfreich",
+  "feedbackNotHelpful": "Diese Seite ist nicht hilfreich",
+  "feedbackThanks": "Danke für dein Feedback!"
 }
