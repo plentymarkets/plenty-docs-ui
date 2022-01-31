@@ -40,7 +40,9 @@
   --code-background: var(--plentyRedCrimson);
   --example-background: var(--plentyLightGrey);
   /* footer */
+  --footer-background-color: var(--plentyGreysLimedSpruce);
   --footer-link-font-color: var(--plenty-secondaries-white);
+  --footer-link-hover-color: var(--link_hover-font-color);
   --cookie-background: var(--plenty-secondaries-white);
   --cookie-button-background: var(--plentyRedCrimson);
   --cookie-button-color: var(--plenty-secondaries-white);
