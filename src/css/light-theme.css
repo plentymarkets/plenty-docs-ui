@@ -41,7 +41,7 @@
   --example-background: var(--plentyLightGrey);
   /* footer */
   --footer-background-color: var(--plentyGreysLimedSpruce);
-  --footer-link-font-color: var(----plentyRedCrimson);
+  --footer-link-font-color: var(--plenty-secondaries-white);
   --footer-link-hover-color: var(--link_hover-font-color);
   /* docsearch */
   --docsearch-searchbox-background: var(--plenty-secondaries-white);
