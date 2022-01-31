@@ -40,7 +40,9 @@
   --heading-font-color: var(--doc-font-color);
   --link-font-color: var(--plenty-secondaries-white);
   /* footer */
+  --footer-background-color: var(--plentyGreysLimedSpruce);
   --footer-link-font-color: var(--plenty-secondaries-white);
+  --footer-link-hover-color: var(--link_hover-font-color);
   /* docsearch */
   --docsearch-searchbox-background: var(--plentyBluesTealBlue);
   --docsearch-muted-color: var(--color-white);
