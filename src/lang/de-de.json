@@ -1,6 +1,6 @@
 {
   "toctitle": "Inhalte",
-  
+
   "developers-documentation": "Entwicklerdoku",
 
   "company_name": "plentysystems AG",
@@ -12,7 +12,7 @@
   "terms_and_conditions_text": "AGB",
   "terms_and_conditions_link": "https://www.plentymarkets.com/de/agb/",
 
-  "footer_col_1": "plentymarkets",
+  "footer_col_1": "PLENTYMARKETS",
   "footer_text_1_1": "Systemvoraussetzungen",
   "footer_link_1_1": "/de-de/manual/main/willkommen/systemvoraussetzungen.html",
   "footer_text_1_2": "Admin-Aufgaben",
@@ -22,7 +22,7 @@
   "footer_text_1_4": "EOL",
   "footer_link_1_4": "/de-de/manual/main/business-entscheidungen/eol.html",
 
-  "footer_col_2": "Systemerweiterung",
+  "footer_col_2": "SYSTEMERWEITERUNG",
   "footer_text_2_1": "plentyMarketplace",
   "footer_link_2_1": "https://marketplace.plentymarkets.com/",
   "footer_text_2_2": "Entwicklerdokumentation",
@@ -31,8 +31,8 @@
   "footer_link_2_3": "https://github.com/plentymarkets",
   "footer_text_2_4": "Kassensystem plentyPOS",
   "footer_link_2_4": "https://www.plentymarkets.com/de/produkt/module/point-of-sale/",
-  
-  "footer_col_3": "Service",
+
+  "footer_col_3": "SERVICE",
   "footer_text_3_1": "Systemeinrichtung",
   "footer_link_3_1": "http://marketplace.plentymarkets.com/services/plentyservices/einrichtungspakete/",
   "footer_text_3_2": "Consulting",
@@ -41,8 +41,8 @@
   "footer_link_3_3": "https://www.plentymarkets.com/de/wissen/workshops-webinare/",
   "footer_text_3_4": "Partneragenturen",
   "footer_link_3_4": "https://marketplace.plentymarkets.com/partners",
-  
-  "footer_col_4": "Produkt",
+
+  "footer_col_4": "PRODUKT",
   "footer_text_4_1": "Übersicht",
   "footer_link_4_1": "https://www.plentymarkets.com/de/produkt/",
   "footer_text_4_2": "Editionen",
@@ -51,7 +51,7 @@
   "footer_link_4_3": "https://www.plentymarkets.com/de/kunden/",
   "footer_text_4_4": "Blog",
   "footer_link_4_4": "https://www.plentymarkets.eu/blog/",
-  
+
   "feedbackTitle": "Ist diese Seite hilfreich?",
   "feedbackPlaceholder": "Schreibe einen Kommentar... (optional)",
   "feedbackHelpful": "Diese Seite ist hilfreich",

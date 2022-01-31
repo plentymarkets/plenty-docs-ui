@@ -122,6 +122,7 @@
 
 .doc p {
   margin: 0;
+  hyphens: none;
 }
 
 .doc a.bare{
@@ -549,7 +550,7 @@
 }
 
 .doc .exampleblock > .content {
-  display: flex;
+  display: contents;
   background: var(--example-background);
   border: 0.25rem solid var(--example-border-color);
   border-radius: 0.5rem;
