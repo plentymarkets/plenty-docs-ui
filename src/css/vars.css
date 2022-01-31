@@ -93,7 +93,7 @@
     --caution-color: var(--color-white);
     --caution-on-color: var(--plentyRedCrimson);
     --important-color: var(--color-white);
-    --important-on-color: var(--plentyAdocYellow);
+    --important-on-color: var(--plentyRedCrimson);
     --note-color: var(--color-white);
     --note-on-color: var(--plentyBluesPacificBlue);
     --tip-color: var(--color-white);
