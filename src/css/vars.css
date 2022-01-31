@@ -119,6 +119,7 @@
     --caption-font-weight: var(--body-font-weight-bold);
     --code-font-color: var(--body-font-color);
     --code-block-border-radius: 5px;
+    --code-background: var(--plentyGreysNevada);
     --example-border-color: var(--color-gray-70);
     --kbd-background: var(--panel-background);
     --kbd-border-color: var(--color-gray-10);
