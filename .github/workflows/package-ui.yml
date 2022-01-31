@@ -41,10 +41,18 @@ jobs:
           git commit -am "Automated bundle"
           git push
       
-      # This step dispatches an event to run the CI workflow of plenty-developers-docs
-      - name: Rebuild site
+      # This step dispatches an event to run the CD workflow of plenty-developers-docs
+      - name: Rebuild developers documentation site
         run: |
           curl -X POST https://api.github.com/repos/plentymarkets/plenty-developers-docs/dispatches \
+          -H 'Accept: application/vnd.github.v3+json' \
+          --user 'plentymonkey:${{ secrets.PLENTYMONKEY_TOKEN }}' \
+          --data '{"event_type": "UIBundleUpdate", "client_payload": { "repository": "${{ github.repository }}" }}'
+          
+      # This step dispatches an event to run the CD workflow of plenty-manual-docs
+      - name: Rebuild knowledge documentation site
+        run: |
+          curl -X POST https://api.github.com/repos/plentymarkets/plenty-manual-docs/dispatches \
           -H 'Accept: application/vnd.github.v3+json' \
           --user 'plentymonkey:${{ secrets.PLENTYMONKEY_TOKEN }}' \
           --data '{"event_type": "UIBundleUpdate", "client_payload": { "repository": "${{ github.repository }}" }}'
