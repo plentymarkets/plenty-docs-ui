@@ -1,5 +1,5 @@
 footer {
-  background: var(--plentyGreysLimedSpruce);
+  background: var(--footer-background-color);
   padding-top: 0.5rem;
   font-size: 1rem;
 }
@@ -7,9 +7,12 @@ footer {
 .footer-menu * {
   color: var(--footer-link-font-color);
   margin: 1rem 0;
+}
+
+.footer-menu .social-list * {
   text-align: center;
 }
 
 .footer-menu a:hover {
-  color: var(--footer-link-font-color);
+  color: var(--footer-link-hover-color);
 }
