@@ -241,6 +241,10 @@
   font-size: 0.75rem;
 }
 
+.doc table.tableblock td:not(:first-child) {
+  border-left: 1px solid var(--table-borders-color);
+}
+
 .doc table.tableblock tr:nth-child(even) {
   background-color: var(--table-row-even);
 }
