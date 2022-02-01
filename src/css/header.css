@@ -286,13 +286,18 @@ button:focus {
 
 .navbar .left .logo img {
   width: auto;
-  height: 80px;
+  height: 35px;
+}
+
+.navbar .left .logo-knowledge img {
+  height: 80px!important;
 }
 
 .navbar .left .logo:last-child img {
   border-left: 1px solid white;
   padding-top: 2px;
   padding-bottom: 2px;
+  padding-left: 5px;
 }
 
 .navbar .right {
