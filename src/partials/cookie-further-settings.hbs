@@ -2,41 +2,48 @@
    <div class="col-12 mb-3">
       <div class="privacy-settings d-flex flex-column">
          <div class="privacy-settings-body overflow-auto">
+
             <div class="card consent-group">
                <div class="card-body mb-0">
-                  <p class="card-title h4 d-flex"><span class="flex-fill">
-                     Essential
-                     (4)
-                     </span> <span class="badge badge-primary bg-appearance">Essential</span>
+                  <p class="card-title h4 d-flex">
+                     <span class="flex-fill">
+                        {{ i18n page.attributes.lang 'cookies_essential_label' }} {{ i18n page.attributes.lang 'cookies_essential.amount' }}
+                     </span>
+                     <span class="badge badge-primary bg-appearance">
+                        {{ i18n page.attributes.lang 'cookies_essential_tag_label' }}
+                     </span>
                   </p>
-                  <p class="card-text">Essential cookies enable basic functions and are necessary for the proper functioning of the website.</p>
+                  <p class="card-text">
+                     {{ i18n page.attributes.lang 'cookies_essential.description' }}
+                  </p>
                </div>
                <div class="card-body mt-0">
-
                   <div class="collapse" id="essentialSettings">
                      <div class="card consent bg-light mb-3 border-primary border-appearance active">
                         <div class="card-body">
                            <p class="d-flex mb-0 font-weight-bold">
-                              <span class="flex-fill">Convenience Cookies</span> <!---->
+                              <span class="flex-fill">
+                                 {{ i18n page.attributes.lang 'cookies_essential.cookies_convenience_label' }}
+                              </span>
                            </p>
                         </div>
                         <table class="table table-responsive-md table-sm table-striped mb-0">
                            <tbody>
                               <tr>
-                                 <td class="pl-3">Provider</td>
-                                 <td class="pr-3">plentymarkets</td>
+                                 <td class="pl-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.cookies_provider_label' }}</td>
+                                 <td class="pr-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.provider' }}</td>
                               </tr>
                               <tr>
-                                 <td class="pl-3">Purpose</td>
-                                 <td class="pr-3">Convenience cookies improve your user experience.</td>
+                                 <td class="pl-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.cookies_purpose_label' }}</td>
+                                 <td class="pr-3"><td class="pr-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.purpose' }}</td></td>
                               </tr>
                               <tr>
-                                 <td class="pl-3">Privacy policy</td>
-                                 <td class="pr-3"><a href="http://master.plentymarkets.com/privacy-policy" target="_blank" class="text-primary text-appearance">http://master.plentymarkets.com/privacy-policy</a></td>
+                                 <td class="pl-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.cookies_privacy_policy_label' }}</td>
+                                 <td class="pr-3"><td class="pr-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.privacy_policy' }}</td></td>
                               </tr>
                               <tr>
-                                 <td class="pl-3">Lifespan</td>
-                                 <td class="pr-3">Session</td>
+                                 <td class="pl-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.cookies_lifespan_label' }}</td>
+                                 <td class="pr-3"><td class="pr-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.lifespan' }}</td></td>
                               </tr>
                            </tbody>
                         </table>
@@ -44,26 +51,28 @@
                      <div class="card consent bg-light mb-3 border-primary border-appearance active">
                         <div class="card-body">
                            <p class="d-flex mb-0 font-weight-bold">
-                              <span class="flex-fill">Consent</span> <!---->
+                              <span class="flex-fill">
+                                 {{ i18n page.attributes.lang 'cookies_essential.cookies_consent_label' }}
+                              </span>
                            </p>
                         </div>
                         <table class="table table-responsive-md table-sm table-striped mb-0">
                            <tbody>
                               <tr>
-                                 <td class="pl-3">Provider</td>
-                                 <td class="pr-3">plentymarkets</td>
+                                 <td class="pl-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.cookies_provider_label' }}</td>
+                                 <td class="pr-3"><td class="pr-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_consent.provider' }}</td></td>
                               </tr>
                               <tr>
-                                 <td class="pl-3">Purpose</td>
-                                 <td class="pr-3">The consent cookies stores the user’s state of consent for cookies on our page.</td>
+                                 <td class="pl-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.cookies_purpose_label' }}</td>
+                                 <td class="pr-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_consent.purpose' }}</td>
                               </tr>
                               <tr>
-                                 <td class="pl-3">Privacy policy</td>
-                                 <td class="pr-3"><a href="https://www.plentymarkets.com/privacy-policy/" target="_blank" class="text-primary text-appearance">https://www.plentymarkets.com/privacy-policy/</a></td>
+                                 <td class="pl-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.cookies_privacy_policy_label' }}</td>
+                                 <td class="pr-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_consent.privacy_policy' }}</td>
                               </tr>
                               <tr>
-                                 <td class="pl-3">Lifespan</td>
-                                 <td class="pr-3">Session</td>
+                                 <td class="pl-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.cookies_lifespan_label' }}</td>
+                                 <td class="pr-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_consent.lifespan' }}</td>
                               </tr>
                            </tbody>
                         </table>
@@ -71,26 +80,28 @@
                      <div class="card consent bg-light mb-3 border-primary border-appearance active">
                         <div class="card-body">
                            <p class="d-flex mb-0 font-weight-bold">
-                              <span class="flex-fill">Session</span> <!---->
+                              <span class="flex-fill">
+                                 {{ i18n page.attributes.lang 'cookies_essential.cookies_session_label' }}
+                              </span>
                            </p>
                         </div>
                         <table class="table table-responsive-md table-sm table-striped mb-0">
                            <tbody>
                               <tr>
-                                 <td class="pl-3">Provider</td>
-                                 <td class="pr-3">plentymarkets</td>
+                                 <td class="pl-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.cookies_provider_label' }}</td>
+                                 <td class="pr-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_session.provider' }}</td>
                               </tr>
                               <tr>
-                                 <td class="pl-3">Purpose</td>
-                                 <td class="pr-3">The session cookie retains the user’s states during all page requests.</td>
+                                 <td class="pl-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.cookies_purpose_label' }}</td>
+                                 <td class="pr-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_session.purpose' }}</td>
                               </tr>
                               <tr>
-                                 <td class="pl-3">Privacy policy</td>
-                                 <td class="pr-3"><a href="https://www.plentymarkets.com/privacy-policy/" target="_blank" class="text-primary text-appearance">https://www.plentymarkets.com/privacy-policy/</a></td>
+                                 <td class="pl-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.cookies_privacy_policy_label' }}</td>
+                                 <td class="pr-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_session.privacy_policy' }}</td>
                               </tr>
                               <tr>
-                                 <td class="pl-3">Lifespan</td>
-                                 <td class="pr-3">Session</td>
+                                 <td class="pl-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.cookies_lifespan_label' }}</td>
+                                 <td class="pr-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_session.lifespan' }}</td>
                               </tr>
                            </tbody>
                         </table>
@@ -98,175 +109,206 @@
                      <div class="card consent bg-light mb-3 border-primary border-appearance active">
                         <div class="card-body">
                            <p class="d-flex mb-0 font-weight-bold">
-                              <span class="flex-fill">CSRF</span> <!---->
+                              <span class="flex-fill">
+                                 {{ i18n page.attributes.lang 'cookies_essential.cookies_csrf_label' }}
+                              </span>
                            </p>
                         </div>
                         <table class="table table-responsive-md table-sm table-striped mb-0">
                            <tbody>
                               <tr>
-                                 <td class="pl-3">Provider</td>
-                                 <td class="pr-3">plentymarkets</td>
+                                 <td class="pl-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.cookies_provider_label' }}</td>
+                                 <td class="pr-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_csrf.provider' }}</td>
                               </tr>
                               <tr>
-                                 <td class="pl-3">Purpose</td>
-                                 <td class="pr-3">The CSRF cookie serves to prevent cross-site request forgery attacks.</td>
+                                 <td class="pl-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.cookies_purpose_label' }}</td>
+                                 <td class="pr-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_csrf.purpose' }}</td>
                               </tr>
                               <tr>
-                                 <td class="pl-3">Privacy policy</td>
-                                 <td class="pr-3"><a href="https://www.plentymarkets.com/privacy-policy/" target="_blank" class="text-primary text-appearance">https://www.plentymarkets.com/privacy-policy/</a></td>
+                                 <td class="pl-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.cookies_privacy_policy_label' }}</td>
+                                 <td class="pr-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_csrf.privacy_policy' }}</td>
                               </tr>
                               <tr>
-                                 <td class="pl-3">Lifespan</td>
-                                 <td class="pr-3">Session</td>
+                                 <td class="pl-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.cookies_lifespan_label' }}</td>
+                                 <td class="pr-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_csrf.lifespan' }}</td>
                               </tr>
                            </tbody>
                         </table>
                      </div>
                   </div>
-
                   <a class="card-link text-appearance" data-toggle="collapse" href="#essentialSettings" role="button" aria-expanded="false" aria-controls="essentialSettings">
-                  More information
+                     {{ i18n page.attributes.lang 'cookies_more_information' }}
                   </a>
                </div>
-
             </div>
+
             <div class="card consent-group">
                <div class="card-body mb-0">
-                  <p class="card-title h4 d-flex"><span class="flex-fill">
-                     Statistics
-                     (1)
+                  <p class="card-title h4 d-flex">
+                     <span class="flex-fill">
+                        {{ i18n page.attributes.lang 'cookies_statistics_label' }} {{ i18n page.attributes.lang 'cookies_statistics.amount' }}
                      </span>
                   </p>
-                  <p class="card-text">Statistics cookies collect information anonymously. This information helps us understand how visitors are interacting with our website.</p>
+                  <p class="card-text">
+                     {{ i18n page.attributes.lang 'cookies_statistics.description' }}
+                  </p>
                </div>
                <div class="card-body mt-0">
-
                   <div class="collapse" id="statisticsSettings">
                      <div class="card consent bg-light mb-3 border-primary border-appearance active">
                         <div class="card-body">
-                           <p class="d-flex mb-0 font-weight-bold"><span class="flex-fill">Google Analytics</span> <span class="custom-control custom-switch custom-control-appearance"><input type="checkbox" class="custom-control-input"> <label class="custom-control-label"></label></span></p>
+                           <p class="d-flex mb-0 font-weight-bold">
+                              <span class="flex-fill">
+                                 {{ i18n page.attributes.lang 'cookies_statistics.cookies_google_analytics_label' }}
+                              </span>
+                              <span class="custom-control custom-switch custom-control-appearance"><input type="checkbox" class="custom-control-input">
+                                 <label class="custom-control-label">
+
+                                 </label>
+                              </span>
+                           </p>
                         </div>
                         <table class="table table-responsive-md table-sm table-striped mb-0">
                            <tbody>
                               <tr>
-                                 <td class="pl-3">Provider</td>
-                                 <td class="pr-3">Google Ireland Limited, Irland or Google LLC, USA</td>
+                                 <td class="pl-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.cookies_provider_label' }}</td>
+                                 <td class="pr-3">{{ i18n page.attributes.lang 'cookies_statistics.cookies_google_analytics.provider' }}</td>
                               </tr>
                               <tr>
-                                 <td class="pl-3">Purpose</td>
-                                 <td class="pr-3">For improving our products and marketing</td>
+                                 <td class="pl-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.cookies_purpose_label' }}</td>
+                                 <td class="pr-3">{{ i18n page.attributes.lang 'cookies_statistics.cookies_google_analytics.purpose' }}</td>
                               </tr>
                               <tr>
-                                 <td class="pl-3">Privacy policy</td>
-                                 <td class="pr-3"><a href="https://policies.google.com/privacy" target="_blank" class="text-primary text-appearance">https://policies.google.com/privacy</a></td>
+                                 <td class="pl-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.cookies_privacy_policy_label' }}</td>
+                                 <td class="pr-3">{{ i18n page.attributes.lang 'cookies_statistics.cookies_google_analytics.privacy_policy' }}</td>
                               </tr>
                               <tr>
-                                 <td class="pl-3">Lifespan</td>
-                                 <td class="pr-3">2 years</td>
+                                 <td class="pl-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.cookies_lifespan_label' }}</td>
+                                 <td class="pr-3">{{ i18n page.attributes.lang 'cookies_statistics.cookies_google_analytics.lifespan' }}</td>
                               </tr>
                            </tbody>
                         </table>
                      </div>
                   </div>
-
                   <a class="card-link text-appearance" data-toggle="collapse" href="#statisticsSettings" role="button" aria-expanded="false" aria-controls="statisticsSettings">
-                  More information
+                     {{ i18n page.attributes.lang 'cookies_more_information' }}
                   </a>
                </div>
             </div>
+
             <div class="card consent-group">
                <div class="card-body mb-0">
-                  <p class="card-title h4 d-flex"><span class="flex-fill">
-                     External media
-                     (1)
+                  <p class="card-title h4 d-flex">
+                     <span class="flex-fill">
+                        {{ i18n page.attributes.lang 'cookies_external_media_label' }} {{ i18n page.attributes.lang 'cookies_external_media.amount' }}
                      </span>
                   </p>
-                  <p class="card-text">Content by video platforms and social media platforms are blocked by default. If you accept cookies by external media, access to these contents requires no further consent.</p>
+                  <p class="card-text">
+                     {{ i18n page.attributes.lang 'cookies_external_media.description' }}
+                  </p>
                </div>
                <div class="card-body mt-0">
-
                   <div class="collapse" id="externalMediaSettings">
                      <div class="card consent bg-light mb-3">
                         <div class="card-body">
-                           <p class="d-flex mb-0 font-weight-bold"><span class="flex-fill">Youtube</span> <span class="custom-control custom-switch custom-control-appearance"><input type="checkbox" class="custom-control-input"> <label class="custom-control-label"></label></span></p>
+                           <p class="d-flex mb-0 font-weight-bold">
+                              <span class="flex-fill">
+                                 {{ i18n page.attributes.lang 'cookies_external_media.cookies_youtube_label' }}
+                              </span>
+                              <span class="custom-control custom-switch custom-control-appearance"><input type="checkbox" class="custom-control-input">
+                                 <label class="custom-control-label">
+
+                                 </label>
+                              </span>
+                           </p>
                         </div>
                         <table class="table table-responsive-md table-sm table-striped mb-0">
                            <tbody>
                               <tr>
-                                 <td class="pl-3">Provider</td>
-                                 <td class="pr-3">Google Ireland Limited, Irland or Google LLC, USA</td>
+                                 <td class="pl-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.cookies_provider_label' }}</td>
+                                 <td class="pr-3">{{ i18n page.attributes.lang 'cookies_external_media.cookies_youtube.provider' }}</td>
                               </tr>
                               <tr>
-                                 <td class="pl-3">Purpose</td>
-                                 <td class="pr-3">For displaying important contents on the website</td>
+                                 <td class="pl-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.cookies_purpose_label' }}</td>
+                                 <td class="pr-3">{{ i18n page.attributes.lang 'cookies_external_media.cookies_youtube.purpose' }}</td>
                               </tr>
                               <tr>
-                                 <td class="pl-3">Privacy policy</td>
-                                 <td class="pr-3"><a href="https://policies.google.com/privacy" target="_blank" class="text-primary text-appearance">https://policies.google.com/privacy</a></td>
+                                 <td class="pl-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.cookies_privacy_policy_label' }}</td>
+                                 <td class="pr-3">{{ i18n page.attributes.lang 'cookies_external_media.cookies_youtube.privacy_policy' }}</td>
                               </tr>
                               <tr>
-                                 <td class="pl-3">Lifespan</td>
-                                 <td class="pr-3">2 years</td>
+                                 <td class="pl-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.cookies_lifespan_label' }}</td>
+                                 <td class="pr-3">{{ i18n page.attributes.lang 'cookies_external_media.cookies_youtube.lifespan' }}</td>
                               </tr>
                            </tbody>
                         </table>
                      </div>
                   </div>
-
                   <a class="card-link text-appearance" data-toggle="collapse" href="#externalMediaSettings" role="button" aria-expanded="false" aria-controls="externalMediaSettings">
-                  More information
+                     {{ i18n page.attributes.lang 'cookies_more_information' }}
                   </a>
                </div>
             </div>
             <div class="card consent-group">
                <div class="card-body mb-0">
-                  <p class="card-title h4 d-flex"><span class="flex-fill">
-                     Functional
-                     (1)
+                  <p class="card-title h4 d-flex">
+                     <span class="flex-fill">
+                        {{ i18n page.attributes.lang 'cookies_functional_label' }} {{ i18n page.attributes.lang 'cookies_functional.amount' }}
                      </span>
                   </p>
-                  <p class="card-text">These cookies are used to store preferred settings and certain options selected by the user (e.g. disabling language redirect).</p>
+                  <p class="card-text">
+                     {{ i18n page.attributes.lang 'cookies_functional.description' }}
+                  </p>
                </div>
                <div class="card-body mt-0">
-
                   <div class="collapse" id="functionalSettings">
                      <div class="card consent bg-light mb-3">
                         <div class="card-body">
-                           <p class="d-flex mb-0 font-weight-bold"><span class="flex-fill">Automatic language redirect</span> <span class="custom-control custom-switch custom-control-appearance"><input type="checkbox" class="custom-control-input"> <label class="custom-control-label"></label></span></p>
+                           <p class="d-flex mb-0 font-weight-bold">
+                              <span class="flex-fill">
+                                 {{ i18n page.attributes.lang 'cookies_functional.cookies_preferred_language_label' }}
+                              </span>
+                              <span class="custom-control custom-switch custom-control-appearance"><input type="checkbox" class="custom-control-input">
+                                 <label class="custom-control-label">
+
+                                 </label>
+                              </span>
+                           </p>
                         </div>
                         <table class="table table-responsive-md table-sm table-striped mb-0">
                            <tbody>
                               <tr>
-                                 <td class="pl-3">Provider</td>
-                                 <td class="pr-3">plentymarkets</td>
+                                 <td class="pl-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.cookies_provider_label' }}</td>
+                                 <td class="pr-3">{{ i18n page.attributes.lang 'cookies_functional.cookies_preferred_language.provider' }}</td>
                               </tr>
                               <tr>
-                                 <td class="pl-3">Purpose</td>
-                                 <td class="pr-3">This cookie saves the information whether a user has disabled the automatic language redirect.</td>
+                                 <td class="pl-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.cookies_purpose_label' }}</td>
+                                 <td class="pr-3">{{ i18n page.attributes.lang 'cookies_functional.cookies_preferred_language.purpose' }}</td>
                               </tr>
                               <tr>
-                                 <td class="pl-3">Privacy policy</td>
-                                 <td class="pr-3"><a href="https://www.plentymarkets.com/privacy-policy/" target="_blank" class="text-primary text-appearance">https://www.plentymarkets.com/privacy-policy/</a></td>
+                                 <td class="pl-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.cookies_privacy_policy_label' }}</td>
+                                 <td class="pr-3">{{ i18n page.attributes.lang 'cookies_functional.cookies_preferred_language.privacy_policy' }}</td>
                               </tr>
                               <tr>
-                                 <td class="pl-3">Lifespan</td>
-                                 <td class="pr-3">Session</td>
+                                 <td class="pl-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.cookies_lifespan_label' }}</td>
+                                 <td class="pr-3">{{ i18n page.attributes.lang 'cookies_functional.cookies_preferred_language.lifespan' }}</td>
                               </tr>
                            </tbody>
                         </table>
                      </div>
                   </div>
-
                   <a class="card-link text-appearance" data-toggle="collapse" href="#functionalSettings" role="button" aria-expanded="false" aria-controls="functionalSettings">
-                  More information
+                     {{ i18n page.attributes.lang 'cookies_more_information' }}
                   </a>
                </div>
             </div>
          </div>
       </div>
    </div>
-   <div class="col-12 col-md-3"><a href="#" class="text-appearance d-inline-block mb-3" id="hide-cookie-further-settings">
-      Back
+
+   <div class="col-12 col-md-3">
+      <a href="#" class="text-appearance d-inline-block mb-3" id="hide-cookie-further-settings">
+         {{ i18n page.attributes.lang 'cookies_further_settings_back' }}
       </a>
    </div>
 </div>
