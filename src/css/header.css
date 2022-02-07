@@ -382,7 +382,7 @@ button:focus {
   width: 100vw;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 625px) {
   .navbar .search {
     position: absolute;
     right: 0;

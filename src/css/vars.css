@@ -137,7 +137,7 @@
     --footer-background: var(--footer-bg-color);
     --footer-font-color: var(--doc-font-color);
     /* dimensions and positioning */
-    --navbar-height: calc(95 / var(--rem-base) * 1rem);
+    --navbar-height: calc(120 / var(--rem-base) * 1rem);
     --toolbar-height: calc(45 / var(--rem-base) * 1rem);
     --drawer-height: var(--toolbar-height);
     --body-top: var(--navbar-height);
