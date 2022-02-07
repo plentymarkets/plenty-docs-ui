@@ -150,6 +150,10 @@ html.is-clipped--nav {
   margin-top: 1em;
 }
 
+span.nav-text {
+  margin-left: 0.3rem;
+}
+
 /* adds some breathing room below a nested list */
 
 .nav-item-toggle ~ .nav-list {
