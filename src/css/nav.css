@@ -150,7 +150,7 @@ html.is-clipped--nav {
   margin-top: 1em;
 }
 
-span.nav-text {
+span.nav-text, a.nav-link {
   margin-left: 0.3rem;
 }
 
