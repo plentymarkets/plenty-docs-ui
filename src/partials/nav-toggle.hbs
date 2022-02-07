@@ -1,5 +1,1 @@
-{{#if (eq site.url 'https://developers.plentymarkets.com/en-gb')}}
-<button class="nav-toggle"></button>
-{{else}}
-<button class="nav-toggle light"></button>
-{{/if}}
+<button class="nav-toggle {{#if (eq site.url 'https://developers.plentymarkets.com/en-gb')}} {{else}}light{{/if}}"></button>
