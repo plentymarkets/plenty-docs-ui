@@ -1,7 +1,7 @@
 'use strict'
 
 module.exports = (data) => {
-  if (data === '') {
+  if (!data || data === '') {
     return ''
   }
 
