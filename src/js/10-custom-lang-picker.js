@@ -13,7 +13,7 @@ if (currentLocation.includes('en-gb')) {
   nextLangTxt = 'de-de'
   currentLangLabel = 'EN'
   nextLangLabel = 'DE'
-  searchLang = '/en'
+  searchLang = ''
 }
 const finalPath = searchLang + semifinalPath.replace('.html', '') //the path to search inside json
 const theUrl = locationObj[0] + '/' + nextLangTxt + ll
@@ -30,7 +30,7 @@ $('#langSelect').html(nextLangLabel)
 
 $('#languagePath').click(function () {
   if (finalPath === '/' || finalPath === '/en/') {
-    window.location.href = theUrl
+    window.location.href = theUrl + '.html'
   }
 
   const dataObj = JSON.parse(window.localStorage.getItem('dataLangItems'))
@@ -38,16 +38,17 @@ $('#languagePath').click(function () {
 
   // Fallback solution - go to nextlang homepage
   if (!langObj[0] || !langObj[0].languageID) {
-    window.location.href = theUrl
+    window.location.href = theUrl + '.html'
   }
 
   const typic = getObjects(dataObj, 'languageID', langObj[0].languageID)
   // Fallback solution - go to nextlang homepage
   if (!typic[nextLang] && !typic[nextLang].url) {
-    window.location.href = theUrl
+    window.location.href = theUrl + '.html'
   }
 
-  window.location.href = theUrl + typic[nextLang].url.replace('/en/', '/') + '.html'
+  const theRealPath = typic[nextLang].url.replace('/en/', '/')
+  window.location.href = theUrl + theRealPath + '.html'
 })
 
 function getObjects (obj, key, val) {
