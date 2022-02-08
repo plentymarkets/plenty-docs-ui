@@ -231,6 +231,7 @@
   padding: 0.5rem;
   font-weight: 700;
   color: var(--table-heading-color);
+  font-size: 1.05rem;
 }
 
 .doc table.tableblock td,
@@ -238,7 +239,7 @@
   border-top: 1px solid var(--table-borders-color);
   border-bottom: 1px solid var(--table-borders-color);
   padding: 0.5rem;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
 }
 
 .doc table.tableblock td:not(:first-child) {
