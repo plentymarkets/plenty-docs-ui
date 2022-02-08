@@ -776,7 +776,8 @@
 .doc .collapseBox .content {
   display: none;
   font-weight: 300;
-  font-size: calc(16/var(--rem-base)*1rem);
+  font-size: 1.05em;
+  margin-top: 1rem;
 }
 .doc .collapseBox.active .content {
   display: block;
