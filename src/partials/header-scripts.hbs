@@ -3,12 +3,13 @@
   var searchOpen = false;
   $(document).ready(function(){
   const faPlusIconArr = document.getElementsByClassName("fa-plus");
+  faPlusIconArr[0].style.display = "none";
       $("#search-icon").click(function(){
           searchOpen = !searchOpen;
           if(!searchOpen) {
-            faPlusIconArr[0].style.display = "none";;
+            faPlusIconArr[0].style.display = "none";
           } else {
-            faPlusIconArr[0].style.display = "block";;
+            faPlusIconArr[0].style.display = "block";
           }
           $(".searchbar").toggle(2000);
       });
