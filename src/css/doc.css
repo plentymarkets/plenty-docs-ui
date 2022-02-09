@@ -545,6 +545,11 @@
   text-align: left;
 }
 
+.doc .exampleblock .title {
+  font-style: normal;
+  font-weight: 700;
+}
+
 .doc .imageblock .title {
   margin-top: 0.5rem;
   padding-bottom: 0;
