@@ -18,13 +18,20 @@
             <a id="languagePath"><span id="langSelect" class="submenu-item">DE</span></a>
             </div>
         </div>
-        <div class="search">
-{{!--             <div id="docsearch"></div> --}}
         <div id="search-icon">
           <span class="fa-stack">
-              <i class="fa fa-search fa-stack-1x"></i>
-              <i class="fa fa-plus fa-stack-1x"></i>
+              <i id="openSearch" class="fa fa-search fa-stack-1x"></i>
+              <i id="closeSearch" class="fa fa-plus fa-stack-1x d-none"></i>
           </span>
         </div>
     </div>
+</div>
+<div id="searchbar" class="searchbar d-none">
+  <form>
+    <div>
+      <input class="search-input" id="search-input" type="text" placeholder="Type at least one char" autocomplete="off">
+      <i class="fa fa-search text-white"></i>
+    </div>
+    <div id="search-results"></div>
+  </form>
 </div>

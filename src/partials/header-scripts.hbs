@@ -1,16 +1,1 @@
 {{!-- Add header scripts here --}}
-<script type="text/javascript">
-  var searchOpen = false;
-  $(document).ready(function(){
-  const faPlusIconArr = document.getElementsByClassName("fa-plus");
-      $("#search-icon").click(function(){
-          searchOpen = !searchOpen;
-          if(!searchOpen) {
-            faPlusIconArr[0].style.display = "none";;
-          } else {
-            faPlusIconArr[0].style.display = "block";;
-          }
-          $(".searchbar").toggle(2000);
-      });
-  });
-</script>
