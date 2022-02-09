@@ -276,6 +276,7 @@
 
 .doc .admonitionblock {
   margin: 1.4rem 0 0;
+  background: var(--admonition-background);
 }
 
 .doc .admonitionblock p,
@@ -318,11 +319,19 @@
   text-transform: uppercase;
 }
 
+.doc .admonitionblock.caution {
+  border-left: 5px solid var(--caution-on-color);
+}
+
 .doc .admonitionblock.caution .icon {
   color: var(--caution-on-color);
 }
 .doc .admonitionblock.caution .icon i::after {
   content: '\e95a';
+}
+
+.doc .admonitionblock.important {
+  border-left: 5px solid var(--important-on-color);
 }
 
 .doc .admonitionblock.important .icon {
@@ -333,12 +342,20 @@
   content: '\e929';
 }
 
+.doc .admonitionblock.note {
+  border-left: 5px solid var(--note-on-color);
+}
+
 .doc .admonitionblock.note .icon {
   color: var(--note-on-color);
 }
 
 .doc .admonitionblock.note .icon i::after {
   content: '\e929';
+}
+
+.doc .admonitionblock.tip {
+  border-left: 5px solid var(--tip-on-color);
 }
 
 .doc .admonitionblock.tip .icon {
@@ -353,6 +370,10 @@
 .doc .admonitionblock.important .icon i[class^="fa fa-"]::after
 {
   content: '';
+}
+
+.doc .admonitionblock.warning {
+  border-left: 5px solid var(--warning-on-color);
 }
 
 .doc .admonitionblock.warning .icon {
