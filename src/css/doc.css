@@ -759,7 +759,7 @@
 .doc .collapseBox .title {
   font-style: normal;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .doc .collapseBox .title::after {
@@ -776,7 +776,6 @@
 .doc .collapseBox .content {
   display: none;
   font-weight: 300;
-  font-size: 1.05em;
   margin-top: 1rem;
 }
 .doc .collapseBox.active .content {
