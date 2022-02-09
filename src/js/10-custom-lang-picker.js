@@ -30,7 +30,7 @@ $('#langSelect').html(nextLangLabel)
 
 $('#languagePath').click(function () {
   if (finalPath === '/' || finalPath === '/en/') {
-    window.location.href = theUrl + '.html'
+    window.location.href = theUrl + '/index.html'
   }
 
   const dataObj = JSON.parse(window.localStorage.getItem('dataLangItems'))
@@ -38,13 +38,13 @@ $('#languagePath').click(function () {
 
   // Fallback solution - go to nextlang homepage
   if (!langObj[0] || !langObj[0].languageID) {
-    window.location.href = theUrl + '.html'
+    window.location.href = theUrl + '/index.html'
   }
 
   const typic = getObjects(dataObj, 'languageID', langObj[0].languageID)
   // Fallback solution - go to nextlang homepage
   if (!typic[nextLang] && !typic[nextLang].url) {
-    window.location.href = theUrl + '.html'
+    window.location.href = theUrl + '/index.html'
   }
 
   const theRealPath = typic[nextLang].url.replace('/en/', '/')
