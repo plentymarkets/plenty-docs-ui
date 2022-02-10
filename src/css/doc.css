@@ -231,6 +231,7 @@
   padding: 0.5rem;
   font-weight: 700;
   color: var(--table-heading-color);
+  font-size: 1.05em;
 }
 
 .doc table.tableblock td,
@@ -238,7 +239,7 @@
   border-top: 1px solid var(--table-borders-color);
   border-bottom: 1px solid var(--table-borders-color);
   padding: 0.5rem;
-  font-size: 0.75rem;
+  font-size: 1.05em;
 }
 
 .doc table.tableblock td:not(:first-child) {
@@ -275,6 +276,7 @@
 
 .doc .admonitionblock {
   margin: 1.4rem 0 0;
+  background: var(--admonition-background);
 }
 
 .doc .admonitionblock p,
@@ -317,11 +319,19 @@
   text-transform: uppercase;
 }
 
+.doc .admonitionblock.caution {
+  border-left: 5px solid var(--caution-on-color);
+}
+
 .doc .admonitionblock.caution .icon {
   color: var(--caution-on-color);
 }
 .doc .admonitionblock.caution .icon i::after {
   content: '\e95a';
+}
+
+.doc .admonitionblock.important {
+  border-left: 5px solid var(--important-on-color);
 }
 
 .doc .admonitionblock.important .icon {
@@ -332,12 +342,20 @@
   content: '\e929';
 }
 
+.doc .admonitionblock.note {
+  border-left: 5px solid var(--note-on-color);
+}
+
 .doc .admonitionblock.note .icon {
   color: var(--note-on-color);
 }
 
 .doc .admonitionblock.note .icon i::after {
   content: '\e929';
+}
+
+.doc .admonitionblock.tip {
+  border-left: 5px solid var(--tip-on-color);
 }
 
 .doc .admonitionblock.tip .icon {
@@ -352,6 +370,10 @@
 .doc .admonitionblock.important .icon i[class^="fa fa-"]::after
 {
   content: '';
+}
+
+.doc .admonitionblock.warning {
+  border-left: 5px solid var(--warning-on-color);
 }
 
 .doc .admonitionblock.warning .icon {
@@ -542,6 +564,11 @@
   letter-spacing: 0.01em;
   padding-bottom: 0.075rem;
   text-align: left;
+}
+
+.doc .exampleblock .title {
+  font-style: normal;
+  font-weight: 700;
 }
 
 .doc .imageblock .title {
@@ -746,6 +773,7 @@
 	display: flex;
 	flex-direction: column;
   padding: 15px 20px;
+  margin: 25px 0;
   background: var(--collapsebox-background-color);
   color: var(--collapsebox-text-color);
   border-radius: 5px;
@@ -759,7 +787,7 @@
 .doc .collapseBox .title {
   font-style: normal;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .doc .collapseBox .title::after {
