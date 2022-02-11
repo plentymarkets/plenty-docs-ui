@@ -278,7 +278,7 @@ button:focus {
   margin-right: 7px;
 }
 
-@media screen and (max-width: 778px) {
+@media screen and (max-width: 890px) {
   .navbar .left {
     margin: 0 auto;
   }
