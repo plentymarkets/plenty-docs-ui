@@ -1,6 +1,6 @@
 const protocol = window.location.protocol
 const host = window.location.host
-if (protocol !== 'file:' && !/localhost|\:5252/i.test(host)) {
+if (protocol !== 'file:' && !/localhost|:5252/i.test(host)) {
   const currentLocation = window.location.pathname
   const locationObj = currentLocation.includes('/en-gb/') ? currentLocation.split('/en-gb/') : currentLocation.split('/de-de/')
   const semifinalPath = locationObj[1].includes('manual/main') ? locationObj[1].split('manual/main')[1] : '/' + locationObj[1]
