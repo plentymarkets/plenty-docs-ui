@@ -1,31 +1,25 @@
 class ElasticSearch {
   constructor () {
     this.searchresults = ''
-    this.setClient()
   }
 
-  setOptions (current, lang) {
+  setOptions (current) {
     this.options = {
       search_fields: { url_path_dir4: {}, article_content: {}, meta_keywords: {}, meta_description: {}, headings: {} },
       result_fields: { id: { raw: {} }, title: { raw: {} }, headings: { raw: {} }, url: { raw: {} } },
-      page: { size: 20, current: current },
-      filters: {
-        all: {
-          url_path_dir1: lang
-        }
-      }
+      page: { size: 20, current: current }
     }
   }
 
-  setClient () {
+  setClient (engine) {
     this.client = window.ElasticAppSearch.createClient({
       searchKey: 'search-j8q2jpghrg9e28z8rj6sqfg1',
-      engineName: 'knowledge',
+      engineName: engine,
       endpointBase: 'https://plenty-docs-search.ent.eu-central-1.aws.cloud.es.io',
     })
   }
 
-  getSuggestions (searchKey, lang) {
+  getSuggestions (searchKey) {
     const filterOptions = {
       query: searchKey,
       size: 10
@@ -87,11 +81,13 @@ class ElasticSearch {
   $(document).ready(function () {
     let timeout = false
     const elasticSearch = new ElasticSearch()
+    const engine = window.location.href.includes('/en-gb/') ? 'knowledge-en' : 'knowledge-de'
+    elasticSearch.setClient(engine)
     const searchPageResults = document.getElementById('search-page-results')
     const searchIcon = document.getElementById('search-icon')
     const searchBar = document.getElementById('searchbar')
     const searchText = document.getElementById('search-input')
-    const currentLang = window.location.href.includes('/en-gb/') ? 'en-gb' : 'de-de'
+
     searchIcon.addEventListener('click', () => {
       if (searchBar.classList.contains('d-none')) {
         searchBar.classList.remove('d-none')
@@ -111,7 +107,7 @@ class ElasticSearch {
         clearTimeout(timeout)
       }
       timeout = setTimeout(function () {
-        elasticSearch.getSuggestions(searchText.value, currentLang)
+        elasticSearch.getSuggestions(searchText.value)
       }, 300)
     })
 
@@ -121,7 +117,7 @@ class ElasticSearch {
       if (urlResult.includes('page=')) {
         urlPage = parseInt(urlResult.split('page=')[1].split('&')[0])
       }
-      elasticSearch.setOptions(urlPage, currentLang)
+      elasticSearch.setOptions(urlPage)
       const startTime = window.performance.now()
       elasticSearch.getResults(urlResult)
       const endTime = window.performance.now()
