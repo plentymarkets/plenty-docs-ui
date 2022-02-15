@@ -9,7 +9,11 @@ class ElasticSearch {
       search_fields: { url_path_dir4: {}, body_content: {}, meta_keywords: {}, meta_description: {}, headings: {} },
       result_fields: { id: { raw: {} }, title: { raw: {} }, headings: { raw: {} }, url: { raw: {} } },
       page: { size: 20, current: current },
-      query: 'url_path_dir1=' + lang
+      filters: {
+        all: {
+          url_path_dir1: lang
+        }
+      }
     }
   }
 
@@ -21,8 +25,12 @@ class ElasticSearch {
     })
   }
 
-  getSuggestions (searchKey) {
-    this.client.querySuggestion(searchKey, { query: searchKey, size: 10 })
+  getSuggestions (searchKey, lang) {
+    const filterOptions = {
+      query: searchKey,
+      size: 10
+    }
+    this.client.querySuggestion(searchKey, filterOptions)
       .then((resultList) => {
         this.searchresults = ''
         resultList.results.documents.forEach((result) => {
@@ -103,7 +111,7 @@ class ElasticSearch {
         clearTimeout(timeout)
       }
       timeout = setTimeout(function () {
-        elasticSearch.getSuggestions(searchText.value)
+        elasticSearch.getSuggestions(searchText.value, currentLang)
       }, 300)
     })
 
