@@ -6,7 +6,7 @@ class ElasticSearch {
   setOptions (current) {
     this.options = {
       search_fields: { url_path_dir4: {}, article_content: {}, meta_keywords: {}, meta_description: {}, headings: {} },
-      result_fields: { id: { raw: {} }, title: { raw: {} }, headings: { raw: {} }, url: { raw: {} } },
+      result_fields: { id: { raw: {} }, headings: { raw: {} }, article_content: { snippet: { size: 250 } }, url: { raw: {} } },
       page: { size: 20, current: current }
     }
   }
@@ -49,7 +49,7 @@ class ElasticSearch {
         this.createPagination(resultList.info.meta.page.current, resultList.info.meta.page.total_pages)
         document.getElementById('searchnores').innerHTML = resultList.info.meta.page.total_results
         resultList.results.forEach((result) => {
-          this.searchresults += '<a class="the-search-result" href="' + result.data.url.raw + '"><span class="result-title">' + result.data.title.raw + '</span><span class="result-description">' + result.data.headings.raw + '</span><span class="result-url">' + result.data.url.raw + '</span></a>'
+          this.searchresults += '<a class="the-search-result" href="' + result.data.url.raw + '"><span class="result-title">' + result.data.headings.raw[0] + '</span><span class="result-description">' + result.data.article_content.snippet + '...</span><span class="result-url">' + result.data.url.raw + '</span></a>'
         })
         document.getElementById('search-page-results').innerHTML = this.searchresults
       })
