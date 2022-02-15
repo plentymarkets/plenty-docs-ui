@@ -3,6 +3,7 @@
 
   "developers-documentation": "Developers docs",
 
+  "search_placeholder_text": "Enter search keywords...",
   "search_query": "Search query:",
   "search_results": "results",
   "search_seconds": "seconds",
