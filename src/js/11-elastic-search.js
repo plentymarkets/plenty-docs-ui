@@ -6,7 +6,7 @@ class ElasticSearch {
 
   setOptions (current, lang) {
     this.options = {
-      search_fields: { url_path_dir4: {}, body_content: {}, meta_keywords: {}, meta_description: {}, headings: {} },
+      search_fields: { url_path_dir4: {}, article_content: {}, meta_keywords: {}, meta_description: {}, headings: {} },
       result_fields: { id: { raw: {} }, title: { raw: {} }, headings: { raw: {} }, url: { raw: {} } },
       page: { size: 20, current: current },
       filters: {
