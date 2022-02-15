@@ -773,6 +773,7 @@
 	display: flex;
 	flex-direction: column;
   padding: 15px 20px;
+  margin: 25px 0;
   background: var(--collapsebox-background-color);
   color: var(--collapsebox-text-color);
   border-radius: 5px;
@@ -786,7 +787,7 @@
 .doc .collapseBox .title {
   font-style: normal;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .doc .collapseBox .title::after {
