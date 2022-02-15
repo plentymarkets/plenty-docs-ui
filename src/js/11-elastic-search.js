@@ -7,7 +7,7 @@ class ElasticSearch {
     this.options = {
       search_fields: { url_path_dir4: {}, article_content: {}, meta_keywords: {}, meta_description: {}, headings: {} },
       result_fields: { id: { raw: {} }, headings: { raw: {} }, article_content: { snippet: { size: 250 } }, url: { raw: {} } },
-      page: { size: 20, current: current }
+      page: { size: 20, current: current },
     }
   }
 
@@ -22,7 +22,7 @@ class ElasticSearch {
   getSuggestions (searchKey) {
     const filterOptions = {
       query: searchKey,
-      size: 10
+      size: 10,
     }
     this.client.querySuggestion(searchKey, filterOptions)
       .then((resultList) => {
