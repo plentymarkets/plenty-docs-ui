@@ -1,0 +1,9 @@
+= Search
+:page-layout: search
+
+[id="search-page-results"]
+--
+
+There are no results!
+
+--

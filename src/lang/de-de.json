@@ -3,6 +3,12 @@
 
   "developers-documentation": "Entwicklerdokumentation",
 
+  "search_placeholder_text": "Suchbegriffe eingeben...",
+  "search_query": "Suchabfrage:",
+  "search_results": "Ergebnisse",
+  "search_seconds": "Sekunden",
+  "search_sort_by_relevance": "Relevanz",
+
   "company_name": "plentysystems AG",
   "company_homepage": "https://plentymarkets.com/de/",
   "legal_disclosure_text": "Impressum",
