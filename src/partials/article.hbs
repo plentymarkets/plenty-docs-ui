@@ -2,11 +2,11 @@
     {{#if (eq page.layout 'search')}}
         <div class="search_head row mb-3">
           <div class="seach_text col-sm-8 text-left">
-            <div class="sucher">{{ i18n page.attributes.lang 'the_search' }} <span id="searche"></span></div>
-            <span class="search_about">{{ i18n page.attributes.lang 'about' }} <span id="searchnores">0</span> {{ i18n page.attributes.lang 'results' }} (<span id="searchnotime">0</span> {{ i18n page.attributes.lang 'seconds' }})</span>
+            <div class="search-result-container">{{ i18n page.attributes.lang 'search_query' }} <span id="searche"></span></div>
+            <span id="searchnores">0</span> {{ i18n page.attributes.lang 'search_results' }} (<span id="searchnotime">0</span> {{ i18n page.attributes.lang 'search_seconds' }})</span>
           </div>
-          <div class="seach_text col-sm-4 text-right">
-            <button class="filtering">{{ i18n page.attributes.lang 'relevance' }}</button>
+          <div class="seach-text col-sm-4 text-right">
+            <button class="filtering">{{ i18n page.attributes.lang 'search_sort_by_relevance' }}</button>
           </div>
         </div>
         <div id="search-page-results"></div>

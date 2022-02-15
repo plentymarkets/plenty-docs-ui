@@ -3,6 +3,11 @@
 
   "developers-documentation": "Developers docs",
 
+  "search_query": "Search query:",
+  "search_results": "results",
+  "search_seconds": "seconds",
+  "search_sort_by_relevance": "Relevance",
+
   "company_name": "plentysystems AG",
   "company_homepage": "https://plentymarkets.com",
   "legal_disclosure_text": "Legal disclosure",
