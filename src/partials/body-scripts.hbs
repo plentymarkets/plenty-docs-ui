@@ -37,21 +37,20 @@
       })
     })()
   </script>
+  <script>
+    var Feedback = {
+          page: '{{ page.title }}',
+          space: 'AAAAFHhmz80',
+          key: 'AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI',
+          token: 'H7zyIArazaYYgfAIsLkPigpFTJUv4IhgPCrosCyPbjY'
+        }
+  </script>
 {{/if}}
 <script>
-{{#if (or (eq site.url 'https://knowledge.plentymarkets.com/de-de') (eq site.url 'https://knowledge.plentymarkets.com/en-gb')) }}
   var Feedback = {
     page: '{{ page.title }}',
     space: 'AAAAxJRMW4Q',
     key: 'AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI',
     token: 'xfBUGHvmyNY3iBOqzjvuD-dterjASSwkMLV-agdw2Ro'
   }
-{{else}}
-  var Feedback = {
-      page: '{{ page.title }}',
-      space: 'AAAAFHhmz80',
-      key: 'AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI',
-      token: 'H7zyIArazaYYgfAIsLkPigpFTJUv4IhgPCrosCyPbjY'
-    }
-{{/if}}
 </script>
