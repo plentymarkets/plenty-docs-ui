@@ -234,8 +234,11 @@
   border-bottom: 2.5px solid var(--table-borders-color);
   padding: 0.5rem;
   font-weight: 700;
-  color: var(--table-heading-color);
   font-size: 1.05em;
+  color: var(--table-heading-color);
+  background-color: var(--table-header-background-color);
+  position: sticky;
+  top: 127.5px;
 }
 
 .doc table.tableblock td,

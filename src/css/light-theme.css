@@ -1,6 +1,4 @@
 :root {
-  --plenty-secondaries-white: #ffffff;
-  --plentyLightGrey: #F1F1F1;
   /* colors */
   --primary-color: var(--plenty-secondaries-white);
   /* base */
@@ -34,6 +32,7 @@
   --tabs-text-color: var(--plentyRedCrimson);
   --table-row-even: var(--color-white);
   --table-heading-color: var(--plentyRedCrimson);
+  --table-header-background-color: var(--plentyLightGrey);
   --table-borders-color: var(--plentyBluesPacificBlue);
   --collapsebox-background-color: var(--color-white);
   --collapsebox-text-color: var(--plentyGreysLimedSpruce);
