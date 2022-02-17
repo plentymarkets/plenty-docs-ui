@@ -797,6 +797,11 @@
   font-size: 1rem;
 }
 
+.doc .collapseBox.active .title {
+  border-bottom-style: groove;
+  padding-bottom: 1rem;
+}
+
 .doc .collapseBox .title::after {
   content: '\e920';
   font-family: var(--plenty-icon-font-family);
@@ -812,9 +817,8 @@
   display: none;
   font-weight: 300;
   font-size: calc(16/var(--rem-base)*1rem);
-  border-top-style: groove;
-  margin-top: 1rem;
 }
+
 .doc .collapseBox.active .content {
   display: block;
 }
