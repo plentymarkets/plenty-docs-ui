@@ -2,8 +2,9 @@
   var colboxes = document.getElementsByClassName('collapseBox')
 
   for (var i = 0; i < colboxes.length; i++) {
-    colboxes[i].onclick = function () {
-      this.classList.toggle('active')
+    var colboxtitle = colboxes[i].getElementsByClassName('title')
+    colboxtitle[i].onclick = function () {
+      this.parentElement.classList.toggle('active')
     }
   }
 })()

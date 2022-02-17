@@ -775,7 +775,6 @@
 
 
 .doc .collapseBox {
-  cursor: pointer;
   position: relative;
 	display: flex;
 	flex-direction: column;
@@ -788,10 +787,11 @@
 }
 
 .doc .collapseBox:hover {
-  filter: brightness(85%);
+  filter: brightness(90%);
 }
 
 .doc .collapseBox .title {
+  cursor: pointer;
   font-style: normal;
   font-weight: 700;
   font-size: 1rem;
@@ -812,6 +812,8 @@
   display: none;
   font-weight: 300;
   font-size: calc(16/var(--rem-base)*1rem);
+  border-top-style: groove;
+  margin-top: 1rem;
 }
 .doc .collapseBox.active .content {
   display: block;
