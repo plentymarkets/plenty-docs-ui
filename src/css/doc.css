@@ -123,6 +123,7 @@
 .doc p {
   margin: 0;
   hyphens: none;
+  font-weight: 300;
 }
 
 .doc a.bare{
