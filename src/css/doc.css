@@ -119,7 +119,6 @@
 .doc h6:hover .anchor {
   visibility: visible;
 }
-
 .doc p {
   margin: 0;
   hyphens: none;
@@ -212,6 +211,10 @@
 .doc .quoteblock,
 .doc .partintro {
   margin: 1rem 0 0;
+}
+
+.doc .paragraph.instruction p {
+  font-weight: 700;
 }
 
 .doc table.tableblock {
