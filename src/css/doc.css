@@ -119,10 +119,10 @@
 .doc h6:hover .anchor {
   visibility: visible;
 }
-
 .doc p {
   margin: 0;
   hyphens: none;
+  font-weight: 300;
 }
 
 .doc a.bare{
@@ -213,6 +213,10 @@
   margin: 1rem 0 0;
 }
 
+.doc .paragraph.instruction p {
+  font-weight: 700;
+}
+
 .doc table.tableblock {
   border-collapse: collapse;
   font-size: calc(15 / var(--rem-base) * 1rem);
@@ -230,8 +234,11 @@
   border-bottom: 2.5px solid var(--table-borders-color);
   padding: 0.5rem;
   font-weight: 700;
-  color: var(--table-heading-color);
   font-size: 1.05em;
+  color: var(--table-heading-color);
+  background-color: var(--table-header-background-color);
+  position: sticky;
+  top: 127.5px;
 }
 
 .doc table.tableblock td,

@@ -4,6 +4,7 @@
     --plentyBluesPacificBlue: #068ec2;
     --plentyBluesPictonBlue: #5DC3F0;
     --plentyBluesSail: #afdef8;
+    --plentyLightGrey: #F1F1F1;
     --plentyGreysNevada: #5F767F;
     --plentyGreysLimedSpruce: #374D55;
     --plentyRedCrimson: #D4021D;
@@ -16,6 +17,7 @@
     --plenty-color-grey: #707173;
     --plenty-primary: var(--plenty-color-blue);
     --plenty-secondary: #eee;
+    --plenty-secondaries-white: #ffffff;
     --white: #fff;
     --black: #000;
     --plenty-color-yellow: #ffd500;
