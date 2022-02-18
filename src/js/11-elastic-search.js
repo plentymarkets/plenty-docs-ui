@@ -22,7 +22,10 @@ class ElasticSearch {
   getSuggestions (searchKey) {
     const filterOptions = {
       query: searchKey,
-      size: 10,
+      types: {
+        documents: { fields: ['meta_keywords', 'headings'] },
+      },
+      size: 7,
     }
     this.client.querySuggestion(searchKey, filterOptions)
       .then((resultList) => {
