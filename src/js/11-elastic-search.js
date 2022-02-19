@@ -94,8 +94,10 @@ class ElasticSearch {
     searchIcon.addEventListener('click', () => {
       if (searchBar.classList.contains('d-none')) {
         searchBar.classList.remove('d-none')
+        searchText.focus()
       } else {
         searchBar.classList.add('d-none')
+        searchText.blur()
       }
       if (document.getElementById('openSearch').classList.contains('d-none')) {
         document.getElementById('openSearch').classList.remove('d-none')
