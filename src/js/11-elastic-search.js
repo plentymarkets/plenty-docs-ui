@@ -83,7 +83,7 @@ class ElasticSearch {
 function toggleSearchBar () {
   const searchBar = document.getElementById('searchbar')
   const searchText = document.getElementById('search-input')
-    
+
   if (searchBar.classList.contains('d-none')) {
     searchBar.classList.remove('d-none')
     searchText.focus()
