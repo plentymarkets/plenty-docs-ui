@@ -80,6 +80,26 @@ class ElasticSearch {
   }
 }
 
+function toggleSearchBar () {
+  const searchBar = document.getElementById('searchbar')
+  const searchText = document.getElementById('search-input')
+    
+  if (searchBar.classList.contains('d-none')) {
+    searchBar.classList.remove('d-none')
+    searchText.focus()
+  } else {
+    searchBar.classList.add('d-none')
+    searchText.blur()
+  }
+  if (document.getElementById('openSearch').classList.contains('d-none')) {
+    document.getElementById('openSearch').classList.remove('d-none')
+    document.getElementById('closeSearch').classList.add('d-none')
+  } else {
+    document.getElementById('openSearch').classList.add('d-none')
+    document.getElementById('closeSearch').classList.remove('d-none')
+  }
+}
+
 (function () {
   $(document).ready(function () {
     let timeout = false
@@ -88,23 +108,14 @@ class ElasticSearch {
     elasticSearch.setClient(engine)
     const searchPageResults = document.getElementById('search-page-results')
     const searchIcon = document.getElementById('search-icon')
-    const searchBar = document.getElementById('searchbar')
     const searchText = document.getElementById('search-input')
 
     searchIcon.addEventListener('click', () => {
-      if (searchBar.classList.contains('d-none')) {
-        searchBar.classList.remove('d-none')
-        searchText.focus()
-      } else {
-        searchBar.classList.add('d-none')
-        searchText.blur()
-      }
-      if (document.getElementById('openSearch').classList.contains('d-none')) {
-        document.getElementById('openSearch').classList.remove('d-none')
-        document.getElementById('closeSearch').classList.add('d-none')
-      } else {
-        document.getElementById('openSearch').classList.add('d-none')
-        document.getElementById('closeSearch').classList.remove('d-none')
+      toggleSearchBar()
+    })
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
+        toggleSearchBar()
       }
     })
     searchText.addEventListener('input', () => {
