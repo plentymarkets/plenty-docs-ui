@@ -11,6 +11,8 @@
         </div>
         <div id="search-page-results"></div>
         <div id="search-page-pagination" class="text-center"></div>
+    {{else if (eq page.layout 'overview')}}
+        {{> overview }}
     {{else if (eq page.layout '404')}}
         <h1 class="page">{{{or page.title 'Page Not Found'}}}</h1>
         <div class="paragraph">
