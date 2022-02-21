@@ -1,0 +1,40 @@
+.logoList ul {
+    list-style: none;
+    padding: 0;
+}
+
+.logolist a {
+    border: var(--card-border-width) solid var(--card-border-color);
+    width: 100%;
+    display: table;
+    height: var(--logo-list-a-height);
+    line-height: var(--logo-list-a-line-height);
+    text-align: center;
+    border-radius: var(--card-border-radius);
+}
+
+.logolist span.image {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.logolist img {
+    display: inline-block;
+    max-width: var(--logo-list-image-width);
+    height: auto;
+    max-height: var(--logo-list-image-height);
+}
+
+@media screen and (min-width: 769px) {
+    .logoList ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: var(--grid-gutter-width) / 2;
+        margin-right: var(--grid-gutter-width) / 2;
+    }
+    .logolist li {
+        width: 25%;
+        padding-left: var(--grid-gutter-width) / 2;
+        padding-right: var(--grid-gutter-width) / 2;
+    }
+}

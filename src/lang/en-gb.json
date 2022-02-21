@@ -1,7 +1,17 @@
 {
   "toctitle": "Contents",
+  "overview_page_intro_1": "Welcome to the section",
+  "overview_page_intro_2": "This section covers the following topics:",
+  "404_page_not_found": "The page you're looking for does not exist. It may have been moved.",
+  "404_page_body": "If you arrived on this page by clicking on a link, please notify us that the link is broken. If you typed the URL of this page manually, please double check that you entered the address correctly.",
 
   "developers-documentation": "Developers docs",
+
+  "search_placeholder_text": "Enter search keywords...",
+  "search_query": "Search query:",
+  "search_results": "results",
+  "search_seconds": "seconds",
+  "search_sort_by_relevance": "Relevance",
 
   "company_name": "plentysystems AG",
   "company_homepage": "https://plentymarkets.com",
@@ -106,7 +116,7 @@
     }
   },
 
-  "footer_col_1": "plentymarkets",
+  "footer_col_1": "PLENTYMARKETS",
   "footer_text_1_1": "System requirements",
   "footer_link_1_1": "/en-gb/manual/main/welcome/quick-start-system-requirements.html",
   "footer_text_1_2": "Admin tasks",
@@ -116,7 +126,7 @@
   "footer_text_1_4": "EOL",
   "footer_link_1_4": "/en-gb/manual/main/business-decisions/eol.html",
 
-  "footer_col_2": "Extensions",
+  "footer_col_2": "EXTENSIONS",
   "footer_text_2_1": "plentyMarketplace",
   "footer_link_2_1": "https://marketplace.plentymarkets.com/en",
   "footer_text_2_2": "Developers documentation",
@@ -126,7 +136,7 @@
   "footer_text_2_4": "plentyPOS",
   "footer_link_2_4": "https://www.plentymarkets.com/product/modules/point-of-sale/",
 
-  "footer_col_3": "Services",
+  "footer_col_3": "SERVICES",
   "footer_text_3_1": "System setup",
   "footer_link_3_1": "http://marketplace.plentymarkets.com/en/services/plentyservices/service-packages/",
   "footer_text_3_2": "Consulting",
@@ -136,7 +146,7 @@
   "footer_text_3_4": "Partner agencies",
   "footer_link_3_4": "https://marketplace.plentymarkets.com/en/partners",
 
-  "footer_col_4": "Product",
+  "footer_col_4": "PRODUCT",
   "footer_text_4_1": "Overview",
   "footer_link_4_1": "https://www.plentymarkets.com/product/",
   "footer_text_4_2": "Editions",
@@ -145,7 +155,7 @@
   "footer_link_4_3": "https://www.plentymarkets.com/customers/",
   "footer_text_4_4": "Blog",
   "footer_link_4_4": "https://www.plentymarkets.eu/blog/",
-  
+
   "feedbackTitle": "Is this page helpful?",
   "feedbackPlaceholder": "Enter your feedback... (optional)",
   "feedbackHelpful": "This page is helpful",

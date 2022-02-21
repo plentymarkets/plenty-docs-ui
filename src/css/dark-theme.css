@@ -31,10 +31,10 @@
   --tabs-text-color: var(--color-white);
   --table-row-even: var(--plentyDarkShadeCyan);
   --table-heading-color: var(--color-white);
+  --table-header-background-color: var(--plentyBluesFadedJade);
   --table-borders-color: var(--color-white);
   --collapsebox-background-color: var(--plentyBluesTealBlue);
   --collapsebox-text-color: var(--color-white);
-  --code-background: var(--plentyGreysNevada);
   --example-background: var(--plentyGreysNevada);
   /*--doc-paragraph-color: var(--plentyGreysLimedSpruce);*/
   --heading-font-color: var(--doc-font-color);

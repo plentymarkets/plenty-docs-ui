@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{#if (eq page.attributes.lang 'de-de')}}de{{else}}en{{/if}}">
   <head>
-{{> head defaultPageTitle='Page Not Found'}}
+{{> head defaultPageTitle='Untitled'}}
   </head>
-  <body class="status-404">
+  <body class="article{{#with (or page.attributes.role page.role)}} {{{this}}}{{/with}}">
 {{> header}}
 {{> body}}
 {{> footer}}

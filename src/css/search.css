@@ -1,0 +1,122 @@
+.searchbar{
+  display: block;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  z-index: 99;
+  top: 100%;
+  border-bottom: 1px solid #fff;
+}
+.searchbar form{
+  height: 50px;
+}
+.searchbar form input.search-input{
+  border: 0px solid;
+}
+#the-results{
+  padding: 5px;
+  background: #fff;
+  color: #0a1927;
+}
+#the-results a{
+  display: block;
+  padding: 5px;
+}
+#the-results a:not(:last-child){
+  border-bottom: 1px solid;
+}
+#the-results a:hover{
+  color: #d4061c;
+}
+#search-input::-webkit-input-placeholder {
+  color: white;
+}
+#search-page-results .the-search-result{
+  padding: 20px 0;
+  display: block;
+  border-bottom: 1px solid grey;
+}
+#search-page-results .the-search-result::before{
+  content: "";
+  padding: 0;
+}
+.result-title{
+  color: #D4021D;
+  font-size: 20px;
+  line-height: 24px;
+  display: block;
+  font-weight: bold;
+}
+.result-description{
+  color: #374D55;
+  font-size: 16px;
+  line-height: 24px;
+  display: block;
+  margin: 1rem;
+}
+
+.result-url{
+  color:#5F767F;
+  display: block;
+  font-style: italic;
+  font-size: 16px;
+}
+.filtering{
+  border: 1px solid #D4021D;
+  background: #D4021D;
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 16px;
+}
+.search-result-container{
+  font-size: 32px;
+  line-height: 36px;
+}
+#searche{
+  color: #D4021D;
+}
+.search-about{
+  font-size: 16px;
+  color: #5F767F;
+}
+#search-page-pagination{
+  margin-top: 50px;
+}
+#search-page-pagination a:not(.previous):not(.next){
+  font-size: 18px;
+  line-height: 10px;
+  display: inline-block;
+  padding-left: 5px;
+  padding-right: 5px;
+  height: 32px;
+  border-radius: 5px;
+  background: #fff;
+  padding: 10px;
+  -webkit-box-shadow: 5px 10px 18px #888888;
+  box-shadow: 2px 3px 5px #888888;
+  color: black;
+  font-weight: bold;
+  margin-left: 10px;
+  cursor: pointer;
+}
+#search-page-pagination a.next{
+  color: black;
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+#search-page-pagination a.previous{
+  color: black;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+#search-page-pagination a.active{
+  color: #fff !important;
+  background: #D4021D !important;
+}
+
+#search-icon{
+  margin-top: -4px;
+}

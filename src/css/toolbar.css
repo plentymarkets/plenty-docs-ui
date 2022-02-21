@@ -38,7 +38,10 @@
   padding: 0;
   width: 2.5rem;
   margin-right: -0.25rem;
-  filter: brightness(100);
+}
+
+.nav-toggle.light {
+  background: url(../img/menu-light.svg) no-repeat 50% 47.5%!important;
 }
 
 @media screen and (min-width: 1024px) {
@@ -50,7 +53,11 @@
 .nav-toggle.is-active {
   background-image: url(../img/back.svg);
   background-size: 41.5%;
-  filter: invert(1);
+}
+
+.nav-toggle.light.is-active {
+  background-image: url(../img/back-light.svg)!important;
+  background-size: 41.5%!important;
 }
 
 .home-link {
