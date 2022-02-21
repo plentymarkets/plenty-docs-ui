@@ -1,7 +1,15 @@
 {
   "toctitle": "Contents",
+  "overview_page_intro_1": "Welcome to the section",
+  "overview_page_intro_2": "This section covers the following topics:",
 
   "developers-documentation": "Developers docs",
+
+  "search_placeholder_text": "Enter search keywords...",
+  "search_query": "Search query:",
+  "search_results": "results",
+  "search_seconds": "seconds",
+  "search_sort_by_relevance": "Relevance",
 
   "company_name": "plentysystems AG",
   "company_homepage": "https://plentymarkets.com",

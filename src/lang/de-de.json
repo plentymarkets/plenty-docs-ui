@@ -1,7 +1,15 @@
 {
   "toctitle": "Inhalte",
+  "overview_page_intro_1": "Willkommen im Themenbereich",
+  "overview_page_intro_2": "Hier findest du folgende Informationen:",
 
-  "developers-documentation": "Entwicklerdoku",
+  "developers-documentation": "Entwicklerdokumentation",
+
+  "search_placeholder_text": "Suchbegriffe eingeben...",
+  "search_query": "Suchabfrage:",
+  "search_results": "Ergebnisse",
+  "search_seconds": "Sekunden",
+  "search_sort_by_relevance": "Relevanz",
 
   "company_name": "plentysystems AG",
   "company_homepage": "https://plentymarkets.com/de/",

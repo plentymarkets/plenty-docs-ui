@@ -9,6 +9,7 @@
 @import "breadcrumbs.css";
 @import "page-versions.css";
 @import "toc.css";
+@import "logo-list.css";
 @import "doc.css";
 @import "pagination.css";
 @import "header.css";
@@ -24,3 +25,4 @@
 @import "swagger-ui.css";
 @import "plenty-icon-font.css";
 @import "icon-colours.css";
+@import "search.css";

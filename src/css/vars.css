@@ -4,6 +4,7 @@
     --plentyBluesPacificBlue: #068ec2;
     --plentyBluesPictonBlue: #5DC3F0;
     --plentyBluesSail: #afdef8;
+    --plentyLightGrey: #F1F1F1;
     --plentyGreysNevada: #5F767F;
     --plentyGreysLimedSpruce: #374D55;
     --plentyRedCrimson: #D4021D;
@@ -16,6 +17,7 @@
     --plenty-color-grey: #707173;
     --plenty-primary: var(--plenty-color-blue);
     --plenty-secondary: #eee;
+    --plenty-secondaries-white: #ffffff;
     --white: #fff;
     --black: #000;
     --plenty-color-yellow: #ffd500;
@@ -100,6 +102,15 @@
     --tip-on-color: var(--plentyMalachite);
     --warning-color: var(--color-white);
     --warning-on-color: var(--plentyAdocYellow);
+    /* logo list */
+    --card-border-color: rgba(var(--black), .125);
+    --card-border-radius: 0;
+    --card-border-width: 0.4em;
+    --logo-list-a-height: 64px;
+    --logo-list-a-line-height: 58px;
+    --logo-list-image-height: 50px;
+    --logo-list-image-width: 120px;
+    --grid-gutter-width: 1.5rem;
     /* doc */
     --doc-font-size: inherit;
     --doc-font-size--desktop: calc(17 / var(--rem-base) * 1rem);
@@ -137,7 +148,7 @@
     --footer-background: var(--footer-bg-color);
     --footer-font-color: var(--doc-font-color);
     /* dimensions and positioning */
-    --navbar-height: calc(95 / var(--rem-base) * 1rem);
+    --navbar-height: calc(120 / var(--rem-base) * 1rem);
     --toolbar-height: calc(45 / var(--rem-base) * 1rem);
     --drawer-height: var(--toolbar-height);
     --body-top: var(--navbar-height);

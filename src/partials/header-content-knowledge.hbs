@@ -1,5 +1,5 @@
 <div class="left">
-    <a class="logo logo-knowledge" href="{{ site.url }}/index.html"><img src="{{ site.url }}/_/img/knowledge-logo.png" alt="home-logo"></a>
+    <a class="logo logo-knowledge" href="{{ site.url }}/index.html"><img src="{{ site.url }}/_/img/plentyKnowledge_RGB.svg" alt="home-logo"></a>
 </div>
 
 <div class="right">
@@ -18,8 +18,20 @@
             <a id="languagePath"><span id="langSelect" class="submenu-item">DE</span></a>
             </div>
         </div>
-        <div class="search">
-            <div id="docsearch"></div>
+        <div id="search-icon">
+          <span class="fa-stack">
+              <i id="openSearch" class="fa fa-search fa-stack-1x"></i>
+              <i id="closeSearch" class="fa fa-plus fa-stack-1x d-none"></i>
+          </span>
         </div>
     </div>
+</div>
+<div id="searchbar" class="searchbar d-none">
+  <form action="search.html">
+    <div>
+      <input class="search-input" id="search-input" type="text" name="query" placeholder="{{ i18n page.attributes.lang 'search_placeholder_text' }}" autocomplete="off">
+      <i class="fa fa-search text-white"></i>
+    </div>
+    <div id="search-results"></div>
+  </form>
 </div>

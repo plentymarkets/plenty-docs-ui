@@ -119,10 +119,10 @@
 .doc h6:hover .anchor {
   visibility: visible;
 }
-
 .doc p {
   margin: 0;
   hyphens: none;
+  font-weight: 300;
 }
 
 .doc a.bare{
@@ -213,6 +213,10 @@
   margin: 1rem 0 0;
 }
 
+.doc .paragraph.instruction p {
+  font-weight: 700;
+}
+
 .doc table.tableblock {
   border-collapse: collapse;
   font-size: calc(15 / var(--rem-base) * 1rem);
@@ -230,8 +234,11 @@
   border-bottom: 2.5px solid var(--table-borders-color);
   padding: 0.5rem;
   font-weight: 700;
-  color: var(--table-heading-color);
   font-size: 1.05em;
+  color: var(--table-heading-color);
+  background-color: var(--table-header-background-color);
+  position: sticky;
+  top: 127.5px;
 }
 
 .doc table.tableblock td,
@@ -309,7 +316,7 @@
   width: 100%;
 }
 
-.doc .admonitionblock .icon {
+.doc .admonitionblock td.icon {
   text-align: center;
   width: 4rem;
   padding: 1rem;
@@ -323,10 +330,11 @@
   border-left: 5px solid var(--caution-on-color);
 }
 
-.doc .admonitionblock.caution .icon {
+.doc .admonitionblock.caution td.icon {
   color: var(--caution-on-color);
 }
-.doc .admonitionblock.caution .icon i::after {
+
+.doc .admonitionblock.caution td.icon i::after {
   content: '\e95a';
 }
 
@@ -334,11 +342,11 @@
   border-left: 5px solid var(--important-on-color);
 }
 
-.doc .admonitionblock.important .icon {
+.doc .admonitionblock.important td.icon {
   color: var(--important-on-color);
 }
 
-.doc .admonitionblock.important .icon i::after {
+.doc .admonitionblock.important td.icon i::after {
   content: '\e929';
 }
 
@@ -346,11 +354,11 @@
   border-left: 5px solid var(--note-on-color);
 }
 
-.doc .admonitionblock.note .icon {
+.doc .admonitionblock.note td.icon {
   color: var(--note-on-color);
 }
 
-.doc .admonitionblock.note .icon i::after {
+.doc .admonitionblock.note td.icon i::after {
   content: '\e929';
 }
 
@@ -358,11 +366,11 @@
   border-left: 5px solid var(--tip-on-color);
 }
 
-.doc .admonitionblock.tip .icon {
+.doc .admonitionblock.tip td.icon {
   color: var(--tip-on-color);
 }
 
-.doc .admonitionblock.tip .icon i::after {
+.doc .admonitionblock.tip td.icon i::after {
   content: '\e92a';
 }
 
@@ -376,16 +384,16 @@
   border-left: 5px solid var(--warning-on-color);
 }
 
-.doc .admonitionblock.warning .icon {
+.doc .admonitionblock.warning td.icon {
   color: var(--warning-on-color);
 }
 
-.doc .admonitionblock.warning .icon i::after {
+.doc .admonitionblock.warning td.icon i::after {
   content: '\e929';
   transform: rotate(180deg);
 }
 
-.doc .admonitionblock .icon i {
+.doc .admonitionblock td.icon i {
   width: 2rem;
   height: 2rem;
   font-size: 2em;
@@ -393,7 +401,7 @@
   align-items: center;
 }
 
-.doc .admonitionblock .icon i::after {
+.doc .admonitionblock td.icon i::after {
   content: attr(title);
   font-family: var(--plenty-icon-font-family);
 }
@@ -768,7 +776,6 @@
 
 
 .doc .collapseBox {
-  cursor: pointer;
   position: relative;
 	display: flex;
 	flex-direction: column;
@@ -781,13 +788,19 @@
 }
 
 .doc .collapseBox:hover {
-  filter: brightness(85%);
+  filter: brightness(90%);
 }
 
 .doc .collapseBox .title {
+  cursor: pointer;
   font-style: normal;
   font-weight: 700;
   font-size: 1rem;
+}
+
+.doc .collapseBox.active .title {
+  border-bottom-style: groove;
+  padding-bottom: 1rem;
 }
 
 .doc .collapseBox .title::after {
@@ -806,6 +819,7 @@
   font-weight: 300;
   font-size: calc(16/var(--rem-base)*1rem);
 }
+
 .doc .collapseBox.active .content {
   display: block;
 }
