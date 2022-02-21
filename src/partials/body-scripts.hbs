@@ -1,55 +1,56 @@
-<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@alpha"></script>
-<script>
-  (function () {
-    window.process = {
-      env: {
-        NODE_ENV: 'production'
+{{#if (not (eq site.url 'https://knowledge.plentymarkets.com/*')) }}
+  <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@alpha"></script>
+  <script>
+    (function () {
+      window.process = {
+        env: {
+          NODE_ENV: 'production'
+        }
       }
-    }
-    var interface_version = "{{page.componentVersion.displayVersion}}"
-    var interface_version_list = [
-      'stable7',
-      'early',
-      'beta7'
-    ]
-    if (!interface_version_list.includes(interface_version)) {
-      interface_version = interface_version_list[0]
-    }
-    var plugin_version = "{{page.componentVersion.displayVersion}}"
-    var plugin_version_list = [
-      '5.0.0',
-      '4.6.0'
-    ]
-    if (!plugin_version_list.includes(plugin_version)) {
-      plugin_version = plugin_version_list[0]
-    }
-    docsearch({
-      apiKey: '45aeef71ca14d766195975ac179f14d0',
-      indexName: 'plentymarkets',
-      container: '#docsearch',
-      searchParameters: {
-        hitsPerPage: 10,
-        'facetFilters': [
-          ['tags:developers', 'version:' + interface_version, 'version:' + plugin_version]
-        ]
-      },
-    })
-  })()
-</script>
+      var interface_version = "{{page.componentVersion.displayVersion}}"
+      var interface_version_list = [
+        'stable7',
+        'early',
+        'beta7'
+      ]
+      if (!interface_version_list.includes(interface_version)) {
+        interface_version = interface_version_list[0]
+      }
+      var plugin_version = "{{page.componentVersion.displayVersion}}"
+      var plugin_version_list = [
+        '5.0.0',
+        '4.6.0'
+      ]
+      if (!plugin_version_list.includes(plugin_version)) {
+        plugin_version = plugin_version_list[0]
+      }
+      docsearch({
+        apiKey: '45aeef71ca14d766195975ac179f14d0',
+        indexName: 'plentymarkets',
+        container: '#docsearch',
+        searchParameters: {
+          hitsPerPage: 10,
+          'facetFilters': [
+            ['tags:developers', 'version:' + interface_version, 'version:' + plugin_version]
+          ]
+        },
+      })
+    })()
+  </script>
+  <script>
+    var Feedback = {
+          page: '{{ page.title }}',
+          space: 'AAAAFHhmz80',
+          key: 'AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI',
+          token: 'H7zyIArazaYYgfAIsLkPigpFTJUv4IhgPCrosCyPbjY'
+        }
+  </script>
+{{/if}}
 <script>
-{{#if (or (eq site.url 'https://knowledge.plentymarkets.com/de-de') (eq site.url 'https://knowledge.plentymarkets.com/en-gb')) }}
   var Feedback = {
     page: '{{ page.title }}',
     space: 'AAAAxJRMW4Q',
     key: 'AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI',
     token: 'xfBUGHvmyNY3iBOqzjvuD-dterjASSwkMLV-agdw2Ro'
   }
-{{else}}
-  var Feedback = {
-      page: '{{ page.title }}',
-      space: 'AAAAFHhmz80',
-      key: 'AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI',
-      token: 'H7zyIArazaYYgfAIsLkPigpFTJUv4IhgPCrosCyPbjY'
-    }
-{{/if}}
 </script>
