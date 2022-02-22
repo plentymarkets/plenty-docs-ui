@@ -66,12 +66,13 @@ class Cookies {
     cookie.tracking = {}
     cookie.media = {}
     cookie.convenience = {}
-    cookie.necessary.convenienceHype = this.consent
     cookie.necessary.consent = this.consent
     cookie.necessary.session = this.consent
     cookie.necessary.csrf = this.consent
+    cookie.necessary.elasticSearch = this.consent
     cookie.tracking.googleAnalytics = this.statistics
     cookie.media.youtube = this.external
+    cookie.media.vimeo = this.external
     cookie.convenience.languageDetection = this.functional
     return JSON.stringify(cookie)
   }

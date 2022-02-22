@@ -44,6 +44,7 @@
     "cookies_consent_label": "Consent",
     "cookies_session_label": "Session",
     "cookies_csrf_label": "CSRF",
+    "cookies_elasticsearch_label": "Elasticsearch",
 
     "cookies_convenience": {
       "provider": "plentymarkets",
@@ -71,6 +72,13 @@
       "purpose": "Der CSRF-Cookie dient dazu, Cross-Site Request Forgery-Angriffe zu verhindern.",
       "privacy_policy": "<a href='https://www.plentymarkets.com/de/datenschutz/' target='_blank' class='text-primary text-appearance'>https://www.plentymarkets.com/de/datenschutz/</a>",
       "lifespan": "Session"
+    },
+
+    "cookies_elasticsearch": {
+      "provider": "Elasticsearch B.V., Niederlande",
+      "purpose": "Der Elasticsearch-Cookie dient der Indexierung der Inhalte unserer Webseite und der Suchfunktion für Nutzer.",
+      "privacy_policy": "<a href='https://www.elastic.co/de/legal/privacy-statement' target='_blank' class='text-primary text-appearance'>https://www.elastic.co/de/legal/privacy-statement</a>",
+      "lifespan": "Session"
     }
   },
 
@@ -93,11 +101,19 @@
     "amount": "1",
     "description": "Inhalte von Videoplattformen und Social Media Plattformen werden standardmäßig blockiert. Wenn Cookies von externen Medien akzeptiert werden, bedarf der Zugriff auf diese Inhalte keiner manuellen Zustimmung mehr.",
     "cookies_youtube_label": "Youtube",
+    "cookies_vimeo_label": "Vimeo",
 
     "cookies_youtube": {
       "provider": "Google Ireland Limited, Irland oder Google LLC, USA",
       "purpose": "Zur Darstellung wichtiger Inhalte auf der Webseite",
       "privacy_policy": "<a href='https://policies.google.com/privacy' target='_blank' class='text-primary text-appearance'>https://policies.google.com/privacy</a>",
+      "lifespan": "2 Jahre"
+    },
+
+    "cookies_vimeo": {
+      "provider": "Vimeo Inc., USA",
+      "purpose": "Zur Darstellung wichtiger Inhalte auf der Webseite",
+      "privacy_policy": "<a href='https://vimeo.com/privacy' target='_blank' class='text-primary text-appearance'>https://vimeo.com/privacy</a>",
       "lifespan": "2 Jahre"
     }
   },

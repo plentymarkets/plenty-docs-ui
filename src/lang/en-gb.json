@@ -44,6 +44,7 @@
     "cookies_consent_label": "Consent",
     "cookies_session_label": "Session",
     "cookies_csrf_label": "CSRF",
+    "cookies_elasticsearch_label": "Elasticsearch",
 
     "cookies_convenience": {
       "provider": "plentymarkets",
@@ -71,6 +72,13 @@
       "purpose": "The CSRF cookie serves to prevent cross-site request forgery attacks.",
       "privacy_policy": "<a href='https://www.plentymarkets.com/en/privacy-policy/' target='_blank' class='text-primary text-appearance'>https://www.plentymarkets.com/en/privacy-policy/</a>",
       "lifespan": "Session"
+    },
+
+    "cookies_elasticsearch": {
+      "provider": "Elasticsearch B.V., Netherlands",
+      "purpose": "The Elasticsearch cookie is used to index the content of our website and it serves the search function for users.",
+      "privacy_policy": "<a href='https://www.elastic.co/legal/privacy-statement' target='_blank' class='text-primary text-appearance'>https://www.elastic.co/legal/privacy-statement</a>",
+      "lifespan": "Session"
     }
   },
 
@@ -93,11 +101,19 @@
     "amount": "1",
     "description": "Content by video platforms and social media platforms are blocked by default. If you accept cookies by external media, access to these contents requires no further consent.",
     "cookies_youtube_label": "Youtube",
+    "cookies_vimeo_label": "Vimeo",
 
     "cookies_youtube": {
       "provider": "Google Ireland Limited, Irland or Google LLC, USA",
       "purpose": "For displaying important contents on the website",
       "privacy_policy": "<a href='https://policies.google.com/privacy' target='_blank' class='text-primary text-appearance'>https://policies.google.com/privacy</a>",
+      "lifespan": "2 years"
+    },
+
+    "cookies_vimeo": {
+      "provider": "Vimeo Inc., USA",
+      "purpose": "For displaying important contents on the website",
+      "privacy_policy": "<a href='https://vimeo.com/privacy' target='_blank' class='text-primary text-appearance'>https://vimeo.com/privacy</a>",
       "lifespan": "2 years"
     }
   },

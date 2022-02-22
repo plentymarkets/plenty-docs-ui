@@ -135,6 +135,35 @@
                            </tbody>
                         </table>
                      </div>
+                     <div class="card consent bg-light mb-3 border-primary border-appearance active">
+                        <div class="card-body">
+                           <p class="d-flex mb-0 font-weight-bold">
+                              <span class="flex-fill">
+                                 {{ i18n page.attributes.lang 'cookies_essential.cookies_elasticsearch_label' }}
+                              </span>
+                           </p>
+                        </div>
+                        <table class="table table-responsive-md table-sm table-striped mb-0">
+                           <tbody>
+                              <tr>
+                                 <td class="pl-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.cookies_provider_label' }}</td>
+                                 <td class="pr-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_elasticsearch.provider' }}</td>
+                              </tr>
+                              <tr>
+                                 <td class="pl-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.cookies_purpose_label' }}</td>
+                                 <td class="pr-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_elasticsearch.purpose' }}</td>
+                              </tr>
+                              <tr>
+                                 <td class="pl-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.cookies_privacy_policy_label' }}</td>
+                                 <td class="pr-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_elasticsearch.privacy_policy' }}</td>
+                              </tr>
+                              <tr>
+                                 <td class="pl-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.cookies_lifespan_label' }}</td>
+                                 <td class="pr-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_elasticsearch.lifespan' }}</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
                   </div>
                   <a class="card-link text-appearance" data-toggle="collapse" href="#essentialSettings" role="button" aria-expanded="false" aria-controls="essentialSettings">
                      {{ i18n page.attributes.lang 'cookies_more_information' }}
@@ -239,6 +268,40 @@
                               <tr>
                                  <td class="pl-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.cookies_lifespan_label' }}</td>
                                  <td class="pr-3">{{ i18n page.attributes.lang 'cookies_external_media.cookies_youtube.lifespan' }}</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                     <div class="card consent bg-light mb-3">
+                        <div class="card-body">
+                           <p class="d-flex mb-0 font-weight-bold">
+                              <span class="flex-fill">
+                                 {{ i18n page.attributes.lang 'cookies_external_media.cookies_vimeo_label' }}
+                              </span>
+                              <span class="custom-control custom-switch custom-control-appearance"><input type="checkbox" class="custom-control-input">
+                                 <label class="custom-control-label">
+
+                                 </label>
+                              </span>
+                           </p>
+                        </div>
+                        <table class="table table-responsive-md table-sm table-striped mb-0">
+                           <tbody>
+                              <tr>
+                                 <td class="pl-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.cookies_provider_label' }}</td>
+                                 <td class="pr-3">{{ i18n page.attributes.lang 'cookies_external_media.cookies_vimeo.provider' }}</td>
+                              </tr>
+                              <tr>
+                                 <td class="pl-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.cookies_purpose_label' }}</td>
+                                 <td class="pr-3">{{ i18n page.attributes.lang 'cookies_external_media.cookies_vimeo.purpose' }}</td>
+                              </tr>
+                              <tr>
+                                 <td class="pl-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.cookies_privacy_policy_label' }}</td>
+                                 <td class="pr-3">{{ i18n page.attributes.lang 'cookies_external_media.cookies_vimeo.privacy_policy' }}</td>
+                              </tr>
+                              <tr>
+                                 <td class="pl-3">{{ i18n page.attributes.lang 'cookies_essential.cookies_convenience.cookies_lifespan_label' }}</td>
+                                 <td class="pr-3">{{ i18n page.attributes.lang 'cookies_external_media.cookies_vimeo.lifespan' }}</td>
                               </tr>
                            </tbody>
                         </table>
