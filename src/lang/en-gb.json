@@ -28,14 +28,14 @@
   "cookies_reject_all": "Reject all",
   "cookies_further_settings_label": "Further settings",
   "cookies_further_settings_back": "Back",
-  
+
   "cookies_more_information": "More information",
   "cookies_essential_tag_label": "Essential",
   "cookies_provider_label": "Provider",
   "cookies_purpose_label": "Purpose",
   "cookies_privacy_policy_label": "Privacy policy",
   "cookies_lifespan_label": "Lifespan",
-  
+
   "cookies_essential_label": "Essential",
   "cookies_essential": {
     "amount": "4",
@@ -98,7 +98,7 @@
 
   "cookies_external_media_label": "External media",
   "cookies_external_media": {
-    "amount": "1",
+    "amount": "2",
     "description": "Content by video platforms and social media platforms are blocked by default. If you accept cookies by external media, access to these contents requires no further consent.",
     "cookies_youtube_label": "Youtube",
     "cookies_vimeo_label": "Vimeo",
@@ -123,7 +123,7 @@
     "amount": "1",
     "description": "These cookies are used to store preferred settings and certain options selected by the user (e.g. disabling language redirect).",
     "cookies_preferred_language_label": "Automatic language redirect",
-    
+
     "cookies_preferred_language": {
       "provider": "plentymarkets",
       "purpose": "This cookie saves the information whether a user has disabled the automatic language redirect.",

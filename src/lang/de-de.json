@@ -28,14 +28,14 @@
   "cookies_reject-all": "Alle ablehnen",
   "cookies_further_settings_label": "Weitere Einstellungen",
   "cookies_further_settings_back": "Zurück",
-  
+
   "cookies_more_information": "Mehr Informationen",
   "cookies_essential_tag_label": "Essenziell",
   "cookies_provider_label": "Anbieter",
   "cookies_purpose_label": "Zweck",
   "cookies_privacy_policy_label": "Datenschutzerklärung",
   "cookies_lifespan_label": "Laufzeit",
-  
+
   "cookies_essential-label": "Essenziell",
   "cookies_essential": {
     "amount": "4",
@@ -98,7 +98,7 @@
 
   "cookies_external-media-label": "Externe Medien",
   "cookies_external_media": {
-    "amount": "1",
+    "amount": "2",
     "description": "Inhalte von Videoplattformen und Social Media Plattformen werden standardmäßig blockiert. Wenn Cookies von externen Medien akzeptiert werden, bedarf der Zugriff auf diese Inhalte keiner manuellen Zustimmung mehr.",
     "cookies_youtube_label": "Youtube",
     "cookies_vimeo_label": "Vimeo",
@@ -123,7 +123,7 @@
     "amount": "1",
     "description": "Diese Cookies ermöglichen, dass die von Nutzern getroffenen Auswahlmöglichkeiten und bevorzugte Einstellungen (z.B. das Deaktivieren der Sprachweiterleitung) gespeichert werden können.",
     "cookies_preferred_language_label": "Automatische Spracherkennung",
-    
+
     "cookies_preferred_language": {
       "provider": "plentymarkets",
       "purpose": "Dieser Cookie erfasst, ob ein Nutzer die Sprachweiterleitung abgelehnt hat.",
