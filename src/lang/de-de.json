@@ -22,7 +22,7 @@
   "terms_and_conditions_text": "AGB",
   "terms_and_conditions_link": "https://www.plentymarkets.com/de/agb/",
 
-  "cookies_info": "Wir nutzen Cookies auf unserer Website. Einige von diesen sind essenziell, während andere uns helfen, diese Website und Ihre Erfahrung zu verbessern. Weitere Informationen zu den von uns verwendeten Cookies und Ihren Rechten als Nutzer finden Sie in unserer <a class='text-appearance' href='https://www.plentymarkets.com/de/datenschutz/' target='_blank'>Datenschutzerklärung</a> und unserem <a class='text-appearance' href='https://www.plentymarkets.com/de/impressum/' target='_blank'>Impressum</a>.",
+  "cookies_info": "Wir nutzen Cookies auf unserer Website. Einige von diesen sind essenziell, während andere uns helfen, diese Website und Ihre Erfahrung zu verbessern. Weitere Informationen zu den von uns verwendeten Cookies und Ihren Rechten als Nutzer finden Sie in unserer Datenschutzerklärung und unserem Impressum.",
   "cookies_accept-selection": "Auswahl akzeptieren",
   "cookies_accept-all": "Alle akzeptieren",
   "cookies_reject-all": "Alle ablehnen",
@@ -49,35 +49,35 @@
     "cookies_convenience": {
       "provider": "plentymarkets",
       "purpose": "Durch Komfort-Cookies wird das Browsen der Seite für dich angenehmer.",
-      "privacy_policy": "<a href='https://www.plentymarkets.com/de/datenschutz/' target='_blank' class='text-primary text-appearance'>https://www.plentymarkets.com/de/datenschutz/</a>",
+      "privacy_policy": "https://www.plentymarkets.com/de/datenschutz/",
       "lifespan": "Session"
     },
 
     "cookies_consent": {
       "provider": "plentymarkets",
       "purpose": "Der Consent-Cookie speichert den Zustimmungsstatus des Benutzers für Cookies auf unserer Seite.",
-      "privacy_policy": "<a href='https://www.plentymarkets.com/de/datenschutz/' target='_blank' class='text-primary text-appearance'>https://www.plentymarkets.com/de/datenschutz/</a>",
+      "privacy_policy": "https://www.plentymarkets.com/de/datenschutz/",
       "lifespan": "Session"
     },
 
     "cookies_session": {
       "provider": "plentymarkets",
       "purpose": "Der Session-Cookie behält die Zustände des Benutzers bei allen Seitenanfragen bei.",
-      "privacy_policy": "<a href='https://www.plentymarkets.com/de/datenschutz/' target='_blank' class='text-primary text-appearance'>https://www.plentymarkets.com/de/datenschutz/</a>",
+      "privacy_policy": "https://www.plentymarkets.com/de/datenschutz/",
       "lifespan": "Session"
     },
 
     "cookies_csrf": {
       "provider": "plentymarkets",
       "purpose": "Der CSRF-Cookie dient dazu, Cross-Site Request Forgery-Angriffe zu verhindern.",
-      "privacy_policy": "<a href='https://www.plentymarkets.com/de/datenschutz/' target='_blank' class='text-primary text-appearance'>https://www.plentymarkets.com/de/datenschutz/</a>",
+      "privacy_policy": "<https://www.plentymarkets.com/de/datenschutz/",
       "lifespan": "Session"
     },
 
     "cookies_elasticsearch": {
       "provider": "Elasticsearch B.V., Niederlande",
-      "purpose": "Der Elasticsearch-Cookie dient der Indexierung der Inhalte unserer Webseite und der Suchfunktion für Nutzer.",
-      "privacy_policy": "<a href='https://www.elastic.co/de/legal/privacy-statement' target='_blank' class='text-primary text-appearance'>https://www.elastic.co/de/legal/privacy-statement</a>",
+      "purpose": "Der Elasticsearch-Cookie dient der strukturierten Indexierung der Inhalte unserer Webseite und der Suchfunktion für Nutzer.",
+      "privacy_policy": "https://www.elastic.co/de/legal/privacy-statement",
       "lifespan": "Session"
     }
   },
@@ -91,7 +91,7 @@
     "cookies_google_analytics": {
       "provider": "Google Ireland Limited, Irland oder Google LLC, USA",
       "purpose": "Zur Verbesserung unserer Produkte und Werbemaßnahmen",
-      "privacy_policy": "<a href='https://policies.google.com/privacy' target='_blank' class='text-primary text-appearance'>https://policies.google.com/privacy</a>",
+      "privacy_policy": "https://policies.google.com/privacy",
       "lifespan": "2 Jahre"
     }
   },
@@ -106,14 +106,14 @@
     "cookies_youtube": {
       "provider": "Google Ireland Limited, Irland oder Google LLC, USA",
       "purpose": "Zur Darstellung wichtiger Inhalte auf der Webseite",
-      "privacy_policy": "<a href='https://policies.google.com/privacy' target='_blank' class='text-primary text-appearance'>https://policies.google.com/privacy</a>",
+      "privacy_policy": "https://policies.google.com/privacy",
       "lifespan": "2 Jahre"
     },
 
     "cookies_vimeo": {
       "provider": "Vimeo Inc., USA",
       "purpose": "Zur Darstellung wichtiger Inhalte auf der Webseite",
-      "privacy_policy": "<a href='https://vimeo.com/privacy' target='_blank' class='text-primary text-appearance'>https://vimeo.com/privacy</a>",
+      "privacy_policy": "https://vimeo.com/privacy",
       "lifespan": "2 Jahre"
     }
   },
@@ -127,7 +127,7 @@
     "cookies_preferred_language": {
       "provider": "plentymarkets",
       "purpose": "Dieser Cookie erfasst, ob ein Nutzer die Sprachweiterleitung abgelehnt hat.",
-      "privacy_policy": "<a href='https://www.plentymarkets.com/de/datenschutz/' target='_blank' class='text-primary text-appearance'>https://www.plentymarkets.com/de/datenschutz/</a>",
+      "privacy_policy": "https://www.plentymarkets.com/de/datenschutz/",
       "lifespan": "Session"
     }
   },
