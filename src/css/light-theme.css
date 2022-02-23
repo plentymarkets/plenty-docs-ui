@@ -34,6 +34,7 @@
   --table-heading-color: var(--plentyRedCrimson);
   --table-header-background-color: var(--plentyLightGrey);
   --table-borders-color: var(--plentyBluesPacificBlue);
+  --admonition-background: var(--color-white);
   --collapsebox-background-color: var(--color-white);
   --collapsebox-text-color: var(--plentyGreysLimedSpruce);
   --example-background: var(--plentyLightGrey);
