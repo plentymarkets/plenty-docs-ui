@@ -141,6 +141,7 @@
 
 .doc a {
   color: var(--doc-font-color);
+  font-weight: 700;
 }
 
 .doc a:hover {
