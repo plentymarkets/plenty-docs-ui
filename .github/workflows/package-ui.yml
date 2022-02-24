@@ -46,16 +46,16 @@ jobs:
           git push
       
       # This step dispatches an event to run the CD workflow of plenty-developers-docs
-      - name: Rebuild site
+      - name: Rebuild developers site
         uses: peter-evans/repository-dispatch@ce5485de42c9b2622d2ed064be479e8ed65e76f4
         with:
           token: ${{ secrets.PUBLIC_PAT_CICD4_PUBLIC }}
           repository: plentymarkets/plenty-developers-docs
-          event-type: ContentSourceUpdate
+          event-type: UIBundleUpdate
           client-payload: '{ "repository": "${{github.repository}}" }'
       
       # This step dispatches an event to run the CD workflow of plenty-manual-docs
-      - name: Rebuild site
+      - name: Rebuild knowledge site
         uses: peter-evans/repository-dispatch@ce5485de42c9b2622d2ed064be479e8ed65e76f4
         with:
           token: ${{ secrets.PUBLIC_PAT_CICD4_PUBLIC }}

@@ -27,7 +27,11 @@
     </div>
 </div>
 <div id="searchbar" class="searchbar d-none">
-  <form action="search.html">
+  {{#if (eq site.url 'http://localhost:5252')}}
+    <form action="search.html">
+  {{else}}
+    <form action="{{ site.url }}/{{ page.component.name }}/{{ page.version }}/search.html">
+  {{/if}}
     <div>
       <input class="search-input" id="search-input" type="text" name="query" placeholder="{{ i18n page.attributes.lang 'search_placeholder_text' }}" autocomplete="off">
       <i class="fa fa-search text-white"></i>
