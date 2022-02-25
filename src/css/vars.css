@@ -113,7 +113,7 @@
     --grid-gutter-width: 1.5rem;
     /* doc */
     --doc-font-size: inherit;
-    --doc-font-size--desktop: calc(17 / var(--rem-base) * 1rem);
+    --doc-font-size--desktop: calc(20 / var(--rem-base) * 1rem);
     --doc-line-height: 1.6;
     --doc-margin: 0 auto;
     --doc-margin--desktop: 0 2rem;
