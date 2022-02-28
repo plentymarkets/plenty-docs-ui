@@ -1,14 +1,14 @@
 .searchbar{
-  display: block;
-  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  margin-left: calc(var(--nav-width) + 1rem);
   width: 100%;
-  left: 0;
-  z-index: 99;
-  top: 100%;
-  border-bottom: 1px solid #fff;
 }
 .searchbar form{
   height: 50px;
+  width: -webkit-fill-available;
+  margin-left: 50px;
+  margin-right: 0.5rem;
 }
 .searchbar form input.search-input{
   border: 0px solid;
@@ -29,7 +29,7 @@
   color: #d4061c;
 }
 #search-input::-webkit-input-placeholder {
-  color: white;
+  color: #374D55;
 }
 #search-page-results .the-search-result{
   padding: 20px 0;

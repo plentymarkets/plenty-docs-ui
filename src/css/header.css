@@ -401,7 +401,7 @@ button:focus {
 }
 
 .searchbar {
-  background: #D4021D;
+  background: #D8E4EB;
   display: none;
 }
 
@@ -417,7 +417,7 @@ button:focus {
   border: 0;
   border-bottom: 1px solid white;
   background: inherit;
-  color: white;
+  color: #374D55;
   flex-grow: 9;
   height: 50%;
   width: calc(100% - 24px);

@@ -101,13 +101,6 @@ function toggleSearchBar () {
     searchBar.classList.add('d-none')
     searchText.blur()
   }
-  if (document.getElementById('openSearch').classList.contains('d-none')) {
-    document.getElementById('openSearch').classList.remove('d-none')
-    document.getElementById('closeSearch').classList.add('d-none')
-  } else {
-    document.getElementById('openSearch').classList.add('d-none')
-    document.getElementById('closeSearch').classList.remove('d-none')
-  }
 }
 
 (function () {
@@ -117,16 +110,16 @@ function toggleSearchBar () {
     const engine = window.location.href.includes('/en-gb/') ? 'knowledge-en' : 'knowledge-de'
     elasticSearch.setClient(engine)
     const searchPageResults = document.getElementById('search-page-results')
-    const searchIcon = document.getElementById('search-icon')
+    const searchIcon = document.getElementById('toggle-search')
     const searchText = document.getElementById('search-input')
 
-    searchIcon.addEventListener('click', () => {
-      toggleSearchBar()
-    })
     document.addEventListener('keydown', (e) => {
       if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
         toggleSearchBar()
       }
+    })
+    searchIcon.addEventListener('click', () => {
+      toggleSearchBar()
     })
     searchText.addEventListener('input', () => {
       if (timeout) {
