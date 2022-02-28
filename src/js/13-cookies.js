@@ -30,24 +30,30 @@ class Cookies {
           if (item.getAttribute('target') !== null) {
             this[item.getAttribute('source')][item.getAttribute('target')] = !this[item.getAttribute('source')][item.getAttribute('target')]
 
-            let parentCheck = true;
-            Object.keys(this[item.getAttribute('source')]).forEach(v => {
-              if(!this[item.getAttribute('source')][v]) {
-                parentCheck = false;
+            let parentCheck = true
+            Object.keys(this[item.getAttribute('source')]).forEach((v) => {
+              if (!this[item.getAttribute('source')][v]) {
+                parentCheck = false
               }
             })
 
-            document.querySelectorAll('.cookie-settings[source="'+ item.getAttribute('source') +'"]').forEach(v => {
-              if (v !== item && v.getAttribute('target') === null){
+            document.querySelectorAll('.cookie-settings[source="' + item.getAttribute('source') + '"]').forEach((v) => {
+              if (v !== item && v.getAttribute('target') === null) {
                 v.checked = parentCheck
               }
             })
             return
           }
 
-          Object.keys(this[item.getAttribute('source')]).forEach(v => this[item.getAttribute('source')][v] = item.checked)
-          document.querySelectorAll('.cookie-settings[source="'+ item.getAttribute('source') +'"]').forEach(v => v.checked = item.checked)
-          document.querySelectorAll('.cookie-settings[source="'+ item.getAttribute('source') +'"][target="'+ item.getAttribute('target') +'"]').forEach(v => v.checked = item.checked)
+          Object.keys(this[item.getAttribute('source')]).forEach((v) => {
+            this[item.getAttribute('source')][v] = item.checked
+          })
+          document.querySelectorAll('.cookie-settings[source="' + item.getAttribute('source') + '"]').forEach((v) => {
+            v.checked = item.checked
+          })
+          document.querySelectorAll('.cookie-settings[source="' + item.getAttribute('source') + '"][target="' + item.getAttribute('target') + '"]').forEach((v) => {
+            v.checked = item.checked
+          })
         }
       })
     })
