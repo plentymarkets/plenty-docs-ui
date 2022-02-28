@@ -18,7 +18,7 @@ class Cookies {
 
     acceptAllButton[0].addEventListener('click', () => { this.setCookie(true, true, true, true) })
     acceptSelectedButton[0].addEventListener('click', () => {
-      this.setCookie(this.consent, this.statistics, this.external, this.functional)
+      this.setCookie(this.consent, this.statistics.googleAnalytics, this.media.youtube, this.media.vimeo, this.functional.preferredLanguage)
     })
     declineButton[0].addEventListener('click', () => { this.setCookie(false, false, false, false) })
     showfurtherSettings.addEventListener('click', () => { this.toggleExtraSettings('show') })
@@ -26,7 +26,29 @@ class Cookies {
 
     document.querySelectorAll('.cookie-settings').forEach((item) => {
       item.addEventListener('click', (event) => {
-        this[item.getAttribute('source')] = !this[item.getAttribute('source')]
+        if (typeof this[item.getAttribute('source')] === 'object' && this[item.getAttribute('source')] !== null) {
+          if (item.getAttribute('target') !== null) {
+            this[item.getAttribute('source')][item.getAttribute('target')] = !this[item.getAttribute('source')][item.getAttribute('target')]
+
+            let parentCheck = true;
+            Object.keys(this[item.getAttribute('source')]).forEach(v => {
+              if(!this[item.getAttribute('source')][v]) {
+                parentCheck = false;
+              }
+            })
+
+            document.querySelectorAll('.cookie-settings[source="'+ item.getAttribute('source') +'"]').forEach(v => {
+              if (v !== item && v.getAttribute('target') === null){
+                v.checked = parentCheck
+              }
+            })
+            return
+          }
+
+          Object.keys(this[item.getAttribute('source')]).forEach(v => this[item.getAttribute('source')][v] = item.checked)
+          document.querySelectorAll('.cookie-settings[source="'+ item.getAttribute('source') +'"]').forEach(v => v.checked = item.checked)
+          document.querySelectorAll('.cookie-settings[source="'+ item.getAttribute('source') +'"][target="'+ item.getAttribute('target') +'"]').forEach(v => v.checked = item.checked)
+        }
       })
     })
   }
@@ -50,11 +72,12 @@ class Cookies {
     document.getElementById('cookie-settings').style.display = cookieSettingsDisplay
   }
 
-  setCookie (consent, statistics, external, functional) {
+  setCookie (consent, googleAnalytics, youtube, vimeo, preferredLanguage) {
     this.consent = consent
-    this.statistics = statistics
-    this.external = external
-    this.functional = functional
+    this.statistics.googleAnalytics = googleAnalytics
+    this.media.youtube = youtube
+    this.media.vimeo = vimeo
+    this.functional.preferredLanguage = preferredLanguage
     document.cookie = name + '= ' + this.createCookie() + '; Secure'
     this.toggleCookies('hide')
     this.setDefaultSettings()
@@ -70,18 +93,22 @@ class Cookies {
     cookie.necessary.session = this.consent
     cookie.necessary.csrf = this.consent
     cookie.necessary.elasticSearch = this.consent
-    cookie.tracking.googleAnalytics = this.statistics
-    cookie.media.youtube = this.external
-    cookie.media.vimeo = this.external
-    cookie.convenience.languageDetection = this.functional
+    cookie.tracking.googleAnalytics = this.statistics.googleAnalytics
+    cookie.media.youtube = this.media.youtube
+    cookie.media.vimeo = this.media.vimeo
+    cookie.convenience.languageDetection = this.functional.preferredLanguage
     return JSON.stringify(cookie)
   }
 
   setDefaultSettings () {
     this.consent = true
-    this.statistics = false
-    this.external = false
-    this.functional = false
+    this.statistics = {}
+    this.statistics.googleAnalytics = false
+    this.media = {}
+    this.media.youtube = false
+    this.media.vimeo = false
+    this.functional = {}
+    this.functional.preferredLanguage = false
   }
 }
 
