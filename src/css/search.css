@@ -1,17 +1,32 @@
 .searchbar{
+  background: #D8E4EB;
   display: flex;
   justify-content: space-between;
   margin-left: calc(var(--nav-width) + 1rem);
   width: 100%;
 }
 .searchbar form{
+  background: inherit;
+  display: flex;
+  flex-direction: column;
   height: 50px;
   width: -webkit-fill-available;
   margin-left: 50px;
   margin-right: 1rem;
 }
 .searchbar form input.search-input{
-  border: 0px solid;
+  border: 0;
+  background: inherit;
+  color: #374D55;
+  flex-grow: 9;
+  width: calc(100% - 55px);
+}
+.searchbar form input:focus {
+  outline: none;
+}
+.searchbar form i {
+  line-height: 45px;
+  height: fit-content;
 }
 .searchbar form button.searchSubmitButton{
   background: inherit;
