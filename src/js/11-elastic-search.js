@@ -90,7 +90,7 @@ class ElasticSearch {
   }
 }
 
-window.onload = function showSearchBarOnDesktop() {
+window.onload = function showSearchBarOnDesktop () {
   const searchBar = document.getElementById('searchbar')
   const searchText = document.getElementById('search-input')
   const mediaQuery = window.matchMedia('(min-width: 1024px)')
@@ -105,20 +105,20 @@ function toggleSearchBar () {
   const searchBar = document.getElementById('searchbar')
   const searchText = document.getElementById('search-input')
   const mediaQuery = window.matchMedia('(min-width: 1024px)')
-  
+
   if (searchBar.classList.contains('d-none')) {
     searchBar.classList.remove('d-none')
     searchText.focus()
     if (!mediaQuery.matches) {
-      document.body.style.position = 'fixed';
-      document.body.style.top = `-${window.scrollY}px`;
+      document.body.style.position = 'fixed'
+      document.body.style.top = `-${window.scrollY}px`
     }
   } else {
     searchBar.classList.add('d-none')
     searchText.blur()
     if (!mediaQuery.matches) {
-      document.body.style.position = '';
-      document.body.style.top = '';
+      document.body.style.position = ''
+      document.body.style.top = ''
     }
   }
 }
