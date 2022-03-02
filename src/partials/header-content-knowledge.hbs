@@ -20,15 +20,19 @@
         </div>
     </div>
 </div>
-<div id="searchbar" class="searchbar">
+<div id="searchbar" class="searchbar d-none">
   {{#if (eq site.url 'http://localhost:5252')}}
     <form action="search.html">
   {{else}}
     <form action="{{ site.url }}/{{ page.component.name }}/{{ page.version }}/search.html">
   {{/if}}
-    <div>
+    <div class="input-group">
       <input class="search-input" id="search-input" type="text" name="query" placeholder="{{ i18n page.attributes.lang 'search_placeholder_text' }}" autocomplete="off" autofocus>
-      <i class="fa fa-search"></i>
+      <div class="input-group-append">
+      <button class="searchSubmitButton" type="submit">
+        <i class="fa fa-search"></i>
+      </button>
+      </div>
     </div>
     <div id="search-results"></div>
   </form>

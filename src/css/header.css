@@ -419,8 +419,7 @@ button:focus {
   background: inherit;
   color: #374D55;
   flex-grow: 9;
-  height: 50%;
-  width: calc(100% - 24px);
+  width: calc(100% - 55px);
 }
 
 .searchbar form input:focus {

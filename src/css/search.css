@@ -13,6 +13,11 @@
 .searchbar form input.search-input{
   border: 0px solid;
 }
+.searchbar form button.searchSubmitButton{
+  background: inherit;
+  border: none;
+  padding: 0;
+}
 #the-results{
   padding: 5px;
   background: #fff;
