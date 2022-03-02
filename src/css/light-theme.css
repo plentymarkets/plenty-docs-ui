@@ -8,21 +8,21 @@
   /* nav */
   --nav-background: var(--plentyRedCrimson);
   /* navbar */
-  --navbar-font-color: var(--plentyGreysLimedSpruce);
+  --navbar-font-color: var(--black);
   --navbar-dropdown-background: var(--plentyRedCrimson);
   /* toolbar */
-  --toolbar-font-color: var(--plentyGreysLimedSpruce);
+  --toolbar-font-color: var(--black);
   --toolbar-action-background: var(--plentyRedCrimson);
   --toolbar-action-color: var(--color-white);
   /* toc */
-  --toc-font-color: var(--plentyGreysLimedSpruce);
+  --toc-font-color: var(--black);
   --toc-background-color: var(--plenty-secondaries-white);
   --toc-heading-font-color: var(--doc-font-color);
   --toc-left-border: var(--plentyRedCrimson);
   --toc-focused-color: var(--doc-font-color);
   /* doc */
   --doc-font-color: var(--plentyBluesPacificBlue);
-  --doc-paragraph-color: var(--plentyGreysLimedSpruce);
+  --doc-paragraph-color: var(--black);
   --heading-font-color: var(--doc-font-color);
   --link-font-color: var(--plenty-secondaries-white);
   --link_unresolved-font-color: var(--plentyBluesPacificBlue);
@@ -36,7 +36,7 @@
   --table-borders-color: var(--plentyBluesPacificBlue);
   --admonition-background: var(--color-white);
   --collapsebox-background-color: var(--color-white);
-  --collapsebox-text-color: var(--plentyGreysLimedSpruce);
+  --collapsebox-text-color: var(--black);
   --example-background: var(--plentyLightGrey);
   /* footer */
   --footer-background-color: var(--plentyGreysLimedSpruce);
@@ -57,7 +57,7 @@
   --feedback-form-background: var(--color-white);
   --feedback-form-textarea-background: var(--color-white);
   --feedback-form-textarea-border: var(--plentyLightGrey);
-  --feedback-form-textarea-color: var(--plentyGreysLimedSpruce);
+  --feedback-form-textarea-color: var(--black);
   --feedback-form-button-background-like: var(--color-white);
   --feedback-form-button-color-like: var(--plentyStrongCyan);
   --feedback-form-button-border-like: var(--plentyStrongCyan);

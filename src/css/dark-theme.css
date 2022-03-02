@@ -1,6 +1,4 @@
 :root {
-  --plenty-secondaries-white: #fbfbfb;
-  --plentyLightGrey: #F1F1F1;
   /* colors */
   --primary-color: var(--plentyBluesFadedJade);
   /* base */
@@ -37,7 +35,7 @@
   --collapsebox-background-color: var(--plentyBluesTealBlue);
   --collapsebox-text-color: var(--color-white);
   --example-background: var(--plentyGreysNevada);
-  /*--doc-paragraph-color: var(--plentyGreysLimedSpruce);*/
+  --doc-paragraph-color: var(--plenty-secondaries-white);
   --heading-font-color: var(--doc-font-color);
   --link-font-color: var(--plenty-secondaries-white);
   /* footer */

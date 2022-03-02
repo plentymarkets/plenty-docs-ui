@@ -1,14 +1,14 @@
 {{#with page.title}}
     <h1 class="page">{{{this}}}</h1>
+{{/with}}
     <div id="preamble">
         <div class="sectionbody">
             <div class="paragraph">
                 <p>
-                    {{ i18n page.attributes.lang 'overview_page_intro_1' }} <em>{{{this}}}</em>.
+                    {{ i18n page.attributes.lang 'overview_page_intro_1' }} <em>{{{page.title}}}</em>.
                     {{ i18n page.attributes.lang 'overview_page_intro_2' }}
                 </p>
             </div>
             <div class="ulist" id="child-pages-list"></div>
         </div>
     </div>
-{{/with}}

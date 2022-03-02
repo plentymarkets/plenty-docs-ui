@@ -29,9 +29,19 @@ class ElasticSearch {
     }
     this.client.querySuggestion(searchKey, filterOptions)
       .then((resultList) => {
+        const slashCount = window.location.href.match(/\//g).length
+        let searchHref = 'search.html?query='
+        /*
+          The default value for searchHref only works for the local environment and ROOT module.
+          For all other modules, it's required to cut off the module name before appending the search results URL.
+          All non-ROOT pages have 7 slashes in the URL.
+        */
+        if (slashCount === 7) {
+          searchHref = window.location.href.split('/').slice(0, slashCount - 1).join('/') + '/search.html?query='
+        }
         this.searchresults = ''
         resultList.results.documents.forEach((result) => {
-          this.searchresults += '<a href="search.html?query=' + encodeURIComponent(result.suggestion) + '">' + result.suggestion + '</a>'
+          this.searchresults += '<a href=' + searchHref + encodeURIComponent(result.suggestion) + '">' + result.suggestion + '</a>'
         })
         if (this.searchresults) {
           document.getElementById('search-results').innerHTML = '<div id="the-results">' + this.searchresults + '</div>'
