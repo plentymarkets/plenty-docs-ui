@@ -96,7 +96,7 @@
   background: var(--toolbar-action-background);
   border-radius: 50%;
   padding: 0.25rem;
-  margin-right: 0.5rem;
+  margin-right: 0.75rem;
   font-size: var(--toolbar-actions-font-size);
   color: var(--toolbar-action-color);
   display: grid;
