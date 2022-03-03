@@ -91,9 +91,9 @@ class ElasticSearch {
 }
 
 window.onload = function showSearchBarOnDesktop () {
-  const searchBar = document.getElementById('searchbar')
-  const searchText = document.getElementById('search-input')
-  if (searchBar.length > 0 && searchText.length > 0) {
+  if (document.getElementById('searchbar') && document.getElementById('search-input')) {
+    const searchBar = document.getElementById('searchbar')
+    const searchText = document.getElementById('search-input')
     const mediaQuery = window.matchMedia('(min-width: 1024px)')
 
     if (mediaQuery.matches) {
@@ -132,40 +132,42 @@ function toggleSearchBar () {
       const elasticSearch = new ElasticSearch()
       const engine = window.location.href.includes('/en-gb/') ? 'knowledge-en' : 'knowledge-de'
       elasticSearch.setClient(engine)
-      const searchPageResults = document.getElementById('search-page-results')
-      const searchIcon = document.getElementById('toggle-search')
-      const searchText = document.getElementById('search-input')
+      if (document.getElementById('search-page-results') && document.getElementById('toggle-search') && document.getElementById('search-input')) {
+        const searchPageResults = document.getElementById('search-page-results')
+        const searchIcon = document.getElementById('toggle-search')
+        const searchText = document.getElementById('search-input')
 
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
+            toggleSearchBar()
+          }
+        })
+        searchIcon.addEventListener('click', () => {
           toggleSearchBar()
-        }
-      })
-      searchIcon.addEventListener('click', () => {
-        toggleSearchBar()
-      })
-      searchText.addEventListener('input', () => {
-        if (timeout) {
-          clearTimeout(timeout)
-        }
-        timeout = setTimeout(function () {
-          elasticSearch.getSuggestions(searchText.value)
-        }, 300)
-      })
+        })
+        searchText.addEventListener('input', () => {
+          if (timeout) {
+            clearTimeout(timeout)
+          }
+          timeout = setTimeout(function () {
+            elasticSearch.getSuggestions(searchText.value)
+          }, 300)
+        })
 
-      if (searchPageResults) {
-        const urlResult = window.location.search.split('?query=')[1]
-        let urlPage = 1
-        if (urlResult.includes('page=')) {
-          urlPage = parseInt(urlResult.split('page=')[1].split('&')[0])
+        if (searchPageResults) {
+          const urlResult = window.location.search.split('?query=')[1]
+          let urlPage = 1
+          if (urlResult.includes('page=')) {
+            urlPage = parseInt(urlResult.split('page=')[1].split('&')[0])
+          }
+          elasticSearch.setOptions(urlPage)
+          const startTime = window.performance.now()
+          elasticSearch.getResults(urlResult)
+          const endTime = window.performance.now()
+          const timeDifference = (endTime - startTime).toFixed(2)
+          document.getElementById('searchnotime').innerHTML = timeDifference
+          document.getElementById('searche').innerHTML = decodeURI(urlResult.split('&')[0])
         }
-        elasticSearch.setOptions(urlPage)
-        const startTime = window.performance.now()
-        elasticSearch.getResults(urlResult)
-        const endTime = window.performance.now()
-        const timeDifference = (endTime - startTime).toFixed(2)
-        document.getElementById('searchnotime').innerHTML = timeDifference
-        document.getElementById('searche').innerHTML = decodeURI(urlResult.split('&')[0])
       }
     }
   })
