@@ -90,15 +90,17 @@ class ElasticSearch {
   }
 }
 
-window.onload = function showSearchBarOnDesktop () {
-  if (document.getElementById('searchbar') && document.getElementById('search-input')) {
-    const searchBar = document.getElementById('searchbar')
-    const searchText = document.getElementById('search-input')
-    const mediaQuery = window.matchMedia('(min-width: 1024px)')
+if (window.location.host !== 'developers.plentymarkets.com') {
+  window.onload = function showSearchBarOnDesktop () {
+    if (document.getElementById('searchbar') && document.getElementById('search-input')) {
+      const searchBar = document.getElementById('searchbar')
+      const searchText = document.getElementById('search-input')
+      const mediaQuery = window.matchMedia('(min-width: 1024px)')
 
-    if (mediaQuery.matches) {
-      searchBar.classList.remove('d-none')
-      searchText.focus()
+      if (mediaQuery.matches) {
+        searchBar.classList.remove('d-none')
+        searchText.focus()
+      }
     }
   }
 }
