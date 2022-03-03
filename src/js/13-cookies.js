@@ -16,11 +16,11 @@ class Cookies {
     const showfurtherSettings = document.getElementById('show-cookie-further-settings')
     const hidefurtherSettings = document.getElementById('hide-cookie-further-settings')
 
-    acceptAllButton[0].addEventListener('click', () => { this.setCookie(true, true, true, true) })
+    acceptAllButton[0].addEventListener('click', () => { this.setCookie(true, true, true, true, true) })
     acceptSelectedButton[0].addEventListener('click', () => {
       this.setCookie(this.consent, this.statistics.googleAnalytics, this.media.youtube, this.media.vimeo, this.functional.preferredLanguage)
     })
-    declineButton[0].addEventListener('click', () => { this.setCookie(false, false, false, false) })
+    declineButton[0].addEventListener('click', () => { this.setCookie(true, false, false, false, false) })
     showfurtherSettings.addEventListener('click', () => { this.toggleExtraSettings('show') })
     hidefurtherSettings.addEventListener('click', () => { this.toggleExtraSettings('hide') })
 
