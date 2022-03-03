@@ -37,3 +37,6 @@
 .cookie-bar .card-link {
   color: var(--plentyBluesPacificBlue);
 }
+td.pl-3 {
+  width: 260px;
+}
