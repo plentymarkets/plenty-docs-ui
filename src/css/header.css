@@ -248,7 +248,8 @@ body {
 .dropdown:hover .dropdown-menu {display: block;}
 
 .dropdown-menu {
-  top: 60%;
+  top: 0;
+  margin-top: 1.5rem;
   left: 20px;
   cursor: pointer;
   background: var(--dropdown-background-color);
