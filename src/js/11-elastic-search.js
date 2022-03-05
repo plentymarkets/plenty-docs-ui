@@ -134,8 +134,7 @@ function toggleSearchBar () {
       const elasticSearch = new ElasticSearch()
       const engine = window.location.href.includes('/en-gb/') ? 'knowledge-en' : 'knowledge-de'
       elasticSearch.setClient(engine)
-      if (document.getElementById('search-page-results') && document.getElementById('toggle-search') && document.getElementById('search-input')) {
-        const searchPageResults = document.getElementById('search-page-results')
+      if (document.getElementById('toggle-search') && document.getElementById('search-input')) {
         const searchIcon = document.getElementById('toggle-search')
         const searchText = document.getElementById('search-input')
 
@@ -156,17 +155,17 @@ function toggleSearchBar () {
           }, 300)
         })
 
-        if (searchPageResults) {
+        if (document.getElementById('search-page-results')) {
           const urlResult = window.location.search.split('?query=')[1]
+          const startTime = window.performance.now()
+          const endTime = window.performance.now()
+          const timeDifference = (endTime - startTime).toFixed(2)
           let urlPage = 1
           if (urlResult.includes('page=')) {
             urlPage = parseInt(urlResult.split('page=')[1].split('&')[0])
           }
           elasticSearch.setOptions(urlPage)
-          const startTime = window.performance.now()
           elasticSearch.getResults(urlResult)
-          const endTime = window.performance.now()
-          const timeDifference = (endTime - startTime).toFixed(2)
           document.getElementById('searchnotime').innerHTML = timeDifference
           document.getElementById('searche').innerHTML = decodeURI(urlResult.split('&')[0])
         }
