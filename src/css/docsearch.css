@@ -410,7 +410,7 @@ svg.DocSearch-Search-Icon path{
     background: var(--docsearch-modal-background);
     color: var(--plentyGreysLimedSpruce);
     font-size: .85em;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 32px;
     margin: 0 -4px;
     padding: 8px 4px 0;
@@ -590,7 +590,7 @@ svg.DocSearch-Hit-Select-Icon {
     cursor: pointer;
     display: inline-block;
     font-size: 1em;
-    font-weight: 700;
+    font-weight: 500;
     padding: 0
 }
 
