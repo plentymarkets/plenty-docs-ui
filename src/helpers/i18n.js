@@ -9,7 +9,7 @@ module.exports = (...data) => {
   } else if (path.includes('plenty-docs-ui')) {
     trans = require(path + '/public/_/lang/' + currentLang + '.json')
   } else {
-    trans = require(path + '/build/' + currentLang + '/_/lang/' + currentLang + '.json')
+    return trans
   }
   return trans[data[1]]
 }
