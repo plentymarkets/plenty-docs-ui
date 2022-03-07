@@ -8,10 +8,6 @@
         {{#unless (eq page.layout '404')}}
             <a class="toolbar-action feedback-popup" href="javascript:void(0)"><i class="fa-pif-intercom"></i></a>
         {{/unless}}
-        {{#if (and page.fileUri (not env.CI))}}
-            <a class="toolbar-action" href="{{page.fileUri}}"><i class="fa-pif-pen"></i></a>
-        {{else if (and page.editUrl (or env.FORCE_SHOW_EDIT_PAGE_LINK (not page.origin.private)))}}
-            <a class="toolbar-action" href="{{page.editUrl}}"><i class="fa-pif-pen"></i></a>
-        {{/if}}
+            <a id="toggle-search" class="toolbar-action" href="javascript:void(0)"><i class="fa-pif-search"></i></a>
     </div>
 </div>

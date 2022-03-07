@@ -248,7 +248,8 @@ body {
 .dropdown:hover .dropdown-menu {display: block;}
 
 .dropdown-menu {
-  top: 60%;
+  top: 0;
+  margin-top: 1.5rem;
   left: 20px;
   cursor: pointer;
   background: var(--dropdown-background-color);
@@ -302,7 +303,7 @@ button:focus {
 
 .navbar .right {
   display: flex;
-  margin-right: 30px;
+  margin-right: 0.75rem;
 }
 
 @media screen and (max-width: 769px) {
@@ -398,56 +399,4 @@ button:focus {
 .navbar .search-wrapper .algolia-autocomplete input {
   width: 100%;
   padding: 10px;
-}
-
-.searchbar {
-  background: #D4021D;
-  display: none;
-}
-
-.searchbar form {
-  height: 90px;
-  margin: 0 50px;
-  background: inherit;
-  display: flex;
-  flex-direction: column;
-}
-
-.searchbar form input.search-input {
-  border: 0;
-  border-bottom: 1px solid white;
-  background: inherit;
-  color: white;
-  flex-grow: 9;
-  height: 50%;
-  width: calc(100% - 24px);
-}
-
-.searchbar form input:focus {
-  outline: none;
-}
-
-.searchbar form input.checkbox {
-  height: fit-content;
-  vertical-align: middle;
-}
-
-.searchbar form i {
-  line-height: 45px;
-  height: fit-content;
-}
-
-.searchbar form label {
-  font-size: 12px;
-}
-
-#search-icon {
-  cursor: pointer;
-}
-
-#search-icon .fa-stack .fa.fa-plus.fa-stack-1x {
-  transform: rotate(45deg);
-  position: relative;
-  top: 3px;
-  left: -4px
 }

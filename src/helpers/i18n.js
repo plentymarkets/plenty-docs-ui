@@ -16,14 +16,14 @@ module.exports = (...data) => {
   const keyElementSeven = splitKey[7]
   const keyElementEight = splitKey[8]
   const keyElementNine = splitKey[9]
+  let translation = 'Lorem ipsum'
   let langJson = ''
-  let translation = ''
   if (process.env.GITHUB_ACTION) {
     langJson = require(path + '/lang/' + currentLang + '.json')
   } else if (path.includes('plenty-docs-ui')) {
     langJson = require(path + '/public/_/lang/' + currentLang + '.json')
   } else {
-    langJson = require(path + '/build/' + currentLang + '/_/lang/' + currentLang + '.json')
+    return translation
   }
   switch (splitKeyElements) {
     case 1:

@@ -6,7 +6,7 @@ class ElasticSearch {
   setOptions (current) {
     this.options = {
       search_fields: { url_path_dir4: {}, article_content: {}, meta_keywords: {}, meta_description: {}, headings: {} },
-      result_fields: { id: { raw: {} }, headings: { raw: {} }, article_content: { snippet: { size: 250 } }, url: { raw: {} } },
+      result_fields: { id: { raw: {} }, headings: { raw: {} }, article_content: { raw: { size: 250 } }, url: { raw: {} } },
       page: { size: 20, current: current },
     }
   }
@@ -62,7 +62,7 @@ class ElasticSearch {
         this.createPagination(resultList.info.meta.page.current, resultList.info.meta.page.total_pages)
         document.getElementById('searchnores').innerHTML = resultList.info.meta.page.total_results
         resultList.results.forEach((result) => {
-          this.searchresults += '<a class="the-search-result" href="' + result.data.url.raw + '"><span class="result-title">' + result.data.headings.raw[0] + '</span><span class="result-description">' + result.data.article_content.snippet + '...</span><span class="result-url">' + result.data.url.raw + '</span></a>'
+          this.searchresults += '<a class="the-search-result" href="' + result.data.url.raw + '"><span class="result-title">' + result.data.headings.raw[0] + '</span><span class="result-description">' + result.data.article_content.raw + '...</span><span class="result-url">' + result.data.url.raw + '</span></a>'
         })
         document.getElementById('search-page-results').innerHTML = this.searchresults
       })
@@ -90,66 +90,86 @@ class ElasticSearch {
   }
 }
 
+if (window.location.host !== 'developers.plentymarkets.com') {
+  window.onload = function showSearchBarOnDesktop () {
+    if (document.getElementById('searchbar') && document.getElementById('search-input')) {
+      const searchBar = document.getElementById('searchbar')
+      const searchText = document.getElementById('search-input')
+      const mediaQuery = window.matchMedia('(min-width: 1024px)')
+
+      if (mediaQuery.matches) {
+        searchBar.classList.remove('d-none')
+        searchText.focus()
+      }
+    }
+  }
+}
+
 function toggleSearchBar () {
   const searchBar = document.getElementById('searchbar')
   const searchText = document.getElementById('search-input')
+  const mediaQuery = window.matchMedia('(min-width: 1024px)')
 
   if (searchBar.classList.contains('d-none')) {
     searchBar.classList.remove('d-none')
     searchText.focus()
+    if (!mediaQuery.matches) {
+      document.body.style.position = 'fixed'
+      document.body.style.top = `-${window.scrollY}px`
+    }
   } else {
     searchBar.classList.add('d-none')
     searchText.blur()
-  }
-  if (document.getElementById('openSearch').classList.contains('d-none')) {
-    document.getElementById('openSearch').classList.remove('d-none')
-    document.getElementById('closeSearch').classList.add('d-none')
-  } else {
-    document.getElementById('openSearch').classList.add('d-none')
-    document.getElementById('closeSearch').classList.remove('d-none')
+    if (!mediaQuery.matches) {
+      document.body.style.position = ''
+      document.body.style.top = ''
+    }
   }
 }
 
 (function () {
   $(document).ready(function () {
-    let timeout = false
-    const elasticSearch = new ElasticSearch()
-    const engine = window.location.href.includes('/en-gb/') ? 'knowledge-en' : 'knowledge-de'
-    elasticSearch.setClient(engine)
-    const searchPageResults = document.getElementById('search-page-results')
-    const searchIcon = document.getElementById('search-icon')
-    const searchText = document.getElementById('search-input')
+    if (window.location.host !== 'developers.plentymarkets.com') {
+      let timeout = false
+      const elasticSearch = new ElasticSearch()
+      const engine = window.location.href.includes('/en-gb/') ? 'knowledge-en' : 'knowledge-de'
+      elasticSearch.setClient(engine)
+      if (document.getElementById('toggle-search') && document.getElementById('search-input')) {
+        const searchIcon = document.getElementById('toggle-search')
+        const searchText = document.getElementById('search-input')
 
-    searchIcon.addEventListener('click', () => {
-      toggleSearchBar()
-    })
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
-        toggleSearchBar()
-      }
-    })
-    searchText.addEventListener('input', () => {
-      if (timeout) {
-        clearTimeout(timeout)
-      }
-      timeout = setTimeout(function () {
-        elasticSearch.getSuggestions(searchText.value)
-      }, 300)
-    })
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
+            toggleSearchBar()
+          }
+        })
+        searchIcon.addEventListener('click', () => {
+          toggleSearchBar()
+        })
+        searchText.addEventListener('input', () => {
+          if (timeout) {
+            clearTimeout(timeout)
+          }
+          timeout = setTimeout(function () {
+            elasticSearch.getSuggestions(searchText.value)
+          }, 300)
+        })
 
-    if (searchPageResults) {
-      const urlResult = window.location.search.split('?query=')[1]
-      let urlPage = 1
-      if (urlResult.includes('page=')) {
-        urlPage = parseInt(urlResult.split('page=')[1].split('&')[0])
+        if (document.getElementById('search-page-results')) {
+          const urlResult = window.location.search.split('?query=')[1]
+          const startTime = window.performance.now()
+          const endTime = window.performance.now()
+          const timeDifference = (endTime - startTime).toFixed(2)
+          let urlPage = 1
+          if (urlResult.includes('page=')) {
+            urlPage = parseInt(urlResult.split('page=')[1].split('&')[0])
+          }
+          elasticSearch.setOptions(urlPage)
+          elasticSearch.getResults(urlResult)
+          document.getElementById('searchnotime').innerHTML = timeDifference
+          document.getElementById('searche').innerHTML = decodeURI(urlResult.split('&')[0])
+        }
       }
-      elasticSearch.setOptions(urlPage)
-      const startTime = window.performance.now()
-      elasticSearch.getResults(urlResult)
-      const endTime = window.performance.now()
-      const timeDifference = (endTime - startTime).toFixed(2)
-      document.getElementById('searchnotime').innerHTML = timeDifference
-      document.getElementById('searche').innerHTML = decodeURI(urlResult.split('&')[0])
     }
   })
 })()
