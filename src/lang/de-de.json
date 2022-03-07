@@ -38,7 +38,7 @@
 
   "cookies_essential-label": "Essenziell",
   "cookies_essential": {
-    "amount": "4",
+    "amount": "5",
     "description": "Essenzielle Cookies ermöglichen grundlegende Funktionen und sind für die einwandfreie Funktion der Website erforderlich.",
     "cookies_convenience_label": "Komfort",
     "cookies_consent_label": "Consent",

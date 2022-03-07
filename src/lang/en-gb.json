@@ -38,7 +38,7 @@
 
   "cookies_essential_label": "Essential",
   "cookies_essential": {
-    "amount": "4",
+    "amount": "5",
     "description": "Essential cookies enable basic functions and are necessary for the proper functioning of the website.",
     "cookies_convenience_label": "Convenience",
     "cookies_consent_label": "Consent",
