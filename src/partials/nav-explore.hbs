@@ -2,9 +2,7 @@
   {{#if page.component}}
   <div class="context">
     <span class="title">{{page.component.title}}</span>
-    {{#if (or page.versions.1.url site.components.1.name)}}
-      <span class="version">{{page.componentVersion.displayVersion}}</span>
-    {{/if}}
+    <span class="version">{{page.componentVersion.displayVersion}}</span>
   </div>
   {{/if}}
   <ul class="components">
