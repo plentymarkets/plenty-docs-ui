@@ -303,7 +303,7 @@ button:focus {
 
 .navbar .right {
   display: flex;
-  margin-right: 30px;
+  margin-right: 0.75rem;
 }
 
 @media screen and (max-width: 769px) {

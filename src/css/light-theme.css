@@ -32,7 +32,7 @@
   --tabs-text-color: var(--plentyRedCrimson);
   --table-row-even: var(--color-white);
   --table-heading-color: var(--plentyRedCrimson);
-  --table-header-background-color: var(--plentyLightGrey);
+  --table-header-background-color: var(--color-white);
   --table-borders-color: var(--plentyBluesPacificBlue);
   --admonition-background: var(--color-white);
   --collapsebox-background-color: var(--color-white);

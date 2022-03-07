@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Graublau Sans';
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     src: url(../font/graublausans-bold-webfont.woff2) format('woff2'),
     url('../font/graublausans-bold-webfont.woff') format('woff'),
     url('../font/graublausans-bold-webfont.svg#graublau_sansbold') format('svg');
