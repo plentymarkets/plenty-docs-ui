@@ -17,22 +17,22 @@
         </div>
         <a class="menu-item" href="/en-gb/plentydevtool/main/plentydevtool-introduction.html">plentyDevTool</a>
         <a class="menu-item" href="https://knowledge.plentymarkets.com/en" target="_blank">User manual</a>
-        <div id="searchbar" class="searchbar d-none">
-           {{#if (eq site.url 'http://localhost:5252')}}
-             <form action="search.html">
-           {{else}}
-             <form action="{{ site.url }}/{{ page.component.name }}/{{ page.version }}/search.html">
-           {{/if}}
-             <div class="input-group">
-               <input class="search-input" id="search-input" type="text" name="query" placeholder="{{ i18n page.attributes.lang 'search_placeholder_text' }}" autocomplete="off" autofocus>
-               <div class="input-group-append">
+    </div>
+</div>
+<div id="searchbar" class="searchbar d-none">
+   {{#if (eq site.url 'http://localhost:5252')}}
+      <form action="search.html">
+      {{else}}
+       <form action="{{ site.url }}/{{ page.component.name }}/{{ page.version }}/search.html">
+        {{/if}}
+          <div class="input-group">
+            <input class="search-input" id="search-input" type="text" name="query" placeholder="{{ i18n page.attributes.lang 'search_placeholder_text' }}" autocomplete="off" autofocus>
+            <div class="input-group-append">
                <button class="searchSubmitButton" type="submit">
                  <i class="fa fa-search"></i>
                </button>
-               </div>
-             </div>
-             <div id="search-results-dev"></div>
-           </form>
-         </div>
-    </div>
+            </div>
+          </div>
+          <div id="search-results"></div>
+        </form>
 </div>
