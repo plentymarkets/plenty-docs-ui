@@ -44,10 +44,10 @@ class ElasticSearch {
           this.searchresults += '<a href=' + searchHref + encodeURIComponent(result.suggestion) + '">' + result.suggestion + '</a>'
         })
         if (this.searchresults) {
-          document.getElementById('search-results').innerHTML = '<div id="the-results">' + this.searchresults + '</div>';
-          document.getElementById('search-results-dev').innerHTML = '<div id="the-results">' + this.searchresults + '</div>';
+          document.getElementById('search-results').innerHTML = '<div id="the-results">' + this.searchresults + '</div>'
+          document.getElementById('search-results-dev').innerHTML = '<div id="the-results">' + this.searchresults + '</div>'
         } else {
-          document.getElementById('search-results').innerHTML = '';
+          document.getElementById('search-results').innerHTML = ''
           document.getElementById('search-results-dev').innerHTML = ''
         }
       })
@@ -133,15 +133,14 @@ function toggleSearchBar () {
   $(document).ready(function () {
     if (window.location.host !== 'developers.plentymarkets.com') {
       let timeout = false
-      const elasticSearch = new ElasticSearch();
-      let engine;
-      if(window.location.href.includes('developers-en')){
-        engine = 'developers-en';
+      const elasticSearch = new ElasticSearch()
+      let engine
+      if (window.location.href.includes('developers-en')) {
+        engine = 'developers-en'
+      } else {
+        engine = window.location.href.includes('/en-gb/') ? 'knowledge-en' : 'knowledge-de'
       }
-      else {
-        engine = window.location.href.includes('/en-gb/') ? 'knowledge-en' : 'knowledge-de';
-      }
-      elasticSearch.setClient(engine);
+      elasticSearch.setClient(engine)
       if (document.getElementById('toggle-search') && document.getElementById('search-input')) {
         const searchIcon = document.getElementById('toggle-search')
         const searchText = document.getElementById('search-input')
