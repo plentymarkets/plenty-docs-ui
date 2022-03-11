@@ -45,8 +45,10 @@ class ElasticSearch {
         })
         if (this.searchresults) {
           document.getElementById('search-results').innerHTML = '<div id="the-results">' + this.searchresults + '</div>'
+          document.getElementById('search-results-dev').innerHTML = '<div id="the-results">' + this.searchresults + '</div>'
         } else {
           document.getElementById('search-results').innerHTML = ''
+          document.getElementById('search-results-dev').innerHTML = ''
         }
       })
       .catch((error) => {
@@ -132,7 +134,12 @@ function toggleSearchBar () {
     if (window.location.host !== 'developers.plentymarkets.com') {
       let timeout = false
       const elasticSearch = new ElasticSearch()
-      const engine = window.location.href.includes('/en-gb/') ? 'knowledge-en' : 'knowledge-de'
+      let engine
+      if (window.location.href.includes('developers-en')) {
+        engine = 'developers-en'
+      } else {
+        engine = window.location.href.includes('/en-gb/') ? 'knowledge-en' : 'knowledge-de'
+      }
       elasticSearch.setClient(engine)
       if (document.getElementById('toggle-search') && document.getElementById('search-input')) {
         const searchIcon = document.getElementById('toggle-search')

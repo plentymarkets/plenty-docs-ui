@@ -42,13 +42,7 @@
   --footer-background-color: var(--plentyGreysLimedSpruce);
   --footer-link-font-color: var(--plenty-secondaries-white);
   --footer-link-hover-color: var(--link_hover-font-color);
-  /* docsearch */
-  --docsearch-searchbox-background: var(--plentyBluesTealBlue);
-  --docsearch-muted-color: var(--color-white);
-  --docsearch-text-color: var(--color-white);
-  --docsearch-searchbox-header-focus-background: #126277;
-  --docsearch-modal-background: var(--plentyVeryDarkBlue);
-  --docsearch-searchbox-focus-background: var(--plentyDarkCyan);
+
   /* feedback-form */
   --feedback-form-background: var(--plentyBluesTealBlue);
   --feedback-form-textarea-background: var(--plentyBluesFadedJade);
