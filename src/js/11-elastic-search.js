@@ -45,10 +45,8 @@ class ElasticSearch {
         })
         if (this.searchresults) {
           document.getElementById('search-results').innerHTML = '<div id="the-results">' + this.searchresults + '</div>'
-          document.getElementById('search-results-dev').innerHTML = '<div id="the-results">' + this.searchresults + '</div>'
         } else {
           document.getElementById('search-results').innerHTML = ''
-          document.getElementById('search-results-dev').innerHTML = ''
         }
       })
       .catch((error) => {
