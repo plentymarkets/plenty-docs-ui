@@ -17,7 +17,6 @@
 @import "highlight.css";
 @import "print.css";
 @import "homepage.css";
-@import "search.css";
 @import "tabs.css";
 @import "feedback-form.css";
 @import "redoc.css";
@@ -25,4 +24,5 @@
 @import "swagger-ui.css";
 @import "plenty-icon-font.css";
 @import "icon-colours.css";
+@import "search.css";
 @import "responsive.css";
