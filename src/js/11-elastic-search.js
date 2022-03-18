@@ -133,7 +133,7 @@ function toggleSearchBar () {
       let timeout = false
       const elasticSearch = new ElasticSearch()
       let engine
-      if (window.location.href.includes('developers-en')) {
+      if (window.location.href.includes('developers.plentymarkets.com')) {
         engine = 'developers-en'
       } else {
         engine = window.location.href.includes('/en-gb/') ? 'knowledge-en' : 'knowledge-de'
