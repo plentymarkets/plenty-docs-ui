@@ -10,7 +10,7 @@ section.models {
 
 .swagger-ui {
   font-family: var(--source-sans-pro);
-  color: var(--color-white);
+  color: var(--white);
 }
 .swagger-ui a {
   color: var(--link-font-color);
@@ -37,7 +37,7 @@ section.models {
 .swagger-ui .opblock-description-wrapper p,
 .swagger-ui label,
 .swagger-ui p {
-  color: var(--color-white);
+  color: var(--white);
 }
 .swagger-ui .table-container table {
   border-collapse: separate;
@@ -61,13 +61,13 @@ section.models {
 .swagger-ui .dialog-ux .modal-ux-header h3,
 .swagger-ui .dialog-ux .modal-ux-content p,
 .swagger-ui .dialog-ux .modal-ux-content h4 {
-  color: var(--color-white);
+  color: var(--white);
 }
 .swagger-ui .dialog-ux .modal-ux-content p code {
-  color: var(--plentyRedCrimson);
+  color: var(--plentyRedsThree);
 }
 .swagger-ui .prop-format {
-  color: var(--plentyRedSeaPink);
+  color: var(--plentyRedsFour);
 }
 .swagger-ui .opblock-tag-section {
   background: var(--secondary-background);
@@ -76,7 +76,7 @@ section.models {
   box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
 }
 .swagger-ui .opblock-tag-section a.nostyle {
-  color: var(--color-white);
+  color: var(--white);
 }
 .swagger-ui .opblock-tag-section .is-open {
   margin-bottom: 1rem;
@@ -96,27 +96,27 @@ section.models {
 .swagger-ui .opblock.opblock-post,
 .swagger-ui .opblock.opblock-delete,
 .swagger-ui .opblock.opblock-opt {
-  background: var(--plentyBluesFadedJade);
+  background: var(--plentyBluesOne);
 }
 .swagger-ui .opblock .opblock-section-header {
   background: rgba(255, 255, 255, 0.1);
 }
 .swagger-ui .opblock .opblock-section-header span,
 .swagger-ui .opblock .opblock-section-header h4 {
-  color: var(--color-white);
+  color: var(--white);
 }
 .swagger-ui .opblock .opblock-summary-path {
-  color: var(--color-white);
+  color: var(--white);
   flex: 3 1 auto !important;
   max-width: 100%;
 }
 .swagger-ui .opblock .opblock-summary-description {
   min-width: 20%;
   flex: 1;
-  color: var(--color-white);
+  color: var(--white);
 }
 .swagger-ui .opblock .authorization__btn svg {
-  fill: var(--color-white);
+  fill: var(--white);
 }
 .swagger-ui .opblock-body {
   background: rgba(255, 255, 255, 0.1);
@@ -137,7 +137,7 @@ section.models {
 .swagger-ui .opblock-summary-description a:hover,
 .swagger-ui .opblock-summary-description a:active,
 .swagger-ui .opblock-summary-description a:focus {
-  color: var(--color-white);
+  color: var(--white);
 }
 .swagger-ui .opblock .opblock-summary-method {
   font-size: 1rem;

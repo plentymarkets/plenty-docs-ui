@@ -59,11 +59,11 @@ code,
 kbd,
 pre {
   font-family: var(--monospace-font-family);
-  color: var(--color-white);
+  color: var(--white);
 }
 
 pre code {
-  color: var(--color-white);
+  color: var(--white);
 }
 
 b,

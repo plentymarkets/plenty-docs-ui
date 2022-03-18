@@ -1,78 +1,78 @@
 :root {
   /* colors */
-  --primary-color: var(--plenty-secondaries-white);
+  --primary-color: var(--white);
   /* base */
   --body-background: var(--plentyLightGrey);
   /* header */
-  --dropdown-background-color: var(--plentyRedCrimson);
+  --dropdown-background-color: var(--plentyRedsThree);
   /* nav */
-  --nav-background: var(--plentyRedCrimson);
+  --nav-background: var(--plentyRedsThree);
   /* navbar */
   --navbar-font-color: var(--black);
-  --navbar-dropdown-background: var(--plentyRedCrimson);
+  --navbar-dropdown-background: var(--plentyRedsThree);
   /* search */
-  --searchbar-background: #D8E4EB;
-  --searchbar-text-placeholder: var(--plentyGreysLimedSpruce);
-  --searchbar-text-input: var(--plentyGreysLimedSpruce);
+  --searchbar-background: var(--plentyGreysFive);
+  --searchbar-text-placeholder: var(--plentyGreysOne);
+  --searchbar-text-input: var(--plentyGreysOne);
   --search-suggestions-background: var(--white);
-  --search-suggestions-text: #0a1927;
-  --search-suggestions-hover: var(--plentyRedCrimson);
-  --search-result-query: var(--plentyRedCrimson);
-  --search-result-about: var(--plentyGreysNevada);
-  --search-result-title: var(--plentyRedCrimson);
-  --search-result-description: var(--plentyGreysLimedSpruce);
-  --search-result-url: var(--plentyGreysNevada);
-  --search-result-divider: var(--plentyGreysNevada);
-  --search-result-sort-background: var(--plentyRedCrimson);
-  --search-result-sort-border: var(--plentyRedCrimson);
+  --search-suggestions-text: var(--black);
+  --search-suggestions-hover: var(--plentyRedsThree);
+  --search-result-query: var(--plentyRedsThree);
+  --search-result-about: var(--plentyGreysTwo);
+  --search-result-title: var(--plentyRedsThree);
+  --search-result-description: var(--plentyGreysOne);
+  --search-result-url: var(--plentyGreysTwo);
+  --search-result-divider: var(--plentyGreysTwo);
+  --search-result-sort-background: var(--plentyRedsThree);
+  --search-result-sort-border: var(--plentyRedsThree);
   --search-result-sort-text: var(--white);
-  --search-pagination-shadow: #888888;
-  --search-pagination-active-background: var(--plentyRedCrimson);
+  --search-pagination-shadow: var(--plentyGreysTwo);
+  --search-pagination-active-background: var(--plentyRedsThree);
   --search-pagination-active-text: var(--white);
   --search-pagination-inactive-background: var(--white);
-  --search-pagination-inactive-text: black;
+  --search-pagination-inactive-text: var(--black);
   /* toolbar */
   --toolbar-font-color: var(--black);
-  --toolbar-action-background: var(--plentyRedCrimson);
-  --toolbar-action-color: var(--color-white);
+  --toolbar-action-background: var(--plentyRedsThree);
+  --toolbar-action-color: var(--white);
   /* toc */
   --toc-font-color: var(--black);
-  --toc-background-color: var(--plenty-secondaries-white);
+  --toc-background-color: var(--white);
   --toc-heading-font-color: var(--doc-font-color);
-  --toc-left-border: var(--plentyRedCrimson);
+  --toc-left-border: var(--plentyRedsThree);
   --toc-focused-color: var(--doc-font-color);
   /* doc */
-  --doc-font-color: var(--plentyBluesPacificBlue);
+  --doc-font-color: var(--plentyBluesThree);
   --doc-paragraph-color: var(--black);
   --heading-font-color: var(--doc-font-color);
-  --link-font-color: var(--plenty-secondaries-white);
-  --link_unresolved-font-color: var(--plentyBluesPacificBlue);
-  --tabs-background-color-is-active: var(--plentyRedCrimson);
-  --tabs-background-color: var(--color-white);
-  --tabs-text-color-is-active: var(--color-white);
-  --tabs-text-color: var(--plentyRedCrimson);
-  --table-row-even: var(--color-white);
-  --table-heading-color: var(--plentyRedCrimson);
-  --table-header-background-color: var(--color-white);
-  --table-borders-color: var(--plentyBluesPacificBlue);
-  --admonition-background: var(--color-white);
-  --collapsebox-background-color: var(--color-white);
+  --link-font-color: var(--white);
+  --link_unresolved-font-color: var(--plentyBluesThree);
+  --tabs-background-color-is-active: var(--plentyRedsThree);
+  --tabs-background-color: var(--white);
+  --tabs-text-color-is-active: var(--white);
+  --tabs-text-color: var(--plentyRedsThree);
+  --table-row-even: var(--white);
+  --table-heading-color: var(--plentyRedsThree);
+  --table-header-background-color: var(--white);
+  --table-borders-color: var(--plentyBluesThree);
+  --admonition-background: var(--white);
+  --collapsebox-background-color: var(--white);
   --collapsebox-text-color: var(--black);
   --example-background: var(--plentyLightGrey);
   /* footer */
-  --footer-background-color: var(--plentyGreysLimedSpruce);
-  --footer-link-font-color: var(--plenty-secondaries-white);
+  --footer-background-color: var(--plentyGreysOne);
+  --footer-link-font-color: var(--white);
   --footer-link-hover-color: var(--link_hover-font-color);
 
   /* feedback-form */
-  --feedback-form-background: var(--color-white);
-  --feedback-form-textarea-background: var(--color-white);
+  --feedback-form-background: var(--white);
+  --feedback-form-textarea-background: var(--white);
   --feedback-form-textarea-border: var(--plentyLightGrey);
   --feedback-form-textarea-color: var(--black);
-  --feedback-form-button-background-like: var(--color-white);
-  --feedback-form-button-color-like: var(--plentyStrongCyan);
-  --feedback-form-button-border-like: var(--plentyStrongCyan);
-  --feedback-form-button-background-dislike: var(--color-white);
-  --feedback-form-button-color-dislike: var(--plentyRedCrimson);
-  --feedback-form-button-border-dislike: var(--plentyRedCrimson);
+  --feedback-form-button-background-like: var(--white);
+  --feedback-form-button-color-like: var(--plentyBluesThree);
+  --feedback-form-button-border-like: var(--plentyBluesThree);
+  --feedback-form-button-background-dislike: var(--white);
+  --feedback-form-button-color-dislike: var(--plentyRedsThree);
+  --feedback-form-button-border-dislike: var(--plentyRedsThree);
 }

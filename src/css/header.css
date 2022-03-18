@@ -337,7 +337,7 @@ button:focus {
 }
 
 .navbar .right .menu-wrapper .submenu-wrapper .submenu-item{
-  color: var(--plenty-secondaries-white);
+  color: var(--white);
 }
 
 .navbar .right .menu-wrapper .submenu-wrapper .submenu-item:not(:first-of-type) {

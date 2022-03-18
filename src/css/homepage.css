@@ -23,7 +23,7 @@ body.homepage .tiles-outer-wrapper .tile-wrapper {
   padding: 5px;
   position: relative; }
   body.homepage .tiles-outer-wrapper .tile-wrapper .tile {
-    background: var(--plentyGreysLimedSpruce);
+    background: var(--plentyGreysOne);
     height: 170px;
     padding: 25px;
     margin: 5px;
@@ -47,10 +47,10 @@ body.homepage .tiles-outer-wrapper .tile-wrapper {
 
 body.homepage .stack-wrapper {
   text-align: center;
-  background: var(--plentyBluesTealBlue);
+  background: var(--plentyBluesTwo);
   padding-top: 80px; }
   body.homepage .stack-wrapper .logo-wrapper {
-    background: var(--plentyBluesFadedJade);
+    background: var(--plentyBluesOne);
     padding: 10px;
     border-radius: 15px;
     margin: 0 15px; }

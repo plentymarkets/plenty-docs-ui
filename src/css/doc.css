@@ -126,12 +126,12 @@
 }
 
 .doc a.bare{
-  color: var(--color-white);
+  color: var(--white);
 }
 
 .doc mark {
   background-color: var(--code-background);
-  color: var(--color-white);
+  color: var(--white);
 }
 
 .doc .tableblock p {
@@ -301,7 +301,7 @@
   table-layout: fixed;
   position: relative;
   width: 100%;
-  border: 1px solid var(--color-white);
+  border: 1px solid var(--white);
   border-radius: 5px;
   box-shadow: var(--box-shadow);
 }

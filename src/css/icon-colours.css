@@ -1,43 +1,43 @@
 .black {
-  color: #000000;
+  color: var(--terra-black);
 }
 
 .blue {
-  color: #3f54d0;
+  color: var(--terra-active);
 }
 
 .darkGrey {
-  color: #636671;
+  color: var(--terray-darkGrey);
 }
 
 .green {
-  color: #6ad26a;
+  color: var(--terra-add);
 }
 
 .lightGrey {
-  color: #D7D8DB;
+  color: var(--terra-lightGrey);
 }
 
 .orange {
-  color: #ff873e;
+  color: var(--terra-warning);
 }
 
 .purple {
-  color: #e468f3;
+  color: var(--terra-transfer);
 }
 
 .red {
-  color: #f11539;
+  color: var(--terra-alert);
 }
 
 .skyBlue {
-  color: #24b3e0;
+  color: var(--terra-info);
 }
 
 .white {
-  color: #FFFFFF;
+  color: var(--terra-white);
 }
 
 .yellow {
-  color: #ffdb4c;
+  color: var(--terra-action);
 }

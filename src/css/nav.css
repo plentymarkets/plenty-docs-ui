@@ -191,7 +191,7 @@ span.nav-text, a.nav-link {
 .is-current-page > .nav-link,
 .is-current-page > .nav-text {
   font-weight: 500;
-  border-left: 3px solid var(--color-white);
+  border-left: 3px solid var(--white);
   padding-left: 0.5em;
   color: var(--link-font-color);
 }
@@ -290,8 +290,8 @@ span.nav-text, a.nav-link {
 }
 
 .nav-panel-explore .component .version a:hover {
-  color: var(--plentyBluesPictonBlue);
-  border-color: var(--plentyBluesPictonBlue);
+  color: var(--plentyBluesFour);
+  border-color: var(--plentyBluesFour);
 }
 .nav-panel-explore .component .version a {
   border: 2px solid var(--nav-border-color);
@@ -304,13 +304,13 @@ span.nav-text, a.nav-link {
 }
 
 .nav-panel-explore .component .is-current a {
-  border-color: var(--plentyBluesPacificBlue);
-  color: var(--plentyBluesPacificBlue);
+  border-color: var(--plentyBluesThree);
+  color: var(--plentyBluesThree);
 }
 
 .nav-panel-explore .component .is-current a:hover {
-  border-color: var(--plentyBluesPacificBlue);
-  color: var(--plentyBluesPacificBlue);
+  border-color: var(--plentyBluesThree);
+  color: var(--plentyBluesThree);
 }
 
 /*

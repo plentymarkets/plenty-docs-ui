@@ -1,42 +1,42 @@
 :root {
-    --plentyBluesFadedJade: #012e35;
-    --plentyBluesTealBlue: #04485b;
-    --plentyBluesPacificBlue: #068ec2;
-    --plentyBluesPictonBlue: #5DC3F0;
-    --plentyBluesSail: #afdef8;
-    --plentyLightGrey: #F1F1F1;
-    --plentyGreysNevada: #5F767F;
-    --plentyGreysLimedSpruce: #374D55;
-    --plentyRedCrimson: #D4021D;
-    --plentyRedSeaPink: #F0A3AB;
-    --plentyMalachite: #42952D;
-    --plentyAdocYellow: #e18114;
-    --plenty-color-blue: #008ebd;
-    --plenty-color-lightblue: #90b9d7;
-    --plenty-color-red: #d4021d;
-    --plenty-color-grey: #707173;
-    --plenty-primary: var(--plenty-color-blue);
-    --plenty-secondary: #eee;
-    --plenty-secondaries-white: #ffffff;
-    --white: #fff;
+    /* brand colors */
+    --plentyBluesOne: #012E35;
+    --plentyBluesTwo: #04485B;
+    --plentyBluesThree: #008EBD;
+    --plentyBluesFour: #5DC3F0;
+    --plentyBluesFive: #afdef8;
+    --plentyRedsOne: #7B1812;
+    --plentyRedsTwo: #9E1B17;
+    --plentyRedsThree: #D4021D;
+    --plentyRedsFour: #F0A3AB;
+    --plentyRedsFive: #F8CCCE;
+    --plentyGreysOne: #374D55;
+    --plentyGreysTwo: #5F767F;
+    --plentyGreysThree: #839BA8;
+    --plentyGreysFour: #AEC5D0;
+    --plentyGreysFive: #D8E4EB;
+    --plentyGreen: #4CAD33;
     --black: #000;
-    --plenty-color-yellow: #ffd500;
-    --plenty-color-green: #5cb85c;
-    --red: var(--plenty-color-red);
-    --yellow: var(--plenty-color-yellow);
-    --green: var(--plenty-color-green);
-    --blue: var(--plenty-color-blue);
-    --teal: var(--plenty-color-lightblue);
-    --brand-primary: var(--plenty-primary);
-    --secondary: var(--plenty-secondary);
-    --plentyStrongCyan: #008ebd;
-    --plentyVeryDarkBlue: #142637;
-    --plentyDarkCyan: #126277;
-    --plentyDarkShadeCyan: #374d55;
-    /* colors */
-    --secondary-color: var(--plentyBluesTealBlue);
-    --footer-bg-color: var(--plentyGreysLimedSpruce);
-    --color-white: var(--plenty-secondaries-white);
+    --plentyLightGrey: #F1F1F1;
+    --white: #FFF;
+    /* admonition colors */
+    --admonition-caution: var(--plentyRedsThree);
+    --admonition-important: #FFD500;
+    --admonition-note: var(--plentyBluesThree);
+    --admonition-tip: var(--plentyGreen);
+    --admonition-warning: #E18114;
+    /* terra icon colors */
+    --terra-action: #FFDB4C;
+    --terra-active: #3F54D0;
+    --terra-add: #6AD26A;
+    --terra-alert: #F11539;
+    --terra-info: #24B3E0;
+    --terra-transfer: #E468F3;
+    --terra-warning: #FF873E;
+    --terra-black: #000;
+    --terray-darkGrey: #636671;
+    --terra-lightGrey: #D7D8DB;
+    --terra-white: #FFF;
     /* font */
     --grau-blau-sans: "Graublau Sans";
     --source-sans-pro: "Source Sans Pro";
@@ -52,56 +52,56 @@
     --body-font-size--print: 0.9375em;
     /* 15px */
     --body-line-height: 1.15;
-    --body-font-color: var(--color-white);
+    --body-font-color: var(--white);
     --body-font-family: var(--source-sans-pro);
     --body-font-weight-bold: 500;
     --version-font-weight: 500;
     --monospace-font-family: "Source Code Pro", monospace;
     --monospace-font-weight-bold: 500;
     /* base */
-    --panel-background: var(--plentyGreysLimedSpruce);
-    --secondary-background: var(--plentyBluesTealBlue);
-    --panel-border-color: var(--color-white);
-    --scrollbar-thumb-color: var(--plentyGreysNevada);
+    --panel-background: var(--plentyGreysOne);
+    --secondary-background: var(--plentyBluesTwo);
+    --panel-border-color: var(--white);
+    --scrollbar-thumb-color: var(--plentyGreysTwo);
     /* navbar */
-    --navbar-background: var(--secondary-color);
+    --navbar-background: var(--plentyBluesTwo);
     --navbar_hover-background: var(--color-black);
-    --navbar-button-background: var(--color-white);
+    --navbar-button-background: var(--white);
     --navbar-button-border-color: var(--panel-border-color);
     --navbar-button-font-color: var(--body-font-color);
     --navbar-menu-border-color: var(--panel-border-color);
-    --navbar-menu-background: var(--color-white);
+    --navbar-menu-background: var(--white);
     --navbar-menu-font-color: var(--body-font-color);
     --navbar-menu_hover-background: var(--color-smoke-50);
     /* nav */
-    --nav-border-color: var(--color-white);
+    --nav-border-color: var(--white);
     --nav-line-height: 1.35;
     --nav-heading-font-color: var(--color-jet-30);
     --nav-muted-color: var(--color-gray-70);
     --nav-panel-divider-color: var(--color-smoke-90);
     --nav-secondary-background: var(--color-smoke-70);
     /* toolbar */
-    --toolbar-background: var(--plentyBluesTealBlue);
+    --toolbar-background: var(--plentyBluesTwo);
     --toolbar-border-color: var(--panel-border-color);
     --toolbar-muted-color: var(--color-gray-30);
     --toolbar-font-size: calc(13 / var(--rem-base) * 1rem);
     --toolbar-actions-font-size: 1rem;
-    --page-version-menu-background: var(--plentyGreysLimedSpruce);
+    --page-version-menu-background: var(--plentyGreysOne);
     --page-version-missing-font-color: var(--color-gray-30);
     /* toc */
     --toc-border-color: var(--panel-border-color);
     --toc-line-height: 1.2;
     /* admonitions */
-    --caution-color: var(--color-white);
-    --caution-on-color: var(--plentyRedCrimson);
-    --important-color: var(--color-white);
-    --important-on-color: var(--plenty-color-yellow);
-    --note-color: var(--color-white);
-    --note-on-color: var(--plentyBluesPacificBlue);
-    --tip-color: var(--color-white);
-    --tip-on-color: var(--plentyMalachite);
-    --warning-color: var(--color-white);
-    --warning-on-color: var(--plentyAdocYellow);
+    --caution-color: var(--white);
+    --caution-on-color: var(--admonition-caution);
+    --important-color: var(--white);
+    --important-on-color: var(--admonition-important);
+    --note-color: var(--white);
+    --note-on-color: var(--admonition-note);
+    --tip-color: var(--white);
+    --tip-on-color: var(--admonition-tip);
+    --warning-color: var(--white);
+    --warning-on-color: var(--admonition-warning);
     /* logo list */
     --card-border-color: rgba(var(--black), .125);
     --card-border-radius: 0;
@@ -120,7 +120,7 @@
     --heading-font-weight: 500;
     --alt-heading-font-weight: var(--body-font-weight-bold);
     --section-divider-color: var(--panel-border-color);
-    --link_hover-font-color: var(--plenty-color-blue);
+    --link_hover-font-color: var(--plentyBluesThree);
     --abstract-background: var(--color-smoke-70);
     --abstract-font-color: var(--color-jet-20);
     --abstract-border-color: var(--panel-border-color);
@@ -129,7 +129,7 @@
     --caption-font-weight: var(--body-font-weight-bold);
     --code-font-color: var(--body-font-color);
     --code-block-border-radius: 5px;
-    --code-background: var(--plentyGreysNevada);
+    --code-background: var(--plentyGreysTwo);
     --example-border-color: var(--color-gray-70);
     --kbd-background: var(--panel-background);
     --kbd-border-color: var(--color-gray-10);
@@ -144,7 +144,7 @@
     --table-border-color: var(--panel-border-color);
     /* footer */
     --footer-line-height: var(--doc-line-height);
-    --footer-background: var(--footer-bg-color);
+    --footer-background: var(--plentyGreysOne);
     --footer-font-color: var(--doc-font-color);
     /* dimensions and positioning */
     --navbar-height: calc(120 / var(--rem-base) * 1rem);
@@ -170,6 +170,6 @@
     --z-index-navbar: 4;
 
     /* redoc */
-    --marking-background-color: var(--plentyGreysLimedSpruce);
-    --marking-color: var(--color-white);
+    --marking-background-color: var(--plentyGreysOne);
+    --marking-color: var(--white);
 }
