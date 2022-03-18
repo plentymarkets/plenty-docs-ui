@@ -31,6 +31,7 @@
   background: inherit;
   border: none;
   padding: 0;
+  color: var(--search-submit-button);
 }
 #the-results{
   padding: 5px;

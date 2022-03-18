@@ -14,6 +14,7 @@
   --searchbar-background: var(--plentyGreysFive);
   --searchbar-text-placeholder: var(--plentyGreysOne);
   --searchbar-text-input: var(--plentyGreysOne);
+  --search-submit-button: var(--black);
   --search-suggestions-background: var(--white);
   --search-suggestions-text: var(--black);
   --search-suggestions-hover: var(--plentyRedsThree);
