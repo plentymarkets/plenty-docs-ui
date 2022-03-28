@@ -132,7 +132,7 @@ function toggleSearchBar () {
     if (window.location.host !== 'developers.plentymarkets.com') {
       let timeout = false
       const elasticSearch = new ElasticSearch()
-      const engine = window.location.href.includes('/en-gb/') ? 'knowledge-en' : 'knowledge-de'
+      const engine = window.location.href.includes('/en-gb/') ? 'knowledge-en-gb' : 'knowledge-de-de'
       elasticSearch.setClient(engine)
       if (document.getElementById('toggle-search') && document.getElementById('search-input')) {
         const searchIcon = document.getElementById('toggle-search')
