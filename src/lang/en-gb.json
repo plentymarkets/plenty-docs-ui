@@ -5,7 +5,9 @@
   "404_page_not_found": "The page you're looking for does not exist. It may have been moved.",
   "404_page_body": "If you arrived on this page by clicking on a link, please notify us that the link is broken. If you typed the URL of this page manually, please double check that you entered the address correctly.",
 
-  "developers-documentation": "Developers docs",
+  "plentymarkets_demo_system": "plentymarkets trial",
+  "plentymarkets_demo_system_link": "http://plentymarkets.com/free-trial/",
+  "developers_documentation": "Developers docs",
 
   "search_placeholder_text": "Enter search keywords...",
   "search_query": "Search query:",
