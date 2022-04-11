@@ -1,3 +1,5 @@
+/* global MutationObserver */
+
 class ElasticSearch {
   constructor () {
     this.searchresults = ''
@@ -8,16 +10,16 @@ class ElasticSearch {
       search_fields: { url_path_dir4: {}, article_content: {}, meta_keywords: {}, meta_description: {}, headings: {} },
       result_fields: { id: { raw: {} }, headings: { raw: {} }, article_content: { raw: { size: 250 } }, url: { raw: {} } },
       facets: {
-        url_path_dir2: { type: "value" },
-        url_path_dir4: { type: "value" }
+        url_path_dir2: { type: 'value' },
+        url_path_dir4: { type: 'value' },
       },
       filters: {
         all: [
-          {url_path_dir2: componentFilter},
-          {url_path_dir4: moduleFilter}
-        ]
+          { url_path_dir2: componentFilter },
+          { url_path_dir4: moduleFilter },
+        ],
       },
-      page: { size: 20, current: current }
+      page: { size: 20, current: current },
     }
   }
 
@@ -70,15 +72,12 @@ class ElasticSearch {
       .then((resultList) => {
         const currentLocation = window.location.pathname
         const locale = currentLocation.includes('en-gb') ? 'en-gb' : 'de-de'
+        const componentFilter = this.options.filters.all[0].url_path_dir2
+        const moduleFilter = this.options.filters.all[1].url_path_dir4
         let translationObject
-        let componentFilter
-        let moduleFilter
         this.searchresults = ''
         this.componentFacets = ''
         this.moduleFacets = ''
-
-        componentFilter = this.options.filters.all[0].url_path_dir2
-        moduleFilter = this.options.filters.all[1].url_path_dir4
 
         if (locale === 'de-de') {
           translationObject = JSON.parse(window.localStorage.getItem('localeDeDe'))
@@ -95,9 +94,9 @@ class ElasticSearch {
 
         document.getElementById('facets-container').innerHTML = ''
         resultList.info.facets.url_path_dir2[0].data.forEach((component) => {
-          let componentName = component.value
-          let componentLabel = translationObject[componentName] ? translationObject[componentName] : component.value
-          this.componentFacets += 
+          const componentName = component.value
+          const componentLabel = translationObject[componentName] ? translationObject[componentName] : component.value
+          this.componentFacets +=
           `<li>
           <label for="facet_url_path_dir2${componentName}" class="sui-multi-checkbox-facet__option-label">
           <div class="sui-multi-checkbox-facet__option-input-wrapper">
@@ -109,9 +108,9 @@ class ElasticSearch {
         ${translationObject.components_title}</h3><ul>${this.componentFacets}</ul>`
 
         resultList.info.facets.url_path_dir4[0].data.forEach((module) => {
-          let moduleName = module.value
-          let moduleLabel = translationObject[moduleName] ? translationObject[moduleName] : module.value
-          this.moduleFacets += 
+          const moduleName = module.value
+          const moduleLabel = translationObject[moduleName] ? translationObject[moduleName] : module.value
+          this.moduleFacets +=
           `<li><label for="facet_url_path_dir4${moduleName}" class="sui-multi-checkbox-facet__option-label">
           <div class="sui-multi-checkbox-facet__option-input-wrapper">
           <input id="facet_url_path_dir4${moduleName}" data-filter="url_path_dir4" data-value=${moduleName} type="checkbox" class="sui-multi-checkbox-facet__checkbox">
@@ -152,6 +151,47 @@ class ElasticSearch {
   }
 }
 
+function toggleSearchBar () {
+  const searchBar = document.getElementById('searchbar')
+  const searchText = document.getElementById('search-input')
+  const mediaQuery = window.matchMedia('(min-width: 1024px)')
+
+  if (searchBar.classList.contains('d-none')) {
+    searchBar.classList.remove('d-none')
+    searchText.focus()
+    if (!mediaQuery.matches) {
+      document.body.style.position = 'fixed'
+      document.body.style.top = `-${window.scrollY}px`
+    }
+  } else {
+    searchBar.classList.add('d-none')
+    searchText.blur()
+    if (!mediaQuery.matches) {
+      document.body.style.position = ''
+      document.body.style.top = ''
+    }
+  }
+}
+
+function toggleFilterContainer () {
+  const facetsSidebar = document.getElementById('facets-sidebar')
+  const mediaQuery = window.matchMedia('(min-width: 1024px)')
+
+  if (facetsSidebar.classList.contains('d-none')) {
+    facetsSidebar.classList.remove('d-none')
+    if (!mediaQuery.matches) {
+      document.body.style.position = 'fixed'
+      document.body.style.top = `-${window.scrollY}px`
+    }
+  } else {
+    facetsSidebar.classList.add('d-none')
+    if (!mediaQuery.matches) {
+      document.body.style.position = ''
+      document.body.style.top = ''
+    }
+  }
+}
+
 (function () {
   $(document).ready(function () {
     if (window.location.host !== 'developers.plentymarkets.com') {
@@ -178,10 +218,12 @@ class ElasticSearch {
           timeout = setTimeout(function () {
             elasticSearch.getSuggestions(searchText.value)
           }, 300)
-        })}
+        })
+      }
+
       if (document.getElementById('toggle-filter') && document.getElementById('facets-sidebar')) {
         const filterIcon = document.getElementById('toggle-filter')
-        
+
         filterIcon.addEventListener('click', () => {
           toggleFilterContainer()
         })
@@ -192,10 +234,10 @@ class ElasticSearch {
         const startTime = window.performance.now()
         const endTime = window.performance.now()
         const timeDifference = (endTime - startTime).toFixed(2)
-        const facetsContainer = document.getElementById('facets-container');
-        const observerConfig = { childList: true };
-        let componentFilter = undefined
-        let moduleFilter = undefined    
+        const facetsContainer = document.getElementById('facets-container')
+        const observerConfig = { childList: true }
+        let componentFilter
+        let moduleFilter
         let urlPage = 1
         if (urlResult.includes('page=')) {
           urlPage = parseInt(urlResult.split('page=')[1].split('&')[0])
@@ -204,12 +246,11 @@ class ElasticSearch {
         elasticSearch.getResults(urlResult)
         document.getElementById('searchnotime').innerHTML = timeDifference
         document.getElementById('searche').innerHTML = decodeURI(urlResult.split('&')[0])
-      
 
-        const callback = function(mutationsList, observer) {
-          const facets = document.querySelectorAll( '.sui-multi-checkbox-facet input[type=checkbox]' );
+        const callback = function (mutationsList, observer) {
+          const facets = document.querySelectorAll('.sui-multi-checkbox-facet input[type=checkbox]')
 
-          function toggleFilter(event) {
+          function toggleFilter (event) {
             if (document.getElementById(event.target.id).checked === true) {
               if (event.target.dataset.filter === 'url_path_dir2') {
                 componentFilter = event.target.dataset.value
@@ -230,12 +271,13 @@ class ElasticSearch {
           }
 
           for (var i = 0; i < facets.length; i++) {
-            facets[i].addEventListener('change', toggleFilter);
+            facets[i].addEventListener('change', toggleFilter)
           }
-        };
-        const observer = new MutationObserver(callback);
-        
-        observer.observe(facetsContainer, observerConfig);
+        }
+        const observer = new MutationObserver(callback)
+
+        observer.observe(facetsContainer, observerConfig)
       }
-  }})
+    }
+  })
 })()
