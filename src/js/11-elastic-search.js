@@ -3,11 +3,21 @@ class ElasticSearch {
     this.searchresults = ''
   }
 
-  setOptions (current) {
+  setOptions (current, componentFilter, moduleFilter) {
     this.options = {
       search_fields: { url_path_dir4: {}, article_content: {}, meta_keywords: {}, meta_description: {}, headings: {} },
       result_fields: { id: { raw: {} }, headings: { raw: {} }, article_content: { raw: { size: 250 } }, url: { raw: {} } },
-      page: { size: 20, current: current },
+      facets: {
+        url_path_dir2: { type: "value" },
+        url_path_dir4: { type: "value" }
+      },
+      filters: {
+        all: [
+          {url_path_dir2: componentFilter},
+          {url_path_dir4: moduleFilter}
+        ]
+      },
+      page: { size: 20, current: current }
     }
   }
 
@@ -58,13 +68,65 @@ class ElasticSearch {
     this.client
       .search(searchKey, this.options)
       .then((resultList) => {
+        const currentLocation = window.location.pathname
+        const locale = currentLocation.includes('en-gb') ? 'en-gb' : 'de-de'
+        let translationObject
+        let componentFilter
+        let moduleFilter
         this.searchresults = ''
+        this.componentFacets = ''
+        this.moduleFacets = ''
+
+        componentFilter = this.options.filters.all[0].url_path_dir2
+        moduleFilter = this.options.filters.all[1].url_path_dir4
+
+        if (locale === 'de-de') {
+          translationObject = JSON.parse(window.localStorage.getItem('localeDeDe'))
+        } else {
+          translationObject = JSON.parse(window.localStorage.getItem('localeEnGb'))
+        }
+
         this.createPagination(resultList.info.meta.page.current, resultList.info.meta.page.total_pages)
         document.getElementById('searchnores').innerHTML = resultList.info.meta.page.total_results
         resultList.results.forEach((result) => {
           this.searchresults += '<a class="the-search-result" href="' + result.data.url.raw + '"><span class="result-title">' + result.data.headings.raw[0] + '</span><span class="result-description">' + result.data.article_content.raw + '...</span><span class="result-url">' + result.data.url.raw + '</span></a>'
         })
         document.getElementById('search-page-results').innerHTML = this.searchresults
+
+        document.getElementById('facets-container').innerHTML = ''
+        resultList.info.facets.url_path_dir2[0].data.forEach((component) => {
+          let componentName = component.value
+          let componentLabel = translationObject[componentName] ? translationObject[componentName] : component.value
+          this.componentFacets += 
+          `<li>
+          <label for="facet_url_path_dir2${componentName}" class="sui-multi-checkbox-facet__option-label">
+          <div class="sui-multi-checkbox-facet__option-input-wrapper">
+          <input id="facet_url_path_dir2${componentName}" data-filter="url_path_dir2" data-value=${componentName} type="checkbox" class="sui-multi-checkbox-facet__checkbox">
+          <span class="sui-multi-checkbox-facet__input-text">${componentLabel}</span></div>
+          <span class="sui-multi-checkbox-facet__option-count">${component.count}</span></label></li>`
+        })
+        document.getElementById('facets-container').innerHTML += `<h3 data-i18n-key="components-title" class="sui-facet__title">
+        ${translationObject.components_title}</h3><ul>${this.componentFacets}</ul>`
+
+        resultList.info.facets.url_path_dir4[0].data.forEach((module) => {
+          let moduleName = module.value
+          let moduleLabel = translationObject[moduleName] ? translationObject[moduleName] : module.value
+          this.moduleFacets += 
+          `<li><label for="facet_url_path_dir4${moduleName}" class="sui-multi-checkbox-facet__option-label">
+          <div class="sui-multi-checkbox-facet__option-input-wrapper">
+          <input id="facet_url_path_dir4${moduleName}" data-filter="url_path_dir4" data-value=${moduleName} type="checkbox" class="sui-multi-checkbox-facet__checkbox">
+          <span class="sui-multi-checkbox-facet__input-text">${moduleLabel}</span></div>
+          <span class="sui-multi-checkbox-facet__option-count">${module.count}</span></label></li>`
+        })
+        document.getElementById('facets-container').innerHTML += `<h3 class="sui-facet__title">
+        ${translationObject.modules_title}</h3><ul>${this.moduleFacets}</ul>`
+
+        if (componentFilter !== undefined) {
+          document.getElementById('facet_url_path_dir2' + componentFilter).checked = true
+        }
+        if (moduleFilter !== undefined) {
+          document.getElementById('facet_url_path_dir4' + moduleFilter).checked = true
+        }
       })
       .catch((error) => {
         console.log(`error: ${error}`)
@@ -87,43 +149,6 @@ class ElasticSearch {
       thePages += '<a href="' + newUrl + '&page=' + nextPageNumber + '" class="next"><i class="fa fa-angle-right"></i></a>'
     }
     document.getElementById('search-page-pagination').innerHTML = thePages
-  }
-}
-
-if (window.location.host !== 'developers.plentymarkets.com') {
-  window.onload = function showSearchBarOnDesktop () {
-    if (document.getElementById('searchbar') && document.getElementById('search-input')) {
-      const searchBar = document.getElementById('searchbar')
-      const searchText = document.getElementById('search-input')
-      const mediaQuery = window.matchMedia('(min-width: 1024px)')
-
-      if (mediaQuery.matches) {
-        searchBar.classList.remove('d-none')
-        searchText.focus()
-      }
-    }
-  }
-}
-
-function toggleSearchBar () {
-  const searchBar = document.getElementById('searchbar')
-  const searchText = document.getElementById('search-input')
-  const mediaQuery = window.matchMedia('(min-width: 1024px)')
-
-  if (searchBar.classList.contains('d-none')) {
-    searchBar.classList.remove('d-none')
-    searchText.focus()
-    if (!mediaQuery.matches) {
-      document.body.style.position = 'fixed'
-      document.body.style.top = `-${window.scrollY}px`
-    }
-  } else {
-    searchBar.classList.add('d-none')
-    searchText.blur()
-    if (!mediaQuery.matches) {
-      document.body.style.position = ''
-      document.body.style.top = ''
-    }
   }
 }
 
@@ -153,23 +178,64 @@ function toggleSearchBar () {
           timeout = setTimeout(function () {
             elasticSearch.getSuggestions(searchText.value)
           }, 300)
+        })}
+      if (document.getElementById('toggle-filter') && document.getElementById('facets-sidebar')) {
+        const filterIcon = document.getElementById('toggle-filter')
+        
+        filterIcon.addEventListener('click', () => {
+          toggleFilterContainer()
         })
-
-        if (document.getElementById('search-page-results')) {
-          const urlResult = window.location.search.split('?query=')[1]
-          const startTime = window.performance.now()
-          const endTime = window.performance.now()
-          const timeDifference = (endTime - startTime).toFixed(2)
-          let urlPage = 1
-          if (urlResult.includes('page=')) {
-            urlPage = parseInt(urlResult.split('page=')[1].split('&')[0])
-          }
-          elasticSearch.setOptions(urlPage)
-          elasticSearch.getResults(urlResult)
-          document.getElementById('searchnotime').innerHTML = timeDifference
-          document.getElementById('searche').innerHTML = decodeURI(urlResult.split('&')[0])
-        }
       }
-    }
-  })
+
+      if (document.getElementById('search-page-results')) {
+        const urlResult = window.location.search.split('?query=')[1]
+        const startTime = window.performance.now()
+        const endTime = window.performance.now()
+        const timeDifference = (endTime - startTime).toFixed(2)
+        const facetsContainer = document.getElementById('facets-container');
+        const observerConfig = { childList: true };
+        let componentFilter = undefined
+        let moduleFilter = undefined    
+        let urlPage = 1
+        if (urlResult.includes('page=')) {
+          urlPage = parseInt(urlResult.split('page=')[1].split('&')[0])
+        }
+        elasticSearch.setOptions(urlPage)
+        elasticSearch.getResults(urlResult)
+        document.getElementById('searchnotime').innerHTML = timeDifference
+        document.getElementById('searche').innerHTML = decodeURI(urlResult.split('&')[0])
+      
+
+        const callback = function(mutationsList, observer) {
+          const facets = document.querySelectorAll( '.sui-multi-checkbox-facet input[type=checkbox]' );
+
+          function toggleFilter(event) {
+            if (document.getElementById(event.target.id).checked === true) {
+              if (event.target.dataset.filter === 'url_path_dir2') {
+                componentFilter = event.target.dataset.value
+              }
+              if (event.target.dataset.filter === 'url_path_dir4') {
+                moduleFilter = event.target.dataset.value
+              }
+            } else {
+              if (event.target.dataset.filter === 'url_path_dir2') {
+                componentFilter = undefined
+              }
+              if (event.target.dataset.filter === 'url_path_dir4') {
+                moduleFilter = undefined
+              }
+            }
+            elasticSearch.setOptions(1, componentFilter, moduleFilter)
+            elasticSearch.getResults(urlResult)
+          }
+
+          for (var i = 0; i < facets.length; i++) {
+            facets[i].addEventListener('change', toggleFilter);
+          }
+        };
+        const observer = new MutationObserver(callback);
+        
+        observer.observe(facetsContainer, observerConfig);
+      }
+  }})
 })()

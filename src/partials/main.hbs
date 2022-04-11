@@ -1,7 +1,12 @@
 <main class="article">
 {{> toolbar}}
   <div class="content">
+{{#if (eq page.layout 'search')}}
+{{> search}}
+    {{> search-facets }}
+{{else}}
 {{> article}}
-{{> toc}}
+    {{> toc}}
+{{/if}}
   </div>
 </main>

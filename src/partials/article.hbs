@@ -1,7 +1,5 @@
 <article class="doc" data-elastic-name="article_content">
-    {{#if (eq page.layout 'search')}}
-        {{> search }}
-    {{else if (eq page.layout 'overview')}}
+    {{#if (eq page.layout 'overview')}}
         {{> overview }}
     {{else if (eq page.layout '404')}}
         {{> 404 }}
