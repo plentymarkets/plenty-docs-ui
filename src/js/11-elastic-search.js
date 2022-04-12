@@ -1,4 +1,4 @@
-/* global MutationObserver */
+/* global MutationObserver, translations */
 
 class ElasticSearch {
   constructor () {
@@ -72,18 +72,13 @@ class ElasticSearch {
       .then((resultList) => {
         const currentLocation = window.location.pathname
         const locale = currentLocation.includes('en-gb') ? 'en-gb' : 'de-de'
+        const componentsTitle = translateKey(locale, 'components_title')
         const componentFilter = this.options.filters.all[0].url_path_dir2
+        const modulesTitle = translateKey(locale, 'modules_title')
         const moduleFilter = this.options.filters.all[1].url_path_dir4
-        let translationObject
         this.searchresults = ''
         this.componentFacets = ''
         this.moduleFacets = ''
-
-        if (locale === 'de-de') {
-          translationObject = JSON.parse(window.localStorage.getItem('localeDeDe'))
-        } else {
-          translationObject = JSON.parse(window.localStorage.getItem('localeEnGb'))
-        }
 
         this.createPagination(resultList.info.meta.page.current, resultList.info.meta.page.total_pages)
         document.getElementById('searchnores').innerHTML = resultList.info.meta.page.total_results
@@ -95,7 +90,7 @@ class ElasticSearch {
         document.getElementById('facets-container').innerHTML = ''
         resultList.info.facets.url_path_dir2[0].data.forEach((component) => {
           const componentName = component.value
-          const componentLabel = translationObject[componentName] ? translationObject[componentName] : component.value
+          const componentLabel = translateKey(locale, componentName)
           this.componentFacets +=
           `<li>
           <label for="facet_url_path_dir2${componentName}" class="sui-multi-checkbox-facet__option-label">
@@ -105,11 +100,11 @@ class ElasticSearch {
           <span class="sui-multi-checkbox-facet__option-count">${component.count}</span></label></li>`
         })
         document.getElementById('facets-container').innerHTML += `<h3 data-i18n-key="components-title" class="sui-facet__title">
-        ${translationObject.components_title}</h3><ul>${this.componentFacets}</ul>`
+        ${componentsTitle}</h3><ul>${this.componentFacets}</ul>`
 
         resultList.info.facets.url_path_dir4[0].data.forEach((module) => {
           const moduleName = module.value
-          const moduleLabel = translationObject[moduleName] ? translationObject[moduleName] : module.value
+          const moduleLabel = translateKey(locale, moduleName)
           this.moduleFacets +=
           `<li><label for="facet_url_path_dir4${moduleName}" class="sui-multi-checkbox-facet__option-label">
           <div class="sui-multi-checkbox-facet__option-input-wrapper">
@@ -118,7 +113,7 @@ class ElasticSearch {
           <span class="sui-multi-checkbox-facet__option-count">${module.count}</span></label></li>`
         })
         document.getElementById('facets-container').innerHTML += `<h3 class="sui-facet__title">
-        ${translationObject.modules_title}</h3><ul>${this.moduleFacets}</ul>`
+        ${modulesTitle}</h3><ul>${this.moduleFacets}</ul>`
 
         if (componentFilter !== undefined) {
           document.getElementById('facet_url_path_dir2' + componentFilter).checked = true
@@ -190,6 +185,11 @@ function toggleFilterContainer () {
       document.body.style.top = ''
     }
   }
+}
+
+function translateKey (locale, key) {
+  const translation = translations[locale][key] ? translations[locale][key] : key
+  return translation
 }
 
 (function () {
