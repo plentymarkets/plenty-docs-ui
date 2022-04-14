@@ -1,3 +1,5 @@
+/* global translations */
+
 class ElasticSearch {
   constructor () {
     this.searchresults = ''
@@ -58,9 +60,12 @@ class ElasticSearch {
     this.client
       .search(searchKey, this.options)
       .then((resultList) => {
+        const currentLocation = window.location.pathname
+        const locale = currentLocation.includes('en-gb') ? 'en-gb' : 'de-de'
+        const resultsLabel = translateKey(locale, 'results_label')
         this.searchresults = ''
         this.createPagination(resultList.info.meta.page.current, resultList.info.meta.page.total_pages)
-        document.getElementById('searchnores').innerHTML = resultList.info.meta.page.total_results
+        document.getElementById('searchnores').innerHTML = `${resultList.info.meta.page.total_results} ${resultsLabel}`
         resultList.results.forEach((result) => {
           this.searchresults += '<a class="the-search-result" href="' + result.data.url.raw + '"><span class="result-title">' + result.data.headings.raw[0] + '</span><span class="result-description">' + result.data.article_content.raw + '...</span><span class="result-url">' + result.data.url.raw + '</span></a>'
         })
@@ -127,6 +132,11 @@ function toggleSearchBar () {
   }
 }
 
+function translateKey (locale, key) {
+  const translation = translations[locale][key] ? translations[locale][key] : key
+  return translation
+}
+
 (function () {
   $(document).ready(function () {
     if (window.location.host !== 'developers.plentymarkets.com') {
@@ -157,16 +167,12 @@ function toggleSearchBar () {
 
         if (document.getElementById('search-page-results')) {
           const urlResult = window.location.search.split('?query=')[1]
-          const startTime = window.performance.now()
-          const endTime = window.performance.now()
-          const timeDifference = (endTime - startTime).toFixed(2)
           let urlPage = 1
           if (urlResult.includes('page=')) {
             urlPage = parseInt(urlResult.split('page=')[1].split('&')[0])
           }
           elasticSearch.setOptions(urlPage)
           elasticSearch.getResults(urlResult)
-          document.getElementById('searchnotime').innerHTML = timeDifference
           document.getElementById('searche').innerHTML = decodeURI(urlResult.split('&')[0])
         }
       }
