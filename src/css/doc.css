@@ -762,8 +762,11 @@
   hyphens: none;
 }
 
-.doc th.tableblock,
+.doc th.tableblock {
+  hyphens: none;
+}
 .doc td.tableblock {
+  hyphens: auto;
   word-break: break-word; /* overflow-wrap for table cells; gives space higher precedence than hyphen opportunity */
 }
 
