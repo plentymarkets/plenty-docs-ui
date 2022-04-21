@@ -11,8 +11,8 @@
 
   "search_placeholder_text": "Enter search keywords...",
   "search_query": "Search query:",
+  "loading_results": "Loading results...",
   "search_results": "results",
-  "search_seconds": "seconds",
   "search_sort_by_relevance": "Relevance",
 
   "company_name": "plentysystems AG",

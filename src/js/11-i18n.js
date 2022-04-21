@@ -2,6 +2,7 @@
 
 const translations = {
   'en-gb': {
+    results_label: 'results',
     components_title: 'Produkt filter',
     manual: 'plentymarkets',
 
@@ -29,6 +30,7 @@ const translations = {
   },
 
   'de-de': {
+    results_label: 'Ergebnisse',
     components_title: 'Produktfilter',
     manual: 'plentymarkets',
 
