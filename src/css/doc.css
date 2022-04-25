@@ -769,6 +769,10 @@
   hyphens: auto;
   word-break: break-word; /* overflow-wrap for table cells; gives space higher precedence than hyphen opportunity */
 }
+.doc td.tableblock p {
+  hyphens: auto;
+  word-break: break-word; /* overflow-wrap for table cells; gives space higher precedence than hyphen opportunity */
+}
 .doc td.tableblock .content .paragraph p {
   /* Required for cells that use the a attribute to render their contents as nested Asciidoc documents */
   hyphens: auto;
