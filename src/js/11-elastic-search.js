@@ -168,8 +168,8 @@ function translateKey (locale, key) {
           let urlResult = decodeURI(window.location.search.split('?query=')[1])
           let urlPage = 1
           if (urlResult.includes('page=')) {
-            urlResult = urlResult.split('page=')[0].split('&')[0]
             urlPage = parseInt(urlResult.split('page=')[1].split('&')[0])
+            urlResult = urlResult.split('page=')[0].split('&')[0]
           }
           elasticSearch.setOptions(urlPage)
           elasticSearch.getResults(urlResult)
