@@ -3,12 +3,12 @@
 const translations = {
   'en-gb': {
     results_label: 'results',
-    components_title: 'Produkt filter',
+    components_title: 'Product filter',
     manual: 'plentymarkets',
 
     modules_title: 'Module filter',
 
-    '': 'General',
+    general: 'General',
     App: 'App',
     Automation: 'Automation',
     'Business-decisions': 'Business decisions',
@@ -36,7 +36,7 @@ const translations = {
 
     modules_title: 'Modulfilter',
 
-    '': 'Allgemein',
+    general: 'Allgemein',
     App: 'App',
     Artikel: 'Artikel',
     Auftraege: 'Aufträge',

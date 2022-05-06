@@ -21,13 +21,7 @@
     display: none;
   }
 
-  aside.toc.sidebar {
-    flex: 0 0 var(--toc-width);
-    margin-right: 0.5rem;
-    padding-bottom: 4rem;
-  }
-
-  aside.facets.sidebar {
+  aside.sidebar {
     flex: 0 0 var(--toc-width);
     margin-right: 0.5rem;
     padding-bottom: 4rem;
@@ -36,11 +30,7 @@
 
 @media screen and (min-width: 1216px) {
 
-  aside.toc.sidebar {
-    flex-basis: var(--toc-width--widescreen);
-  }
-
-  aside.facets.sidebar {
+  aside.sidebar {
     flex-basis: var(--toc-width--widescreen);
   }
 }

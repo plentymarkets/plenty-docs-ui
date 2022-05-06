@@ -77,6 +77,7 @@ class ElasticSearch {
         const modulesTitle = translateKey(locale, 'modules_title')
         const moduleFilter = this.options.filters.all[1].url_path_dir4
         const resultsLabel = translateKey(locale, 'results_label')
+        const generalLabel = 'general'
         this.searchresults = ''
         this.componentFacets = ''
         this.moduleFacets = ''
@@ -91,12 +92,12 @@ class ElasticSearch {
         document.getElementById('facets-container').innerHTML = ''
         resultList.info.facets.url_path_dir2[0].data.forEach((component) => {
           const componentName = component.value
-          const componentLabel = translateKey(locale, componentName)
+          const componentLabel = componentName ? translateKey(locale, componentName) : translateKey(locale, generalLabel)
           this.componentFacets +=
           `<li>
           <label for="facet_url_path_dir2${componentName}" class="sui-multi-checkbox-facet__option-label">
           <div class="sui-multi-checkbox-facet__option-input-wrapper">
-          <input id="facet_url_path_dir2${componentName}" data-filter="url_path_dir2" data-value=${componentName} type="checkbox" class="sui-multi-checkbox-facet__checkbox">
+          <input id="facet_url_path_dir2${componentName}" data-filter="url_path_dir2" data-value="${componentName}" type="checkbox" class="sui-multi-checkbox-facet__checkbox">
           <span class="sui-multi-checkbox-facet__input-text">${componentLabel}</span></div>
           <span class="sui-multi-checkbox-facet__option-count">${component.count}</span></label></li>`
         })
@@ -105,11 +106,11 @@ class ElasticSearch {
 
         resultList.info.facets.url_path_dir4[0].data.forEach((module) => {
           const moduleName = module.value
-          const moduleLabel = translateKey(locale, moduleName)
+          const moduleLabel = moduleName ? translateKey(locale, moduleName) : translateKey(locale, generalLabel)
           this.moduleFacets +=
           `<li><label for="facet_url_path_dir4${moduleName}" class="sui-multi-checkbox-facet__option-label">
           <div class="sui-multi-checkbox-facet__option-input-wrapper">
-          <input id="facet_url_path_dir4${moduleName}" data-filter="url_path_dir4" data-value=${moduleName} type="checkbox" class="sui-multi-checkbox-facet__checkbox">
+          <input id="facet_url_path_dir4${moduleName}" data-filter="url_path_dir4" data-value="${moduleName}" type="checkbox" class="sui-multi-checkbox-facet__checkbox">
           <span class="sui-multi-checkbox-facet__input-text">${moduleLabel}</span></div>
           <span class="sui-multi-checkbox-facet__option-count">${module.count}</span></label></li>`
         })
@@ -147,47 +148,6 @@ class ElasticSearch {
   }
 }
 
-function toggleSearchBar () {
-  const searchBar = document.getElementById('searchbar')
-  const searchText = document.getElementById('search-input')
-  const mediaQuery = window.matchMedia('(min-width: 1024px)')
-
-  if (searchBar.classList.contains('d-none')) {
-    searchBar.classList.remove('d-none')
-    searchText.focus()
-    if (!mediaQuery.matches) {
-      document.body.style.position = 'fixed'
-      document.body.style.top = `-${window.scrollY}px`
-    }
-  } else {
-    searchBar.classList.add('d-none')
-    searchText.blur()
-    if (!mediaQuery.matches) {
-      document.body.style.position = ''
-      document.body.style.top = ''
-    }
-  }
-}
-
-function toggleFilterContainer () {
-  const facetsSidebar = document.getElementById('facets-sidebar')
-  const mediaQuery = window.matchMedia('(min-width: 1024px)')
-
-  if (facetsSidebar.classList.contains('d-none')) {
-    facetsSidebar.classList.remove('d-none')
-    if (!mediaQuery.matches) {
-      document.body.style.position = 'fixed'
-      document.body.style.top = `-${window.scrollY}px`
-    }
-  } else {
-    facetsSidebar.classList.add('d-none')
-    if (!mediaQuery.matches) {
-      document.body.style.position = ''
-      document.body.style.top = ''
-    }
-  }
-}
-
 function translateKey (locale, key) {
   const translation = translations[locale][key] ? translations[locale][key] : key
   return translation
@@ -196,22 +156,13 @@ function translateKey (locale, key) {
 (function () {
   $(document).ready(function () {
     if (window.location.host !== 'developers.plentymarkets.com') {
-      let timeout = false
+      const searchIcon = document.getElementById('toggle-search')
+      const searchText = document.getElementById('search-input')
       const elasticSearch = new ElasticSearch()
       const engine = window.location.href.includes('/en-gb/') ? 'knowledge-en-gb' : 'knowledge-de-de'
+      let timeout = false
       elasticSearch.setClient(engine)
-      if (document.getElementById('toggle-search') && document.getElementById('search-input')) {
-        const searchIcon = document.getElementById('toggle-search')
-        const searchText = document.getElementById('search-input')
-
-        document.addEventListener('keydown', (e) => {
-          if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
-            toggleSearchBar()
-          }
-        })
-        searchIcon.addEventListener('click', () => {
-          toggleSearchBar()
-        })
+      if (searchIcon && searchText) {
         searchText.addEventListener('input', () => {
           if (timeout) {
             clearTimeout(timeout)
@@ -219,14 +170,6 @@ function translateKey (locale, key) {
           timeout = setTimeout(function () {
             elasticSearch.getSuggestions(searchText.value)
           }, 300)
-        })
-      }
-
-      if (document.getElementById('toggle-filter') && document.getElementById('facets-sidebar')) {
-        const filterIcon = document.getElementById('toggle-filter')
-
-        filterIcon.addEventListener('click', () => {
-          toggleFilterContainer()
         })
       }
 

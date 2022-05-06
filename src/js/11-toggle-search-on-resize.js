@@ -7,6 +7,8 @@ function toggleSearchBarOnResize () {
   } else {
     searchBar.classList.remove('d-none')
   }
+  document.body.style.position = ''
+  document.body.style.top = ''
 }
 
 window.addEventListener('resize', toggleSearchBarOnResize)
