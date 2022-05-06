@@ -7,7 +7,6 @@ class ElasticSearch {
 
   setOptions (current, componentFilter, moduleFilter) {
     this.options = {
-      search_fields: { url_path_dir4: {}, article_content: {}, meta_keywords: {}, meta_description: {}, headings: {} },
       result_fields: { id: { raw: {} }, headings: { raw: {} }, article_content: { raw: { size: 250 } }, url: { raw: {} } },
       facets: {
         url_path_dir2: { type: 'value' },
@@ -174,14 +173,15 @@ function translateKey (locale, key) {
       }
 
       if (document.getElementById('search-page-results')) {
-        const urlResult = window.location.search.split('?query=')[1]
         const facetsContainer = document.getElementById('facets-container')
         const observerConfig = { childList: true }
         let componentFilter
         let moduleFilter
+        let urlResult = decodeURI(window.location.search.split('?query=')[1])
         let urlPage = 1
         if (urlResult.includes('page=')) {
           urlPage = parseInt(urlResult.split('page=')[1].split('&')[0])
+          urlResult = urlResult.split('page=')[0].split('&')[0]
         }
         elasticSearch.setOptions(urlPage)
         elasticSearch.getResults(urlResult)
