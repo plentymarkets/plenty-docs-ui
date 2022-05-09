@@ -1,3 +1,4 @@
+const articleBody = document.getElementById('article-body')
 const searchBar = document.getElementById('searchbar')
 const searchText = document.getElementById('search-input')
 const searchIcon = document.getElementById('toggle-search')
@@ -36,34 +37,22 @@ $(document).ready(function () {
 
 function toggleSearchBar () {
   if (searchBar.classList.contains('d-none')) {
+    articleBody.classList.add('mobile-no-scroll')
     searchBar.classList.remove('d-none')
     searchText.focus()
-    if (!mediaQuery.matches) {
-      document.body.style.position = 'fixed'
-      document.body.style.top = `-${window.scrollY}px`
-    }
   } else {
+    articleBody.classList.remove('mobile-no-scroll')
     searchBar.classList.add('d-none')
     searchText.blur()
-    if (!mediaQuery.matches) {
-      document.body.style.position = ''
-      document.body.style.top = ''
-    }
   }
 }
 
 function toggleFilterContainer () {
   if (facetsSidebar.classList.contains('d-none')) {
+    articleBody.classList.add('mobile-no-scroll')
     facetsSidebar.classList.remove('d-none')
-    if (!mediaQuery.matches) {
-      document.body.style.position = 'fixed'
-      document.body.style.top = `-${window.scrollY}px`
-    }
   } else {
+    articleBody.classList.remove('mobile-no-scroll')
     facetsSidebar.classList.add('d-none')
-    if (!mediaQuery.matches) {
-      document.body.style.position = ''
-      document.body.style.top = ''
-    }
   }
 }

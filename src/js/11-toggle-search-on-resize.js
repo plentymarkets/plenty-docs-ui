@@ -1,4 +1,5 @@
 function toggleSearchBarOnResize () {
+  const articleBody = document.getElementById('article-body')
   const searchBar = document.getElementById('searchbar')
   const mediaQuery = window.matchMedia('(min-width: 1024px)')
 
@@ -7,8 +8,7 @@ function toggleSearchBarOnResize () {
   } else {
     searchBar.classList.remove('d-none')
   }
-  document.body.style.position = ''
-  document.body.style.top = ''
+  articleBody.classList.remove('mobile-no-scroll')
 }
 
 window.addEventListener('resize', toggleSearchBarOnResize)

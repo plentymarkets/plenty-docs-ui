@@ -1,4 +1,5 @@
 function toggleFacetsOnResize () {
+  const articleBody = document.getElementById('article-body')
   const facetsSidebar = document.getElementById('facets-sidebar')
   const mediaQuery = window.matchMedia('(min-width: 1024px)')
 
@@ -7,8 +8,7 @@ function toggleFacetsOnResize () {
   } else {
     facetsSidebar.classList.remove('d-none')
   }
-  document.body.style.position = ''
-  document.body.style.top = ''
+  articleBody.classList.remove('mobile-no-scroll')
 }
 
 window.addEventListener('resize', toggleFacetsOnResize)
