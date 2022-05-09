@@ -1,4 +1,4 @@
-/* global MutationObserver, translations */
+/* global Handlebars MutationObserver, translations */
 
 class ElasticSearch {
   constructor () {
@@ -7,7 +7,12 @@ class ElasticSearch {
 
   setOptions (current, componentFilter, moduleFilter) {
     this.options = {
-      result_fields: { id: { raw: {} }, headings: { raw: {} }, article_content: { raw: { size: 250 } }, url: { raw: {} } },
+      result_fields: {
+        id: { raw: {} },
+        headings: { raw: {} },
+        article_content: { raw: { size: 250 } },
+        url: { raw: {} },
+      },
       facets: {
         url_path_dir2: { type: 'value' },
         url_path_dir4: { type: 'value' },
@@ -52,7 +57,9 @@ class ElasticSearch {
         }
         this.searchresults = ''
         resultList.results.documents.forEach((result) => {
-          this.searchresults += '<a href=' + searchHref + encodeURIComponent(result.suggestion) + '">' + result.suggestion + '</a>'
+          const resultSuggestion = result.suggestion
+          const resultSuggestionUri = encodeURIComponent(result.suggestion)
+          this.searchresults += '<a href=' + searchHref + resultSuggestionUri + '">' + resultSuggestion + '</a>'
         })
         if (this.searchresults) {
           document.getElementById('search-results').innerHTML = '<div id="the-results">' + this.searchresults + '</div>'
@@ -71,79 +78,72 @@ class ElasticSearch {
       .then((resultList) => {
         const currentLocation = window.location.pathname
         const locale = currentLocation.includes('en-gb') ? 'en-gb' : 'de-de'
-        const componentsTitle = translateKey(locale, 'components_title')
-        const componentFilter = this.options.filters.all[0].url_path_dir2
-        const modulesTitle = translateKey(locale, 'modules_title')
-        const moduleFilter = this.options.filters.all[1].url_path_dir4
-        const resultsLabel = translateKey(locale, 'results_label')
         const generalLabel = 'general'
-        this.searchresults = ''
-        this.componentFacets = ''
-        this.moduleFacets = ''
+        const searchQuery = decodeURI(window.location.search.split('?query=')[1].split('&page=')[0])
+        const searchQueryLabel = translateKey(locale, 'search_query_label')
+        const searchResultsTemplateHtml = document.getElementById('search-page-template').innerHTML
+        const searchFacetsTemplateHtml = document.getElementById('search-facets-template').innerHTML
+        const searchPage = document.getElementById('search-page')
+        const searchResultsFacets = document.getElementById('facets-container')
+        const resultsLabel = translateKey(locale, 'results_label')
+        const componentsTitle = translateKey(locale, 'components_title')
+        const modulesTitle = translateKey(locale, 'modules_title')
+        const componentFilterOptions = this.options.filters.all[0].url_path_dir2
+        const moduleFilterOptions = this.options.filters.all[1].url_path_dir4
+        const componentFilter = resultList.info.facets.url_path_dir2[0].data
+        const moduleFilter = resultList.info.facets.url_path_dir4[0].data
+        const pagesTotal = resultList.info.meta.page.total_pages
+        const pageCurrent = resultList.info.meta.page.current
+        const pageNext = pageCurrent < pagesTotal ? pageCurrent + 1 : ''
+        const pagePrevious = pageCurrent > 1 ? pageCurrent - 1 : ''
 
-        this.createPagination(resultList.info.meta.page.current, resultList.info.meta.page.total_pages)
-        document.getElementById('searchnores').innerHTML = `${resultList.info.meta.page.total_results} ${resultsLabel}`
-        resultList.results.forEach((result) => {
-          this.searchresults += '<a class="the-search-result" href="' + result.data.url.raw + '"><span class="result-title">' + result.data.headings.raw[0] + '</span><span class="result-description">' + result.data.article_content.raw + '...</span><span class="result-url">' + result.data.url.raw + '</span></a>'
+        searchPage.innerHTML = Handlebars.compile(searchResultsTemplateHtml)(
+          {
+            pageCurrent: pageCurrent,
+            pageNext: pageNext,
+            pagePrevious: pagePrevious,
+            results: resultList.rawResults,
+            resultsLabel: resultsLabel,
+            searchQuery: searchQuery,
+            searchQueryLabel: searchQueryLabel,
+            totalResults: resultList.info.meta.page.total_results,
+          })
+
+        /*
+          The facet values Elasticsearch returns aren't necessarily well-suited for displaying.
+          Occasionally there are problems with capitalisation or empty strings in case of the ROOT module.
+          The following methods enrich the facets results with appropriate labels.
+        */
+
+        componentFilter.forEach((facet) => {
+          const value = facet.value
+          facet.label = value ? translateKey(locale, value) : translateKey(locale, generalLabel)
         })
-        document.getElementById('search-page-results').innerHTML = this.searchresults
 
-        document.getElementById('facets-container').innerHTML = ''
-        resultList.info.facets.url_path_dir2[0].data.forEach((component) => {
-          const componentName = component.value
-          const componentLabel = componentName ? translateKey(locale, componentName) : translateKey(locale, generalLabel)
-          this.componentFacets +=
-          `<li>
-          <label for="facet_url_path_dir2${componentName}" class="sui-multi-checkbox-facet__option-label">
-          <div class="sui-multi-checkbox-facet__option-input-wrapper">
-          <input id="facet_url_path_dir2${componentName}" data-filter="url_path_dir2" data-value="${componentName}" type="checkbox" class="sui-multi-checkbox-facet__checkbox">
-          <span class="sui-multi-checkbox-facet__input-text">${componentLabel}</span></div>
-          <span class="sui-multi-checkbox-facet__option-count">${component.count}</span></label></li>`
+        moduleFilter.forEach((facet) => {
+          const value = facet.value
+          facet.label = value ? translateKey(locale, value) : translateKey(locale, generalLabel)
         })
-        document.getElementById('facets-container').innerHTML += `<h3 data-i18n-key="components-title" class="sui-facet__title">
-        ${componentsTitle}</h3><ul>${this.componentFacets}</ul>`
 
-        resultList.info.facets.url_path_dir4[0].data.forEach((module) => {
-          const moduleName = module.value
-          const moduleLabel = moduleName ? translateKey(locale, moduleName) : translateKey(locale, generalLabel)
-          this.moduleFacets +=
-          `<li><label for="facet_url_path_dir4${moduleName}" class="sui-multi-checkbox-facet__option-label">
-          <div class="sui-multi-checkbox-facet__option-input-wrapper">
-          <input id="facet_url_path_dir4${moduleName}" data-filter="url_path_dir4" data-value="${moduleName}" type="checkbox" class="sui-multi-checkbox-facet__checkbox">
-          <span class="sui-multi-checkbox-facet__input-text">${moduleLabel}</span></div>
-          <span class="sui-multi-checkbox-facet__option-count">${module.count}</span></label></li>`
-        })
-        document.getElementById('facets-container').innerHTML += `<h3 class="sui-facet__title">
-        ${modulesTitle}</h3><ul>${this.moduleFacets}</ul>`
+        searchResultsFacets.innerHTML = Handlebars.compile(searchFacetsTemplateHtml)(
+          {
+            componentsTitle: componentsTitle,
+            components: componentFilter,
+            modulesTitle: modulesTitle,
+            modules: moduleFilter,
+          })
 
-        if (componentFilter !== undefined) {
-          document.getElementById('facet_url_path_dir2' + componentFilter).checked = true
+        if (componentFilterOptions) {
+          document.getElementById('facet_url_path_dir2' + componentFilterOptions).checked = true
         }
-        if (moduleFilter !== undefined) {
-          document.getElementById('facet_url_path_dir4' + moduleFilter).checked = true
+
+        if (moduleFilterOptions) {
+          document.getElementById('facet_url_path_dir4' + moduleFilterOptions).checked = true
         }
       })
       .catch((error) => {
         console.log(`error: ${error}`)
       })
-  }
-
-  createPagination (pageId, totalPages) {
-    const urlResult = decodeURI(window.location.search.split('?query=')[1].split('&page=')[0])
-    const newUrl = '?query=' + encodeURIComponent(urlResult)
-    const previousPageNumber = pageId - 1
-    const nextPageNumber = pageId + 1
-    let thePages = ''
-    if (pageId > 1) {
-      thePages += '<a href="' + newUrl + '&page=' + previousPageNumber + '" class="previous"><i class="fa fa-angle-left"></i></a>'
-      thePages += '<a href="' + newUrl + '&page=' + previousPageNumber + '">' + previousPageNumber + '</a>'
-    }
-    thePages += '<a href="' + newUrl + '&page=' + pageId + '" class="active">' + pageId + '</a>'
-    if (pageId < totalPages) {
-      thePages += '<a href="' + newUrl + '&page=' + nextPageNumber + '">' + nextPageNumber + '</a>'
-      thePages += '<a href="' + newUrl + '&page=' + nextPageNumber + '" class="next"><i class="fa fa-angle-right"></i></a>'
-    }
-    document.getElementById('search-page-pagination').innerHTML = thePages
   }
 }
 
@@ -172,7 +172,7 @@ function translateKey (locale, key) {
         })
       }
 
-      if (document.getElementById('search-page-results')) {
+      if (document.getElementById('search-page')) {
         const facetsContainer = document.getElementById('facets-container')
         const observerConfig = { childList: true }
         let componentFilter

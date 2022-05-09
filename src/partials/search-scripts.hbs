@@ -1,0 +1,81 @@
+<script id="search-page-template" type="text/x-handlebars-template">
+    <div class="search_head row mb-3">
+        <div class="seach_text col-sm-8 text-left">
+            <div class="search-result-container">
+                \{{ searchQueryLabel }}:
+                <span id="searche">\{{searchQuery}}</span>
+            </div>
+            <span id="searchnores">\{{totalResults}} \{{resultsLabel}}</span>
+        </div>
+    </div>
+    <div id="search-page-results">
+        \{{#each results}}
+            \{{#url}}
+            <a class="the-search-result" href="\{{raw}}">
+            \{{/url}}
+                \{{#headings}}
+                \{{#raw}}
+                <span class="result-title">\{{#if @first}}\{{this}}\{{/if}}</span>
+                \{{/raw}}
+                \{{/headings}}
+                \{{#article_content}}
+                <span class="result-description">\{{raw}}...</span>
+                \{{/article_content}}
+                \{{#url}}
+                <span class="result-url">\{{raw}}</span>
+                \{{/url}}
+            </a>
+        \{{/each}}
+    </div>
+    <div id="search-page-pagination" class="text-center">
+        \{{#if pagePrevious}}
+        <a href="?query=\{{searchQuery}}&page=\{{pagePrevious}}" class="previous">
+            <i class="fa fa-angle-left"></i>
+        </a>
+        <a href="?query=\{{searchQuery}}&page=\{{pagePrevious}}" class="previous">
+            \{{pagePrevious}}
+        </a>
+        \{{/if}}
+        <a class="active">\{{pageCurrent}}</a>
+        \{{#if pageNext}}
+        <a href="?query=\{{searchQuery}}&page=\{{pageNext}}" class="next">
+            \{{pageNext}}
+        </a>
+        <a href="?query=\{{searchQuery}}&page=\{{pageNext}}" class="next">
+            <i class="fa fa-angle-right"></i>
+        </a>
+        \{{/if}}
+    </div>
+</script>
+
+<script id="search-facets-template" type="text/x-handlebars-template">
+<h3 data-i18n-key="components-title" class="sui-facet__title">\{{componentsTitle}}</h3>
+<ul>
+    \{{#each components}}
+    <li>
+        <label for="facet_url_path_dir2\{{value}}" class="sui-multi-checkbox-facet__option-label">
+            <div class="sui-multi-checkbox-facet__option-input-wrapper">
+                <input id="facet_url_path_dir2\{{value}}" data-filter="url_path_dir2" data-value="\{{value}}" type="checkbox" class="sui-multi-checkbox-facet__checkbox">
+                <span class="sui-multi-checkbox-facet__input-text">\{{label}}</span>
+            </div>
+            <span class="sui-multi-checkbox-facet__option-count">\{{count}}</span>
+        </label>
+    </li>
+    \{{/each}}
+</ul>
+
+<h3 class="sui-facet__title">\{{modulesTitle}}</h3>
+<ul>
+    \{{#each modules}}
+    <li>
+        <label for="facet_url_path_dir4\{{value}}" class="sui-multi-checkbox-facet__option-label">
+            <div class="sui-multi-checkbox-facet__option-input-wrapper">
+                <input id="facet_url_path_dir4\{{value}}" data-filter="url_path_dir4" data-value="\{{value}}" type="checkbox" class="sui-multi-checkbox-facet__checkbox">
+                <span class="sui-multi-checkbox-facet__input-text">\{{label}}</span>
+            </div>
+            <span class="sui-multi-checkbox-facet__option-count">\{{count}}</span>
+        </label>
+    </li>
+    \{{/each}}
+</ul>
+</script>
