@@ -42,6 +42,10 @@
   --footer-background-color: var(--plentyGreysLimedSpruce);
   --footer-link-font-color: var(--plenty-secondaries-white);
   --footer-link-hover-color: var(--link_hover-font-color);
+  --cookie-background: var(--plentyBluesTealBlue);
+  --cookie-button-background: var(--plentyBluesFadedJade);
+  --cookie-button-color: var(--plenty-secondaries-white);
+  --cookie-button-border: var(--plentyBluesFadedJade);
   /* docsearch */
   --docsearch-searchbox-background: var(--plentyBluesTealBlue);
   --docsearch-muted-color: var(--color-white);

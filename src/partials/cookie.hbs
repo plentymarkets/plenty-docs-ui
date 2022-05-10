@@ -1,0 +1,53 @@
+<div class="cookie-bar fixed-bottom">
+   <div class="container-max">
+      <div class="row py-3" id="cookie-settings">
+         <div class="col-12 col-md-8">
+            <p>
+               {{ i18n page.attributes.lang 'cookies_info' }}
+            </p>
+               <ul>
+                  <li>
+                     <a class="footer-link" href="{{ i18n page.attributes.lang 'privacy_policy_link' }}">{{ i18n page.attributes.lang 'privacy_policy_text' }}</a>
+                  </li>
+                  <li>
+                     <a class="footer-link" href="{{ i18n page.attributes.lang 'terms_and_conditions_link' }}">{{ i18n page.attributes.lang 'terms_and_conditions_text' }}</a>
+                  </li>
+               </ul>
+
+            <div>
+               <span class="custom-control custom-switch custom-control-appearance d-md-inline-block mr-3"><input type="checkbox" id="necessary-group" disabled="disabled" class="custom-control-input"> <label for="necessary-group" class="custom-control-label">
+                  {{ i18n page.attributes.lang 'cookies_essential_label' }}
+               </label></span>
+
+               <span class="custom-control custom-switch custom-control-appearance d-md-inline-block mr-3"><input type="checkbox" id="tracking-group" class="custom-control-input cookie-settings" source="statistics"> <label for="tracking-group" class="custom-control-label">
+                  {{ i18n page.attributes.lang 'cookies_statistics_label' }}
+               </label></span>
+
+               <span class="custom-control custom-switch custom-control-appearance d-md-inline-block mr-3"><input type="checkbox" id="external-group" class="custom-control-input cookie-settings" source="media"> <label for="external-group" class="custom-control-label">
+                  {{ i18n page.attributes.lang 'cookies_external_media_label' }}
+               </label></span>
+
+               <span class="custom-control custom-switch custom-control-appearance d-md-inline-block mr-3"><input type="checkbox" id="functional-group" class="custom-control-input cookie-settings" source="functional"> <label for="functional-group" class="custom-control-label">
+                  {{ i18n page.attributes.lang 'cookies_functional_label' }}
+               </label></span>
+
+               <a href="#" id="show-cookie-further-settings" class="text-appearance d-block d-md-inline-block">
+                  {{ i18n page.attributes.lang 'cookies_further_settings_label' }}
+               </a>
+            </div>
+         </div>
+         <div class="col-12 col-md-4 pt-3 pt-md-0">
+            <button class="btn btn-block btn-appearance cookie-accept-selection">
+               {{ i18n page.attributes.lang 'cookies_accept_selection' }}
+            </button>
+            <button class="btn btn-block btn-appearance cookie-accept">
+               {{ i18n page.attributes.lang 'cookies_accept_all' }}
+            </button>
+            <button class="btn btn-block btn-appearance cookie-deny">
+               {{ i18n page.attributes.lang 'cookies_reject_all' }}
+            </button>
+         </div>
+      </div>
+      {{> cookie-further-settings}}
+   </div>
+</div>
