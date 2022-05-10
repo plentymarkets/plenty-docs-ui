@@ -1,4 +1,4 @@
-/* global Handlebars MutationObserver, translations */
+/* global Handlebars, MutationObserver, translations */
 
 class ElasticSearch {
   constructor () {
