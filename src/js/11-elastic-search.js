@@ -79,7 +79,7 @@ class ElasticSearch {
         const currentLocation = window.location.pathname
         const locale = currentLocation.includes('en-gb') ? 'en-gb' : 'de-de'
         const generalLabel = 'general'
-        const searchQuery = decodeURI(window.location.search.split('?query=')[1].split('&page=')[0])
+        const searchQuery = decodeQueryParam(window.location.search.split('?query=')[1].split('&page=')[0])
         const searchQueryLabel = translateKey(locale, 'search_query_label')
         const searchResultsTemplateHtml = document.getElementById('search-page-template').innerHTML
         const searchFacetsTemplateHtml = document.getElementById('search-facets-template').innerHTML
@@ -152,6 +152,10 @@ function translateKey (locale, key) {
   return translation
 }
 
+function decodeQueryParam (p) {
+  return decodeURIComponent(p.replace(/\+/g, ' '))
+}
+
 (function () {
   $(document).ready(function () {
     if (window.location.host !== 'developers.plentymarkets.com') {
@@ -177,7 +181,7 @@ function translateKey (locale, key) {
         const observerConfig = { childList: true }
         let componentFilter
         let moduleFilter
-        let urlResult = decodeURI(window.location.search.split('?query=')[1])
+        let urlResult = decodeQueryParam(window.location.search.split('?query=')[1])
         let urlPage = 1
         if (urlResult.includes('page=')) {
           urlPage = parseInt(urlResult.split('page=')[1].split('&')[0])
@@ -185,7 +189,7 @@ function translateKey (locale, key) {
         }
         elasticSearch.setOptions(urlPage)
         elasticSearch.getResults(urlResult)
-        document.getElementById('searche').innerHTML = decodeURI(urlResult.split('&')[0])
+        document.getElementById('searche').innerHTML = decodeQueryParam(urlResult.split('&')[0])
 
         const callback = function (mutationsList, observer) {
           const facets = document.querySelectorAll('.sui-multi-checkbox-facet input[type=checkbox]')
