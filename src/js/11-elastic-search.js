@@ -136,8 +136,8 @@ function translateKey (locale, key) {
   return translation
 }
 
-function decodeQueryParam(p) {
-  return decodeURIComponent(p.replace(/\+/g, ' '));
+function decodeQueryParam (p) {
+  return decodeURIComponent(p.replace(/\+/g, ' '))
 }
 
 (function () {
