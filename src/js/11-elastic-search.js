@@ -76,7 +76,7 @@ class ElasticSearch {
   }
 
   createPagination (pageId, totalPages) {
-    const urlResult = decodeURI(window.location.search.split('?query=')[1].split('&page=')[0])
+    const urlResult = decodeQueryParam(window.location.search.split('?query=')[1].split('&page=')[0])
     const newUrl = '?query=' + encodeURIComponent(urlResult)
     const previousPageNumber = pageId - 1
     const nextPageNumber = pageId + 1
@@ -136,6 +136,10 @@ function translateKey (locale, key) {
   return translation
 }
 
+function decodeQueryParam(p) {
+  return decodeURIComponent(p.replace(/\+/g, ' '));
+}
+
 (function () {
   $(document).ready(function () {
     if (window.location.host !== 'developers.plentymarkets.com') {
@@ -165,7 +169,7 @@ function translateKey (locale, key) {
         })
 
         if (document.getElementById('search-page-results')) {
-          let urlResult = decodeURI(window.location.search.split('?query=')[1])
+          let urlResult = decodeQueryParam(window.location.search.split('?query=')[1])
           let urlPage = 1
           if (urlResult.includes('page=')) {
             urlPage = parseInt(urlResult.split('page=')[1].split('&')[0])
@@ -173,7 +177,7 @@ function translateKey (locale, key) {
           }
           elasticSearch.setOptions(urlPage)
           elasticSearch.getResults(urlResult)
-          document.getElementById('searche').innerHTML = decodeURI(urlResult.split('&')[0])
+          document.getElementById('searche').innerHTML = decodeQueryParam(urlResult.split('&')[0])
         }
       }
     }
