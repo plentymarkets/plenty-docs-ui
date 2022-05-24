@@ -800,36 +800,36 @@
   filter: brightness(90%);
 }
 
-.doc .collapseBox .title {
+.doc .collapseBox > .title {
   cursor: pointer;
   font-style: normal;
   font-weight: 500;
   font-size: calc(16/var(--rem-base)*1rem);
 }
 
-.doc .collapseBox.active .title {
+.doc .collapseBox.active > .title {
   border-bottom-style: groove;
   padding-bottom: 1rem;
 }
 
-.doc .collapseBox .title::after {
+.doc .collapseBox > .title::after {
   content: '\e920';
   font-family: var(--plenty-icon-font-family);
   float: right;
   margin-left: 5px;
 }
 
-.doc .collapseBox.active .title::after {
+.doc .collapseBox.active > .title::after {
   content: '\e914';
 }
 
-.doc .collapseBox .content {
+.doc .collapseBox > .content {
   display: none;
   font-weight: 300;
   font-size: calc(18/var(--rem-base)*1rem);
 }
 
-.doc .collapseBox.active .content {
+.doc .collapseBox.active > .content {
   display: block;
 }
 

@@ -305,6 +305,7 @@
   font-size: inherit;
   display: inline-block;
   line-height: 1;
+  vertical-align: text-top;
   text-transform: none;
   letter-spacing: normal;
   word-wrap: normal;
