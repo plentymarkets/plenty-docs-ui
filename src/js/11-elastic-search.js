@@ -1,13 +1,28 @@
-/* global translations */
+/* global Handlebars, MutationObserver, translations */
 
 class ElasticSearch {
   constructor () {
     this.searchresults = ''
   }
 
-  setOptions (current) {
+  setOptions (current, componentFilter, moduleFilter) {
     this.options = {
-      result_fields: { id: { raw: {} }, headings: { raw: {} }, article_content: { raw: { size: 250 } }, url: { raw: {} } },
+      result_fields: {
+        id: { raw: {} },
+        headings: { raw: {} },
+        article_content: { raw: { size: 250 } },
+        url: { raw: {} },
+      },
+      facets: {
+        url_path_dir2: { type: 'value' },
+        url_path_dir4: { type: 'value' },
+      },
+      filters: {
+        all: [
+          { url_path_dir2: componentFilter },
+          { url_path_dir4: moduleFilter },
+        ],
+      },
       page: { size: 20, current: current },
     }
   }
@@ -42,7 +57,9 @@ class ElasticSearch {
         }
         this.searchresults = ''
         resultList.results.documents.forEach((result) => {
-          this.searchresults += '<a href=' + searchHref + encodeURIComponent(result.suggestion) + '">' + result.suggestion + '</a>'
+          const resultSuggestion = result.suggestion
+          const resultSuggestionUri = encodeURIComponent(result.suggestion)
+          this.searchresults += '<a href=' + searchHref + resultSuggestionUri + '">' + resultSuggestion + '</a>'
         })
         if (this.searchresults) {
           document.getElementById('search-results').innerHTML = '<div id="the-results">' + this.searchresults + '</div>'
@@ -61,73 +78,72 @@ class ElasticSearch {
       .then((resultList) => {
         const currentLocation = window.location.pathname
         const locale = currentLocation.includes('en-gb') ? 'en-gb' : 'de-de'
+        const generalLabel = 'general'
+        const searchQuery = decodeQueryParam(window.location.search.split('?query=')[1].split('&page=')[0])
+        const searchQueryLabel = translateKey(locale, 'search_query_label')
+        const searchResultsTemplateHtml = document.getElementById('search-page-template').innerHTML
+        const searchFacetsTemplateHtml = document.getElementById('search-facets-template').innerHTML
+        const searchPage = document.getElementById('search-page')
+        const searchResultsFacets = document.getElementById('facets-container')
         const resultsLabel = translateKey(locale, 'results_label')
-        this.searchresults = ''
-        this.createPagination(resultList.info.meta.page.current, resultList.info.meta.page.total_pages)
-        document.getElementById('searchnores').innerHTML = `${resultList.info.meta.page.total_results} ${resultsLabel}`
-        resultList.results.forEach((result) => {
-          this.searchresults += '<a class="the-search-result" href="' + result.data.url.raw + '"><span class="result-title">' + result.data.headings.raw[0] + '</span><span class="result-description">' + result.data.article_content.raw + '...</span><span class="result-url">' + result.data.url.raw + '</span></a>'
+        const componentsTitle = translateKey(locale, 'components_title')
+        const modulesTitle = translateKey(locale, 'modules_title')
+        const componentFilterOptions = this.options.filters.all[0].url_path_dir2
+        const moduleFilterOptions = this.options.filters.all[1].url_path_dir4
+        const componentFilter = resultList.info.facets.url_path_dir2[0].data
+        const moduleFilter = resultList.info.facets.url_path_dir4[0].data
+        const pagesTotal = resultList.info.meta.page.total_pages
+        const pageCurrent = resultList.info.meta.page.current
+        const pageNext = pageCurrent < pagesTotal ? pageCurrent + 1 : ''
+        const pagePrevious = pageCurrent > 1 ? pageCurrent - 1 : ''
+
+        searchPage.innerHTML = Handlebars.compile(searchResultsTemplateHtml)(
+          {
+            pageCurrent: pageCurrent,
+            pageNext: pageNext,
+            pagePrevious: pagePrevious,
+            results: resultList.rawResults,
+            resultsLabel: resultsLabel,
+            searchQuery: searchQuery,
+            searchQueryLabel: searchQueryLabel,
+            totalResults: resultList.info.meta.page.total_results,
+          })
+
+        /*
+          The facet values Elasticsearch returns aren't necessarily well-suited for displaying.
+          Occasionally there are problems with capitalisation or empty strings in case of the ROOT module.
+          The following methods enrich the facets results with appropriate labels.
+        */
+
+        componentFilter.forEach((facet) => {
+          const value = facet.value
+          facet.label = value ? translateKey(locale, value) : translateKey(locale, generalLabel)
         })
-        document.getElementById('search-page-results').innerHTML = this.searchresults
+
+        moduleFilter.forEach((facet) => {
+          const value = facet.value
+          facet.label = value ? translateKey(locale, value) : translateKey(locale, generalLabel)
+        })
+
+        searchResultsFacets.innerHTML = Handlebars.compile(searchFacetsTemplateHtml)(
+          {
+            componentsTitle: componentsTitle,
+            components: componentFilter,
+            modulesTitle: modulesTitle,
+            modules: moduleFilter,
+          })
+
+        if (componentFilterOptions) {
+          document.getElementById('facet_url_path_dir2' + componentFilterOptions).checked = true
+        }
+
+        if (moduleFilterOptions) {
+          document.getElementById('facet_url_path_dir4' + moduleFilterOptions).checked = true
+        }
       })
       .catch((error) => {
         console.log(`error: ${error}`)
       })
-  }
-
-  createPagination (pageId, totalPages) {
-    const urlResult = decodeQueryParam(window.location.search.split('?query=')[1].split('&page=')[0])
-    const newUrl = '?query=' + encodeURIComponent(urlResult)
-    const previousPageNumber = pageId - 1
-    const nextPageNumber = pageId + 1
-    let thePages = ''
-    if (pageId > 1) {
-      thePages += '<a href="' + newUrl + '&page=' + previousPageNumber + '" class="previous"><i class="fa fa-angle-left"></i></a>'
-      thePages += '<a href="' + newUrl + '&page=' + previousPageNumber + '">' + previousPageNumber + '</a>'
-    }
-    thePages += '<a href="' + newUrl + '&page=' + pageId + '" class="active">' + pageId + '</a>'
-    if (pageId < totalPages) {
-      thePages += '<a href="' + newUrl + '&page=' + nextPageNumber + '">' + nextPageNumber + '</a>'
-      thePages += '<a href="' + newUrl + '&page=' + nextPageNumber + '" class="next"><i class="fa fa-angle-right"></i></a>'
-    }
-    document.getElementById('search-page-pagination').innerHTML = thePages
-  }
-}
-
-if (window.location.host !== 'developers.plentymarkets.com') {
-  window.onload = function showSearchBarOnDesktop () {
-    if (document.getElementById('searchbar') && document.getElementById('search-input')) {
-      const searchBar = document.getElementById('searchbar')
-      const searchText = document.getElementById('search-input')
-      const mediaQuery = window.matchMedia('(min-width: 1024px)')
-
-      if (mediaQuery.matches) {
-        searchBar.classList.remove('d-none')
-        searchText.focus()
-      }
-    }
-  }
-}
-
-function toggleSearchBar () {
-  const searchBar = document.getElementById('searchbar')
-  const searchText = document.getElementById('search-input')
-  const mediaQuery = window.matchMedia('(min-width: 1024px)')
-
-  if (searchBar.classList.contains('d-none')) {
-    searchBar.classList.remove('d-none')
-    searchText.focus()
-    if (!mediaQuery.matches) {
-      document.body.style.position = 'fixed'
-      document.body.style.top = `-${window.scrollY}px`
-    }
-  } else {
-    searchBar.classList.add('d-none')
-    searchText.blur()
-    if (!mediaQuery.matches) {
-      document.body.style.position = ''
-      document.body.style.top = ''
-    }
   }
 }
 
@@ -143,22 +159,13 @@ function decodeQueryParam (p) {
 (function () {
   $(document).ready(function () {
     if (window.location.host !== 'developers.plentymarkets.com') {
-      let timeout = false
+      const searchIcon = document.getElementById('toggle-search')
+      const searchText = document.getElementById('search-input')
       const elasticSearch = new ElasticSearch()
       const engine = window.location.href.includes('/en-gb/') ? 'knowledge-en-gb' : 'knowledge-de-de'
+      let timeout = false
       elasticSearch.setClient(engine)
-      if (document.getElementById('toggle-search') && document.getElementById('search-input')) {
-        const searchIcon = document.getElementById('toggle-search')
-        const searchText = document.getElementById('search-input')
-
-        document.addEventListener('keydown', (e) => {
-          if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
-            toggleSearchBar()
-          }
-        })
-        searchIcon.addEventListener('click', () => {
-          toggleSearchBar()
-        })
+      if (searchIcon && searchText) {
         searchText.addEventListener('input', () => {
           if (timeout) {
             clearTimeout(timeout)
@@ -167,18 +174,53 @@ function decodeQueryParam (p) {
             elasticSearch.getSuggestions(searchText.value)
           }, 300)
         })
+      }
 
-        if (document.getElementById('search-page-results')) {
-          let urlResult = decodeQueryParam(window.location.search.split('?query=')[1])
-          let urlPage = 1
-          if (urlResult.includes('page=')) {
-            urlPage = parseInt(urlResult.split('page=')[1].split('&')[0])
-            urlResult = urlResult.split('page=')[0].split('&')[0]
-          }
-          elasticSearch.setOptions(urlPage)
-          elasticSearch.getResults(urlResult)
-          document.getElementById('searche').innerHTML = decodeQueryParam(urlResult.split('&')[0])
+      if (document.getElementById('search-page')) {
+        const facetsContainer = document.getElementById('facets-container')
+        const observerConfig = { childList: true }
+        let componentFilter
+        let moduleFilter
+        let urlResult = decodeQueryParam(window.location.search.split('?query=')[1])
+        let urlPage = 1
+        if (urlResult.includes('page=')) {
+          urlPage = parseInt(urlResult.split('page=')[1].split('&')[0])
+          urlResult = urlResult.split('page=')[0].split('&')[0]
         }
+        elasticSearch.setOptions(urlPage)
+        elasticSearch.getResults(urlResult)
+        document.getElementById('searche').innerHTML = decodeQueryParam(urlResult.split('&')[0])
+
+        const callback = function (mutationsList, observer) {
+          const facets = document.querySelectorAll('.sui-multi-checkbox-facet input[type=checkbox]')
+
+          function toggleFilter (event) {
+            if (document.getElementById(event.target.id).checked === true) {
+              if (event.target.dataset.filter === 'url_path_dir2') {
+                componentFilter = event.target.dataset.value
+              }
+              if (event.target.dataset.filter === 'url_path_dir4') {
+                moduleFilter = event.target.dataset.value
+              }
+            } else {
+              if (event.target.dataset.filter === 'url_path_dir2') {
+                componentFilter = undefined
+              }
+              if (event.target.dataset.filter === 'url_path_dir4') {
+                moduleFilter = undefined
+              }
+            }
+            elasticSearch.setOptions(1, componentFilter, moduleFilter)
+            elasticSearch.getResults(urlResult)
+          }
+
+          for (var i = 0; i < facets.length; i++) {
+            facets[i].addEventListener('change', toggleFilter)
+          }
+        }
+        const observer = new MutationObserver(callback)
+
+        observer.observe(facetsContainer, observerConfig)
       }
     }
   })

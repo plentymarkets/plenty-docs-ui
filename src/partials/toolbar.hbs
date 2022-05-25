@@ -9,5 +9,8 @@
             <a class="toolbar-action feedback-popup" href="javascript:void(0)"><i class="fa-pif-intercom"></i></a>
         {{/unless}}
             <a id="toggle-search" class="toolbar-action" href="javascript:void(0)"><i class="fa-pif-search"></i></a>
+        {{#if (eq page.layout 'search')}}
+            <a id="toggle-filter" class="toolbar-action" href="javascript:void(0)"><i class="fa-pif-filter"></i></a>
+        {{/if}}
     </div>
 </div>

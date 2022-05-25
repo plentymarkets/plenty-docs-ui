@@ -10,7 +10,7 @@
   "developers_documentation": "Developers docs",
 
   "search_placeholder_text": "Enter search keywords...",
-  "search_query": "Search query:",
+  "search_query_label": "Search query:",
   "loading_results": "Loading results...",
   "search_results": "results",
   "search_sort_by_relevance": "Relevance",
