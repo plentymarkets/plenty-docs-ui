@@ -49,6 +49,7 @@
 </script>
 
 <script id="search-facets-template" type="text/x-handlebars-template">
+{{#if (eq site.url 'https://developers.plentymarkets.com/en-gb')}}
 <h3 data-i18n-key="components-title" class="sui-facet__title">\{{componentsTitle}}</h3>
 <ul>
     \{{#each components}}
@@ -63,6 +64,7 @@
     </li>
     \{{/each}}
 </ul>
+{{/if}}
 
 <h3 class="sui-facet__title">\{{modulesTitle}}</h3>
 <ul>
