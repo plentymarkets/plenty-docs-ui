@@ -255,7 +255,7 @@ body {
   background: var(--dropdown-background-color);
   color: white;
   padding: 10px;
-  min-width: unset;
+  min-width: max-content;
 }
 
 .dropdown-menu.submenu-item > span {
