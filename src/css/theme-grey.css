@@ -1,4 +1,4 @@
-:root {
+:root.theme-grey {
   /* colors */
   --primary-color: var(--plentyBluesFadedJade);
   /* base */

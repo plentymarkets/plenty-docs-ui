@@ -258,6 +258,11 @@ body {
   min-width: unset;
 }
 
+.dropdown-menu.submenu-item > span {
+  display: block;
+  padding: 1rem 0;
+}
+
 button:focus {
   outline: none;
   box-shadow: none;
