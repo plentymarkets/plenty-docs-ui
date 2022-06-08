@@ -7,7 +7,8 @@ body {
 }
 
 .navbar {
-  background: var(--primary-color);
+  background: var(--secondary-color);
+  box-shadow: var(--box-shadow);
   color: var(--navbar-font-color);
   font-size: calc(16 / var(--rem-base) * 1rem);
   height: var(--navbar-height);
@@ -50,10 +51,6 @@ body {
   padding: 3px 0;
   color: white;
   outline: none;
-}
-
-.search input::placeholder {
-  color: lightgray;
 }
 
 .search img {
@@ -342,7 +339,7 @@ button:focus {
 }
 
 .navbar .right .menu-wrapper .submenu-wrapper .submenu-item{
-  color: var(--plenty-secondaries-white);
+  color: var(--plentyWhite);
 }
 
 .navbar .right .menu-wrapper .submenu-wrapper .submenu-item:not(:first-of-type) {

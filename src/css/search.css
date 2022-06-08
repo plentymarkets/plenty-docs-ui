@@ -1,5 +1,5 @@
 .searchbar{
-  background: #D8E4EB;
+  background: var(--accent-color);
   display: flex;
   justify-content: space-between;
   margin-left: calc(var(--nav-width) + 1rem);
@@ -16,9 +16,13 @@
 .searchbar form input.search-input{
   border: 0;
   background: inherit;
-  color: #374D55;
+  color: var(--highlight-color);
   flex-grow: 9;
   width: calc(100% - 55px);
+}
+input#search-input::placeholder {
+  color: var(--highlight-color);
+  opacity: 0.5;
 }
 .searchbar form input:focus {
   outline: none;
@@ -30,12 +34,13 @@
 .searchbar form button.searchSubmitButton{
   background: inherit;
   border: none;
+  color: var(--highlight-color);
   padding: 0;
 }
 #the-results{
   padding: 5px;
-  background: #fff;
-  color: #0a1927;
+  background: var(--accent-color);
+  color: var(--secondary-font-color);
 }
 #the-results a{
   display: block;
@@ -45,29 +50,30 @@
   border-bottom: 1px solid;
 }
 #the-results a:hover{
-  color: #d4061c;
+  color: var(--highlight-color);
 }
 #search-input::-webkit-input-placeholder {
-  color: #374D55;
+  color: var(--highlight-color);
 }
 #search-page-results .the-search-result{
-  padding: 20px 0;
-  display: block;
   border-bottom: 1px solid grey;
+  display: block;
+  padding: 20px 0;
+  text-decoration: unset;
 }
 #search-page-results .the-search-result::before{
   content: "";
   padding: 0;
 }
 .result-title{
-  color: #D4021D;
+  color: var(--highlight-color);
   font-size: 20px;
   line-height: 24px;
   display: block;
   font-weight: bold;
 }
 .result-description{
-  color: #374D55;
+  color: var(--secondary-font-color);
   font-size: 16px;
   line-height: 24px;
   display: block;
@@ -93,7 +99,7 @@
   line-height: 36px;
 }
 #searche{
-  color: #D4021D;
+  color: var(--highlight-color);
 }
 .search-about{
   font-size: 16px;
@@ -110,29 +116,32 @@
   padding-right: 5px;
   height: 32px;
   border-radius: 5px;
-  background: #fff;
+  background: var(--accent-color);
   padding: 10px;
   -webkit-box-shadow: 5px 10px 18px #888888;
   box-shadow: 2px 3px 5px #888888;
-  color: black;
+  color: var(--primary-font-color);
   font-weight: bold;
   margin-left: 10px;
 }
 #search-page-pagination a.next{
-  color: black;
+  color: var(--secondary-font-color);
   margin-left: 20px;
   font-size: 20px;
+  text-decoration: unset;
 }
 
 #search-page-pagination a.previous{
-  color: black;
+  color: var(--secondary-font-color);
   margin-right: 10px;
   font-size: 20px;
+  text-decoration: unset;
 }
 
 #search-page-pagination a.active{
-  color: #fff !important;
-  background: #D4021D !important;
+  background: var(--primary-color) !important;
+  color: var(--primary-font-color) !important;
+  text-decoration: unset;
 }
 
 #search-icon{

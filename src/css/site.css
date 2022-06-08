@@ -1,7 +1,8 @@
-@import "vars.css";
+@import "colors.css";
 @import "theme-blue.css";
-@import "theme-grey.css";
+@import "theme-petrol.css";
 @import "theme-red.css";
+@import "vars.css";
 @import "fonts.css";
 @import "base.css";
 @import "body.css";

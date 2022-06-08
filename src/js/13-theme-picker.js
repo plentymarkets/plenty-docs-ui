@@ -5,7 +5,7 @@ function setTheme (themeName) {
 
 document.addEventListener('DOMContentLoaded', () => {
   const host = window.location.host
-  const defaultTheme = (host === 'developers.plentymarkets.com') ? 'theme-grey' : 'theme-red'
+  const defaultTheme = (host === 'developers.plentymarkets.com') ? 'theme-petrol' : 'theme-red'
   const storedTheme = window.localStorage.getItem('theme')
 
   storedTheme ? setTheme(storedTheme) : setTheme(defaultTheme)
