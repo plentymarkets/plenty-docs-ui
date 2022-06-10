@@ -40,12 +40,12 @@
     --navbar-menu-font-color: var(--body-font-color);
     --navbar-menu_hover-background: var(--color-smoke-50);
     /* docsearch */
-    --docsearch-searchbox-background: var(--accent-color);
-    --docsearch-muted-color: var(--plentyGreysOne);
-    --docsearch-text-color: var(--plentyGreysOne);
-    --docsearch-searchbox-header-focus-background: var(--accent-color);
-    --docsearch-modal-background: var(--plentyLightGrey);
-    --docsearch-searchbox-focus-background: var(--plentyLightGrey);
+    --docsearch-searchbox-background: var(--primary-color);
+    --docsearch-muted-color: var(--primary-font-color);
+    --docsearch-text-color: var(--primary-font-color);
+    --docsearch-searchbox-header-focus-background: var(--primary-color);
+    --docsearch-modal-background: var(--secondary-color);
+    --docsearch-searchbox-focus-background: var(--primary-color);
     /* nav */
     --nav-background: var(--primary-color);
     --nav-active-border-color: var(--primary-font-color);

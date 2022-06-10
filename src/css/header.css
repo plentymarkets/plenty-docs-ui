@@ -38,7 +38,7 @@ body {
 @media screen and (min-width: 1024px) {
   .search {
     padding-left: 25px;
-    border-left: 1px solid white;
+    border-left: 1px solid var(--navbar-font-color);
     margin-left: 25px;
   }
 }
@@ -46,10 +46,10 @@ body {
 .search input {
   background: none;
   border: 0;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid var(--navbar-font-color);
   width: 250px;
   padding: 3px 0;
-  color: white;
+  color: var(--navbar-font-color);
   outline: none;
 }
 
