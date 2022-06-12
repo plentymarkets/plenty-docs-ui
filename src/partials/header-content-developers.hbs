@@ -18,6 +18,20 @@
         </div>
         <a class="menu-item" href="/en-gb/plentydevtool/main/plentydevtool-introduction.html">plentyDevTool</a>
         <a class="menu-item" href="https://knowledge.plentymarkets.com/" target="_blank">User manual</a>
+        <div class="dropdown menu-item">
+          <button class="dropdown-toggle"
+                  id="themeToggle"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false">
+                  <i class="fa fa-paint-brush"></i> Theme
+          </button>
+          <div class="dropdown-menu submenu-item" aria-labelledby="themeToggle">
+              <span onclick="setTheme('theme-blue')">Clear Sky</span>
+              <span onclick="setTheme('theme-petrol')">Midnight</span>
+              <span onclick="setTheme('theme-red')">Sunrise</span>
+          </div>
+        </div>
         <div class="search">
             <div id="docsearch"></div>
         </div>
