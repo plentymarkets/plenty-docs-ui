@@ -73,6 +73,10 @@
   font-weight: bold;
 }
 
+.hljs-attr {
+  color: var(--plentyWhite);
+}
+
 @media screen and (-ms-high-contrast: active) {
   .hljs-addition,
   .hljs-attribute,

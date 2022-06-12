@@ -13,10 +13,10 @@ section.models {
   color: var(--plentyWhite);
 }
 .swagger-ui a {
-  color: var(--link-font-color);
+  color: var(--secondary-font-color);
 }
 .swagger-ui a:hover {
-  color: var(--link_hover-font-color);
+  color: var(--highlight-color);
 }
 .swagger-ui input[disabled] {
   display: none;
@@ -37,7 +37,7 @@ section.models {
 .swagger-ui .opblock-description-wrapper p,
 .swagger-ui label,
 .swagger-ui p {
-  color: var(--plentyWhite);
+  color: var(--secondary-font-color);
 }
 .swagger-ui .table-container table {
   border-collapse: separate;
@@ -48,7 +48,7 @@ section.models {
   width: 100%;
 }
 .swagger-ui .dialog-ux .modal-ux {
-  background: var(--secondary-background);
+  background: var(--accent-color);
   border: 0;
   box-shadow: var(--box-shadow);
   max-width: 90vw;
@@ -69,14 +69,20 @@ section.models {
 .swagger-ui .prop-format {
   color: var(--plentyRedsFour);
 }
+pre.body-param__example.microlight {
+  background-color: white;
+}
 .swagger-ui .opblock-tag-section {
-  background: var(--secondary-background);
+  background: var(--accent-color);
   border-radius: 5px;
   margin-bottom: 0.5rem;
   box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
 }
 .swagger-ui .opblock-tag-section a.nostyle {
-  color: var(--plentyWhite);
+  color: var(--secondary-font-color);
+}
+.swagger-ui .opblock-tag-section .h4 a.nostyle {
+  color: var(--highlight-color);
 }
 .swagger-ui .opblock-tag-section .is-open {
   margin-bottom: 1rem;
@@ -95,15 +101,16 @@ section.models {
 .swagger-ui .opblock.opblock-put,
 .swagger-ui .opblock.opblock-post,
 .swagger-ui .opblock.opblock-delete,
-.swagger-ui .opblock.opblock-opt {
-  background: var(--plentyBluesOne);
+.swagger-ui .opblock.opblock-opt,
+.swagger-ui .opblock.opblock-options .opblock-summary {
+  background: var(--secondary-color);
 }
 .swagger-ui .opblock .opblock-section-header {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--accent-color);
 }
 .swagger-ui .opblock .opblock-section-header span,
 .swagger-ui .opblock .opblock-section-header h4 {
-  color: var(--plentyWhite);
+  color: var(--highlight-color);
 }
 .swagger-ui .opblock .opblock-summary-path {
   color: var(--plentyWhite);
@@ -113,13 +120,13 @@ section.models {
 .swagger-ui .opblock .opblock-summary-description {
   min-width: 20%;
   flex: 1;
-  color: var(--plentyWhite);
+  color: var(--secondary-font-color);
 }
 .swagger-ui .opblock .authorization__btn svg {
-  fill: var(--plentyWhite);
+  fill: var(--secondary-font-color);
 }
 .swagger-ui .opblock-body {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--secondary-color);
 }
 .swagger-ui .opblock-body .opblock-section .try-out {
   display: none;
@@ -137,12 +144,18 @@ section.models {
 .swagger-ui .opblock-summary-description a:hover,
 .swagger-ui .opblock-summary-description a:active,
 .swagger-ui .opblock-summary-description a:focus {
-  color: var(--plentyWhite);
+  color: var(--highlight-color);
 }
 .swagger-ui .opblock .opblock-summary-method {
   font-size: 1rem;
   min-width: 6em;
   padding: 0.25em;
+}
+pre.example.microlight > code {
+  color: var(--plentyWhite);
+}
+.swagger-ui .model-box {
+  background-color: var(--accent-color);
 }
 @media (max-width: 767px) {
   .swagger-ui .opblock-tag {
@@ -207,7 +220,7 @@ section.models {
   margin: 0 20px 15px;
 }
 .swagger-ui .scheme-container {
-  background: var(--secondary-background);
+  background: var(--accent-color);
 }
 .swagger-ui .scheme-container .schemes > label {
   margin: -20px 15px 0;
