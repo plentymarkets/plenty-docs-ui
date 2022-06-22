@@ -74,7 +74,7 @@
 }
 
 .hljs-attr {
-  color: var(--plentyWhite);
+  color: var(--hljs-font-color);
 }
 
 @media screen and (-ms-high-contrast: active) {
