@@ -29,20 +29,21 @@
     --docsearch-footer-background: #fff;
     --docsearch-footer-shadow: 0 -1px 0 0 #e0e3e8, 0 -3px 6px 0 rgba(69, 98, 155, 0.12);
     /** Style overwrites */
-    --docsearch-primary-color: #032f35;
+    --docsearch-primary-color: var(--primary-color);
     --docsearch-container-background: rgba(9, 10, 17, 0.8);
     --docsearch-modal-shadow: inset 1px 1px 0 0 #2c2e40, 0 3px 8px 0 #000309;
-    --docsearch-hit-color: #bec3c9;
+    --docsearch-hit-color: var(--secondary-font-color);
+    --docsearch-hit-active-color: var(--primary-font-color);
+    --docsearch-hit-background: var(--accent-color);
     --docsearch-hit-shadow: none;
-    --docsearch-hit-background: #0a1927;
-    --docsearch-key-gradient: linear-gradient(-26.5deg, #565872, #31355b);
+    --docsearch-key-gradient: linear-gradient(-26.5deg, var(--primary-color), var(--accent-color));
     --docsearch-key-shadow: inset 0 -2px 0 0 #282d55, inset 0 0 1px 1px #51577d, 0 2px 2px 0 rgba(3, 4, 9, 0.3);
-    --docsearch-footer-background: #1e2136;
+    --docsearch-footer-background: var(--secondary-color);;
     --docsearch-footer-shadow: inset 0 1px 0 0 rgba(73, 76, 106, 0.5), 0 -4px 8px 0 rgba(0, 0, 0, 0.2);
     --docsearch-logo-color: #374D55;
     --docsearch-searchbox-shadow: none;
-    --docsearch-hit-source-color: var(--plentyBluesPacificBlue);
-    --docsearch-highlight-color: var(--plentyBluesPacificBlue);
+    --docsearch-hit-source-color: var(--primary-color);
+    --docsearch-highlight-color: var(--primary-color);
 }
 
 .DocSearch-Button {
@@ -66,12 +67,12 @@
 .DocSearch-Button:hover{
     background: var(--docsearch-searchbox-header-focus-background);
     box-shadow: var(--docsearch-searchbox-shadow);
-    color: #fff;
+    color: black;
     outline: none;
 }
 
 svg.DocSearch-Search-Icon path{
-  fill: #fff;
+  color: var(--primary-font-color);
 }
 
 .DocSearch-Button-Container {
@@ -88,6 +89,7 @@ svg.DocSearch-Search-Icon path{
 }
 
 .DocSearch-Button-Placeholder {
+    color: var(--primary-font-color);
     font-size: 1rem;
     padding: 0 12px 0 6px
 }
@@ -101,7 +103,7 @@ svg.DocSearch-Search-Icon path{
     background: var(--docsearch-key-gradient);
     border-radius: 3px;
     box-shadow: var(--docsearch-key-shadow);
-    color: var(--plenty-secondaries-white);
+    color: var(--plentyWhite);
     display: flex;
     height: 18px;
     justify-content: center;
@@ -271,7 +273,7 @@ svg.DocSearch-Search-Icon path{
 }
 
 .DocSearch-Reset:hover {
-    color: var(--docsearch-highlight-color)
+    color: var(--secondary-font-color)
 }
 
 .DocSearch-LoadingIndicator svg,
@@ -321,7 +323,7 @@ svg.DocSearch-Search-Icon path{
 
 .DocSearch-Help,
 .DocSearch-Label {
-    color: var(--docsearch-muted-color)
+    color: var(--docsearch-logo-color)
 }
 
 .DocSearch-Help {
@@ -349,7 +351,8 @@ svg.DocSearch-Search-Icon path{
 
 .DocSearch-Hits mark {
     background: none;
-    color: var(--docsearch-highlight-color)
+    color: var(--secondary-font-color);
+    text-decoration: underline;
 }
 
 .DocSearch-HitsFooter {
@@ -408,7 +411,7 @@ svg.DocSearch-Search-Icon path{
 
 .DocSearch-Hit-source {
     background: var(--docsearch-modal-background);
-    color: var(--plentyGreysLimedSpruce);
+    color: var(--plentyGreysOne);
     font-size: .85em;
     font-weight: 500;
     line-height: 32px;
@@ -451,7 +454,7 @@ svg.DocSearch-Search-Icon path{
 
 .DocSearch-Hit-action,
 .DocSearch-Hit-icon {
-    color: var(--docsearch-muted-color);
+    color: var(--docsearch-hit-color);
     stroke-width: var(--docsearch-icon-stroke-width)
 }
 
@@ -528,7 +531,7 @@ svg.DocSearch-Hit-Select-Icon {
 }
 
 .DocSearch-Hit-path {
-    color: var(--docsearch-muted-color);
+    color: var(--docsearch-hit-color);
     font-size: .75em
 }
 

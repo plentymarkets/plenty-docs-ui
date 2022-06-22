@@ -1,9 +1,9 @@
-:root.theme-red {
+:root.theme-blue {
   /* theme colors */
-  --primary-color: var(--plentyRedsThree);
-  --secondary-color: var(--plentyLightGrey);
-  --highlight-color: var(--plentyBluesThree);
-  --accent-color: var(--plentyWhite);
+  --primary-color: var(--plentyBluesThree);
+  --secondary-color: var(--plentyWhite);
+  --highlight-color: var(--plentyBluesOne);
+  --accent-color: var(--plentyGreysFive);
   /* font colors */
   --primary-font-color: var(--plentyWhite);
   --secondary-font-color: var(--plentyBlack);
@@ -12,7 +12,7 @@
   --important-color: var(--plentyOrangesThree);
   --note-color: var(--plentyBluesThree);
   --tip-color: var(--plentyGreen);
-  --warning-color: var(--plentyYellowsTwo);
+  --warning-color: var(--plentyYellowsThree);
   /* highlightjs colors: a11y-light theme
   Based on the Tomorrow Night Eighties theme: https://github.com/isagalaev/highlight.js/blob/master/src/styles/tomorrow-night-eighties.css
   @author: ericwbailey */
