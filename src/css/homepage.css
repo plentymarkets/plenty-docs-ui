@@ -1,10 +1,10 @@
 body.homepage .navbar {
-  background-color: var(--primary-color); }
+  background-color: var(--secondary-color); }
 
 body.homepage .hero-wrapper {
-  background-color: var(--primary-color); }
+  background-color: var(--secondary-color); }
   body.homepage .hero-wrapper .title-wrapper .title {
-    color: white;
+    color: var(--secondary-font-color);
     text-align: center; }
     body.homepage .hero-wrapper .title-wrapper .title.first {
       font-size: 35px;
@@ -16,14 +16,14 @@ body.homepage .hero-wrapper {
           line-height: 1.0303;
           padding: 80px 30px 50px; } }
     body.homepage .hero-wrapper .title-wrapper .title.second {
-      color: #c9c9c9;
+      color: var(--highlight-color);
       font-family: var(--source-sans-pro); }
 
 body.homepage .tiles-outer-wrapper .tile-wrapper {
   padding: 5px;
   position: relative; }
   body.homepage .tiles-outer-wrapper .tile-wrapper .tile {
-    background: var(--plentyGreysLimedSpruce);
+    background: var(--accent-color);
     height: 170px;
     padding: 25px;
     margin: 5px;
@@ -39,7 +39,7 @@ body.homepage .tiles-outer-wrapper .tile-wrapper {
     top: 50%;
     right: 50%;
     transform: translate(50%, -50%);
-    color: white;
+    color: var(--highlight-color);
     font-size: 25px;
     pointer-events: none;
     text-align: center;
@@ -47,10 +47,12 @@ body.homepage .tiles-outer-wrapper .tile-wrapper {
 
 body.homepage .stack-wrapper {
   text-align: center;
-  background: var(--plentyBluesTealBlue);
+  background: var(--primary-color);
+  color: var(--primary-font-color);
   padding-top: 80px; }
   body.homepage .stack-wrapper .logo-wrapper {
-    background: var(--plentyBluesFadedJade);
+    background: var(--secondary-color);
+    color: var(--secondary-font-color);
     padding: 10px;
     border-radius: 15px;
     margin: 0 15px; }

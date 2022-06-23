@@ -5,7 +5,7 @@
 /* Comment */
 .hljs-comment,
 .hljs-quote {
-  color: #d4d0ab;
+  color: var(--hljs-comment);
 }
 
 /* Red */
@@ -17,7 +17,7 @@
 .hljs-selector-class,
 .hljs-regexp,
 .hljs-deletion {
-  color: #ffa07a;
+  color: var(--hljs-red);
 }
 
 /* Orange */
@@ -29,12 +29,12 @@
 .hljs-params,
 .hljs-meta,
 .hljs-link {
-  color: #f5ab35;
+  color: var(--hljs-orange);
 }
 
 /* Yellow */
 .hljs-attribute {
-  color: #ffd700;
+  color: var(--hljs-yellow);
 }
 
 /* Green */
@@ -42,26 +42,26 @@
 .hljs-symbol,
 .hljs-bullet,
 .hljs-addition {
-  color: #abe338;
+  color: var(--hljs-green);
 }
 
 /* Blue */
 .hljs-title,
 .hljs-section {
-  color: #00e0e0;
+  color: var(--hljs-blue);
 }
 
 /* Purple */
 .hljs-keyword,
 .hljs-selector-tag {
-  color: #dcc6e0;
+  color: var(--hljs-purple);
 }
 
 .hljs {
   display: block;
   overflow-x: auto;
-  background: #2b2b2b;
-  color: #f8f8f2;
+  background: var(--hljs-background);
+  color: var(--hljs-font-color);
   padding: 0.5em;
 }
 
@@ -71,6 +71,10 @@
 
 .hljs-strong {
   font-weight: bold;
+}
+
+.hljs-attr {
+  color: var(--hljs-font-color);
 }
 
 @media screen and (-ms-high-contrast: active) {

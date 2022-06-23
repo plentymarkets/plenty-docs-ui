@@ -7,12 +7,26 @@
         <a class="menu-item" href="{{ i18n page.attributes.lang 'plentymarkets_demo_system_link' }}" target="_blank">{{ i18n page.attributes.lang 'plentymarkets_demo_system' }}</a>
         <a class="menu-item" href="https://developers.plentymarkets.com/" target="_blank">{{ i18n page.attributes.lang 'developers_documentation' }}</a>
         <div class="dropdown menu-item">
-            <i class="fa-pif-language"></i>
+          <button class="dropdown-toggle"
+                  id="themeToggle"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false">
+                  <i class="fa fa-paint-brush"></i> Theme
+          </button>
+          <div class="dropdown-menu submenu-item" aria-labelledby="themeToggle">
+              <span onclick="setTheme('theme-blue')">Clear Sky</span>
+              <span onclick="setTheme('theme-petrol')">Midnight</span>
+              <span onclick="setTheme('theme-red')">Sunrise</span>
+          </div>
+        </div>
+        <div class="dropdown menu-item">
             <button class="dropdown-toggle"
                     id="langToggle"
                     data-toggle="dropdown"
                     aria-haspopup="true"
-                    aria-expanded="false">EN
+                    aria-expanded="false">
+                    <i class="fa-pif-global-marketing"></i> EN
             </button>
             <div class="dropdown-menu submenu-item"
                 aria-labelledby="langToggle">

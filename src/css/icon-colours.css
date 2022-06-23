@@ -1,43 +1,43 @@
 .black {
-  color: #000000;
+  color: var(--terraBlack);
 }
 
 .blue {
-  color: #3f54d0;
+  color: var(--terraActive);
 }
 
 .darkGrey {
-  color: #636671;
+  color: var(--terrayDarkGrey);
 }
 
 .green {
-  color: #6ad26a;
+  color: var(--terraAdd);
 }
 
 .lightGrey {
-  color: #D7D8DB;
+  color: var(--terraLightGrey);
 }
 
 .orange {
-  color: #ff873e;
+  color: var(--terraWarning);
 }
 
 .purple {
-  color: #e468f3;
+  color: var(--terraTransfer);
 }
 
 .red {
-  color: #f11539;
+  color: var(--terraAlert);
 }
 
 .skyBlue {
-  color: #24b3e0;
+  color: var(--terraInfo);
 }
 
 .white {
-  color: #FFFFFF;
+  color: var(--terraWhite);
 }
 
 .yellow {
-  color: #ffdb4c;
+  color: var(--terraAction);
 }
