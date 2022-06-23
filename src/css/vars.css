@@ -1,42 +1,4 @@
 :root {
-    --plentyBluesFadedJade: #012e35;
-    --plentyBluesTealBlue: #04485b;
-    --plentyBluesPacificBlue: #068ec2;
-    --plentyBluesPictonBlue: #5DC3F0;
-    --plentyBluesSail: #afdef8;
-    --plentyLightGrey: #F1F1F1;
-    --plentyGreysNevada: #5F767F;
-    --plentyGreysLimedSpruce: #374D55;
-    --plentyRedCrimson: #D4021D;
-    --plentyRedSeaPink: #F0A3AB;
-    --plentyMalachite: #42952D;
-    --plentyAdocYellow: #e18114;
-    --plenty-color-blue: #008ebd;
-    --plenty-color-lightblue: #90b9d7;
-    --plenty-color-red: #d4021d;
-    --plenty-color-grey: #707173;
-    --plenty-primary: var(--plenty-color-blue);
-    --plenty-secondary: #eee;
-    --plenty-secondaries-white: #ffffff;
-    --white: #fff;
-    --black: #000;
-    --plenty-color-yellow: #ffd500;
-    --plenty-color-green: #5cb85c;
-    --red: var(--plenty-color-red);
-    --yellow: var(--plenty-color-yellow);
-    --green: var(--plenty-color-green);
-    --blue: var(--plenty-color-blue);
-    --teal: var(--plenty-color-lightblue);
-    --brand-primary: var(--plenty-primary);
-    --secondary: var(--plenty-secondary);
-    --plentyStrongCyan: #008ebd;
-    --plentyVeryDarkBlue: #142637;
-    --plentyDarkCyan: #126277;
-    --plentyDarkShadeCyan: #374d55;
-    /* colors */
-    --secondary-color: var(--plentyBluesTealBlue);
-    --footer-bg-color: var(--plentyGreysLimedSpruce);
-    --color-white: var(--plenty-secondaries-white);
     /* font */
     --grau-blau-sans: "Graublau Sans";
     --source-sans-pro: "Source Sans Pro";
@@ -52,58 +14,77 @@
     --body-font-size--print: 0.9375em;
     /* 15px */
     --body-line-height: 1.15;
-    --body-font-color: var(--color-white);
+    --body-font-color: var(--plentyWhite);
     --body-font-family: var(--source-sans-pro);
     --body-font-weight-bold: 500;
     --version-font-weight: 500;
     --monospace-font-family: "Source Code Pro", monospace;
     --monospace-font-weight-bold: 500;
     /* base */
-    --panel-background: var(--plentyGreysLimedSpruce);
-    --secondary-background: var(--plentyBluesTealBlue);
-    --panel-border-color: var(--color-white);
-    --scrollbar-thumb-color: var(--plentyGreysNevada);
+    --body-background: var(--secondary-color);
+    --panel-background: var(--accent-color);
+    --panel-border-color: var(--primary-color);
+    --scrollbar-thumb-color: var(--plentyGreysTwo);
+    /* header */
+    --dropdown-background-color: var(--primary-color);
     /* navbar */
-    --navbar-background: var(--secondary-color);
+    --navbar-font-color: var(--secondary-font-color);
+    --navbar-background: var(--primary-color);
+    --navbar-dropdown-background: var(--primary-color);
     --navbar_hover-background: var(--color-black);
-    --navbar-button-background: var(--color-white);
+    --navbar-button-background: var(--accent-color);
     --navbar-button-border-color: var(--panel-border-color);
     --navbar-button-font-color: var(--body-font-color);
     --navbar-menu-border-color: var(--panel-border-color);
-    --navbar-menu-background: var(--color-white);
+    --navbar-menu-background: var(--accent-color);
     --navbar-menu-font-color: var(--body-font-color);
     --navbar-menu_hover-background: var(--color-smoke-50);
+    /* docsearch */
+    --docsearch-searchbox-background: var(--primary-color);
+    --docsearch-muted-color: var(--primary-font-color);
+    --docsearch-text-color: var(--primary-font-color);
+    --docsearch-searchbox-header-focus-background: var(--primary-color);
+    --docsearch-modal-background: var(--secondary-color);
+    --docsearch-searchbox-focus-background: var(--primary-color);
     /* nav */
-    --nav-border-color: var(--color-white);
-    --nav-line-height: 1.35;
+    --nav-background: var(--primary-color);
+    --nav-active-border-color: var(--primary-font-color);
+    --nav-active-color: var(--primary-font-color);
+    --nav-active-hover-color: var(--primary-font-color);
+    --nav-border-color: var(--highlight-color);
+    --nav-color: var(--primary-font-color);
+    --nav-hover-color: var(--primary-font-color);
     --nav-heading-font-color: var(--color-jet-30);
+    --nav-line-height: 1.35;
     --nav-muted-color: var(--color-gray-70);
     --nav-panel-divider-color: var(--color-smoke-90);
     --nav-secondary-background: var(--color-smoke-70);
     /* toolbar */
-    --toolbar-background: var(--plentyBluesTealBlue);
+    --toolbar-font-color: var(--secondary-font-color);
+    --toolbar-action-background: var(--primary-color);
+    --toolbar-action-color: var(--plentyWhite);
     --toolbar-border-color: var(--panel-border-color);
     --toolbar-muted-color: var(--color-gray-30);
     --toolbar-font-size: calc(13 / var(--rem-base) * 1rem);
     --toolbar-actions-font-size: 1rem;
-    --page-version-menu-background: var(--plentyGreysLimedSpruce);
+    --page-version-menu-background: var(--plentyGreysOne);
     --page-version-missing-font-color: var(--color-gray-30);
     /* toc */
-    --toc-border-color: var(--panel-border-color);
+    --toc-font-color: var(--secondary-font-color);
+    --toc-background-color: var(--accent-color);
+    --toc-heading-font-color: var(--doc-font-color);
+    --toc-left-border: var(--primary-color);
+    --toc-focused-color: var(--doc-font-color);
+    --toc-border-color: var(--highlight-color);
     --toc-line-height: 1.2;
     /* admonitions */
-    --caution-color: var(--color-white);
-    --caution-on-color: var(--plentyRedCrimson);
-    --important-color: var(--color-white);
-    --important-on-color: var(--plenty-color-yellow);
-    --note-color: var(--color-white);
-    --note-on-color: var(--plentyBluesPacificBlue);
-    --tip-color: var(--color-white);
-    --tip-on-color: var(--plentyMalachite);
-    --warning-color: var(--color-white);
-    --warning-on-color: var(--plentyAdocYellow);
+    --caution-on-color: var(--caution-color);
+    --important-on-color: var(--important-color);
+    --note-on-color: var(--note-color);
+    --tip-on-color: var(--tip-color);
+    --warning-on-color: var(--warning-color);
     /* logo list */
-    --card-border-color: rgba(var(--black), .125);
+    --card-border-color: rgba(var(--plentyBlack), .125);
     --card-border-radius: 0;
     --card-border-width: 0.4em;
     --logo-list-a-height: 64px;
@@ -112,27 +93,36 @@
     --logo-list-image-width: 120px;
     --grid-gutter-width: 1.5rem;
     /* doc */
+    --doc-font-color: var(--highlight-color);
+    --doc-paragraph-color: var(--secondary-font-color);
     --doc-font-size: inherit;
     --doc-font-size--desktop: calc(19 / var(--rem-base) * 1rem);
     --doc-line-height: 1.6;
     --doc-margin: 0 auto;
     --doc-margin--desktop: 0 2rem;
+    --heading-font-color: var(--highlight-color);
     --heading-font-weight: 500;
     --alt-heading-font-weight: var(--body-font-weight-bold);
-    --section-divider-color: var(--panel-border-color);
-    --link_hover-font-color: var(--plenty-color-blue);
+    --section-divider-color: var(--highlight-color);
+    --link_hover-font-color: var(--plentyBluesThree);
     --abstract-background: var(--color-smoke-70);
     --abstract-font-color: var(--color-jet-20);
     --abstract-border-color: var(--panel-border-color);
+    --admonition-background: var(--accent-color);
     --admonition-label-font-weight: var(--body-font-weight-bold);
     --caption-font-color: var(--color-gray-70);
     --caption-font-weight: var(--body-font-weight-bold);
-    --code-font-color: var(--body-font-color);
+    --code-font-color: var(--highlight-color);
     --code-block-border-radius: 5px;
-    --code-background: var(--plentyGreysNevada);
+    --code-background: var(--accent-color);
+    --collapsebox-background-color: var(--accent-color);
+    --collapsebox-text-color: var(--secondary-font-color);
+    --example-background: var(--plentyLightGrey);
     --example-border-color: var(--color-gray-70);
     --kbd-background: var(--panel-background);
     --kbd-border-color: var(--color-gray-10);
+    --link-font-color: var(--plentyWhite);
+    --link_unresolved-font-color: var(--plentyBluesThree);
     --pre-background: var(--panel-background);
     --pre-border-color: var(--panel-border-color);
     --pre-annotation-font-color: var(--color-gray-10);
@@ -141,11 +131,32 @@
     --quote-font-color: var(--color-gray-70);
     --quote-attribution-font-color: var(--color-gray-30);
     --sidebar-background: var(--color-smoke-90);
-    --table-border-color: var(--panel-border-color);
+    --tabs-background-color-is-active: var(--primary-color);
+    --tabs-background-color: var(--accent-color);
+    --tabs-text-color-is-active: var(--accent-color);
+    --tabs-text-color: var(--primary-color);
+    --table-heading-color: var(--highlight-color);
+    --table-header-background-color: var(--accent-color);
+    --table-borders-color: var(--highlight-color);
+    --table-row-even: var(--accent-color);
+    /* feedback-form */
+    --feedback-form-background: var(--accent-color);
+    --feedback-form-textarea-background: var(--secondary-color);
+    --feedback-form-textarea-border: var(--highlight-color);
+    --feedback-form-textarea-color: var(--highlight-color);
+    --feedback-form-button-background-like: var(--plentyBluesThree);
+    --feedback-form-button-color-like: var(--plentyWhite);
+    --feedback-form-button-border-like: var(--plentyBluesThree);
+    --feedback-form-button-background-dislike: var(--plentyRedsThree);
+    --feedback-form-button-color-dislike: var(--plentyWhite);
+    --feedback-form-button-border-dislike: var(--plentyRedsThree);
     /* footer */
     --footer-line-height: var(--doc-line-height);
     --footer-background: var(--footer-bg-color);
+    --footer-background-color: var(--plentyGreysOne);
     --footer-font-color: var(--doc-font-color);
+    --footer-link-font-color: var(--plentyWhite);
+    --footer-link-hover-color: var(--link_hover-font-color);
     /* dimensions and positioning */
     --navbar-height: calc(120 / var(--rem-base) * 1rem);
     --toolbar-height: calc(45 / var(--rem-base) * 1rem);
@@ -170,6 +181,6 @@
     --z-index-navbar: 4;
 
     /* redoc */
-    --marking-background-color: var(--plentyGreysLimedSpruce);
-    --marking-color: var(--color-white);
+    --marking-background-color: var(--plentyGreysOne);
+    --marking-color: var(--plentyWhite);
 }

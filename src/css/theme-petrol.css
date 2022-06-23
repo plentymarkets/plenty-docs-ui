@@ -1,0 +1,28 @@
+:root.theme-petrol {
+  /* theme colors */
+  --primary-color: var(--plentyBluesTwo);
+  --secondary-color: var(--plentyBluesOne);
+  --highlight-color: var(--plentyWhite);
+  --accent-color: var(--plentyBluesTwo);
+  /* font colors */
+  --primary-font-color: var(--plentyWhite);
+  --secondary-font-color: var(--plentyWhite);
+  /* admonition colors */
+  --caution-color: var(--plentyRedsThree);
+  --important-color: var(--plentyOrangesThree);
+  --note-color: var(--plentyBluesThree);
+  --tip-color: var(--plentyGreen);
+  --warning-color: var(--plentyYellowsThree);
+  /* highlightjs colors: a11y-dark theme
+  Based on the Tomorrow Night Eighties theme: https://github.com/isagalaev/highlight.js/blob/master/src/styles/tomorrow-night-eighties.css
+  @author: ericwbailey */
+  --hljs-background: #2b2b2b;
+  --hljs-font-color: #f8f8f2;
+  --hljs-comment: #d4d0ab;
+  --hljs-red: #ffa07a;
+  --hljs-orange: #f5ab35;
+  --hljs-yellow: #ffd700;
+  --hljs-green: #abe338;
+  --hljs-blue: #00e0e0;
+  --hljs-purple: #dcc6e0;
+}

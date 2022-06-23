@@ -1,5 +1,8 @@
+@import "colors.css";
+@import "theme-blue.css";
+@import "theme-petrol.css";
+@import "theme-red.css";
 @import "vars.css";
-@import "dark-theme.css";
 @import "fonts.css";
 @import "base.css";
 @import "body.css";
@@ -25,4 +28,6 @@
 @import "swagger-ui.css";
 @import "plenty-icon-font.css";
 @import "icon-colours.css";
+@import "search.css";
+@import "search-facets.css";
 @import "responsive.css";
