@@ -126,12 +126,12 @@
 }
 
 .doc a.bare{
-  color: var(--plentyWhite);
+  color: var(--color-white);
 }
 
 .doc mark {
   background-color: var(--code-background);
-  color: var(--code-font-color);
+  color: var(--color-white);
 }
 
 .doc .tableblock p {
@@ -142,7 +142,6 @@
 
 .doc a {
   color: var(--doc-font-color);
-  text-decoration: underline;
 }
 
 .doc a:hover {
@@ -156,10 +155,9 @@
 .doc a[href^="http://"]:not([href*="#"]):before,
 .doc a[href^="https://"]:not([href*="#"]):before {
     content: "\e940";
-    display: inline-block;
     font-family: var(--plenty-icon-font-family);
     padding: .25rem;
-    vertical-align: middle;
+    vertical-align: top;
 }
 
 .doc i.fa {
@@ -222,7 +220,6 @@
 
 .doc table.tableblock {
   border-collapse: collapse;
-  border-color: var(--table-border-color);
   font-size: calc(18 / var(--rem-base) * 1rem);
   margin: 2rem 0;
   /* enable table-layout: fixed if you want the table width to be enforced strictly */
@@ -304,14 +301,14 @@
   table-layout: fixed;
   position: relative;
   width: 100%;
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--color-white);
   border-radius: 5px;
   box-shadow: var(--box-shadow);
 }
 
 .doc .admonitionblock td.content {
   padding: 1rem;
-  padding-left: 1rem;
+  padding-left: .5rem;
   background: var(--admonition-background);
   width: 100%;
 }
@@ -320,41 +317,54 @@
   text-align: center;
   width: 4rem;
   padding: 1rem;
+  padding-right: .5rem;
   font-size: calc(18 / var(--rem-base) * 1rem);
   font-weight: var(--admonition-label-font-weight);
   text-transform: uppercase;
 }
 
+.doc .admonitionblock.caution {
+  border-left: 5px solid var(--caution-on-color);
+}
+
 .doc .admonitionblock.caution td.icon {
-  background-color: var(--caution-on-color);
-  color: var(--plentyWhite);
+  color: var(--caution-on-color);
 }
 
 .doc .admonitionblock.caution td.icon i::after {
   content: '\e95a';
 }
 
+.doc .admonitionblock.important {
+  border-left: 5px solid var(--important-on-color);
+}
+
 .doc .admonitionblock.important td.icon {
-  background-color: var(--important-on-color);
-  color: var(--plentyWhite);
+  color: var(--important-on-color);
 }
 
 .doc .admonitionblock.important td.icon i::after {
   content: '\e929';
 }
 
+.doc .admonitionblock.note {
+  border-left: 5px solid var(--note-on-color);
+}
+
 .doc .admonitionblock.note td.icon {
-  background-color: var(--note-on-color);
-  color: var(--plentyWhite);
+  color: var(--note-on-color);
 }
 
 .doc .admonitionblock.note td.icon i::after {
   content: '\e929';
 }
 
+.doc .admonitionblock.tip {
+  border-left: 5px solid var(--tip-on-color);
+}
+
 .doc .admonitionblock.tip td.icon {
-  background-color: var(--tip-on-color);
-  color: var(--plentyWhite);
+  color: var(--tip-on-color);
 }
 
 .doc .admonitionblock.tip td.icon i::after {
@@ -367,9 +377,12 @@
   content: '';
 }
 
+.doc .admonitionblock.warning {
+  border-left: 5px solid var(--warning-on-color);
+}
+
 .doc .admonitionblock.warning td.icon {
-  background-color: var(--warning-on-color);
-  color: var(--plentyWhite);
+  color: var(--warning-on-color);
 }
 
 .doc .admonitionblock.warning td.icon i::after {

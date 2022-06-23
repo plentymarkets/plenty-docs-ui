@@ -2,7 +2,7 @@
 
 .feedback-form-wrapper textarea {
     width: 100%;
-    background: var(--secondary-color);
+    background: var(--primary-color);
     border: 2px solid var(--feedback-form-textarea-border);
     padding: 10px;
     color: var(--feedback-form-textarea-color);
@@ -15,7 +15,6 @@
 
 .feedback-form-wrapper textarea::placeholder {
     color: var(--feedback-form-textarea-color);
-    opacity: 0.5;
 }
 
 .feedback-form-wrapper {

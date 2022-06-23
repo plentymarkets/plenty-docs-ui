@@ -6,7 +6,7 @@
   font-size: calc(17 / var(--rem-base) * 1rem);
   z-index: var(--z-index-nav);
   visibility: hidden;
-  background: var(--navbar-background);
+  background: var(--body-background);
   box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.2);
 }
 
@@ -191,7 +191,7 @@ span.nav-text, a.nav-link {
 .is-current-page > .nav-link,
 .is-current-page > .nav-text {
   font-weight: 500;
-  border-left: 3px solid var(--plentyWhite);
+  border-left: 3px solid var(--color-white);
   padding-left: 0.5em;
   color: var(--link-font-color);
 }
@@ -290,13 +290,13 @@ span.nav-text, a.nav-link {
 }
 
 .nav-panel-explore .component .version a:hover {
-  color: var(--nav-hover-color);
-  border-color: var(--nav-border-color);
+  color: var(--plentyBluesPictonBlue);
+  border-color: var(--plentyBluesPictonBlue);
 }
 .nav-panel-explore .component .version a {
   border: 2px solid var(--nav-border-color);
   border-radius: 1.5rem;
-  color: var(--nav-color);
+  color: inherit;
   opacity: 0.75;
   white-space: nowrap;
   padding: 4px 7px;
@@ -304,13 +304,13 @@ span.nav-text, a.nav-link {
 }
 
 .nav-panel-explore .component .is-current a {
-  border-color: var(--nav-active-border-color);
-  color: var(--nav-active-color);
+  border-color: var(--plentyBluesPacificBlue);
+  color: var(--plentyBluesPacificBlue);
 }
 
 .nav-panel-explore .component .is-current a:hover {
-  border-color: var(--nav-active-border-color);
-  color: var(--nav-active-hover-color);
+  border-color: var(--plentyBluesPacificBlue);
+  color: var(--plentyBluesPacificBlue);
 }
 
 /*
