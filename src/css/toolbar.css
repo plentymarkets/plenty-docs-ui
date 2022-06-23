@@ -18,7 +18,7 @@
     position: absolute;
     bottom: 0;
     width: 100vw;
-    border-bottom: 1px solid var(--plentyGreysLimedSpruce);
+    border-bottom: 1px solid var(--plentyGreysOne);
     margin: var(--doc-margin--desktop);
     z-index: -1;
   }

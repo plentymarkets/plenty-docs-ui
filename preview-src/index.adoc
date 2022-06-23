@@ -1,25 +1,26 @@
 = Hardware and Software Requirements
-:page-layout: default
-
 Author Name
 :idprefix:
 :idseparator: -
 :!example-caption:
 :!table-caption:
+:page-lang: de-de
+:page-layout: default
 :page-pagination:
+:page-toclevels: 5
+:sectnums: |,all|
+:sectnumlevels: 5
 
-image:multirepo-ssg.svg[Multirepo SSG,200,float=right]
 Platonem complectitur mediocritatem ea eos.
 Ei nonumy deseruisse ius.
 Mel id omnes verear.
 Vis no velit audiam, sonet <<dependencies,praesent>> eum ne.
 *Prompta eripuit* nec ad.
 Integer diam enim, dignissim eget eros et, ultricies mattis odio.
+
 Vestibulum consectetur nec urna a luctus.
 Quisque pharetra tristique arcu fringilla dapibus.
 Curabitur ut massa aliquam, cursus enim et, accumsan lectus.
-
-dadasdd
 
 = heading here
 == heading here
@@ -96,16 +97,24 @@ src/
 
 Eu mea munere vituperata constituam.
 
-[%autowidth]
+[cols="1,4"]
 |===
-|Input | Output
+| Marktplatz-Datenfeld | plentymarkets Datenfeld
 
-m|"foo\nbar"
-l|foo
-bar
+| Kategoriegruppenbezogene Attribute
+| Aktuelle Informationen zu den OTTO Market-Attributen findest du in der Kategorienliste von OTTO Market link:https://og2gether-my.sharepoint.com/:x:/g/personal/micha_saake_otto_de/EXg5Id8bTxNKuV8mRkQ1wrsBNFuBrjP8iQJINZjcezvjdg?rtime=3FovyUEf2Ug[in der Registerkarte "Attributsliste"^]
+
+| *Lieferzeit in Tagen* +
+(Pflichtfeld)
+| Gib als Lieferzeit die Gesamtlieferzeit in Tagen an, also vom Zeitpunkt der Bestellung bis zur Zustellung durch einen Transportdienstleister. +
+Beim Export übersetzt OTTO die Werte in die Kund:innen bekannten Lieferaussagen von OTTO.
+
+| *Kategorie*
+| Aktuelle Informationen zu den OTTO Market-Attributen findest du in der Kategorieliste von OTTO Market link:https://og2gether-my.sharepoint.com/:x:/g/personal/micha_saake_otto_de/EXg5Id8bTxNKuV8mRkQ1wrsBNFuBrjP8iQJINZjcezvjdg?rtime=ueiZ-kgf2Ug[in der Registerkarte "Übersicht Kategorien"^]
+
 |===
 
-Select menu:File[Open Project] to open the project in your IDE.
+_Select_ menu:File[Open Project] to open the project in your IDE.
 Per ea btn:[Cancel] inimicus.
 Ferri kbd:[F11] tacimates constituam sed ex, eu mea munere vituperata kbd:[Ctrl,T] constituam.
 
@@ -124,6 +133,9 @@ Eos suscipit scaevola at.
 No sea, at invenire voluptaria mnesarchum has.
 Ex nam suas nemore dignissim, vel apeirian democritum et.
 At ornatus splendide sed, phaedrum omittantur usu an, vix an noster voluptatibus.
+
+[.instruction]
+Carry out the following steps:
 
 . potenti donec cubilia tincidunt
 . etiam pulvinar inceptos velit quisque aptent himenaeos
@@ -214,16 +226,27 @@ Watch out!
 Don't forget this step!
 ====
 
-.Key Points to Remember
-[TIP]
-====
-If you installed the CLI and the default site generator globally, you can upgrade both of them with the same command.
-
- $ npm i -g @antora/cli @antora/site-generator-default
-====
-
 Nominavi luptatum eos, an vim hinc philosophia intellegebat.
 Eu mea inani iriure.
+
+[.collapseBox]
+.Titel
+--
+Inhalt
+
+[NOTE]
+.Notiz
+====
+Block
+====
+--
+
+[.logoList]
+* <<maerkte/amazon/amazon-einrichten#, image:multirepo-ssg.svg[Multirepo SSG,200]>>
+* <<maerkte/amazon/amazon-einrichten#, image:multirepo-ssg.svg[Multirepo SSG,200]>>
+* <<maerkte/amazon/amazon-einrichten#, image:multirepo-ssg.svg[Multirepo SSG,200]>>
+* <<maerkte/amazon/amazon-einrichten#, image:multirepo-ssg.svg[Multirepo SSG,200]>>
+* <<maerkte/amazon/amazon-einrichten#, image:multirepo-ssg.svg[Multirepo SSG,200]>>
 
 [discrete]
 == Voluptua singulis
