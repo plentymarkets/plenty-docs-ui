@@ -20,7 +20,7 @@
   margin: 0 -0.5px;
   padding-bottom: 0.25rem;
   margin-bottom: 0.25rem;
-  border-bottom: 1px solid var(--toc-border-color);
+  border-bottom: 1px solid var(--plentyLightGrey);
 }
 
 .toc.sidebar .toc-menu h3 {

@@ -7,8 +7,7 @@ body {
 }
 
 .navbar {
-  background: var(--secondary-color);
-  box-shadow: var(--box-shadow);
+  background: var(--primary-color);
   color: var(--navbar-font-color);
   font-size: calc(16 / var(--rem-base) * 1rem);
   height: var(--navbar-height);
@@ -38,7 +37,7 @@ body {
 @media screen and (min-width: 1024px) {
   .search {
     padding-left: 25px;
-    border-left: 1px solid var(--navbar-font-color);
+    border-left: 1px solid white;
     margin-left: 25px;
   }
 }
@@ -46,11 +45,15 @@ body {
 .search input {
   background: none;
   border: 0;
-  border-bottom: 2px solid var(--navbar-font-color);
+  border-bottom: 2px solid white;
   width: 250px;
   padding: 3px 0;
-  color: var(--navbar-font-color);
+  color: white;
   outline: none;
+}
+
+.search input::placeholder {
+  color: lightgray;
 }
 
 .search img {
@@ -252,12 +255,7 @@ body {
   background: var(--dropdown-background-color);
   color: white;
   padding: 10px;
-  min-width: max-content;
-}
-
-.dropdown-menu.submenu-item > span {
-  display: block;
-  padding: 1rem 0;
+  min-width: unset;
 }
 
 button:focus {
@@ -297,6 +295,7 @@ button:focus {
 }
 
 .navbar .left .logo:last-child img {
+  border-left: 1px solid white;
   padding-top: 2px;
   padding-bottom: 2px;
   padding-left: 5px;
@@ -338,7 +337,7 @@ button:focus {
 }
 
 .navbar .right .menu-wrapper .submenu-wrapper .submenu-item{
-  color: var(--plentyWhite);
+  color: var(--plenty-secondaries-white);
 }
 
 .navbar .right .menu-wrapper .submenu-wrapper .submenu-item:not(:first-of-type) {

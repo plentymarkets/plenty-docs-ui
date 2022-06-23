@@ -58,13 +58,12 @@ a.nav-link {
 code,
 kbd,
 pre {
-  background-color: var(--code-background);
-  color: var(--code-font-color);
   font-family: var(--monospace-font-family);
+  color: var(--color-white);
 }
 
 pre code {
-  color: var(--code-font-color);
+  color: var(--color-white);
 }
 
 b,
