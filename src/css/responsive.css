@@ -4,6 +4,9 @@
     }
   }
 @media screen and (max-width: 1023px) {
+  :root {
+    --navbar-height: calc(180 / var(--rem-base) * 1rem);
+  }
   .mobile-no-scroll {
     position: fixed;
   }
