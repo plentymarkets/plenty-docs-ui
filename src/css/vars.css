@@ -133,8 +133,8 @@
     --sidebar-background: var(--color-smoke-90);
     --tabs-background-color-is-active: var(--primary-color);
     --tabs-background-color: var(--accent-color);
-    --tabs-text-color-is-active: var(--accent-color);
-    --tabs-text-color: var(--primary-color);
+    --tabs-text-color-is-active: var(--primary-font-color);
+    --tabs-text-color: var(--secondary-font-color);
     --table-heading-color: var(--highlight-color);
     --table-header-background-color: var(--accent-color);
     --table-borders-color: var(--highlight-color);
