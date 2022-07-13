@@ -247,7 +247,6 @@ body {
 .dropdown-menu {
   top: 0;
   margin-top: 1.5rem;
-  left: 20px;
   cursor: pointer;
   background: var(--dropdown-background-color);
   color: white;
@@ -258,6 +257,10 @@ body {
 .dropdown-menu.submenu-item > span {
   display: block;
   padding: 1rem 0;
+}
+
+.dropdown-menu.theme-dropdown {
+  left: 20px;
 }
 
 button:focus {
