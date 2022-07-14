@@ -5,7 +5,10 @@
   }
 @media screen and (max-width: 1023px) {
   :root {
-    --navbar-height: calc(180 / var(--rem-base) * 1rem);
+    --navbar-height: 11.5rem;
+  }
+  .dropdown-menu.theme-dropdown {
+    left: 0px;
   }
   .mobile-no-scroll {
     position: fixed;
