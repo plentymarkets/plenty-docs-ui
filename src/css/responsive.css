@@ -4,9 +4,16 @@
     }
   }
 @media screen and (max-width: 1023px) {
-  :root {
-    --navbar-height: 11.5rem;
+  body {
+    padding-top: var(--navbar-height--mobile);
   }
+  .navbar {
+    height: var(--navbar-height--mobile);
+  }
+  .nav-container {
+    top: var(--navbar-height--mobile);
+  }
+
   .dropdown-menu.theme-dropdown {
     left: 0px;
   }
@@ -16,7 +23,7 @@
 
   .searchbar form {
       position: fixed;
-      top: calc(var(--navbar-height) + var(--toolbar-height));
+      top: calc(var(--navbar-height--mobile) + var(--toolbar-height));
       right: 0;
       bottom: 0;
       left: 0;
@@ -31,7 +38,7 @@
 
   aside.facets.sidebar {
     position: fixed;
-    top: calc(var(--navbar-height) + var(--toolbar-height));
+    top: calc(var(--navbar-height--mobile) + var(--toolbar-height));
     right: 0;
     bottom: 0;
     left: 0;
