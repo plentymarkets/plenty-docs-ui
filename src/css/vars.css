@@ -138,7 +138,7 @@ html {
     --table-heading-color: var(--highlight-color);
     --table-header-background-color: var(--accent-color);
     --table-borders-color: var(--highlight-color);
-    --table-row-even: var(--accent-color);
+    --table-stripe-background: var(--accent-color);
     /* feedback-form */
     --feedback-form-background: var(--accent-color);
     --feedback-form-textarea-background: var(--secondary-color);

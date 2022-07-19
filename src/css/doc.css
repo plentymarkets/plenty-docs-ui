@@ -223,6 +223,8 @@
 .doc table.tableblock {
   border-collapse: collapse;
   border-color: var(--table-border-color);
+  border-style: solid;
+  border-width: 0px;
   font-size: calc(18 / var(--rem-base) * 1rem);
   margin: 2rem 0;
   /* enable table-layout: fixed if you want the table width to be enforced strictly */
@@ -255,6 +257,26 @@
 
 .doc table.tableblock td:not(:first-child) {
   border-left: 1px solid var(--table-borders-color);
+}
+
+.doc table.grid-none > * > tr > * {
+  border-width: 0px;
+}
+
+.doc table.tableblock thead th {
+  border-bottom: 0px;
+}
+
+.doc table.tableblock.grid-none td:not(:first-child) {
+  border-left: 0px;
+}
+
+.doc table.stripes-all > tbody > tr,
+.doc table.stripes-odd > tbody > tr:nth-of-type(odd),
+.doc table.stripes-even > tbody > tr:nth-of-type(even),
+.doc table.stripes-hover > tbody > tr:hover {
+  background: var(--table-stripe-background);
+  filter: contrast(0.75);
 }
 
 .doc .halign-left {
