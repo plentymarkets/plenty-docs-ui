@@ -279,6 +279,11 @@
   filter: contrast(0.75);
 }
 
+.tableblock .ulist:first-child,
+.tableblock .olist:first-child {
+  margin: 0rem;
+}
+
 .doc .halign-left {
   text-align: left;
 }
