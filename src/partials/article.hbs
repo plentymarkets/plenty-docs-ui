@@ -9,8 +9,8 @@
         {{/with}}
         {{{page.contents}}}
     {{/if}}
+    {{> pagination}}
     {{#unless (eq page.layout '404')}}
         {{> feedback-form location='content' }}
     {{/unless}}
-    {{> pagination}}
 </article>
