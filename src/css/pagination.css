@@ -28,14 +28,6 @@ nav.pagination span::before {
   padding-bottom: 0.1em;
 }
 
-nav.pagination .prev::before {
-  content: "Prev";
-}
-
-nav.pagination .next::before {
-  content: "Next";
-}
-
 nav.pagination a {
   font-weight: var(--body-font-weight-bold);
   line-height: 1.3;
