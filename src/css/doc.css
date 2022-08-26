@@ -367,7 +367,8 @@
 }
 
 .doc .admonitionblock.important td.icon i::after {
-  content: '\e929';
+  font-family: "FontAwesome";
+  content: '\f06a';
 }
 
 .doc .admonitionblock.note td.icon {
@@ -376,7 +377,8 @@
 }
 
 .doc .admonitionblock.note td.icon i::after {
-  content: '\e929';
+  font-family: "FontAwesome";
+  content: '\f249';
 }
 
 .doc .admonitionblock.tip td.icon {
@@ -385,13 +387,8 @@
 }
 
 .doc .admonitionblock.tip td.icon i::after {
-  content: '\e92a';
-}
-
-.doc .admonitionblock.tip .icon i[class^="fa fa-"]::after,
-.doc .admonitionblock.important .icon i[class^="fa fa-"]::after
-{
-  content: '';
+  font-family: "FontAwesome";
+  content: '\f0eb';
 }
 
 .doc .admonitionblock.warning td.icon {
@@ -400,8 +397,8 @@
 }
 
 .doc .admonitionblock.warning td.icon i::after {
-  content: '\e929';
-  transform: rotate(180deg);
+  font-family: "FontAwesome";
+  content: '\f071';
 }
 
 .doc .admonitionblock td.icon i {
@@ -410,6 +407,7 @@
   font-size: 2em;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
 }
 
 .doc .admonitionblock td.icon i::after {
