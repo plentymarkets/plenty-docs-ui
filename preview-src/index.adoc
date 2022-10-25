@@ -10,6 +10,7 @@ Author Name
 :page-toclevels: 5
 :sectnums: |,all|
 :sectnumlevels: 5
+:stem: latexmath
 
 Platonem complectitur mediocritatem ea eos.
 Ei nonumy deseruisse ius.
@@ -140,6 +141,8 @@ Carry out the following steps:
 . potenti donec cubilia tincidunt
 . etiam pulvinar inceptos velit quisque aptent himenaeos
 . lacus volutpat semper porttitor aliquet ornare primis nulla enim
+
+latexmath:[LDEK_{neu} = {LDEK_{alt} \cdot Menge_{alt} + EK_{neu} \cdot Menge_{neu}\over Menge_{alt} + Menge_{neu}}]
 
 Natum facilisis theophrastus an duo.
 No sea, at invenire voluptaria mnesarchum has.
