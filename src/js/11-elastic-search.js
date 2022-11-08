@@ -31,7 +31,7 @@ class ElasticSearch {
     this.client = window.ElasticAppSearch.createClient({
       searchKey: 'search-j8q2jpghrg9e28z8rj6sqfg1',
       engineName: engine,
-      endpointBase: 'https://plenty-docs-search.ent.eu-central-1.aws.cloud.es.io',
+      endpointBase: 'https://plenty-docs-search-8.ent.eu-central-1.aws.cloud.es.io',
     })
   }
 
