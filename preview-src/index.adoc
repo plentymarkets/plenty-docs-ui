@@ -4,13 +4,15 @@ Author Name
 :idseparator: -
 :!example-caption:
 :!table-caption:
-:page-lang: de-de
+:page-lang: en-gb
 :page-layout: default
 :page-pagination:
 :page-toclevels: 5
 :sectnums: |,all|
 :sectnumlevels: 5
 :stem: latexmath
+:page-forum-category-name: OTTO Market
+:page-forum-category-link: https://forum.plentymarkets.com/c/multi-channel/otto-market/460
 
 Platonem complectitur mediocritatem ea eos.
 Ei nonumy deseruisse ius.
