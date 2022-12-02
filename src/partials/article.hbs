@@ -11,6 +11,9 @@
     {{/if}}
     {{> pagination}}
     {{#unless (eq page.layout '404')}}
+        {{#if (and page.attributes.forum-category-link page.attributes.forum-category-name)}}
+            {{> forum-info }}
+        {{/if}}
         {{> feedback-form location='content' }}
     {{/unless}}
 </article>
