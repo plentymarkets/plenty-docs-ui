@@ -35,7 +35,7 @@
 .nav {
   background: var(--nav-background);
   position: relative;
-  top: var(--toolbar-height);
+  top: var(--drawer-height);
   height: var(--nav-height);
 }
 
@@ -59,7 +59,7 @@
 .nav .panels {
   display: flex;
   padding-left: 20px;
-  flex-direction: column-reverse;
+  flex-direction: column;
   height: inherit;
   width: 100%;
 }
@@ -201,17 +201,15 @@ span.nav-text, a.nav-link {
   display: flex;
   flex-direction: column;
   position: absolute;
+  bottom: 0;
   right: 0;
-  top: 0;
   left: 0;
   max-height: calc(50% + var(--drawer-height));
   padding-left: 25px;
-  padding-top: 10px;
 }
 
 .nav-panel-explore.is-active {
-  height: 100%;
-  max-height: 100%;
+  max-height: 75%;
 }
 
 .nav-panel-explore .context {
