@@ -10,9 +10,6 @@
   .navbar {
     height: var(--navbar-height--mobile);
   }
-  .nav-container {
-    top: var(--navbar-height--mobile);
-  }
 
   .dropdown-menu.theme-dropdown {
     left: 0px;
