@@ -2,11 +2,7 @@
     display: none;
 }
 
-@media screen and (min-width: 1024px) {
-    html:has(body header .navbar .container-fluid #banner) {
-        --navbar-height: calc(180 / var(--rem-base) * 1rem);
-    }
-        
+@media screen and (min-width: 1024px) {        
     #banner {
         background-color: var(--note-color);
         color: var(--plentyWhite);

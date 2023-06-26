@@ -159,6 +159,7 @@ html {
     --footer-link-hover-color: var(--link_hover-font-color);
     /* dimensions and positioning */
     --navbar-height: calc(120 / var(--rem-base) * 1rem);
+    --navbar-height-banner: calc(180 / var(--rem-base) * 1rem);
     --navbar-height--mobile: calc(200 / var(--rem-base) * 1rem);
     --toolbar-height: calc(45 / var(--rem-base) * 1rem);
     --drawer-height: calc(77 / var(--rem-base) * 1rem);
