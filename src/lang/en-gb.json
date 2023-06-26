@@ -9,6 +9,10 @@
   "plentymarkets_demo_system_link": "http://plentymarkets.com/free-trial/",
   "developers_documentation": "Developers docs",
 
+  "bannerText": "Since 12 June, we're no longer updating the manual.",
+  "bannerLink": "https://forum.plentymarkets.com/t/726144",
+  "bannerLinkText": "For further information, refer to the forum.",
+
   "search_placeholder_text": "Enter search keywords...",
   "search_query_label": "Search query:",
   "loading_results": "Loading results...",
