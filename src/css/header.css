@@ -6,6 +6,10 @@ body {
   padding-top: var(--navbar-height);
 }
 
+body:has(header .navbar .container-fluid #banner) {
+  padding-top: var(--navbar-height-banner);
+}
+
 .navbar {
   background: var(--secondary-color);
   box-shadow: var(--box-shadow);
@@ -18,6 +22,10 @@ body {
   word-wrap: break-word;
   z-index: var(--z-index-navbar);
   padding: 0;
+}
+
+.navbar:has(.container-fluid #banner) {
+  height: var(--navbar-height-banner);
 }
 
 .navbar .logo img {
