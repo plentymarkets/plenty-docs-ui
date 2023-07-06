@@ -46,7 +46,7 @@ if (protocol !== 'file:' && !/localhost|:5252/i.test(host)) {
 
     const typic = getObjects(dataObj, 'languageID', langObj[0].languageID)
     // Fallback solution - go to nextlang homepage
-    if (!typic[nextLang] && !typic[nextLang].url) {
+    if (!typic[nextLang] || !typic[nextLang].url) {
       window.location.href = theUrl + '/index.html'
     }
 
