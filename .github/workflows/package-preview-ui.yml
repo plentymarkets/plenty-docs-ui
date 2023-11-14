@@ -27,6 +27,9 @@ jobs:
       - name: Setup gulp
         run: npm install gulp-cli --global
 
+      - name: NPM install
+        run: npm install
+
       - name: Package UI
         run: gulp bundle
 
