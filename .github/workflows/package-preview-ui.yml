@@ -25,7 +25,7 @@ jobs:
           check-latest: true
 
       - name: Setup gulp
-        run: npm install gulp-cli
+        run: npm install gulp-cli --global
 
       - name: Package UI
         run: gulp bundle
