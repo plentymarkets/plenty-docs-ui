@@ -27,18 +27,6 @@ const cleanTask = createTask({
   call: task.remove(['build', 'public']),
 })
 
-const lintJsTask = createTask({
-  name: 'lint:js',
-  desc: 'Lint the JavaScript source files using eslint (JavaScript Standard Style)',
-  call: task.lintJs(glob.js),
-})
-
-const lintTask = createTask({
-  name: 'lint',
-  desc: 'Lint the CSS and JavaScript source files',
-  call: parallel(lintJsTask),
-})
-
 const formatTask = createTask({
   name: 'format',
   desc: 'Format the JavaScript source files using prettify (JavaScript Standard Style)',

@@ -13,6 +13,9 @@
   "browserslist": [
     "last 2 versions"
   ],
+  "scripts": {
+    "lint": "eslint -c .eslintrc gulpfile.js gulp.d/**/*.js src/**/*.js"
+  },
   "devDependencies": {
     "@babel/core": "^7.23.3",
     "@babel/preset-env": "^7.23.3",
@@ -33,7 +36,6 @@
     "gulp-babel": "^8.0.0",
     "gulp-concat": "~2.6",
     "gulp-connect": "~5.7",
-    "gulp-eslint": "~6.0",
     "gulp-imagemin": "~8.0",
     "gulp-postcss": "~9.0",
     "gulp-stylelint": "~13.0",
