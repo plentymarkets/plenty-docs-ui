@@ -20,6 +20,20 @@ const uglify = require('gulp-uglify')
 const babel = require('gulp-babel')
 const vfs = require('vinyl-fs')
 
+const noop = () => {}
+
+function postcssPseudoElementFixer (css, result) {
+  css.walkRules(/(?:^|[^:]):(?:before|after)/, (rule) => {
+    rule.selector = rule.selectors.map((it) => it.replace(/(^|[^:]):(before|after)$/, '$1::$2')).join(',')
+  })
+}
+
+const cssnanoPlugin = cssnano({ preset: 'default' })
+const customCssnanoPlugin = {
+  ...cssnanoPlugin,
+  process: (...args) => cssnanoPlugin.process(...args).then((css, result) => postcssPseudoElementFixer(css, result)),
+}
+
 module.exports = (src, dest, preview) => () => {
   const opts = { base: src, cwd: src }
   const sourcemaps = preview || process.env.SOURCEMAPS === 'true'
@@ -48,11 +62,9 @@ module.exports = (src, dest, preview) => () => {
       },
     ]),
     postcssVar({ preserve: preview }),
-    preview ? postcssCalc : () => {},
+    preview ? postcssCalc : noop,
     autoprefixer,
-    preview
-      ? () => {}
-      : (css, result) => cssnano({ preset: 'default' })(css, result).then(() => postcssPseudoElementFixer(css, result)),
+    preview ? noop : customCssnanoPlugin,
   ]
 
   return merge(
@@ -119,10 +131,4 @@ module.exports = (src, dest, preview) => () => {
     vfs.src('layouts/*.hbs', opts),
     vfs.src('partials/*.hbs', opts)
   ).pipe(vfs.dest(dest, { sourcemaps: sourcemaps && '.' }))
-}
-
-function postcssPseudoElementFixer (css, result) {
-  css.walkRules(/(?:^|[^:]):(?:before|after)/, (rule) => {
-    rule.selector = rule.selectors.map((it) => it.replace(/(^|[^:]):(before|after)$/, '$1::$2')).join(',')
-  })
 }
