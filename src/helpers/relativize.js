@@ -19,6 +19,6 @@ module.exports = (to, from, ctx) => {
     : (path.relative(path.dirname(from + '.'), to) || '.') + (isDir(to) ? '/' + hash : hash)
 }
 
-function isDir (str) {
+function isDir(str) {
   return str.charAt(str.length - 1) === '/'
 }

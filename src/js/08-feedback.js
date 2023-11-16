@@ -1,7 +1,7 @@
 const FEEDBACK_TTL = 12 * 60 * 60 * 1000
 
 class FeedbackHandler {
-  constructor ({ space, key, token, page, selector }) {
+  constructor({ space, key, token, page, selector }) {
     this.page = page
     this.pageHash = this.createPageHash(window.location.href)
     this.selector = selector
@@ -11,22 +11,22 @@ class FeedbackHandler {
     this.registerListener()
   }
 
-  registerListener () {
+  registerListener() {
     $(this.selector + ' button[type=submit]').on('click', (event) => this.submitHandler(event))
   }
 
-  initializeForm () {
+  initializeForm() {
     if (this.feedbackWasGivenBefore()) {
       this.hideForm()
     }
   }
 
-  hideForm () {
+  hideForm() {
     $(this.selector).hide()
     $(this.selector + '+ .feedback-submitted').removeClass('d-none')
   }
 
-  submitHandler (event) {
+  submitHandler(event) {
     event.preventDefault()
 
     const target = event.currentTarget
@@ -37,14 +37,13 @@ class FeedbackHandler {
     const message = $(textareaSelector).val() || 'No message was specified'
 
     const requestData = {
-      text: `New ${opinion} feedback on page: <${window.location.href}|${this.page}>\n\n` +
-        `Message below\n${message}`,
+      text: `New ${opinion} feedback on page: <${window.location.href}|${this.page}>\n\n` + `Message below\n${message}`,
     }
 
     this.sendFeedback(requestData)
   }
 
-  feedbackWasGivenBefore () {
+  feedbackWasGivenBefore() {
     const feedbackTime = window.localStorage.getItem('feedback_' + this.pageHash)
     if (!feedbackTime) {
       return false
@@ -60,7 +59,7 @@ class FeedbackHandler {
     return true
   }
 
-  sendFeedback (data) {
+  sendFeedback(data) {
     if (this.isSubmitting) {
       return
     }
@@ -68,31 +67,29 @@ class FeedbackHandler {
     $(this.selector).addClass('disabled')
     this.isSubmitting = true
 
-    $.ajax(
-      {
-        type: 'POST',
-        url: this.endpoint,
-        dataType: 'json',
-        contentType: 'application/json',
-        data: JSON.stringify(data),
-        success: () => {
-          this.onSuccess()
-        },
-        complete: () => {
-          $(this.selector).removeClass('disabled')
-          this.isSubmitting = false
-        },
-      }
-    )
+    $.ajax({
+      type: 'POST',
+      url: this.endpoint,
+      dataType: 'json',
+      contentType: 'application/json',
+      data: JSON.stringify(data),
+      success: () => {
+        this.onSuccess()
+      },
+      complete: () => {
+        $(this.selector).removeClass('disabled')
+        this.isSubmitting = false
+      },
+    })
   }
 
-  onSuccess () {
+  onSuccess() {
     const now = new Date()
     window.localStorage.setItem('feedback_' + this.pageHash, JSON.stringify(now.getTime() + FEEDBACK_TTL))
     this.hideForm()
   }
 
-  createPageHash (string) {
+  createPageHash(string) {
     let hash = 0
 
     if (string.length === 0) {
@@ -101,7 +98,7 @@ class FeedbackHandler {
 
     for (let i = 0; i < string.length; i++) {
       const char = string.charCodeAt(i)
-      hash = ((hash << 5) - hash) + char
+      hash = (hash << 5) - hash + char
       hash = hash & hash
     }
 
@@ -109,7 +106,7 @@ class FeedbackHandler {
   }
 }
 
-(function () {
+;(function () {
   $(document).ready(function () {
     // eslint-disable-next-line
     new FeedbackHandler({

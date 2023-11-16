@@ -2,8 +2,12 @@ const protocol = window.location.protocol
 const host = window.location.host
 if (protocol !== 'file:' && !/localhost|:5252/i.test(host)) {
   const currentLocation = window.location.pathname
-  const locationObj = currentLocation.includes('/en-gb/') ? currentLocation.split('/en-gb/') : currentLocation.split('/de-de/')
-  const semifinalPath = locationObj[1].includes('manual/main') ? locationObj[1].split('manual/main')[1] : '/' + locationObj[1]
+  const locationObj = currentLocation.includes('/en-gb/')
+    ? currentLocation.split('/en-gb/')
+    : currentLocation.split('/de-de/')
+  const semifinalPath = locationObj[1].includes('manual/main')
+    ? locationObj[1].split('manual/main')[1]
+    : '/' + locationObj[1]
   const ll = locationObj[1].includes('manual/main') ? '/manual/main' : '/'
 
   let nextLang = 1
@@ -22,10 +26,9 @@ if (protocol !== 'file:' && !/localhost|:5252/i.test(host)) {
   const theUrl = locationObj[0] + '/' + nextLangTxt + ll
 
   if (!window.localStorage.getItem('dataLangItems')) {
-    $.getJSON('../../../_/lang/mapper.json')
-      .done((data) => {
-        window.localStorage.setItem('dataLangItems', JSON.stringify(data))
-      })
+    $.getJSON('../../../_/lang/mapper.json').done((data) => {
+      window.localStorage.setItem('dataLangItems', JSON.stringify(data))
+    })
   }
 
   $('#langToggle').html(currentLangLabel)
@@ -55,20 +58,19 @@ if (protocol !== 'file:' && !/localhost|:5252/i.test(host)) {
   })
 }
 
-function getObjects (obj, key, val) {
+function getObjects(obj, key, val) {
   let objects = []
   for (const i in obj) {
     if (!Object.prototype.hasOwnProperty.call(obj, i)) continue
     if (typeof obj[i] === 'object') {
       objects = objects.concat(getObjects(obj[i], key, val))
-    } else
-      if ((i === key && obj[i] === val) || (i === key && val === '')) {
+    } else if ((i === key && obj[i] === val) || (i === key && val === '')) {
+      objects.push(obj)
+    } else if (obj[i] === val && key === '') {
+      if (objects.lastIndexOf(obj) === -1) {
         objects.push(obj)
-      } else if (obj[i] === val && key === '') {
-        if (objects.lastIndexOf(obj) === -1) {
-          objects.push(obj)
-        }
       }
+    }
   }
   return objects
 }

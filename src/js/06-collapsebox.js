@@ -1,4 +1,4 @@
-; (function () {
+;(function () {
   const colboxes = document.getElementsByClassName('collapseBox')
 
   for (let i = 0; i < colboxes.length; i++) {

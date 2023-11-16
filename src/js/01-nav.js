@@ -47,7 +47,7 @@
     if (e.detail > 1) e.preventDefault()
   })
 
-  function onHashChange () {
+  function onHashChange() {
     let navLink
     let hash = window.location.hash
     if (hash) {
@@ -90,7 +90,7 @@
     window.addEventListener('hashchange', onHashChange)
   }
 
-  function activateCurrentPath (navItem) {
+  function activateCurrentPath(navItem) {
     let ancestorClasses
     let ancestor = navItem.parentNode
     while (!(ancestorClasses = ancestor.classList).contains('nav-menu')) {
@@ -102,11 +102,11 @@
     navItem.classList.add('is-active')
   }
 
-  function toggleActive () {
+  function toggleActive() {
     this.classList.toggle('is-active')
   }
 
-  function showNav (e) {
+  function showNav(e) {
     if (navToggle.classList.contains('is-active')) return hideNav(e)
     const html = document.documentElement
     html.classList.add('is-clipped--nav')
@@ -116,7 +116,7 @@
     concealEvent(e)
   }
 
-  function hideNav (e) {
+  function hideNav(e) {
     const html = document.documentElement
     html.classList.remove('is-clipped--nav')
     navToggle.classList.remove('is-active')
@@ -126,11 +126,11 @@
   }
 
   // NOTE don't let event get picked up by window click listener
-  function concealEvent (e) {
+  function concealEvent(e) {
     e.stopPropagation()
   }
 
-  function scrollItemToMidpoint (panel, el) {
+  function scrollItemToMidpoint(panel, el) {
     const rect = panel.getBoundingClientRect()
     let effectiveHeight = rect.height
     const navStyle = window.getComputedStyle(nav)
@@ -138,11 +138,11 @@
     panel.scrollTop = Math.max(0, (el.getBoundingClientRect().height - effectiveHeight) * 0.5 + el.offsetTop)
   }
 
-  function find (from, selector) {
+  function find(from, selector) {
     return [].slice.call(from.querySelectorAll(selector))
   }
 
-  function findNextElement (from, selector) {
+  function findNextElement(from, selector) {
     const el = from.nextElementSibling
     if (!el) return
     return selector ? el[el.matches ? 'matches' : 'msMatchesSelector'](selector) && el : el

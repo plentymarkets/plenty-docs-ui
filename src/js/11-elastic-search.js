@@ -1,11 +1,11 @@
 /* global Handlebars, MutationObserver, translations */
 
 class ElasticSearch {
-  constructor () {
+  constructor() {
     this.searchresults = ''
   }
 
-  setOptions (current, componentFilter, moduleFilter) {
+  setOptions(current, componentFilter, moduleFilter) {
     this.options = {
       result_fields: {
         id: { raw: {} },
@@ -18,16 +18,13 @@ class ElasticSearch {
         url_path_dir4: { type: 'value' },
       },
       filters: {
-        all: [
-          { url_path_dir2: componentFilter },
-          { url_path_dir4: moduleFilter },
-        ],
+        all: [{ url_path_dir2: componentFilter }, { url_path_dir4: moduleFilter }],
       },
       page: { size: 20, current },
     }
   }
 
-  setClient (engine) {
+  setClient(engine) {
     this.client = window.ElasticAppSearch.createClient({
       searchKey: 'search-j8q2jpghrg9e28z8rj6sqfg1',
       engineName: engine,
@@ -35,7 +32,7 @@ class ElasticSearch {
     })
   }
 
-  getSuggestions (searchKey) {
+  getSuggestions(searchKey) {
     const filterOptions = {
       query: searchKey,
       types: {
@@ -43,7 +40,8 @@ class ElasticSearch {
       },
       size: 7,
     }
-    this.client.querySuggestion(searchKey, filterOptions)
+    this.client
+      .querySuggestion(searchKey, filterOptions)
       .then((resultList) => {
         const slashCount = window.location.href.match(/\//g).length
         let searchHref = 'search.html?query='
@@ -53,7 +51,11 @@ class ElasticSearch {
           All non-ROOT pages have 7 slashes in the URL.
         */
         if (slashCount === 7) {
-          searchHref = window.location.href.split('/').slice(0, slashCount - 1).join('/') + '/search.html?query='
+          searchHref =
+            window.location.href
+              .split('/')
+              .slice(0, slashCount - 1)
+              .join('/') + '/search.html?query='
         }
         this.searchresults = ''
         resultList.results.documents.forEach((result) => {
@@ -72,7 +74,7 @@ class ElasticSearch {
       })
   }
 
-  getResults (searchKey) {
+  getResults(searchKey) {
     this.client
       .search(searchKey, this.options)
       .then((resultList) => {
@@ -97,17 +99,16 @@ class ElasticSearch {
         const pageNext = pageCurrent < pagesTotal ? pageCurrent + 1 : ''
         const pagePrevious = pageCurrent > 1 ? pageCurrent - 1 : ''
 
-        searchPage.innerHTML = Handlebars.compile(searchResultsTemplateHtml)(
-          {
-            pageCurrent,
-            pageNext,
-            pagePrevious,
-            results: resultList.rawResults,
-            resultsLabel,
-            searchQuery,
-            searchQueryLabel,
-            totalResults: resultList.info.meta.page.total_results,
-          })
+        searchPage.innerHTML = Handlebars.compile(searchResultsTemplateHtml)({
+          pageCurrent,
+          pageNext,
+          pagePrevious,
+          results: resultList.rawResults,
+          resultsLabel,
+          searchQuery,
+          searchQueryLabel,
+          totalResults: resultList.info.meta.page.total_results,
+        })
 
         /*
           The facet values Elasticsearch returns aren't necessarily well-suited for displaying.
@@ -125,13 +126,12 @@ class ElasticSearch {
           facet.label = value ? translateKey(locale, value) : translateKey(locale, generalLabel)
         })
 
-        searchResultsFacets.innerHTML = Handlebars.compile(searchFacetsTemplateHtml)(
-          {
-            componentsTitle,
-            components: componentFilter,
-            modulesTitle,
-            modules: moduleFilter,
-          })
+        searchResultsFacets.innerHTML = Handlebars.compile(searchFacetsTemplateHtml)({
+          componentsTitle,
+          components: componentFilter,
+          modulesTitle,
+          modules: moduleFilter,
+        })
 
         if (componentFilterOptions) {
           document.getElementById('facet_url_path_dir2' + componentFilterOptions).checked = true
@@ -147,16 +147,16 @@ class ElasticSearch {
   }
 }
 
-function translateKey (locale, key) {
+function translateKey(locale, key) {
   const translation = translations[locale][key] ? translations[locale][key] : key
   return translation
 }
 
-function decodeQueryParam (p) {
+function decodeQueryParam(p) {
   return decodeURIComponent(p.replace(/\+/g, ' '))
 }
 
-(function () {
+;(function () {
   $(document).ready(function () {
     if (window.location.host !== 'developers.plentymarkets.com') {
       const searchIcon = document.getElementById('toggle-search')
@@ -194,7 +194,7 @@ function decodeQueryParam (p) {
         const callback = function (mutationsList, observer) {
           const facets = document.querySelectorAll('.sui-multi-checkbox-facet input[type=checkbox]')
 
-          function toggleFilter (event) {
+          function toggleFilter(event) {
             if (document.getElementById(event.target.id).checked === true) {
               if (event.target.dataset.filter === 'url_path_dir2') {
                 componentFilter = event.target.dataset.value

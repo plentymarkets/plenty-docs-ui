@@ -14,7 +14,8 @@
     "last 2 versions"
   ],
   "scripts": {
-    "lint": "eslint -c .eslintrc gulpfile.js gulp.d/**/*.js src/**/*.js"
+    "lint": "eslint -c .eslintrc gulpfile.js gulp.d/**/*.js src/**/*.js",
+    "format": "prettier --write gulpfile.js gulp.d/**/*.js src/**/*.js"
   },
   "devDependencies": {
     "@babel/core": "^7.23.3",
@@ -49,7 +50,7 @@
     "postcss-custom-properties": "~13.3",
     "postcss-import": "~15.1",
     "postcss-url": "~10.1",
-    "prettier-eslint": "~16.1",
+    "prettier": "3.1.0",
     "require-directory": "~2.1",
     "require-from-string": "~2.0",
     "stylelint": "~13.3",

@@ -35,7 +35,7 @@ $(document).ready(function () {
   }
 })
 
-function toggleSearchBar () {
+function toggleSearchBar() {
   if (searchBar.classList.contains('d-none')) {
     articleBody.classList.add('mobile-no-scroll')
     searchBar.classList.remove('d-none')
@@ -47,7 +47,7 @@ function toggleSearchBar () {
   }
 }
 
-function toggleFilterContainer () {
+function toggleFilterContainer() {
   if (facetsSidebar.classList.contains('d-none')) {
     articleBody.classList.add('mobile-no-scroll')
     facetsSidebar.classList.remove('d-none')

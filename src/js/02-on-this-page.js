@@ -47,7 +47,7 @@
     window.addEventListener('scroll', onScroll)
   })
 
-  function onScroll () {
+  function onScroll() {
     const scrolledBy = window.pageYOffset
     const buffer = getNumericStyleVal(document.documentElement, 'fontSize') * 1.15
     const ceil = article.offsetTop
@@ -95,11 +95,11 @@
     }
   }
 
-  function find (selector, from) {
+  function find(selector, from) {
     return [].slice.call((from || document).querySelectorAll(selector))
   }
 
-  function getNumericStyleVal (el, prop) {
+  function getNumericStyleVal(el, prop) {
     return parseFloat(window.getComputedStyle(el)[prop])
   }
 })()

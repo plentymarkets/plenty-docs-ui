@@ -29,7 +29,7 @@
     tabset.classList.remove('is-loading')
   })
 
-  function activateTab (e) {
+  function activateTab(e) {
     const tab = this.tab
     const pane = this.pane
     find('.tabs li, .tab-pane', this.tabset).forEach(function (it) {
@@ -38,11 +38,11 @@
     e.preventDefault()
   }
 
-  function find (selector, from) {
+  function find(selector, from) {
     return Array.prototype.slice.call((from || document).querySelectorAll(selector))
   }
 
-  function getPane (id, tabset) {
+  function getPane(id, tabset) {
     return find('.tab-pane', tabset).find(function (it) {
       return it.getAttribute('aria-labelledby') === id
     })

@@ -58,9 +58,11 @@ module.exports = (src, dest, preview) => () => {
   return merge(
     vfs
       .src('js/+([0-9])-*.js', { ...opts, sourcemaps })
-      .pipe(babel({
-        presets: ['@babel/env'],
-      }))
+      .pipe(
+        babel({
+          presets: ['@babel/env'],
+        })
+      )
       .pipe(uglify())
       // NOTE concat already uses stat from newest combined file
       .pipe(concat('js/site.js')),
@@ -121,7 +123,7 @@ module.exports = (src, dest, preview) => () => {
   ).pipe(vfs.dest(dest, { sourcemaps: sourcemaps && '.' }))
 }
 
-function postcssPseudoElementFixer (css, result) {
+function postcssPseudoElementFixer(css, result) {
   css.walkRules(/(?:^|[^:]):(?:before|after)/, (rule) => {
     rule.selector = rule.selectors.map((it) => it.replace(/(^|[^:]):(before|after)$/, '$1::$2')).join(',')
   })

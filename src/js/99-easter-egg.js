@@ -1,11 +1,11 @@
 class EasterEggHandler {
-  constructor () {
+  constructor() {
     this.registerListener()
     this.enabled = false
     this.copyrightClickCounter = 0
   }
 
-  registerListener () {
+  registerListener() {
     $('.footer-menu small').on('click', () => {
       if (this.enabled) {
         return
@@ -17,7 +17,7 @@ class EasterEggHandler {
     })
   }
 
-  enableEasterEgg () {
+  enableEasterEgg() {
     this.enabled = true
     $('body').css('transition', '1s all')
     $('.menu-wrapper').append('<a class="menu-item easter-egg-button" href="javascript:void(0)">Show backend</a>')
@@ -27,7 +27,7 @@ class EasterEggHandler {
   }
 }
 
-(function () {
+;(function () {
   $(document).ready(function () {
     // eslint-disable-next-line
     new EasterEggHandler()

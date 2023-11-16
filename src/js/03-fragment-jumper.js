@@ -3,11 +3,11 @@
 
   const article = document.querySelector('article.doc')
 
-  function decodeFragment (hash) {
+  function decodeFragment(hash) {
     return hash && (~hash.indexOf('%') ? decodeURIComponent(hash) : hash).slice(1)
   }
 
-  function computePosition (el, sum) {
+  function computePosition(el, sum) {
     if (article.contains(el)) {
       return computePosition(el.offsetParent, el.offsetTop + sum)
     } else {
@@ -15,7 +15,7 @@
     }
   }
 
-  function jumpToAnchor (e) {
+  function jumpToAnchor(e) {
     if (e) {
       window.location.hash = '#' + this.id
       e.preventDefault()
@@ -28,7 +28,7 @@
     window.scrollTo(0, computePosition(this, 0) - diff)
   }
 
-  window.addEventListener('load', function jumpOnLoad (e) {
+  window.addEventListener('load', function jumpOnLoad(e) {
     let fragment, target
     if ((fragment = decodeFragment(window.location.hash)) && (target = document.getElementById(fragment))) {
       jumpToAnchor.bind(target)()
