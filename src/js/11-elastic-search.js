@@ -23,7 +23,7 @@ class ElasticSearch {
           { url_path_dir4: moduleFilter },
         ],
       },
-      page: { size: 20, current: current },
+      page: { size: 20, current },
     }
   }
 
@@ -99,13 +99,13 @@ class ElasticSearch {
 
         searchPage.innerHTML = Handlebars.compile(searchResultsTemplateHtml)(
           {
-            pageCurrent: pageCurrent,
-            pageNext: pageNext,
-            pagePrevious: pagePrevious,
+            pageCurrent,
+            pageNext,
+            pagePrevious,
             results: resultList.rawResults,
-            resultsLabel: resultsLabel,
-            searchQuery: searchQuery,
-            searchQueryLabel: searchQueryLabel,
+            resultsLabel,
+            searchQuery,
+            searchQueryLabel,
             totalResults: resultList.info.meta.page.total_results,
           })
 
@@ -127,9 +127,9 @@ class ElasticSearch {
 
         searchResultsFacets.innerHTML = Handlebars.compile(searchFacetsTemplateHtml)(
           {
-            componentsTitle: componentsTitle,
+            componentsTitle,
             components: componentFilter,
-            modulesTitle: modulesTitle,
+            modulesTitle,
             modules: moduleFilter,
           })
 
@@ -214,7 +214,7 @@ function decodeQueryParam (p) {
             elasticSearch.getResults(urlResult)
           }
 
-          for (var i = 0; i < facets.length; i++) {
+          for (let i = 0; i < facets.length; i++) {
             facets[i].addEventListener('change', toggleFilter)
           }
         }

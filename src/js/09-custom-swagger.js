@@ -21,8 +21,8 @@
         e.stopPropagation()
         e.preventDefault()
 
-        var $target = $(this.firstChild.hash)
-        var headerHeight = $('nav.navbar').height() + $target.height()
+        const $target = $(this.firstChild.hash)
+        const headerHeight = $('nav.navbar').height() + $target.height()
 
         $('html, body').stop().animate({
           scrollTop: $target.offset().top - headerHeight,
