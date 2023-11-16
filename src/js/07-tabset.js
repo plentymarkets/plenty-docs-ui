@@ -1,17 +1,17 @@
 ;(function () {
   'use strict'
 
-  var hash = window.location.hash
+  const hash = window.location.hash
   find('.doc .tabset').forEach(function (tabset) {
-    var active
-    var tabs = tabset.querySelector('.tabs')
+    let active
+    const tabs = tabset.querySelector('.tabs')
     if (tabs) {
-      var first
+      let first
       find('li', tabs).forEach(function (tab, idx) {
-        var id = (tab.querySelector('a[id]') || tab).id
+        const id = (tab.querySelector('a[id]') || tab).id
         if (!id) return
-        var pane = getPane(id, tabset)
-        if (!idx) first = { tab: tab, pane: pane }
+        const pane = getPane(id, tabset)
+        if (!idx) first = { tab, pane }
         if (!active && hash === '#' + id && (active = true)) {
           tab.classList.add('is-active')
           if (pane) pane.classList.add('is-active')
@@ -19,7 +19,7 @@
           tab.classList.remove('is-active')
           if (pane) pane.classList.remove('is-active')
         }
-        tab.addEventListener('click', activateTab.bind({ tabset: tabset, tab: tab, pane: pane }))
+        tab.addEventListener('click', activateTab.bind({ tabset, tab, pane }))
       })
       if (!active && first) {
         first.tab.classList.add('is-active')
@@ -30,8 +30,8 @@
   })
 
   function activateTab (e) {
-    var tab = this.tab
-    var pane = this.pane
+    const tab = this.tab
+    const pane = this.pane
     find('.tabs li, .tab-pane', this.tabset).forEach(function (it) {
       it === tab || it === pane ? it.classList.add('is-active') : it.classList.remove('is-active')
     })

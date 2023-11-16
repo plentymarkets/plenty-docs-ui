@@ -14,18 +14,13 @@ jobs:
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       
       - name: Setup Node.js environment
-        uses: actions/setup-node@v2.1.2
+        uses: actions/setup-node@v4
         with:
-          # Version Spec of the version to use.  Examples: 12.x, 10.15.1, >=10.15.0
-          node-version: 12.x
-          # Set this option if you want the action to check for the latest available version that satisfies the version spec
-          check-latest: true
-
-      - name: Setup gulp
-        run: npm install gulp-cli
+          node-version-file: '.nvmrc'
+          cache: npm
       
       - name: Package UI
         run: gulp bundle
