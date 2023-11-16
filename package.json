@@ -17,7 +17,7 @@
     "@babel/core": "^7.23.3",
     "@babel/preset-env": "^7.23.3",
     "asciidoctor.js": "1.5.9",
-    "autoprefixer": "~9.7",
+    "autoprefixer": "~10.4",
     "browser-pack-flat": "~3.4",
     "browserify": "~16.5",
     "cssnano": "~6.0",
