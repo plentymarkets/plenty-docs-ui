@@ -9,9 +9,9 @@
   "plentymarkets_demo_system_link": "https://www.plentymarkets.com/de/testen/",
   "developers_documentation": "Entwicklerdokumentation",
 
-  "bannerText": "Seit dem 12.06. werden im Handbuch keine Anpassungen mehr vorgenommen.",
-  "bannerLink": "https://forum.plentymarkets.com/t/726144",
-  "bannerLinkText": "Weitere Informationen findest du im Forum.",
+  "bannerText": "",
+  "bannerLink": "",
+  "bannerLinkText": "",
 
   "search_placeholder_text": "Suchbegriffe eingeben...",
   "search_query_label": "Suchabfrage:",
