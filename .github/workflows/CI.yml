@@ -1,4 +1,4 @@
-name: Lint
+name: Lint & Build
 
 on:
   pull_request:
@@ -19,3 +19,5 @@ jobs:
         run: npm ci
       - name: Lint files
         run: gulp lint
+      - name: Package UI
+        run: gulp bundle
