@@ -125,10 +125,6 @@
   font-weight: 300;
 }
 
-.doc a.bare{
-  color: var(--plentyWhite);
-}
-
 .doc mark {
   background-color: var(--code-background);
   color: var(--code-font-color);
