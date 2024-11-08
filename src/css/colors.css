@@ -19,6 +19,24 @@ html:root {
     --plentyBlack: #000;
     --plentyLightGrey: #F1F1F1;
     --plentyWhite: #FFF;
+    /* brand colors new */
+    --plentyOneBlueA: #062633;
+    --plentyOneBlueB: #31687D;
+    --plentyOneBlueC: #72CBEE;
+    --plentyOneBlueD: #D5EFFA;
+    --plentyOneLimeY: #828E2B;
+    --plentyOneLimeZ: #C7DF1C;
+    --plentyOneLimeA: #EDFF6C;
+    --plentyOneLimeB: #FBFFE2;
+    --plentyOneNudeY: #998772;
+    --plentyOneNudeZ: #CEC2B3;
+    --plentyOneNudeA: #E9DFD3;
+    --plentyOneNudeB: #F6F2ED;
+    /* signal colors */
+    --plentyOneSignalPrimary: #72CBEE;
+    --plentyOneSignalAdd: #8ECC2E;
+    --plentyOneSignalAlert: #FF3458;
+    --plentyOneSignalWarning: #FB8732;
     /* supplementary colors */
     --plentyOrangesOne: #ED4109;
     --plentyOrangesTwo: #F7660A;

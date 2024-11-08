@@ -26,6 +26,7 @@ html {
     --panel-border-color: var(--primary-color);
     --scrollbar-thumb-color: var(--plentyGreysTwo);
     /* header */
+    --dropdown-color: var(--primary-font-color);
     --dropdown-background-color: var(--primary-color);
     /* navbar */
     --navbar-font-color: var(--secondary-font-color);
@@ -62,7 +63,7 @@ html {
     /* toolbar */
     --toolbar-font-color: var(--secondary-font-color);
     --toolbar-action-background: var(--primary-color);
-    --toolbar-action-color: var(--plentyWhite);
+    --toolbar-action-color: var(--secondary-font-color);
     --toolbar-border-color: var(--panel-border-color);
     --toolbar-muted-color: var(--color-gray-30);
     --toolbar-font-size: calc(13 / var(--rem-base) * 1rem);
@@ -73,7 +74,7 @@ html {
     --toc-font-color: var(--secondary-font-color);
     --toc-background-color: var(--accent-color);
     --toc-heading-font-color: var(--doc-font-color);
-    --toc-left-border: var(--primary-color);
+    --toc-left-border: var(--secondary-font-color);
     --toc-focused-color: var(--doc-font-color);
     --toc-border-color: var(--highlight-color);
     --toc-line-height: 1.2;
@@ -144,16 +145,16 @@ html {
     --feedback-form-textarea-background: var(--secondary-color);
     --feedback-form-textarea-border: var(--highlight-color);
     --feedback-form-textarea-color: var(--highlight-color);
-    --feedback-form-button-background-like: var(--plentyBluesThree);
+    --feedback-form-button-background-like: var(--plentyOneSignalPrimary);
     --feedback-form-button-color-like: var(--plentyWhite);
-    --feedback-form-button-border-like: var(--plentyBluesThree);
-    --feedback-form-button-background-dislike: var(--plentyRedsThree);
+    --feedback-form-button-border-like: var(--plentyOneSignalPrimary);
+    --feedback-form-button-background-dislike: var(--plentyOneSignalAlert);
     --feedback-form-button-color-dislike: var(--plentyWhite);
-    --feedback-form-button-border-dislike: var(--plentyRedsThree);
+    --feedback-form-button-border-dislike: var(--plentyOneSignalAlert);
     /* footer */
     --footer-line-height: var(--doc-line-height);
     --footer-background: var(--footer-bg-color);
-    --footer-background-color: var(--plentyGreysOne);
+    --footer-background-color: var(--plentyOneBlueA);
     --footer-font-color: var(--doc-font-color);
     --footer-link-font-color: var(--plentyWhite);
     --footer-link-hover-color: var(--link_hover-font-color);

@@ -257,7 +257,7 @@ body:has(header .navbar .container-fluid #banner) {
   margin-top: 1.5rem;
   cursor: pointer;
   background: var(--dropdown-background-color);
-  color: white;
+  color: var(--dropdown-color);
   padding: 10px;
   min-width: max-content;
 }
@@ -300,11 +300,7 @@ button:focus {
 
 .navbar .left .logo img {
   width: auto;
-  height: 35px;
-}
-
-.navbar .left .logo-knowledge img {
-  height: 80px!important;
+  height: 45px;
 }
 
 .navbar .left .logo:last-child img {
