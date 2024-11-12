@@ -151,6 +151,7 @@ html.is-clipped--nav {
 }
 
 span.nav-text, a.nav-link {
+  color: var(--primary-font-color);
   margin-left: 0.3rem;
 }
 
@@ -191,9 +192,9 @@ span.nav-text, a.nav-link {
 .is-current-page > .nav-link,
 .is-current-page > .nav-text {
   font-weight: 500;
-  border-left: 3px solid var(--plentyWhite);
+  border-left: 3px solid var(--primary-font-color);
   padding-left: 0.5em;
-  color: var(--link-font-color);
+  color: var(--primary-font-color);
 }
 
 .nav-panel-explore {
@@ -227,6 +228,7 @@ span.nav-text, a.nav-link {
 }
 
 .nav-panel-explore .context .title {
+  color: var(--primary-font-color);
   font-size: calc(18 / var(--rem-base) * 1rem);
   font-weight: bold;
 }
@@ -236,8 +238,8 @@ span.nav-text, a.nav-link {
   background-repeat: no-repeat;
   background-position: right 0.5rem top 50%;
   background-size: auto 0.75em;
+  color: var(--primary-font-color);
   padding: 0 1.5rem 0 0;
-  filter: brightness(3);
 }
 
 .nav-panel-explore .components {
@@ -269,6 +271,7 @@ span.nav-text, a.nav-link {
 }
 
 .nav-panel-explore .component .title {
+  color: var(--primary-font-color);
   font-weight: var(--body-font-weight-bold);
 }
 
