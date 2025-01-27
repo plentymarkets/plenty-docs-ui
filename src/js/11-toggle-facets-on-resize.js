@@ -8,10 +8,9 @@ function toggleFacetsOnResize () {
       facetsSidebar.classList.remove('d-none')
     } else {
       facetsSidebar.classList.add('d-none')
+      articleBody.classList.remove('mobile-no-scroll')
     }
   }
-
-  articleBody.classList.remove('mobile-no-scroll')
 }
 
 window.addEventListener('resize', toggleFacetsOnResize)
