@@ -13,6 +13,11 @@
   "browserslist": [
     "last 2 versions"
   ],
+  "scripts": {
+    "build": "gulp build",
+    "start": "gulp serve",
+    "preview": "gulp preview"
+  },
   "devDependencies": {
     "@babel/core": "^7.23.3",
     "@babel/preset-env": "^7.23.3",
