@@ -25,10 +25,14 @@
                   data-toggle="dropdown"
                   aria-haspopup="true"
                   aria-expanded="false">
-                  EN
+                  {{#if (eq page.attributes.lang 'de-de')}}DE{{else}}EN{{/if}}
           </button>
           <div class="dropdown-menu submenu-item" aria-labelledby="langToggle">
-            <a id="languagePath"><span id="langSelect" class="submenu-item">DE</span></a>
+            {{#if (eq page.attributes.lang 'de-de')}}
+              <a href="/en-gb/manual/main/{{ or page.attributes.href-en 'index' }}.html">EN</a>
+            {{else}}
+              <a href="/de-de/manual/main/{{ or page.attributes.href-de 'index' }}.html">DE</a>
+            {{/if}}
           </div>
         </div>
     </div>
