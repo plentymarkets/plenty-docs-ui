@@ -1,3 +1,5 @@
+/* global translations */
+
 const FEEDBACK_TTL = 12 * 60 * 60 * 1000
 
 class FeedbackHandler {
@@ -62,11 +64,21 @@ class FeedbackHandler {
 
     textarea.addClass('validation-error')
 
-    const errorMessage = $('<div class="feedback-validation-error">' +
-      'Please provide feedback when giving a negative rating.</div>')
+    const locale = window.location.href.includes('/en-gb/') ? 'en-gb' : 'de-de'
+    const errorText = this.getTranslation(locale, 'feedbackValidationError')
+    const errorMessage = $('<div class="feedback-validation-error">' + errorText + '</div>')
     textarea.after(errorMessage)
 
     textarea.focus()
+  }
+
+  getTranslation (locale, key) {
+    if (typeof translations !== 'undefined' && translations?.[locale]?.[key]) {
+      return translations[locale][key]
+    }
+
+    const fallback = 'Please provide feedback when giving a negative rating.'
+    return fallback
   }
 
   clearValidationError (location) {
