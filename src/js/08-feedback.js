@@ -13,6 +13,12 @@ class FeedbackHandler {
 
   registerListener () {
     $(this.selector + ' button[type=submit]').on('click', (event) => this.submitHandler(event))
+
+    $(document).on('input', this.selector + ' textarea[name=feedback]', (event) => {
+      const textarea = $(event.target)
+      const location = textarea.closest('form').attr('data-location')
+      this.clearValidationError(location)
+    })
   }
 
   initializeForm () {
@@ -34,14 +40,39 @@ class FeedbackHandler {
     const opinion = target.getAttribute('data-opinion')
     const location = target.getAttribute('data-location')
     const textareaSelector = this.selector + '[data-location=' + location + '] textarea[name=feedback]'
-    const message = $(textareaSelector).val() || 'No message was specified'
+    const textarea = $(textareaSelector)
+    const message = textarea.val()
+
+    if (opinion === 'dislike' && (!message || message.trim() === '')) {
+      this.showValidationError(textarea, location)
+      return
+    }
 
     const requestData = {
       text: `New ${opinion} feedback on page: <${window.location.href}|${this.page}>\n\n` +
-        `Message below\n${message}`,
+        `Message below\n${message || 'No message was specified'}`,
     }
 
+    this.clearValidationError(location)
     this.sendFeedback(requestData)
+  }
+
+  showValidationError (textarea, location) {
+    this.clearValidationError(location)
+
+    textarea.addClass('validation-error')
+
+    const errorMessage = $('<div class="feedback-validation-error">' +
+      'Please provide feedback when giving a negative rating.</div>')
+    textarea.after(errorMessage)
+
+    textarea.focus()
+  }
+
+  clearValidationError (location) {
+    const formSelector = this.selector + '[data-location=' + location + ']'
+    $(formSelector + ' textarea[name=feedback]').removeClass('validation-error')
+    $(formSelector + ' .feedback-validation-error').remove()
   }
 
   feedbackWasGivenBefore () {
