@@ -28,6 +28,7 @@ const translations = {
     'Stock-management': 'Stock management',
     Videos: 'Videos',
     Welcome: 'Welcome',
+    feedbackValidationError: 'Please provide feedback when giving a negative rating.',
   },
 
   'de-de': {
@@ -57,5 +58,6 @@ const translations = {
     Warenwirtschaft: 'Warenwirtschaft',
     Webshop: 'Webshop',
     Willkommen: 'Willkommen',
+    feedbackValidationError: 'Bitte gib uns Feedback, wenn du eine negative Bewertung abgibst.',
   },
 }
