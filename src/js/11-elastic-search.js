@@ -162,7 +162,9 @@ function decodeQueryParam (p) {
       const searchIcon = document.getElementById('toggle-search')
       const searchText = document.getElementById('search-input')
       const elasticSearch = new ElasticSearch()
-      const engine = window.location.href.includes('/en-gb/') ? 'knowledge-en-gb' : 'knowledge-de-de'
+      const engine = window.location.href.includes('/en-gb/')
+        ? 'knowledge-en-gb-plentyone'
+        : 'knowledge-de-de-plentyone'
       let timeout = false
       elasticSearch.setClient(engine)
       if (searchIcon && searchText) {
