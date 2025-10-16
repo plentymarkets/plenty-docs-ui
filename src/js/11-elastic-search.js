@@ -158,7 +158,7 @@ function decodeQueryParam (p) {
 
 (function () {
   $(document).ready(function () {
-    if (window.location.host !== 'developers.plentymarkets.com') {
+    if (window.location.host !== 'developers.plentyone.com') {
       const searchIcon = document.getElementById('toggle-search')
       const searchText = document.getElementById('search-input')
       const elasticSearch = new ElasticSearch()
