@@ -121,7 +121,7 @@
 @font-face {
   font-family: 'Material Symbols Outlined';
   font-style: normal;
-  src: url(https://cdn01.plentymarkets.com/avw8j9fg70hi/frontend/layout/plentycom/fonts/MaterialSymbolsOutlined.woff2) format('woff');
+  src: url(~material-symbols/material-symbols-outlined.woff2) format('woff2');
 }
 
 @font-face {
