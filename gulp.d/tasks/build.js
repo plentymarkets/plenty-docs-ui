@@ -60,6 +60,17 @@ module.exports = (src, dest, preview) => () => {
           return path.join('..', 'font', basename)
         },
       },
+      {
+        filter: '**/~material-symbols/*',
+        url: (asset) => {
+          const relpath = asset.pathname.substr(1)
+          const abspath = require.resolve(relpath)
+          const basename = ospath.basename(abspath)
+          const destpath = ospath.join(dest, 'font', basename)
+          if (!fs.pathExistsSync(destpath)) fs.copySync(abspath, destpath)
+          return path.join('..', 'font', basename)
+        },
+      },
     ]),
     postcssVar({ preserve: preview }),
     preview ? postcssCalc : noop,
