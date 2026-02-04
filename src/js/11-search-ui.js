@@ -7,7 +7,7 @@ const facetsSidebar = document.getElementById('facets-sidebar')
 const mediaQuery = window.matchMedia('(min-width: 1024px)')
 
 $(document).ready(function () {
-  if (window.location.host !== 'developers.plentyone.com') {
+  if (window.location.host !== 'developers.plentymarkets.com') {
     if (searchBar && searchText && !mediaQuery.matches) {
       searchBar.classList.add('d-none')
       searchText.focus()
