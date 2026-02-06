@@ -29,7 +29,7 @@ function isCompliantTheme (themeName) {
 
 document.addEventListener('DOMContentLoaded', () => {
   const host = window.location.host
-  const defaultTheme = (host === 'developers.plentymarkets.com') ? 'theme-onyx' : 'theme-ivory'
+  const defaultTheme = (host === 'developers.plentymarkets.com' || host === 'developers.plentyone.com') ? 'theme-onyx' : 'theme-ivory'
   const storedTheme = getTheme()
   const isCompliant = isCompliantTheme(storedTheme)
 
