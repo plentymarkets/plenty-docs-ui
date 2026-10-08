@@ -1,5 +1,5 @@
 <div class="left">
-    <a class="logo logo-plentyone" href="{{ site.url }}/index.html"><img id="logo-img" src="{{ site.url }}/_/img/PlentyONE_Logo_PlentyBlue_RGB.svg" alt="home-logo"></a>
+    <a class="logo logo-plentyone" href="{{ site.url }}/{{ page.component.name }}/{{ page.version }}/index.html"><img id="logo-img" src="{{ site.url }}/_/img/PlentyONE_Logo_PlentyBlue_RGB.svg" alt="home-logo"></a>
 </div>
 
 <div class="right">
@@ -29,9 +29,9 @@
           </button>
           <div class="dropdown-menu submenu-item" aria-labelledby="langToggle">
             {{#if (eq page.attributes.lang 'de-de')}}
-              <a href="/en-gb/manual/main/{{ or page.attributes.href-en 'index' }}.html">EN</a>
+              <a href="/en-gb/manual/{{ page.version }}/{{ or page.attributes.href-en 'index' }}.html">EN</a>
             {{else}}
-              <a href="/de-de/manual/main/{{ or page.attributes.href-de 'index' }}.html">DE</a>
+              <a href="/de-de/manual/{{ page.version }}/{{ or page.attributes.href-de 'index' }}.html">DE</a>
             {{/if}}
           </div>
         </div>
