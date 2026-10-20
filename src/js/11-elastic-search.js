@@ -3,6 +3,8 @@
 class ElasticSearch {
   constructor () {
     this.searchresults = ''
+    // URLs follow the pattern /{lang}/{component}/{version}/..., e.g. /de-de/manual/archive/...
+    this.version = window.location.pathname.split('/')[3] || 'main'
   }
 
   setOptions (current, componentFilter, moduleFilter) {
@@ -21,6 +23,7 @@ class ElasticSearch {
         all: [
           { url_path_dir2: componentFilter },
           { url_path_dir4: moduleFilter },
+          { url_path_dir3: this.version },
         ],
       },
       page: { size: 20, current },
@@ -36,14 +39,24 @@ class ElasticSearch {
   }
 
   getSuggestions (searchKey) {
+    /*
+      The Query Suggestion API doesn't support filters.
+      A regular search restricted to the current version is used instead and the first heading of each result is suggested.
+    */
     const filterOptions = {
-      query: searchKey,
-      types: {
-        documents: { fields: ['meta_keywords', 'headings'] },
+      search_fields: {
+        meta_keywords: {},
+        headings: {},
       },
-      size: 7,
+      result_fields: {
+        headings: { raw: {} },
+      },
+      filters: {
+        url_path_dir3: this.version,
+      },
+      page: { size: 7 },
     }
-    this.client.querySuggestion(searchKey, filterOptions)
+    this.client.search(searchKey, filterOptions)
       .then((resultList) => {
         const slashCount = window.location.href.match(/\//g).length
         let searchHref = 'search.html?query='
@@ -56,10 +69,17 @@ class ElasticSearch {
           searchHref = window.location.href.split('/').slice(0, slashCount - 1).join('/') + '/search.html?query='
         }
         this.searchresults = ''
-        resultList.results.documents.forEach((result) => {
-          const resultSuggestion = result.suggestion
-          const resultSuggestionUri = encodeURIComponent(result.suggestion)
-          this.searchresults += '<a href=' + searchHref + resultSuggestionUri + '">' + resultSuggestion + '</a>'
+        const suggestions = new Set()
+        resultList.rawResults.forEach((result) => {
+          const headings = result.headings && result.headings.raw
+          const firstHeading = Array.isArray(headings) ? headings[0] : headings
+          if (firstHeading) {
+            suggestions.add(firstHeading)
+          }
+        })
+        suggestions.forEach((resultSuggestion) => {
+          const resultSuggestionUri = encodeURIComponent(resultSuggestion)
+          this.searchresults += '<a href="' + searchHref + resultSuggestionUri + '">' + resultSuggestion + '</a>'
         })
         if (this.searchresults) {
           document.getElementById('search-results').innerHTML = '<div id="the-results">' + this.searchresults + '</div>'
