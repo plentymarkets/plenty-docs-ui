@@ -3,6 +3,8 @@
 class ElasticSearch {
   constructor () {
     this.searchresults = ''
+    // URLs follow the pattern /{lang}/{component}/{version}/..., e.g. /de-de/manual/archive/...
+    this.version = window.location.pathname.split('/')[3] || 'main'
   }
 
   setOptions (current, componentFilter, moduleFilter) {
@@ -21,6 +23,7 @@ class ElasticSearch {
         all: [
           { url_path_dir2: componentFilter },
           { url_path_dir4: moduleFilter },
+          { url_path_dir3: this.version },
         ],
       },
       page: { size: 20, current },
@@ -59,7 +62,7 @@ class ElasticSearch {
         resultList.results.documents.forEach((result) => {
           const resultSuggestion = result.suggestion
           const resultSuggestionUri = encodeURIComponent(result.suggestion)
-          this.searchresults += '<a href=' + searchHref + resultSuggestionUri + '">' + resultSuggestion + '</a>'
+          this.searchresults += '<a href="' + searchHref + resultSuggestionUri + '">' + resultSuggestion + '</a>'
         })
         if (this.searchresults) {
           document.getElementById('search-results').innerHTML = '<div id="the-results">' + this.searchresults + '</div>'
