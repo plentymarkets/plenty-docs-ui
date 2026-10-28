@@ -39,24 +39,14 @@ class ElasticSearch {
   }
 
   getSuggestions (searchKey) {
-    /*
-      The Query Suggestion API doesn't support filters.
-      A regular search restricted to the current version is used instead and the first heading of each result is suggested.
-    */
     const filterOptions = {
-      search_fields: {
-        meta_keywords: {},
-        headings: {},
+      query: searchKey,
+      types: {
+        documents: { fields: ['meta_keywords', 'headings'] },
       },
-      result_fields: {
-        headings: { raw: {} },
-      },
-      filters: {
-        url_path_dir3: this.version,
-      },
-      page: { size: 7 },
+      size: 7,
     }
-    this.client.search(searchKey, filterOptions)
+    this.client.querySuggestion(searchKey, filterOptions)
       .then((resultList) => {
         const slashCount = window.location.href.match(/\//g).length
         let searchHref = 'search.html?query='
@@ -69,16 +59,9 @@ class ElasticSearch {
           searchHref = window.location.href.split('/').slice(0, slashCount - 1).join('/') + '/search.html?query='
         }
         this.searchresults = ''
-        const suggestions = new Set()
-        resultList.rawResults.forEach((result) => {
-          const headings = result.headings && result.headings.raw
-          const firstHeading = Array.isArray(headings) ? headings[0] : headings
-          if (firstHeading) {
-            suggestions.add(firstHeading)
-          }
-        })
-        suggestions.forEach((resultSuggestion) => {
-          const resultSuggestionUri = encodeURIComponent(resultSuggestion)
+        resultList.results.documents.forEach((result) => {
+          const resultSuggestion = result.suggestion
+          const resultSuggestionUri = encodeURIComponent(result.suggestion)
           this.searchresults += '<a href="' + searchHref + resultSuggestionUri + '">' + resultSuggestion + '</a>'
         })
         if (this.searchresults) {
