@@ -15,6 +15,7 @@
   ],
   "scripts": {
     "build": "gulp build",
+    "bundle": "gulp bundle",
     "start": "gulp serve",
     "preview": "gulp preview"
   },
